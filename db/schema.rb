@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140411151627) do
+ActiveRecord::Schema.define(version: 20140411153430) do
+
+  create_table "forums", force: true do |t|
+    t.integer  "category_id"
+    t.string   "name",        limit: 20
+    t.string   "intro",       limit: 250
+    t.integer  "province_id"
+    t.integer  "city_id"
+    t.integer  "club_id"
+    t.integer  "topics_num"
+    t.integer  "order_num"
+    t.boolean  "is_systemic"
+    t.string   "icon_path",   limit: 200
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "forums", ["category_id"], name: "index_forums_on_category_id"
+  add_index "forums", ["city_id"], name: "index_forums_on_city_id"
+  add_index "forums", ["club_id"], name: "index_forums_on_club_id"
+  add_index "forums", ["province_id"], name: "index_forums_on_province_id"
 
   create_table "logs", force: true do |t|
     t.string   "title",      limit: 150
