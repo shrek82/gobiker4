@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Forum:</strong>
+  <%= @topic.forum_id %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @topic.subject_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @topic.title %>
+</p>
+
+<p>
+  <strong>Title color:</strong>
+  <%= @topic.title_color %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @topic.user_id %>
+</p>
+
+<p>
+  <strong>Is fixed:</strong>
+  <%= @topic.is_fixed %>
+</p>
+
+<p>
+  <strong>Is good:</strong>
+  <%= @topic.is_good %>
+</p>
+
+<p>
+  <strong>Is recommend:</strong>
+  <%= @topic.is_recommend %>
+</p>
+
+<p>
+  <strong>Hits num:</strong>
+  <%= @topic.hits_num %>
+</p>
+
+<p>
+  <strong>Comments num:</strong>
+  <%= @topic.comments_num %>
+</p>
+
+<p>
+  <strong>Last comment user:</strong>
+  <%= @topic.last_comment_user_id %>
+</p>
+
+<p>
+  <strong>Last comment time:</strong>
+  <%= @topic.last_comment_time %>
+</p>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>

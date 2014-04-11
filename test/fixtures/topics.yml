@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  forum_id: 1
+  subject_id: 1
+  title: MyString
+  title_color: MyString
+  user_id: 1
+  is_fixed: false
+  is_good: false
+  is_recommend: false
+  hits_num: 1
+  comments_num: 1
+  last_comment_user_id: 1
+  last_comment_time: 2014-04-11 23:10:26
+
+two:
+  forum_id: 1
+  subject_id: 1
+  title: MyString
+  title_color: MyString
+  user_id: 1
+  is_fixed: false
+  is_good: false
+  is_recommend: false
+  hits_num: 1
+  comments_num: 1
+  last_comment_user_id: 1
+  last_comment_time: 2014-04-11 23:10:26

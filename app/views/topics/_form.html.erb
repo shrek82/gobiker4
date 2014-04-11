@@ -1,0 +1,65 @@
+<%= form_for(@topic) do |f| %>
+  <% if @topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+
+      <ul>
+      <% @topic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :forum_id %><br>
+    <%= f.number_field :forum_id %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_id %><br>
+    <%= f.number_field :subject_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :title_color %><br>
+    <%= f.text_field :title_color %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fixed %><br>
+    <%= f.check_box :is_fixed %>
+  </div>
+  <div class="field">
+    <%= f.label :is_good %><br>
+    <%= f.check_box :is_good %>
+  </div>
+  <div class="field">
+    <%= f.label :is_recommend %><br>
+    <%= f.check_box :is_recommend %>
+  </div>
+  <div class="field">
+    <%= f.label :hits_num %><br>
+    <%= f.number_field :hits_num %>
+  </div>
+  <div class="field">
+    <%= f.label :comments_num %><br>
+    <%= f.number_field :comments_num %>
+  </div>
+  <div class="field">
+    <%= f.label :last_comment_user_id %><br>
+    <%= f.number_field :last_comment_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :last_comment_time %><br>
+    <%= f.datetime_select :last_comment_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
