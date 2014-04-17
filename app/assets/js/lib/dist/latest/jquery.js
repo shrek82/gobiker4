@@ -1,4 +1,4 @@
-/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-09-22 9:09:47*/
+/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-04-17 23:01:46*/
 define("lib/latest/jquery", [], function(require, exports, module) {
     /*!
    * jQuery JavaScript Library v1.8.2

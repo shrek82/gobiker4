@@ -14,13 +14,13 @@ capybara-*.html
 /public/system/*
 /coverage/
 /spec/tmp/*
-**.orig
+*.orig
 rerun.txt
 pickle-email-*.html
 .project
 .idea
 node_modules
 *.DS_Store
-.build
+*.build
 dist
 *.swp

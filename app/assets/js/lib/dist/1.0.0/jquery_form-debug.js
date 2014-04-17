@@ -1,4 +1,4 @@
-/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-09-22 9:09:44*/
+/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-04-17 23:01:42*/
 define("lib/1.0.0/jquery_form-debug", [], function(require, exports, moudles) {
     return function(jquery) {
         (function($) {
