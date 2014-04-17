@@ -15,6 +15,7 @@ class ForumsController < ApplicationController
   # GET /forums/new
   def new
     @forum = Forum.new
+    @forum.valid?
   end
 
   # GET /forums/1/edit

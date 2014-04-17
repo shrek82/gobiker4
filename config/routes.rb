@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   resources :forums
-
   resources :users
-
   resources :topics
-
   resources :logs
 
   # The priority is based upon order of creation: first created -> highest priority.

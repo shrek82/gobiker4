@@ -39,13 +39,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #rails-settings-cached
-gem "rails-settings-cached","0.3.1"
+gem "rails-settings-cached", "0.4.0"
 
 #兼容rails3.2 attr_acessiable 和 attr_protected
-#rails4会被移除
-gem "protected_attributes"
+#rails4会被移除，但如果添加了如下gem,model没有指定就会添加不成功
+#gem "protected_attributes"
 
 #开发模式用到的
 group :development do
+  gem "thin"
   gem "better_errors"
 end

@@ -1,4 +1,6 @@
 *.rbc
+.un~
+/Gemfile.lock
 *.sassc
 .sass-cache
 capybara-*.html
@@ -17,4 +19,8 @@ rerun.txt
 pickle-email-*.html
 .project
 .idea
+node_modules
 *.DS_Store
+.build
+dist
+*.swp

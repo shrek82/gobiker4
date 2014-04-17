@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140411153430) do
+ActiveRecord::Schema.define(version: 20140416145342) do
 
   create_table "forums", force: true do |t|
     t.integer  "category_id"
-    t.string   "name",        limit: 20
+    t.string   "name",        limit: 30
     t.string   "intro",       limit: 250
     t.integer  "province_id"
     t.integer  "city_id"
@@ -41,6 +41,17 @@ ActiveRecord::Schema.define(version: 20140411153430) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "settings", force: true do |t|
+    t.string   "var",                   null: false
+    t.text     "value"
+    t.integer  "thing_id"
+    t.string   "thing_type", limit: 30
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "settings", ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true
 
   create_table "topics", force: true do |t|
     t.integer  "forum_id"
