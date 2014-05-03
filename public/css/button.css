@@ -1,0 +1,45 @@
+.btn-mint {
+    border-color: #0D6F50;
+    background-color: #0A5536;
+    background-image: -moz-linear-gradient(top, #249364 0%, #147850 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #249364), color-stop(100%, #147850));
+    background-image: -webkit-linear-gradient(top, #249364 0%, #147850 100%);
+    background-image: -o-linear-gradient(top, #249364 0%, #147850 100%);
+    background-image: -ms-linear-gradient(top, #249364 0%, #147850 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#249364, endColorstr=#147850, GradientType=0);
+    background-image: linear-gradient(top, #249364 0%, #147850 100%)
+}
+
+.btn-mint:hover,a.btn-mint:hover, a.btn-mint:focus, input.btn-mint:hover,input.btn-mint:focus{
+    border-color: #15956C;
+    background-color: #15956C;
+    background-image: -moz-linear-gradient(top, #34A274 0%, #15956C 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #34A274), color-stop(100%, #15956C));
+    background-image: -webkit-linear-gradient(top, #34A274 0%, #15956C 100%);
+    background-image: -o-linear-gradient(top, #34A274 0%, #15956C 100%);
+    background-image: -ms-linear-gradient(top, #34A274 0%, #15956C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#34A274, endColorstr=#15956C, GradientType=0);
+    background-image: linear-gradient(top, #34A274 0%, #15956C 100%)
+}
+
+.btn-mint:active,a.btn-mint:active,input.btn-mint:active{
+    border-color: #0D6F50;
+    background-color: #0A5536;
+    background-image: -moz-linear-gradient(top, #249364 0%, #147850 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #249364), color-stop(100%, #147850));
+    background-image: -webkit-linear-gradient(top, #249364 0%, #147850 100%);
+    background-image: -o-linear-gradient(top, #249364 0%, #147850 100%);
+    background-image: -ms-linear-gradient(top, #249364 0%, #147850 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#249364, endColorstr=#147850, GradientType=0);
+    background-image: linear-gradient(top, #249364 0%, #147850 100%)
+}
+
+.btn-mint[disabled],a.btn-mint.disabled,input.btn-mint[disabled]{
+    color: #fff;
+    border-color: #489D79;
+    box-shadow: none;
+    text-shadow:none;
+    text-transform: uppercase;
+    background-color: #5DAF8E;
+    background-image:none;
+}

@@ -1,0 +1,23 @@
+{
+  "family": "zhaojiangang",
+  "name": "venus",
+  "version": "1.0.0",
+  "description": "comments module",
+  "homepage": "https://github.com/shrek82/gobiker",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shrek82/gobiker.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": ["widget"],
+  "licenses": "MIT",
+  "spm": {
+    "output": ["venus.js"],
+    "alias": {},
+    "devAlias": {},
+    "engines": {}
+  }
+}

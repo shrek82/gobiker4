@@ -1,0 +1,927 @@
+.txthover {
+    border: 1px
+    solid #b9b9b9!important;
+    border-top: 1px solid #a0a0a0!important;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.txtfocus {
+    border: 1px
+    solid #4D90FE!important;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.txterror {
+    border: 1px
+    solid #DD4B39!important;
+}
+
+.border8 {
+    background: #f5f4f0;
+    height: 8px;
+    font-size: 0;
+}
+
+.border1 {
+    background: #f5f4f0;
+    height: 1px;
+    font-size: 0;
+}
+
+.user_button {
+    background: #077345;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0
+    12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.main {
+    width: 960px;
+    margin: 0
+    auto;
+    font-family: "hiragino sans gb","Microsoft YaHei","\5b8b\4f53",sans-serif;
+    padding-bottom: 50px;
+    min-height: 560px;
+    _height: 560px;
+}
+
+.main
+h3 {
+    line-height: 28px;
+    margin-top: 24px;
+    font-size: 24px;
+    width: 100%;
+    float: left;
+}
+
+.main h3
+a {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #069;
+    font-family: "\5b8b\4f53",sans-serif;
+    line-height: 14px;
+}
+
+.address_process {
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+    background: url(/static/media/processbj.gif) repeat-x 0 12px;
+}
+
+.address_process
+div {
+    float: left;
+    width: 24px;
+    height: 19px;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 700;
+    color: #323232;
+    font-size: 16px;
+    font-family: arial;
+    background: url(/static/media/processicon.png) no-repeat -24px 0;
+    margin-right: 444px;
+    display: inline;
+    line-height: 16px;
+}
+
+.address_process
+.current {
+    color: #fff;
+    background-position: 0 0;
+}
+
+.infoform_main {
+    width: 320px;
+}
+
+.user_klogin {
+    margin-top: 0px;
+    width: 100%;
+    float: left;
+}
+
+.user_klogin
+h4 {
+    margin-top: 24px;
+    line-height: 32px;
+    font-family: "hiragino sans gb","Microsoft YaHei","\5b8b\4f53",sans-serif;
+    font-size: 18px;
+    color: #636363;
+}
+
+.user_klogin
+ul {
+    overflow: hidden;
+    zoom: 1;
+    padding-top: 4px;
+}
+
+.user_klogin ul
+li {
+    float: left;
+    padding-right: 10px;
+}
+
+.user_klogin ul li
+img {
+    float: left;
+}
+
+.infoform {
+    width: 272px;
+    padding: 6px
+    24px 14px;
+    min-height: 233px;
+    _height: 233px;
+    margin-top: 20px;
+    background: #f5f4f0;
+    float: left;
+}
+
+.infoform
+h4 {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 12px;
+    width: 272px;
+    float: left;
+}
+
+.infoform
+ul {
+    width: 272px;
+    float: left;
+}
+
+.infoform
+li {
+    width: 100%;
+    float: left;
+    padding-top: 10px;
+    font-family: "\5b8b\4f53";
+}
+
+.frpsotion {
+    position: relative;
+}
+
+.infoform li
+b {
+    width: 100%;
+    float: left;
+    line-height: 30px;
+    color: #323232;
+}
+
+.usercity {
+    height: 0;
+    font-size: 0;
+    width: 100%;
+    float: left;
+    position: relative;
+    display: none;
+}
+
+.usercitylist {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 270px;
+    float: left;
+    font-size: 12px;
+    border: 1px
+    solid #c0c0c0;
+    background: #fff;
+    padding: 5px
+    0;
+}
+
+.usercitylist
+a {
+    line-height: 18px;
+    display: block;
+    text-indent: 10px;
+    color: #636363;
+    cursor: pointer;
+}
+
+.usercitylist
+.current {
+    background: #f5f4f0;
+}
+
+.usercitylist a:hover {
+    text-decoration: none;
+    background: #f5f4f0;
+}
+
+.infoform .frlayout
+.ulayouttag {
+    display: none;
+    width: 290px;
+    position: absolute;
+    left: -304px;
+    top: 32px;
+}
+
+.infoform .fllayout
+.ulayouttag {
+    display: none;
+    width: 290px;
+    position: absolute;
+    right: -304px;
+    top: 32px;
+}
+
+.ulayouttmain {
+    position: relative;
+    border: 1px
+    solid #bbb;
+    border-bottom: 1px solid #a8a8a8;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px #e1e1e1;
+    -moz-box-shadow: 1px 1px 2px #e1e1e1;
+    box-shadow: 1px 1px 2px #e1e1e1;
+    -khtml-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.ultmcontent {
+    padding: 10px
+    12px;
+    line-height: 20px;
+}
+
+.ultmcontent
+h6 {
+    font-weight: 700;
+}
+
+.ultmcontent h6
+span {
+    font-weight: 400;
+}
+
+.ultmcontent
+.upassq {
+    overflow: hidden;
+    height: 5px;
+    background: #f5f5f5;
+    margin: 2px
+    0 14px;
+}
+
+.ultmcontent .upassq
+span {
+    height: 5px;
+    text-indent: -9999px;
+    display: block;
+}
+
+.infoform .frlayout .ulayouttag
+.ultmicon {
+    width: 9px;
+    height: 15px;
+    position: absolute;
+    right: -8px;
+    top: 13px;
+    text-indent: -9999px;
+    background: url(/static/media/userlayouticon.gif) no-repeat -9px 0;
+}
+
+.infoform .fllayout .ulayouttag
+.ultmicon {
+    width: 9px;
+    height: 15px;
+    position: absolute;
+    left: -9px;
+    top: 13px;
+    text-indent: -9999px;
+    background: url(/static/media/userlayouticon.gif) no-repeat 0 0;
+}
+
+.infoform
+.txttag {
+    line-height: 18px;
+    padding-top: 6px;
+    float: left;
+    display: none;
+}
+
+.infoform
+.infoform_txt {
+    width: 264px;
+    padding: 0
+    3px;
+    line-height: 28px;
+    background: #fff;
+    height: 28px;
+    border: 1px
+    solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    float: left;
+}
+
+.infoform
+.infoformyzm {
+    width: 272px;
+    float: left;
+}
+
+.infoformyzm
+img {
+    float: left;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.infoformyzm
+b {
+    text-indent: 12px;
+}
+
+.infoform .infoformyzm
+input {
+    width: 172px;
+}
+
+.infoformyzm
+a {
+    float: left;
+    margin: 0
+    0 0 12px;
+}
+
+.infoformyzm a
+img {
+    border: 0;
+}
+
+.passwordmail {
+    margin-top: 28px;
+    line-height: 24px;
+    font-family: "\5b8b\4f53";
+}
+
+.passwordmail
+b {
+    font-family: Tahoma;
+}
+
+.passyes {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    margin: 36px
+    0 10px;
+    background: url(/static/media/taggou.gif) no-repeat center top;
+    padding-top: 80px;
+}
+
+.regmyty {
+    width: 100%;
+    float: left;
+    margin-top: 6px;
+    padding: 3px
+    0 0;
+    line-height: 18px;
+}
+
+.regmyty
+input {
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+}
+
+.regmyty
+label {
+    float: left;
+    padding-left: 6px;
+}
+
+.regmyty label
+a {
+    font-weight: 700;
+}
+
+.regmyty label a:hover {
+    color: #077345;
+}
+
+.infoform_btn {
+    width: 272px;
+    float: left;
+    margin-top: 12px;
+    text-align: center;
+    font-family: "\5b8b\4f53";
+}
+
+.infoform_btn a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.userlcheckbox {
+    float: left;
+    padding-left: 20px;
+}
+
+.userlcheckbox
+input {
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 6px;
+}
+
+.userlcheckbox
+label {
+    float: left;
+    line-height: 30px;
+    font-family: "\5b8b\4f53";
+}
+
+.infoform_btn
+p {
+    width: 100%;
+    float: left;
+    line-height: 20px;
+    text-align: left;
+    font-family: "\5b8b\4f53";
+    margin-top: 10px;
+}
+
+.infoform_btn p
+a {
+    color: #077345;
+}
+
+.infoform_btn p a:hover {
+    text-decoration: underline;
+    color: #077345;
+}
+
+.passlayout {
+    width: 632px;
+    margin-top: 20px;
+}
+
+.passbanner {
+    width: 100%;
+    float: left;
+}
+
+.passbanner
+img {
+    float: left;
+    width: 100%;
+}
+
+.userregtag {
+    width: 100%;
+    float: left;
+}
+
+.userregzh {
+    min-height: 100px;
+    _height: 100px;
+    padding-bottom: 6px;
+}
+
+.userregzh
+a {
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+    background: #92003e;
+    padding: 12px
+    38px 0;
+    height: 36px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+
+.userregzh a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.userregtag
+.cGray {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.userregtag
+.user_reg_tag {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 4px;
+}
+
+.userregtag
+dl {
+    margin-top: 10px;
+}
+
+.userregtag
+dt {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.userregtag
+dd {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.userregtag dd
+a {
+    margin-right: 20px;
+    float: left;
+    margin-top: 6px;
+}
+
+.userregtag dd
+img {
+    float: left;
+}
+
+.userregtagclass {
+    overflow: hidden;
+    zoom: 1;
+    padding: 10px
+    30px 30px 0;
+}
+
+.userregtagclass
+.userregtagclassimg {
+    float: left;
+    width: 270px;
+}
+
+.userregtagclass
+h4 {
+    width: 310px;
+    float: right;
+    line-height: 24px;
+    font-size: 18px;
+    color: #636363;
+}
+
+.userregtagclass
+p {
+    width: 310px;
+    line-height: 22px;
+    margin-top: 8px;
+    color: #636363;
+}
+
+.regmail {
+    width: 661px;
+    margin-top: 20px;
+    color: #636363;
+    margin-left: 280px;
+}
+
+.regmail_open {
+    margin-left: 20px;
+}
+
+.regmail div div
+input {
+    width: 240px;
+}
+
+.regmail1 {
+    background: url(/static/media/regmailiconerror.gif) no-repeat 0 6px;
+    padding-left: 81px;
+    min-height: 78px;
+    _height: 78px;
+}
+
+.regmail2 {
+    background: url(/static/media/regmailicon.gif) no-repeat 0 6px;
+    padding-left: 81px;
+    min-height: 78px;
+    _height: 78px;
+}
+
+.regmail3 {
+    margin-left: 81px;
+}
+
+.regmail
+h4 {
+    font-size: 16px;
+    padding-bottom: 6px;
+    color: #666;
+    font-family: "\5b8b\4f53";
+    font-weight: 700;
+}
+
+.regmail h4
+span {
+    font-size: 12px;
+    padding-left: 20px;
+    font-family: "\4f53";
+    color: #323232;
+    font-weight: 400;
+}
+
+.regmail
+p {
+    font-family: "\5b8b\4f53";
+    line-height: 24px;
+}
+
+.regmail p
+b {
+    font-family: Tahoma;
+}
+
+.regmaillink {
+    margin-top: 6px;
+}
+
+.regmaillink
+a {
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+    background: #92003e;
+    padding: 12px
+    38px 0;
+    height: 36px;
+    line-height: 24px;
+}
+
+.regmaillink a:hover {
+    text-decoration: none;
+}
+
+.regmail
+dl {
+    font-family: "\5b8b\4f53";
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.regmail
+dt {
+    font-weight: 700;
+}
+
+.regmail dd a:hover {
+    color: #077345;
+}
+
+.regsuccess {
+    width: 100%;
+    float: left;
+}
+
+.regsuccesstitle {
+    line-height: 44px;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    padding-top: 80px;
+    margin-top: 30px;
+    background: url(/static/media/taggou.gif) no-repeat center top;
+}
+
+.successblock {
+    width: 900px;
+    padding: 0
+    30px 20px;
+    float: left;
+    margin-top: 38px;
+    font-family: "\5b8b\4f53";
+}
+
+.regweibofriend {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+
+.regweibofriend_title
+a {
+    line-height: 30px;
+    display: inline-block;
+}
+
+.reg_user {
+    padding: 0
+    10px 10px;
+}
+
+.reg_user_main {
+    padding-top: 10px;
+}
+
+.reg_user_item_list {
+    width: 48%;
+    margin: 10px
+    0 0;
+    line-height: 24px;
+}
+
+.reg_user_item_list
+dl {
+    width: 320px;
+    float: left;
+}
+
+.reg_user_item_list
+div.fr {
+    margin-top: 4px;
+}
+
+.reg_user_item_list .icon_gender_man,.reg_user_item_list
+.icon_gender_woman {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.reg_user_main
+.border1 {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.reg_user_main
+.border8 {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.usertblock {
+    width: 840px;
+    border: 1px
+    solid #e8e5df;
+    margin: 38px
+    40px 20px;
+    font-family: "\5b8b\4f53";
+    display: inline;
+    float: left;
+    background: #fff;
+    padding: 20px
+    19px;
+}
+
+.sblocktitle {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sblocktitle b,.sblocktitle
+ul {
+    float: left;
+    padding-left: 10px;
+}
+
+.sblocktitle ul
+li {
+    float: left;
+    padding: 0
+    10px;
+}
+
+.sblocktitle ul .current
+a {
+    color: #790000;
+}
+
+.sblockmain {
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+}
+
+.sblockclass {
+    width: 190px;
+    display: inline;
+    margin: 0
+    10px 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.sblockcimg {
+    width: 100%;
+    float: left;
+    background: #f5f4f0;
+}
+
+.sblockcimg
+img {
+    float: left;
+    width: 48px;
+    height: 48px;
+}
+
+.sblockcimg
+span {
+    float: left;
+    padding: 4px
+    6px;
+    line-height: 20px;
+    width: 130px;
+}
+
+.sblockcimg span
+strong {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    height: 20px;
+    width: 130px;
+    float: left;
+}
+
+.sblockclass p
+a {
+    margin: 4px
+    16px 0 0;
+    display: inline-block;
+}
+
+.sblockclass p a:hover {
+    color: #fff;
+    background: #9e0b0f;
+}
+
+.sblockclass p .current:hover {
+    color: #fff;
+    background: #790000;
+}
+
+.sblockllink {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.sblockllink
+a {
+    color: #790000;
+}
+
+.sblockllink a:hover {
+    color: #790000;
+}
+
+.sgetinfolink {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.sgetinfolink
+a {
+    display: inline-block;
+}
+
+.sgetinfolink a:hover {
+    color: #fff;
+}
+
+.sblockclass p
+.current {
+    color: #fff;
+    background: #790000;
+}

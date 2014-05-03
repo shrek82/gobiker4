@@ -1,0 +1,473 @@
+.qyer_header{ width:980px }
+
+.qyer_head_crumb{ width:980px }
+
+.qyer_footerBox{ width:980px }
+
+#ajaxwaitid{ display:none }
+
+.popupmenu_popup{ background-color:#fff; border:1px solid #ccc; padding:10px }
+
+#wrap{ width:980px; margin:20px auto }
+
+.dropmenu{ padding-right:17px; background:url(/images/forum/arrow_down.png) no-repeat right center }
+
+#fjump_menu{ padding:0 30px 0 10px }
+
+#fjump_menu
+a{ color:#077345 }
+
+#fjump_menu
+dl{ padding:5px 0 }
+
+#fjump_menu dt
+a{ font-weight:bold; color:#636363 }
+
+#fjump_menu
+dd{ padding-left:1em }
+
+#fjump_menu dd
+.sub{ padding-left:1em }
+
+#fjump_menu dd
+.current{ font-weight:bold }
+
+.bbs_titboxs{ width:100%; border-bottom:2px solid #d7d7d7; padding-bottom:20px; margin-bottom:10px }
+
+.bbs_titbox{ width:980px; margin:0 auto }
+
+.bbs_titbox_title{ padding-bottom:2px; font-size:24px; line-height:36px; color:#147850 }
+
+.bbs_titbox_info{line-height:20px; height:40px;color:#999;padding-left:62px;position:relative;}
+
+.bbs_titbox_info .infos{width:500px;float:left}
+
+.category{ display:inline-block; padding:0 4px; background-color:#6faf8e; color:#fff; text-decoration:none; border-radius:3px }
+
+.category:hover{ background-color:#5fa678 }
+
+.bbs_titbox_info .infos .views, .bbs_titbox_info .infos .sum, .bbs_titbox_info .infos
+.like{ background:url(/images/forum/listinfo.png) no-repeat }
+
+.bbs_titbox_info .infos .views{ padding-left:21px; background-position:0 1px }
+
+.bbs_titbox_info .infos .sum{ padding-left:17px; background-position:0 -28px; margin-left:20px }
+
+.bbs_titbox_info .infos .like{ padding-left:21px; background-position:0 -89px; margin-left:20px }
+
+.bbs_titbox_info .icons{ }
+
+.bbs_titbox_info .icons img{ vertical-align:text-bottom; margin-right:4px }
+
+.bbs_main{ float:left; width:680px }
+
+.bbs_forumcontrol{ position:relative; z-index:9 }
+
+.bbs_forumcontrol
+.rpostno{ display:none; position:absolute; right:0; top:21px; padding:5px 10px; border:1px solid #ccc; background-color:#fff }
+
+.bbs_forumcontrol
+#rpostnobtn{ color:#006aad; cursor:pointer }
+
+#modopt{ float:right; padding:0 21px 0 7px; border:1px solid #ccc; margin-right:2px; line-height:20px; cursor:pointer }
+
+#modopt_menu
+.wide{ float:left; width:50% }
+
+#modopt_menu .wide
+a{ float:left; padding:0 7px; height:26px; line-height:26px; font-size:14px }
+
+#modopt_menu .wide a:hover{ background-color:#e6f4d9; text-decoration:none }
+
+.bbs_viewthread{ border-bottom:8px solid #f5f4f0 }
+
+.bbs_postview{ margin-top:20px }
+
+.bbs_txttop_fixed{ width:100%; height:50px }
+
+.bbs_txttop{ position:relative; z-index:2; width:622px; padding-left:58px; background-color:#e2e2e2; color:#636363; border-top:2px solid #fff }
+
+.bbs_txttop
+.floor_arrow{ position:absolute; right:21px; top:48px; width:16px; height:8px; overflow:hidden; background:url(/images/forum/floor_arrow.png) no-repeat }
+
+.bbs_txttop
+.ui_headPort{ float:left; display:inline; margin-left:-58px }
+
+.bbs_txttop .ui_headPort
+img{ display:block; width:48px; height:48px }
+
+.bbs_txttop
+.bbs_floor{ position:absolute; top:0; right:0; float:right; padding-right:10px }
+
+.bbs_txttop .bbs_floor
+a.num{ float:right; height:48px; font-size:14px; font-weight:700; color:#959595 }
+
+.bbs_txttop .bbs_floor a.num:hover{ color:#636363; text-decoration:none }
+
+.bbs_txttop .bbs_floor a.num
+span{ font-size:32px; font-weight:normal }
+
+.bbs_txttop .bbs_floor
+.grade{ float:right; height:28px; padding-top:20px; margin-right:10px }
+
+.bbs_txttop .bbs_floor .grade
+a{ color:#636363 }
+
+.bbs_txttop
+.userinfo{ padding:5px 10px 0 0 }
+
+.bbs_txttop
+.authorinfo{ padding:3px 10px 0 0 }
+
+.bbs_txttop
+.gradelay{ display:none; position:absolute; z-index:9; right:0; top:48px; width:268px; background-color:#fff; border:1px solid #ccc; color:#323232 }
+
+.bbs_txttop .gradelay
+dt{ padding-left:10px; line-height:32px }
+
+.bbs_txttop .gradelay
+dd{ padding:10px 10px 10px 68px; border-top:1px solid #ccc }
+
+.bbs_txttop .gradelay dd
+.pic{ float:left; display:inline; margin-left:-58px }
+
+.bbs_txttop .gradelay dd
+.number{ font-style:italic; color:#f30; font-weight:700 }
+
+.bbs_txtbox{ width:680px;overflow:hidden; font:14px/1.8 helvetica, arial, "hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif; *font-family:"Microsoft YaHei", \5b8b\4f53, sans-serif }
+
+.bbs_txtbox_table{ table-layout:fixed }
+
+.bbs_txtbox_table
+td{ word-wrap:break-word; word-break:break-all }
+
+.bbs_txtbox
+.locked{ margin:10px 0; border:1px dashed #F60; padding:5px 10px; text-align:center; color:#636363 }
+
+.bbs_txtbox
+.showhide{ margin:10px 0; border:1px dashed #F60; padding:5px 10px }
+
+.bbs_txtbox .showhide
+h4{ margin-bottom:10px; text-align:center; color:#636363 }
+
+.bbs_txtbox
+a.placetag{ color:#323232; background-color:#e5e5e5; padding:2px }
+
+.bbs_txtbox a.placetag:hover{ background-color:#d9d9d9; text-decoration:none }
+
+.bbs_txtbox
+a.booktag{ margin:0 4px; padding-right:13px; background:url(/images/forum/text/icon_booktag.png) no-repeat right 0; color:#323232 }
+
+.bbs_txtbox a.booktag
+span{ padding:2px; border-bottom:1px dotted #70afcc }
+
+.bbs_txtbox a.booktag:hover{ text-decoration:none }
+
+.bbs_txtbox a.booktag:hover
+span{ border-bottom:1px solid #006aad; color:#0073b6 }
+
+.bbs_txtbox
+a.bookfirsttag{ margin:0 5px; padding-right:13px; background:url(/images/forum/text/icon_booktag.png) no-repeat right 0; color:#fff }
+
+.bbs_txtbox a.bookfirsttag
+span{ padding:2px; background-color:#f63 }
+
+.bbs_txtbox
+font{ font-family:helvetica, arial, "hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif; *font-family:"Microsoft YaHei", \5b8b\4f53, sans-serif }
+
+.bbs_txtbox font[size="1"], .bbs_txtbox font[size="+1"], .bbs_txtbox font[size="-1"], .bbs_txtbox font[size="-2"], .bbs_txtbox font[size="-3"], .bbs_txtbox font[size="-4"], .bbs_txtbox font[size="-5"], .bbs_txtbox font[size="-6"]{ font-size:12px }
+
+.bbs_txtbox font[size="2"], .bbs_txtbox font[size="+2"]{ font-size:14px }
+
+.bbs_txtbox font[size="3"], .bbs_txtbox font[size="+3"]{ font-size:16px }
+
+.bbs_txtbox font[size="4"], .bbs_txtbox font[size="+4"]{ font-size:18px }
+
+.bbs_txtbox font[size="5"], .bbs_txtbox font[size="+5"], .bbs_txtbox font[size="6"], .bbs_txtbox font[size="+6"], .bbs_txtbox font[size="7"], .bbs_txtbox font[size="+7"]{ font-size:20px }
+
+.bbs_txtbox
+img{ max-width:680px; margin-bottom:1em }
+
+.bbs_txtbox
+img.qyersmilies{ margin-bottom:0 }
+
+.bbs_txtbox
+.absmiddle{ vertical-align:middle; margin-bottom:0; margin-right:10px }
+
+.bbs_txtbox
+strong{ font-weight:bold }
+
+.bbs_txtbox
+.pstatus{ display:block; font-style:normal; font-size:12px; color:#999 }
+
+.bbs_txtbox
+.quote{ border:1px solid #e5e5e5; margin-bottom:10px; background:#f9f9f9 url(/images/forum/icon_quote1.png) no-repeat 10px top }
+
+.bbs_txtbox .quote
+blockquote{ padding:5px 60px; font-size:12px; background:url(/images/forum/icon_quote2.png) no-repeat 630px bottom }
+
+.bbs_txtbox .quote
+img{ margin-bottom:0 }
+
+.t_attach{ display:none }
+
+.postattachlist{ padding-bottom:10px }
+
+.t_attachlist{ height:32px; padding-top:10px }
+
+.t_attachlist
+dt{ width:40px; float:left; font-weight:700 }
+
+.t_attachlist dt
+img{ width:32px; height:32px }
+
+.t_attachlist
+dd{ margin-left:40px; color:#999; line-height:32px }
+
+.t_attachlist dd
+img{ max-width:670px; max-height:670px }
+
+.attachimg{ height:auto }
+
+.attachimg
+dd{ margin-left:0 }
+
+.attach_popup{ width:180px; border:0 solid #f5f4f0 }
+
+.cornerlayger{ padding:6px 8px; border:1px solid #09C; background:#EBF2F8; line-height:1.6em }
+
+.minicorner{ margin-top:-1px; height:6px; background:url(/images/forum/attachinfobg.gif) no-repeat 50% 0 }
+
+.bbs_txtbtm{ padding:8px 0 18px }
+
+.fastreply, .repquote, .fastreplyno, .repquoteno{ padding-left:18px; background:url(/images/forum/icon_replyquote.png) no-repeat 0 2px }
+
+.repquote{ background-position:0 -20px }
+
+.fastreplyno{ background-position:0 -40px; color:#ccc }
+
+.repquoteno{ background-position:0 -62px; color:#ccc }
+
+.bbs_txtbtm_share
+.gap{ color:#959595; padding:0 14px }
+
+#modlayer{ position:absolute; z-index:9; width:275px; padding:12px; background-color:#fff; border:4px solid #7FCAE2 }
+
+.showselect_menu{ margin-bottom:0.8em; padding:5px; text-align:left; border:1px solid #636363; background:#FEFEFE }
+
+.pages{ float:right }
+
+.pages a, .pages strong, .pageback
+a{ display:inline-block; height:20px; line-height:20px; padding:0 5px; border:1px solid #ccc; margin-left:2px; color:#063 }
+
+.pages strong, .pages a:hover, .pageback a:hover{ border-color:#077345; background-color:#077345; color:#fff; text-decoration:none }
+
+.pageback{ float:right }
+
+.pageback a, .pages .next, .pages
+.prev{ background-image:url(/images/common/page_bg.png); background-repeat:no-repeat }
+
+.pageback
+a{ padding-left:13px; background-position:left 7px; margin-left:0 }
+
+.pageback a:hover{ background-position:left -33px }
+
+.pages
+.prev{ padding-left:13px; background-position:2px 7px }
+
+.pages .prev:hover{ background-position:2px -33px }
+
+.pages
+.next{ padding-right:13px; background-position:right -13px }
+
+.pages .next:hover{ background-position:right -53px }
+
+#visitedforums_menu{ padding:5px 10px; line-height:20px }
+
+.nopostcnt{ padding-top:16px }
+
+.nopostcnt
+.quick{ padding-left:10px; line-height:28px; color:#636363 }
+
+.nopostcnt .quick
+a{ margin-right:10px }
+
+.nopostcnt .quick
+img{ vertical-align:middle }
+
+.postauthor .avatar
+img{ width:80px; height:80px }
+
+.postcontent{ position:relative; width:557px; padding:10px; background-color:#f5f5f5 }
+
+.editor_tb{ width:555px; height:26px; border:1px solid #ccc; background:#f5f5f5; border-bottom:none }
+
+.editor_tb
+.phiz{ float:left; padding:4px 0 0 6px }
+
+.editor_tb .phiz
+a{ padding:1px 0 1px 20px; background:url(/images/forum/icon_phiz.png) no-repeat }
+
+.editor_tb
+.right{ float:right; padding-right:10px; line-height:26px }
+
+.postcontent
+.txtarea{ width:551px; height:120px; border:1px solid #ccc; border-top:none; padding:2px; overflow:auto }
+
+.bbs_sidebar{ float:right; width:270px }
+
+.bbs_toolbox{ border-bottom:8px solid #f5f4f0; margin-top:-10px }
+
+.bbs_tools{ position:relative; z-index:2; width:270px; padding:10px 0; height:32px; background:#fff }
+
+.bbs_tools_scroll{ padding-bottom:12px; background:#fff url(/images/forum/likecollect_bor.png) no-repeat center bottom }
+
+.bbs_tools .like, .bbs_tools .liked, .bbs_tools .collect, .bbs_tools .collected, .bbs_tools
+.share{ float:right; width:82px; height:32px; line-height:200px; overflow:hidden; background:url(/images/forum/likecollect.png) no-repeat 0 0 }
+
+.bbs_tools .like:hover{ background-position:0 -84px }
+
+.bbs_tools .like:active{ background-position:0 -126px }
+
+.bbs_tools
+.liked{ background-position:0 -42px; cursor:default }
+
+.bbs_tools
+.collect{ margin-left:12px; background-position:-92px 0 }
+
+.bbs_tools .collect:hover{ background-position:-92px -84px }
+
+.bbs_tools .collect:active{ background-position:-92px -126px }
+
+.bbs_tools
+.collected{ margin-left:12px; background-position:-92px -42px }
+
+.bbs_tools
+.share{ margin-left:12px; background-position:-184px 0 }
+
+.bbs_tools .share:hover{ background-position:-184px -84px }
+
+.bbs_tools .share:active{ background-position:-184px -126px }
+
+.bbs_tools_sharelay{ display:none; position:absolute; right:0; top:49px; background-color:#fff; border:1px solid #ccc; padding:12px }
+
+.bbs_tools_sharelay
+p{ float:left; padding-left:12px }
+
+.sharelay_top{ position:absolute; left:0; top:-8px; width:100%; height:8px; overflow:hidden; background:url(/images/forum/share_top.png) no-repeat right top }
+
+.bbs_txttag_box{ border-bottom:1px dotted #e2e2e2; padding-bottom:5px }
+
+.bbs_txttag_list{ margin-top:-5px; height:56px; overflow:hidden }
+
+.bbs_txttag_list
+.ask_tag{ margin-right:10px }
+
+.bbs_guidelist{ margin-left:-15px }
+
+.bbs_guidelist
+li{ float:left; display:inline; width:80px; margin-left:15px; color:#666 }
+
+.bbs_guidelist_title{ width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:5px; font-weight:bold }
+
+.bbs_placelist{ }
+
+.bbs_placelist
+li{ padding-left:58px; margin-bottom:10px; line-height:20px }
+
+.bbs_placelist_pic{ float:left; display:inline; margin-left:-58px }
+
+.bbs_placelist_title{ padding-top:3px; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.bbs_placelist_txt{ color:#636363 }
+
+.bbs_travellist{ margin-top:-5px }
+
+.bbs_travellist
+li{ padding:5px 0; border-top:1px solid #e2e2e2; line-height:18px }
+
+.bbs_travellist
+li.first{ border-top:none }
+
+.bbs_travellist
+.title{ padding-left:13px; background:url(/images/forum/icon_01.png) no-repeat 0 6px }
+
+.bbs_travellist
+.other{ padding-left:13px; padding-top:5px; color:#636363 }
+
+.bbs_travellist .other
+a{ color:#636363 }
+
+.bbs_txttit{ line-height:34px }
+
+.aimgbox{ display:inline-block; position:relative }
+
+.bbstext_photo{ display:none; position:absolute; top:0; left:0; width:325px; padding:10px 0; background-color:rgba(0, 0, 0, 0.75) }
+
+.bbstext_photo_zoombig, .bbstext_photo_like{ float:left; width:24px; height:24px; overflow:hidden; text-indent:-200px; cursor:pointer; background:url(/images/forum/photo_layicon.png) no-repeat }
+
+.bbstext_photo_zoombig{ background-position:0 0; margin-left:10px }
+
+.bbstext_photo_zoombig:hover{ background-position:0 -34px }
+
+.bbstext_photo_like{ background-position:-34px 0; margin-left:20px }
+
+.bbstext_photo_like:hover{ background-position:-34px -34px }
+
+.bbstext_photo_liked, .bbstext_photo_liked:hover{ background-position:-68px 0; cursor:default }
+
+.bbstext_photo_likeck{ background-position:-68px 0 }
+
+.bbstext_photo_sharetit{ float:left; font-size:14px; line-height:24px; color:#fff; margin:0 10px 0 20px }
+
+.moderator-memo{ border:1px solid #999; border-radius:5px; padding:3px 6px; cursor:pointer }
+
+.moderator-memo:hover{ background:#fbb }
+
+.contentbox{ padding:10px }
+
+.hotel_layer{ position:absolute; left:0; top:0; z-index:999; width:200px; background:#fff; border:1px solid #c0c0c0; box-shadow:0 0 3px rgba(0, 0, 0, 0.15); color:#636363 }
+
+.hotel_layer
+.loading{ height:140px; background:url(/images/common/tpl/wait_34.gif) no-repeat center center }
+
+.hotel_layer .pic
+img{ display:block }
+
+.hotel_layer
+.name{ padding:7px 9px 8px; font-size:14px; line-height:18px }
+
+.hotel_layer .cnname
+span{ margin-right:10px }
+
+.hotel_layer
+.pricelay{ position:absolute; top:91px; right:-4px; height:32px; padding:0 10px; background:#f5802d; box-shadow:-2px 2px 1px rgba(0, 0, 0, 0.1) }
+
+.hotel_layer
+.price{ font-size:14px; line-height:32px; color:#fff }
+
+.hotel_layer .price
+em{ font-size:26px; font-weight:700; font-family:helvetica, arial, \5b8b\4f53, sans-serif }
+
+.hotel_layer .pricelay
+.arrow{ position:absolute; right:0; bottom:-4px; width:5px; height:4px; background:url(/images/forum/text/hotel_ydprice_arrow.png) no-repeat }
+
+.hotel_layer
+.info{ padding:0 9px 5px }
+
+.hotel_layer .info
+.star{ float:left; margin-right:5px; padding-top:5px }
+
+.hotel_layer .info
+.praise{ float:left; margin-right:10px }
+
+.hotel_layer .info
+.grade{ float:left; font-size:14px; line-height:16px; padding-top:4px }
+
+.hotel_layer
+.btnlay{ padding:5px 9px 9px }
+
+.hotel_layer
+.btn{ display:block; width:180px; height:36px; overflow:hidden; background:url(/images/forum/text/hotel_ydbtn.png) no-repeat; line-height:200px; border-radius:3px; box-shadow:0 1px 1px #ddd }
+
+.hotel_layer .btn:hover{ background-position:0 -60px }

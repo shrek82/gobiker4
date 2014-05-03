@@ -1,0 +1,13 @@
+<% content_for:seajs_global do %>
+    var ueditor_options = global.ueditor_config.simple;
+    <%
+       unless options.class=="nilClass"
+         options.each do |key, value|
+    %>
+            ueditor_options.<%= key %> =<%= raw value %>;
+        <%
+           end
+           end
+        %>
+    window.ueditor = UE.getEditor('<%= id %>', ueditor_options);
+<% end %>

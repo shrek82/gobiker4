@@ -1,0 +1,87 @@
+/*main圆角*/
+.main_content_radius{-webkit-border-radius: 12px;border-radius: 12px;}
+/*在application.css基础上附加的一些样式*/
+/*记录标题*/
+.icon-list{color: #999}
+td.record-date{width:155px;text-align: center}
+/*单选框*/
+td.record-checkbox{width:40px;text-align: center}
+/*表格操作*/
+td.record-operate{width:60px;text-align: center}
+td.record-operate a{margin-right:4px}
+td.record-operate .icon-search{color: #96C877}
+td.record-operate .icon-search:hover{color: #3B6A1F;}
+td.record-operate .icon-edit{cdddolor: #4CA9D9}
+td.record-operate .icon-edit:hover{color: #086490}
+td.record-operate .icon-remove{color: #EA9381}
+td.record-operate .icon-remove:hover{color: #BC4B34}
+/*表格评论点击*/
+td.record-cmthit{width: 60px;text-align: center}
+td.record-cmthit span{color: #258717
+}
+td.record-author{width: 60px;text-align: center}
+/*待移除的tr*/
+.remove_tr,.remove_tr td{background-color: #FCB4C6}
+
+.ui_page {
+    float: right;
+    margin-top: 7px;
+    height: 22px;
+    line-height: 22px;
+}
+.ui_page a,.ui_page em,.ui_page span{
+    border-top: 1px solid #E2E2E2;
+    border-left: 1px solid #C9C9C9;
+    border-right: 1px solid #C9C9C9;
+    border-bottom: 1px solid #AEAEAE;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px 7px;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #666;
+    font-weight: 600;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    -webkit-box-shadow: 0 1px 0 white inset;
+    -moz-box-shadow: 0 1px 0 white inset;
+    box-shadow: 0 1px 0 white inset;
+}
+.ui_page a{
+    background: #5a6573;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #fdfdfd), color-stop(100%, #eaeaea));
+    background-image: -webkit-linear-gradient(top, #fdfdfd, #eaeaea);
+    background-image: -moz-linear-gradient(top, #fdfdfd, #eaeaea);
+    background-image: -o-linear-gradient(top, #fdfdfd, #eaeaea);
+    background-image: linear-gradient(top, #fdfdfd, #eaeaea);
+}
+.ui_page .disabled{
+    background: #eee;
+    color: #c5c5c5;
+    box-shadow: none;
+    border: 1px solid #E2E2E2;
+}
+.ui_page em{
+    border: 1px solid #AEAEAE;
+    -webkit-box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.2) inset, 0 1px 0 white;
+    -moz-box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.2) inset, 0 1px 0 white;
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.2) inset, 0 1px 0 white;
+}
+.ui_page a:hover{
+    border: 1px solid #AEAEAE;
+}
+.alert ul{margin-left: 15px}
+
+/*上传预览区*/
+#uploadify_preview ul{list-style:none;padding: 0;margin: 0}
+#uploadify_preview li{width:100px;height:75px;margin-bottom:5px;overflow:hidden;float: left;margin-right: 4px;padding:4px;border: 1px solid #cccccc;}
+#uploadify_preview li img{width:100px;height: 75px}
+#uploadify_preview li.cur{border: 1px solid #36ba16;background-color: #ddffda}
+
+.btn{min-width: 80px}

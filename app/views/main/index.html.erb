@@ -1,0 +1,400 @@
+<% @title=Gobiker::Application.config.site_name %>
+<% content_for:style do %>
+    <link rel="stylesheet" href="/css/index/style.css"/>
+<% end %>
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['index/latest/index'], function() {
+            console.log('index loaded!');
+        });
+    </script>
+<% end %>
+
+<% content_for:full_body do %>
+    <%= render 'focus' %>
+<% end %>
+
+<div class="ind_main">
+<div class="ind_content">
+  <%= render 'left_content' %>
+</div>
+
+<div class="ind_sidebar">
+<div class="mb30">
+<div class="ind_title">
+  <h2 class="ind_title_name">特价酒店预订</h2>
+</div>
+<style>
+        /*酒店预订*/
+    .side_booking_con {
+        padding: 20px 10px 26px;
+        border-radius: 1px;
+        box-shadow: 0 0 4px #ddd;
+        background: #edf5fa;
+    }
+
+    #searchboxInc label {
+        float: left;
+        margin-right: 5px;
+        line-height: 22px;
+    }
+
+    #searchboxInc .ui_input {
+        float: right;
+        width: 176px;
+        font-size: 12px;
+        padding: 0 0 0 10px;
+        height:24px;
+        background: #fff url(/static/media/booking_input_bg.png) no-repeat right top;
+    }
+
+    #searchboxInc #inout .ui_input {
+        background: #fff url(/static/media/booking_input_bg.png) no-repeat right bottom;
+    }
+
+    #searchboxInc .but {
+        padding-top: 12px;
+        line-height: 28px;
+    }
+
+    #inout div.clearfix {
+        margin-top: 12px;
+    }
+
+    .side_booking_placehot {
+        position: absolute;
+        z-index: 9;
+        right: 0;
+        top: 24px;
+        width: 201px;
+        border: 1px solid #ccc;
+        border-top: 0;
+        background: #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+
+    .side_booking_placehot h4 {
+        border-bottom: 1px solid #ededed;
+        line-height: 32px;
+        font-weight: 700;
+        text-indent: 10px;
+        color: #636363;
+    }
+
+    .side_booking_placehot ul {
+        padding: 5px;
+        overflow: hidden;
+        zoom: 1;
+    }
+
+    .side_booking_placehot ul li {
+        width: 50%;
+        float: left;
+        line-height: 24px;
+        text-indent: 5px;
+    }
+
+    .side_booking_placehot ul li a {
+        display: block;
+        color: #077345;
+    }
+
+    .side_booking_placehot ul li a:hover {
+        background: #e6f4d9;
+        text-decoration: none;
+    }
+
+    .side_booking_srchdrop {
+        position: absolute;
+        z-index: 9;
+        right: 0;
+        top: 24px;
+        width: 201px;
+        border: 1px solid #ccc;
+        border-top: 0;
+        background-color: #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .side_booking_srchdrop .related {
+        font-weight: bold;
+        color: #007345;
+    }
+
+    .side_booking_srchdrop_list {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .side_booking_srchdrop_list li {
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .side_booking_srchdrop_list li a {
+        display: block;
+        padding: 6px 5px 6px 10px;
+        color: #323232;
+    }
+
+    .side_booking_srchdrop_list li a:hover {
+        background-color: #e6f4d9;
+        text-decoration: none;
+        color: #323232;
+    }
+
+    .side_booking_srchdrop_list li .title_cn, .side_booking_srchdrop_list li .title_en {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .side_booking_srchdrop_list li .title_en {
+        color: #959595;
+    }
+
+    .side_booking_srchdrop_more {
+        border-top: 1px solid #ebebeb;
+        margin-top: -1px;
+    }
+
+    .side_booking_srchdrop_more a {
+        display: block;
+        padding: 6px 0;
+        color: #323232;
+        text-align: center;
+        color: #323232;
+    }
+
+    .side_booking_srchdrop_more a:hover {
+        background-color: #e6f4d9;
+        text-decoration: none;
+        color: #323232;
+    }
+
+    .side_booking_srchdrop_null {
+        text-align: center;
+        line-height: 32px;
+    }
+</style>
+<div class="side_booking_con">
+  <!-- start copy sourcecode from here -->
+  <div id="searchboxInc">
+    <form id="frm" name="frm" action="http://www.booking.com/searchresults.html" method="get" target="_blank">
+      <fieldset>
+        <span data-flag="2" class="icon_error js_poi_error" style="display:none;"></span>
+
+        <div id="destinationSearch" class="clearfix pr js_poi_input_div" style="z-index:9;">
+          <label for="destination" class="fl">目的地:</label>
+          <input class="ui_input" type="text" id="js_form_poi" name="ss" value="" title="城市, 区域, 国家, 地标, 酒店, 区" placeholder="输入城市"/>
+          <!--热门城市 -->
+          <div class="side_booking_placehot  js_hot_poi_menu">
+            <h4>热门目的地</h4>
+            <ul>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">巴黎</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">曼谷</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">清迈</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">佛罗伦萨</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">罗马</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">巴塞罗那</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">威尼斯</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">伦敦</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">香港</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">慕尼黑</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">洛杉矶</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">苏黎世</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">阿姆斯特丹</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">雅典</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">吉隆坡</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">米兰</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">新加坡</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">法兰克福</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">纽约</a></li>
+              <li class="js_hot_poi_li"><a href="javascript:void(0);">悉尼</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="inout">
+          <div id="homein" class="clearfix">
+            <label for="from" class="fl">入住日:</label>
+            <input type="text" id="from" name="from" class="ui_input" placeholder="入住日期" value="" onclick="$('.js_poi_error').html('').hide();$('.js_date_error').html('').hide();" onkeyup="VDate(this)"/>
+          </div>
+          <div id="homeout" class="clearfix">
+            <label for="to" class="fl">退房日:</label>
+            <input type="text" id="to" name="to" class="ui_input" placeholder="退房日期" value="" onclick="$('.js_poi_error').html('').hide();$('.js_date_error').html('').hide();" onkeyup="VDate(this)"/>
+          </div>
+        </div>
+        <div class="hotel_input_web" style="display:none;">
+          <strong class="fl fb cGray pl20">提供酒店的网站：</strong>
+
+          <div class="hotel_input_web_list">
+            <input type="checkbox" checked="checked" id="js_site1"/>
+            <label>Booking.com</label>
+            <input type="checkbox" id="js_site2"/>
+            <label>Agoda.com</label>
+            <input type="checkbox" id="js_site3" style="display:none;"/>
+          </div>
+        </div>
+        <div class="but">
+          <button type="button" id="js_search_button" class="ui_buttonB fr" data-bn-ipg="leftnav-booksearch">搜索</button>
+          <span class="cGreen">前台现付&nbsp;&nbsp;免预订费&nbsp;&nbsp;免费取消预订</span></div>
+      </fieldset>
+    </form>
+  </div>
+  <!-- end copy sourcecode until here -->
+</div>
+</div>
+<div>
+  <div class="ind_title">
+    <h2 class="ind_title_name">穷游折扣</h2>
+    <a class="ind_title_more" href="http://www.qyer.com/lastminute/" data-bn-ipg="lm-more" title="更多穷游折扣">更多</a>
+  </div>
+  <ul class="ind_crebate">
+    <li>
+      <p class="tit">
+        <a href="http://www.qyer.com/lastminute/deal/1113/" title="东航杭州往返曼谷特价机票" target="_blank" data-bn-ipg="lm-1">东航杭州往返曼谷特价机票</a>
+      </p>
+
+      <p class="prices"><em>1780</em>元</p>
+    </li>
+    <li>
+      <p class="tit">
+        <a href="http://www.qyer.com/lastminute/deal/1118/" title="港龙航空正十一国内多城市往返台北机票特价" target="_blank" data-bn-ipg="lm-2">港龙航空正十一国内多城市往返台北机票特价</a>
+      </p>
+
+      <p class="prices"><em>2005</em>元起</p>
+    </li>
+  </ul>
+</div>
+<div class="ind_sldline2"></div>
+
+<div>
+  <div class="ind_title">
+    <h2 class="ind_title_name">穷游活动</h2>
+  </div>
+  <div>
+    <iframe id='a63818f0' name='a63818f0' src='http://ad.qyer.com/www/delivery/afr.php?zoneid=27&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='270' height='186'>
+      <a href='http://ad.qyer.com/www/delivery/ck.php?n=a0f1a1b0&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ad.qyer.com/www/delivery/avw.php?zoneid=27&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a0f1a1b0' border='0' alt=''/></a>
+    </iframe>
+  </div>
+</div>
+<div class="ind_sldline2"></div>
+<div>
+  <div class="ind_title">
+    <h2 class="ind_title_name">每日光荣榜</h2>
+  </div>
+  <div class="ind_honortit"><span class="explain">贡献值最高</span><span class="title">贡献最多者</span></div>
+  <ul class="ind_honorlist clearfix">
+    <li>
+      <a href="http://user.qyer.com/user_uid_593091" data-bn-ipg="honor-contri-1" title="wangapo"><img src="http://static.qyer.com/data/images/noavatar_middle.gif" width="48" height="48" alt="wangapo"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_319596" data-bn-ipg="honor-contri-2" title="anleo"><img src="http://static.qyer.com/data/avatar/000/31/95/96_avatar_middle.jpg" width="48" height="48" alt="anleo"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_1650504" data-bn-ipg="honor-contri-3" title="sean3076"><img src="http://static.qyer.com/data/avatar/001/65/05/04_avatar_middle.jpg" width="48" height="48" alt="sean3076"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_1710181" data-bn-ipg="honor-contri-4" title="luiszhangxu"><img src="http://static.qyer.com/data/avatar/001/71/01/81_avatar_middle.jpg" width="48" height="48" alt="luiszhangxu"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_164029" data-bn-ipg="honor-contri-5" title="njyinhc"><img src="http://static.qyer.com/data/images/noavatar_middle.gif" width="48" height="48" alt="njyinhc"></a>
+    </li>
+  </ul>
+  <div class="ind_honortit"><span class="explain">游记被回复最多</span><span class="title">最佳写作者</span></div>
+  <ul class="ind_honorlist clearfix">
+    <li>
+      <a href="http://user.qyer.com/user_uid_177463" data-bn-ipg="honor-writer-1" title="皮皮看灰机"><img src="http://static.qyer.com/data/avatar/000/17/74/63_avatar_middle.jpg" width="48" height="48" alt="皮皮看灰机"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_1385379" data-bn-ipg="honor-writer-2" title="穷游活动君"><img src="http://static.qyer.com/data/avatar/001/38/53/79_avatar_middle.jpg" width="48" height="48" alt="穷游活动君"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_899033" data-bn-ipg="honor-writer-3" title="少儿不遗"><img src="http://static.qyer.com/data/avatar/000/89/90/33_avatar_middle.jpg" width="48" height="48" alt="少儿不遗"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_1750114" data-bn-ipg="honor-writer-4" title="nikolausatp"><img src="http://static.qyer.com/data/images/noavatar_middle.gif" width="48" height="48" alt="nikolausatp"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_458481" data-bn-ipg="honor-writer-5" title="思而行远"><img src="http://static.qyer.com/data/images/noavatar_middle.gif" width="48" height="48" alt="思而行远"></a>
+    </li>
+
+  </ul>
+  <div class="ind_honortit"><span class="explain">回答问题最多</span><span class="title">最乐于助人</span></div>
+  <ul class="ind_honorlist clearfix">
+    <li>
+      <a href="http://user.qyer.com/user_uid_319596" data-bn-ipg="honor-helper-1" title="anleo"><img src="http://static.qyer.com/data/avatar/000/31/95/96_avatar_middle.jpg" width="48" height="48" alt="anleo"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_1504166" data-bn-ipg="honor-helper-2" title="fionayyfiona"><img src="http://static.qyer.com/data/avatar/001/50/41/66_avatar_middle.jpg" width="48" height="48" alt="fionayyfiona"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_730302" data-bn-ipg="honor-helper-3" title="小9"><img src="http://static.qyer.com/data/avatar/000/73/03/02_avatar_middle.jpg" width="48" height="48" alt="小9"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_228304" data-bn-ipg="honor-helper-4" title="visa007"><img src="http://static.qyer.com/data/avatar/000/22/83/04_avatar_middle.jpg" width="48" height="48" alt="visa007"></a>
+    </li>
+    <li>
+      <a href="http://user.qyer.com/user_uid_1258398" data-bn-ipg="honor-helper-5" title="if衣服if"><img src="http://static.qyer.com/data/avatar/001/25/83/98_avatar_middle.jpg" width="48" height="48" alt="if衣服if"></a>
+    </li>
+  </ul>
+</div>
+<div class="ind_sldline2"></div>
+<div class="mt30">
+  <iframe id='a88d21e1' name='a88d21e1' src='http://ad.qyer.com/www/delivery/afr.php?zoneid=28&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='270' height='80'>
+    <a href='http://ad.qyer.com/www/delivery/ck.php?n=a7451bc3&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ad.qyer.com/www/delivery/avw.php?zoneid=28&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a7451bc3' border='0' alt=''/></a>
+  </iframe>
+</div>
+<div class="mt30">
+  <iframe id='a362a1fa' name='a362a1fa' src='http://ad.qyer.com/www/delivery/afr.php?zoneid=183&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='270' height='215'>
+    <a href='http://ad.qyer.com/www/delivery/ck.php?n=a87230cc&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ad.qyer.com/www/delivery/avw.php?zoneid=183&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a87230cc' border='0' alt=''/></a>
+  </iframe>
+</div>
+
+<div class="mt30">
+  <div class="ind_title">
+    <h2 class="ind_title_name">邮件订阅</h2>
+  </div>
+  <div class="ind_emailyd">
+    <p class="title">QYER Newsletter</p>
+
+    <p class="text">获得定期的内容更新，产品功能发布和独特的优惠信息，立刻订阅穷游邮件！</p>
+
+    <div class="clearfix">
+      <form action='http://user.qyer.com/subscibe.php' method='get'>
+        <input type="text" name="email" value="" placeholder="输入E-mail地址" class="ui_input"/><input type="submit" value="订阅" class="ui_buttonB" data-bn-ipg="leftnav-mailsubscribe"/>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="ind_sldline2"></div>
+<div>
+  <h2 class="ind_weibotit fontYaHei">在新浪微博关注穷游网</h2>
+  <ul class="ind_weibolist">
+    <li><a href="http://weibo.com/go2eu" target="_blank" rel="nofollow" data-bn-ipg="weibo-1">@穷游网</a> - 官方微博</li>
+    <li><a href="http://weibo.com/going2eu" target="_blank" rel="nofollow" data-bn-ipg="weibo-2">@穷游锦囊</a> - 出境旅行指南
+    </li>
+    <li><a href="http://weibo.com/qyask" target="_blank" rel="nofollow" data-bn-ipg="weibo-3">@穷游问答</a> - 旅行问答君</li>
+    <li><a href="http://weibo.com/lastminuteexpress" target="_blank" rel="nofollow" data-bn-ipg="weibo-4">@穷游折扣</a> -
+      全球打折优惠
+    </li>
+  </ul>
+</div>
+</div>
+<div class="cb"></div>
+</div>
+
+<div class="ind_partner_bg">
+  <div class="ind_partner">
+    <img src="http://static.qyer.com/images/www/index/ind_partner.png" alt="" width="500" height="80" border="0" usemap="#indpartner">
+    <map name="indpartner" id="indpartner">
+      <area shape="rect" coords="33,16,125,63" href="http://www.airasia.com/cn/zh/home.page" target="_blank" rel="nofollow" alt="亚航" title="亚航" data-bn-ipg="bottom-1"/>
+      <area shape="rect" coords="154,20,298,58" href="http://www.booking.com/index.html?aid=336174" target="_blank" rel="nofollow" alt="Booking" title="Booking" data-bn-ipg="bottom-2"/>
+      <area shape="rect" coords="328,19,393,62" href="http://bbs.qyer.com/forum-100-1.html" target="_blank" alt="境外使用银联卡" title="境外使用银联卡" data-bn-ipg="bottom-3"/>
+      <area shape="rect" coords="423,20,497,60" href="http://bx.qyer.com/" target="_blank" alt="境外旅游保险" title="境外旅游保险" data-bn-ipg="bottom-4"/>
+    </map>
+  </div>
+</div>
+

@@ -1,0 +1,560 @@
+#modlayer{ z-index:12 }
+
+.bbs_viewthread{ position:relative; z-index:10 }
+
+.fastcheck{ margin-top:0; padding-top:10px }
+
+.columntype
+td{ border-left:0 }
+
+#wrap{ background:none; margin:0 auto 20px }
+
+.editorcontent{ background:none; padding:0 }
+
+.float_ctrl
+em{ color:#077345 }
+
+.float_ctrl{ margin-bottom:0 }
+
+.float_typeid{ width:86px; background:#f3f3f3; border-radius:2px; margin:6px 0 0 0 }
+
+.float_typeid
+#typeid_ctrl{ background:url(http://static.qyer.com/images/common/select_bg.png) no-repeat right 9px; color:#636363 !important; width:auto; padding:0 15px 0 5px; border:1px solid #ccc; height:22px; border-radius:2px; line-height:22px }
+
+.float_typeid #typeid_ctrl:hover, .float_typeid #typeid_ctrl:focus{ background:url(http://static.qyer.com/images/common/select_bg.png) no-repeat right 9px; border:1px solid #ccc }
+
+.select_menu{ width:118px !important; line-height:22px; background:#fff; border:1px solid #ccc; border-radius:2px; margin-top:23px; border-top:0 }
+
+.select_menu
+ul{ margin:0 }
+
+.select_menu ul
+li{ line-height:22px; border-top:1px solid #ebebeb; padding:0 5px; color:#636363 }
+
+.select_menu ul li:hover{ background:#e6f4d9 }
+
+.travel_tit_form
+.dropdown{ min-width:86px; background:#f3f3f3; margin-top:6px }
+
+.travel_tit_form .dropdown dt
+a{ min-width:64px; border-radius:2px }
+
+.travel_tit_form .dropdown dd
+ul{ top:-1px; min-width:84px; border-top:0 }
+
+.travel_tit_form .dropdown dd ul li
+a{ line-height:22px; border-top:1px solid #ebebeb; padding:0 5px }
+
+.ask_tag_list{ padding:0 0 0 10px; display:inline-block; color:#02734a; background:url(/images/ask/tag_ask.png) no-repeat 0 0; margin:5px 0; white-space:nowrap }
+
+.ask_tag_list
+.ask_tag_strong{ display:inline-block; padding:0 10px 0 0; background:url(/images/ask/tag_ask.png) no-repeat right -36px; white-space:nowrap; font-family:\5b8b\4f53, sans-serif }
+
+.ask_tag_list
+span{ float:left }
+
+.ask_tag_list
+a{ float:left; background:url(/images/ask/ask_tag_close.png) no-repeat 2px 2px; width:10px; height:10px; line-height:300%; overflow:hidden; color:#fff; text-decoration:none; margin:4px 0 0 4px }
+
+.ask_tag_list a:hover{ background:url(/images/ask/ask_tag_closehover.png) no-repeat }
+
+.travel_con_show{ width:17px; height:17px; display:block; cursor:pointer }
+
+.travel_con_show1{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat 0 -17px }
+
+.travel_con_show1:hover{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat 0 0 }
+
+.travel_con_hide1{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat 0 -51px }
+
+.travel_con_hide1:hover{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat 0 -34px }
+
+.bbs_found_bg{ background:url(/images/bbs/travel/bbs_found_bg1.png); position:absolute; left:0; top:0; z-index:100001 }
+
+.bbs_found_tips{ position:absolute; left:0; top:0; z-index:100002 }
+
+.bbs_found_item{ margin:150px auto 0; width:679px; height:343px; background:url(/images/bbs/travel/bbs_found_bg.png) no-repeat; position:relative }
+
+.bbs_found_close{ width:42px; height:41px; background:url(/images/bbs/travel/bbs_found_close.png) no-repeat; cursor:pointer; position:absolute; right:-10px; top:-10px }
+
+.bbs_found_close:hover{ background-position:left center }
+
+.bbs_found_close:active{ background-position:left bottom }
+
+.bbs_found_btn{ position:absolute; top:200px; left:322px }
+
+.bbs_found_btn
+a{ display:inline-block; width:175px; height:52px; text-indent:-9999px; background:url(/images/bbs/travel/bbs_found_btn.png) no-repeat }
+
+.bbs_found_btn a:hover{ background-position:left center }
+
+.bbs_found_btn a:active{ background-position:left bottom }
+
+.zindex10000{ z-index:10000 }
+
+.bbs_travel_item_photo{ margin-top:20px; width:262px; float:right; position:relative; z-index:59 }
+
+.bbs_travel_item_photo_tit{ height:28px; position:relative }
+
+.bbs_travel_item_photo_tit
+.icon_doubt{ padding:0; width:16px; height:16px; background-position:0 -80px }
+
+.bbs_photo_bg{ position:absolute; left:0; top:0; z-index:100001; display:none }
+
+.bbs_photo_ask{ width:532px; position:absolute; left:0; *left:-552px; top:0; *top:-50px; z-index:100002; display:none }
+
+.bbs_photo_ask1{ width:522px; background:url(/images/bbs/travel/bbs_add_icon_bg.png); padding:5px; border-radius:5px }
+
+.bbs_photo_ask2{ border:1px solid #7E7E7E; background:#fff }
+
+.bbs_photo_ask
+.ui_pupBox_close{ right:11px; top:11px }
+
+.bbs_photo_bg{ background:url(/images/common/popup_bg.png) }
+
+.bbs_photo_icon{ background:url(/images/bbs/travel/bbs_add_icon_tips.png) no-repeat; width:52px; height:103px; position:absolute; right:-46px; top:30px }
+
+.editorcontent .bbs_travel_item_photo_tit
+a{ color:#fff }
+
+.editorcontent .bbs_travel_item_photo_tit
+.bbs_travel_item_photo_tit_ico{ color:#006AAD }
+
+.bbs_travel_item_photo_tit_ico{ float:right; width:44px; height:17px; margin-top:5px; line-height:17px }
+
+.bbs_travel_item_photo_tit_ico1{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat right -17px }
+
+.bbs_travel_item_photo_tit_ico1:hover{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat right 0 }
+
+.bbs_travel_item_photo_tit_ico2{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat right -51px }
+
+.bbs_travel_item_photo_tit_ico2:hover{ background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat right -34px }
+
+.bbs_travel_item_photo_page{ text-align:center; margin-top:10px; padding-left:80px; height:30px; zoom:1 }
+
+.bbs_travel_item_photo_page
+a{ float:left; width:30px; height:30px; text-indent:-9999px; margin:0 8px }
+
+.bbs_travel_item_photo_page
+.bbs_travel_item_photo_page_prev{ background:url(/images/bbs/travel/bbs_travel_item_photo_page.png) no-repeat 0 -30px }
+
+.bbs_travel_item_photo_page
+.bbs_travel_item_photo_page_prev_disabled{ background:url(/images/bbs/travel/bbs_travel_item_photo_page.png) no-repeat 0 0; cursor:default }
+
+.bbs_travel_item_photo_page
+.bbs_travel_item_photo_page_next{ background:url(/images/bbs/travel/bbs_travel_item_photo_page.png) no-repeat -30px 0 }
+
+.bbs_travel_item_photo_page
+.bbs_travel_item_photo_page_next_disabled{ background:url(/images/bbs/travel/bbs_travel_item_photo_page.png) no-repeat -30px -30px; cursor:default }
+
+.bbs_travel_item_photo_con{ margin-top:5px; width:262px }
+
+.bbs_travel_item_photo_con_tips{ position:absolute; left:-180px; top:70px; width:170px; border:1px solid #ffd08a; background:#ffffe6; line-height:32px; height:32px; font-family:"hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif }
+
+.bbs_travel_item_photo_con_tips
+a{ margin:7px 3px 0 8px; width:18px; height:18px; background:url(/images/bbs/travel/bbs_travel_item_photo_con_tips_close.png) no-repeat; text-indent:-9999px; float:left }
+
+.bbs_travel_item_photo_con_tips a:hover{ background:url(/images/bbs/travel/bbs_travel_item_photo_con_tips_close.png) no-repeat -18px 0 }
+
+.bbs_travel_item_photo_con_tips a:active{ background:url(/images/bbs/travel/bbs_travel_item_photo_con_tips_close.png) no-repeat -36px 0 }
+
+.bbs_travel_item_photo_con_tips
+span{ background:url(/images/bbs/travel/bbs_travel_item_photo_con_tips_ico.png) no-repeat; width:5px; height:9px; display:block; position:absolute; right:-5px; top:12px }
+
+.bbs_travel_item_photo_select{ border:1px solid #dbdbdb; background:#f1f1f1; position:relative; z-index:35 }
+
+.bbs_travel_item_photo_select
+strong{ display:block; line-height:30px; cursor:pointer; width:250px }
+
+.bbs_travel_item_photo_select
+.bbs_travel_item_photo_select_sup{ background:url(/images/bbs/travel/bbs_travel_item_photo_select_ico.png) no-repeat 241px -6px }
+
+.bbs_travel_item_photo_select
+.bbs_travel_item_photo_select_sdown{ background:url(/images/bbs/travel/bbs_travel_item_photo_select_ico.png) no-repeat 241px -48px }
+
+.bbs_travel_item_photo_select
+ul{ border:1px solid #dbdbdb; border-top:0; width:260px; line-height:30px; position:absolute; top:30px; left:-1px; background:#fff; display:none }
+
+.bbs_travel_item_photo_select
+.bbs_overflow_ul{ height:341px; overflow:hidden; overflow-y:scroll }
+
+.bbs_travel_item_photo_select ul
+li{ border-top:1px solid #dbdbdb }
+
+.bbs_travel_item_photo_select ul li
+a{ display:block; padding-left:10px; color:#636363 }
+
+.bbs_travel_item_photo_select ul li a:hover{ background:#e7f4d6; text-decoration:none }
+
+.bbs_travel_item_photo_list{ border:1px solid #dbdbdb; border-top:0; height:345px; position:relative; z-index:33 }
+
+.bbs_travel_item_photo_list
+ul{ padding:0 5px 5px 0; float:left }
+
+.bbs_travel_item_photo_list
+li{ float:left; padding:5px 0 0 5px }
+
+.bbs_travel_item_photo_list li
+span{ display:none }
+
+.bbs_travel_item_photo_list li
+strong{ display:none }
+
+.bbs_travel_item_photo_list .pr
+strong{ background-color:rgba(0, 0, 0, 0.3); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#4c000000', EndColorStr='#4c000000'); position:absolute; left:5px; top:5px; width:80px; height:80px; display:block }
+
+.bbs_travel_item_photo_list .pr
+span{ border:1px solid #ffd088; padding:0 5px; display:inline; line-height:18px; background:#ffffe5; box-shadow:1px 1px 2px #ccc; position:absolute; left:60px; top:60px; width:100px }
+
+.bbs_travel_item_photo_list li
+img{ float:left }
+
+.travel_warp{ width:980px; margin:0 auto; padding-bottom:20px; text-align:left }
+
+.travel_tit{ position:relative; z-index:160 }
+
+.travel_tit_form{ padding-top:3px; position:relative; height:34px }
+
+.travel_tit_form_tips{ position:absolute; left:720px; top:32px; width:180px; padding:10px 20px; border:5px solid #ccc; background:#fff; border-radius:5px; display:none }
+
+.travel_tit .travel_tit_form_tips
+p{ font-size:14px; font-family:"hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif; color:#636363; line-height:20px }
+
+.travel_tit .travel_tit_form_tips div
+a{ display:inline-block; margin:0 4px }
+
+.travel_tit .travel_tit_form_tips div
+.travel_tit_form_tips_edit{ background:#f5f5f5; border:1px solid #ccc; color:#636363; text-shadow:0 0 0 #05452A }
+
+.travel_tit .travel_tit_form_tips div .travel_tit_form_tips_edit:hover{ color:#8b8b8b }
+
+.travel_tit_form
+.ui_input{ float:left; margin-right:20px; width:678px; padding:5px 10px; font-size:18px }
+
+.travel_tit
+p{ line-height:24px }
+
+.travel_del_form_tips{ z-index:140 !important; position:absolute; right:-40px; bottom:32px; width:180px; padding:10px 20px; border:5px solid #ccc; background:#fff; border-radius:5px; text-align:center; display:none }
+
+.travel_del_form_tips
+p{ font-size:14px; font-family:"hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif; color:#636363; line-height:28px }
+
+.travel_del_form_tips div
+a{ display:inline-block; margin:0 4px }
+
+.travel_del_form_tips div
+.travel_tit_form_tips_edit{ background:#f5f5f5; border:1px solid #ccc; color:#636363; text-shadow:0 0 0 #05452A }
+
+.travel_del_form_tips div .travel_tit_form_tips_edit:hover{ color:#8b8b8b }
+
+.travel_con{ margin-top:10px }
+
+.travel_con_base{ width:700px }
+
+.travel_con_tips{ background:#e2f1f6 url(/images/bbs/travel/travel_con_tips_ico.png) no-repeat 20px center; padding:10px 0 10px 70px; position:relative; margin-bottom:10px; border-radius:5px }
+
+.travel_con_tips
+h4{ font-size:18px; color:#1e4c96; font-weight:700 }
+
+.travel_con_tips
+p{ color:#636363 }
+
+.travel_con_tips_close{ background:url(/images/bbs/travel/travel_con_tips_close.png) no-repeat; width:9px; height:9px; display:block; position:absolute; right:10px; top:10px; cursor:pointer }
+
+.travel_all_con{ padding:0 0 10px 58px; border-bottom:1px dashed #e2e2e2; background:url(/images/bbs/travel/travel_all_list_icon.png) no-repeat; position:relative; z-index:50 }
+
+.travel_all_con
+h4{ line-height:24px }
+
+.travel_all_select{ line-height:24px }
+
+.travel_all_select
+.t_w_100{ width:100px; background:url(/images/bbs/travel/travel_all_date_icon.png) no-repeat right center }
+
+.travel_all_select
+.t_w_20{ width:20px }
+
+.travel_all_select
+.t_w_40{ width:42px }
+
+.travel_all_con
+.travel_con_show{ position:absolute; bottom:10px; right:10px; z-index:93 }
+
+.travel_all_con_none{ background:url(/images/bbs/travel/travel_all_con_none.png) no-repeat; width:293px; height:18px; position:absolute; right:170px; top:16px }
+
+.travel_item_textarea{ width:698px; float:left; margin-top:20px; border:1px solid #dbdbdb }
+
+.travel_item{ border-bottom:1px dashed #e2e2e2; position:relative; z-index:40px; margin-top:10px }
+
+.travel_item_addlist{ padding-left:16px }
+
+.travel_item_addlist
+a{ display:inline-block; background:url(/images/bbs/travel/travel_item_addlist_bg.png) no-repeat; color:#6bac72; line-height:25px; padding-left:28px }
+
+.travel_item_addlist a:hover{ background:url(/images/bbs/travel/travel_item_addlist_bg.png) no-repeat 0 -25px; color:#077345; text-decoration:none }
+
+.travel_item_tips{ position:absolute; width:226px; border:1px solid #fed08a; background:#ffffe6; top:-69px; right:-278px; padding:6px 20px 6px 10px; z-index:70 }
+
+.travel_item_tips
+span{ position:absolute; width:5px; height:9px; background:url(/images/bbs/travel/travel_item_tips_sj.png) no-repeat; display:block; left:-5px; top:84px; text-indent:-9999px }
+
+.travel_item_ul{ background:url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 26px 0; width:100%; float:left; position:relative; z-index:88 }
+
+.travel_item_list{ width:100%; float:left; padding:23px 0 5px }
+
+.travel_item_list_date_c{ width:55px; float:left; position:relative; height:55px }
+
+.travel_item_list_append{ background:url(/images/bbs/travel/travel_item_list_cr.png) no-repeat; width:22px; height:23px; display:block; text-indent:-9999px; margin-left:16px; position:absolute; top:-28px; left:0; z-index:84 }
+
+.travel_item_list_append:hover{ background:url(/images/bbs/travel/travel_item_list_cr.png) no-repeat 0 -23px; width:110px; text-indent:30px; line-height:23px; color:#6bac72; text-decoration:none }
+
+.travel_item_list_date{ width:55px; height:55px; background:url(/images/bbs/travel/travel_item_list_date.png) no-repeat 0 0; display:block; line-height:55px; text-align:center; font-size:14px; font-family:"hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif; color:#29a968; text-indent:0; z-index:85; position:absolute; left:0; top:0 }
+
+.travel_item_list_date:hover{ text-indent:-9999px; background:url(/images/bbs/travel/travel_item_list_date.png) no-repeat 0 -55px }
+
+.travel_item_list_date:active{ text-indent:-9999px; background:url(/images/bbs/travel/travel_item_list_date.png) no-repeat 0 -110px }
+
+.travel_item_con_clist{ width:635px; float:right; margin-bottom:10px }
+
+.travel_item_list_con_tit{ float:left; font-size:14px; width:70px; text-align:right; line-height:24px }
+
+.travel_item_con_clist
+textarea{ width:565px; border:0; border-bottom:1px solid #c8c8c8; font-size:14px; height:18px; line-height:18px; padding:3px 0 5px; float:right }
+
+.travel_item_con_clist_red{ margin-top:5px; width:565px; float:right; display:none }
+
+.travel_item_con_clist_i{ width:565px; border-bottom:1px solid #c8c8c8; padding-bottom:3px; float:right }
+
+.travel_item_con_clist_i
+.ask_tag_list{ float:left; margin:3px 5px; height:18px; position:relative; z-index:95 }
+
+.travel_item_con_clist_i .ask_tag_list
+.ask_tag_strong{ white-space:nowrap; height:18px; padding-right:24px; position:relative; z-index:96 }
+
+.travel_item_con_clist_i .ask_tag_list
+span{ display:inline-block; float:none }
+
+.travel_item_con_clist_i .ask_tag_list
+a{ line-height:inherit; float:none; display:inline-block; position:absolute; right:10px; top:0; z-index:97 }
+
+.travel_item_con_clist_i
+.ui_input{ float:left; border:0; height:20px; padding:0; margin:2px 0; width:168px; font-size:14px }
+
+.plan_search_drop{ position:absolute; left:0; top:27px; width:346px; z-index:110; border:1px solid #ccc; background-color:#fff; display:none }
+
+.plan_search_drop
+.related{ font-weight:bold; color:#007345 }
+
+.plan_search_drop_list{ width:100%; overflow:hidden }
+
+.plan_search_drop_list
+dt{ float:left; padding-left:10px; padding-top:6px; color:#959595 }
+
+.plan_search_drop_list
+dd{ float:right; border-left:1px solid #ebebeb; border-bottom:1px solid #ebebeb }
+
+.plan_search_drop_list dd
+a{ display:block; width:256px; padding:6px 5px 6px 10px; color:#323232 }
+
+.plan_search_drop_list dd a:hover{ text-decoration:none; background-color:#e6f4d9; color:#323232 }
+
+.plan_search_drop_list dd
+.current{ background-color:#e6f4d9; color:#323232 }
+
+.plan_search_drop_list dd
+.title_cn{ display:block }
+
+.plan_search_drop_list dd
+.title_en{ display:block; color:#959595 }
+
+.plan_search_drop_list_place dd .title_cn, .plan_search_drop_list_place dd
+.title_en{ width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.plan_search_drop_list_ask dd
+a{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.plan_search_drop_more{ border-top:1px solid #ebebeb; margin-top:-1px }
+
+.plan_search_drop_more
+a{ display:block; width:100%; padding:6px 0; color:#323232; text-align:center; color:#323232 }
+
+.plan_search_drop_more a:hover{ background-color:#e6f4d9; text-decoration:none; color:#323232 }
+
+.plan_search_drop_null{ text-align:center; line-height:32px }
+
+.tra_bgz_con{ padding-bottom:10px; border-bottom:1px dashed #e2e2e2; line-height:14px }
+
+.tra_bgz_con
+input{ float:left; width:14px; height:14px; margin:1px 6px 0 0 }
+
+.bbs_travel_item{ margin-top:20px }
+
+.bbs_travel_info{ background:#f7f7f7 url(/images/bbs/travel/travel_all_list_icon.png) no-repeat; padding-left:58px; position:relative; height:48px }
+
+.bbs_travel_info
+.travel_con_show{ position:absolute; top:15px; right:10px }
+
+.bbs_travel_copy{ text-align:right; margin-top:10px; border-top:1px dashed #e2e2e2; padding-top:10px }
+
+.bbs_travel_copy
+a{ display:inline-block; margin-right:10px; line-height:22px }
+
+.bbs_travel_copy
+.bbs_copy_down{ display:none; padding-left:16px; background:url(/images/plan/plans/bbs_travel_copy_icon.png) no-repeat 0 0 }
+
+.bbs_travel_copy
+.bbs_copy_copy{ padding:0 10px 0 25px; background:#73b084 url(http://static.qyer.com/images/plan/plans/preview_link.png) no-repeat 5px 0; color:#fff; border-radius:3px }
+
+.bbs_travel_copy .bbs_copy_copy:hover{ text-decoration:none; background:#63a674 url(http://static.qyer.com/images/plan/plans/preview_link.png) no-repeat 5px 0 }
+
+.bbs_travel_copy
+.bbs_travel_copy_cp{ background:url(/images/bbs/travel/bbs_travel_copy_cp.png) no-repeat 0 center; padding-left:15px }
+
+.bbs_travel_copy
+.bbs_travel_copy_bj{ background:url(/images/bbs/travel/bbs_travel_copy_bj.png) no-repeat 0 center; padding-left:20px }
+
+.bbs_travel_info
+.bbs_travel_copy{ position:absolute; right:24px; top:13px; border:0; padding:0; margin:0 }
+
+.bbs_travel_info .bbs_travel_copy
+.f14{ margin-top:-2px }
+
+.bbs_travel_info
+h4{ line-height:24px; padding:2px 0 0 }
+
+.bbs_travel_info
+p{ line-height:20px }
+
+.bbs_travel_info p
+span{ padding-right:12px }
+
+.bbs_travel_info p span
+.bbs_travel_info_1{ min-width:132px; display:inline-block }
+
+.bbs_travel_info p span
+.bbs_travel_info_2{ min-width:21px; display:inline-block }
+
+.bbs_travel_list{ margin-top:20px }
+
+.bbs_travel_list
+ul{ width:100%; float:left; background:url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 26px 0 }
+
+.bbs_more_down, .bbs_more_up{ line-height:30px; border-radius:5px; display:block; height:30px }
+
+.bbs_more_down{ background:#f7f7f7 }
+
+.bbs_more_down span, .bbs_more_up
+span{ height:17px; margin-top:6px; line-height:17px; display:inline-block; padding-left:20px; background:url(/images/bbs/travel/bbs_travel_item_photo_tit_ico.png) no-repeat; cursor:pointer }
+
+.bbs_more_down
+span{ background-position:0 -17px }
+
+.bbs_more_down:hover{ background:#f0efef; text-decoration:none }
+
+.bbs_more_up{ background:#f7f7f7 }
+
+.bbs_more_up
+span{ background-position:0 -51px }
+
+.bbs_more_up:hover{ background:#f0efef; text-decoration:none }
+
+.bbs_travel_list_ul{ margin-top:10px }
+
+.bbs_travel_list_ul
+ul{ background:none }
+
+.bbs_travel_list
+.bbs_travel_list_li{ padding:0 0 10px; background:url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li:hover{ background:#eff6e9 url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li_h:hover{ background:#fff url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li:hover
+.bbs_travel_city_hover{ position:relative; z-index:100 }
+
+.bbs_travel_list .bbs_travel_list_li:hover .bbs_travel_city_hover
+a{ background:#eff6e9 url(/images/bbs/travel/bbs_travel_list_city_bg2.png) no-repeat right center; text-decoration:none; width:48px; padding-right:21px; padding-left:10px; line-height:24px; text-indent:0; position:absolute; right:0; top:0 }
+
+.bbs_travel_list
+.bbs_travel_list_ldiv{ padding:10px 10px 0; width:650px; float:left }
+
+.bbs_travel_list .bbs_travel_list_ldiv:hover{ background:#eff6e9 url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li_h:hover
+.bbs_travel_list_ldiv{ background:none !important }
+
+.bbs_travel_list .bbs_travel_list_li_h .bbs_travel_list_ldiv:hover{ background:none !important }
+
+.bbs_travel_list
+.bbs_travel_list_dashed{ background:url(/images/bbs/travel/travel_item_ul_bg_1.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_dashed:hover{ background:url(/images/bbs/travel/travel_item_ul_bg_1.png) repeat-y 36px 0 !important }
+
+.bbs_travel_list
+.bbs_travel_list_li_bg{ background:url(/images/bbs/travel/travel_item_ul_bg_1.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li_bg:hover{ background:url(/images/bbs/travel/travel_item_ul_bg_1.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li_bg
+.bbs_travel_list_ldiv{ background:url(/images/bbs/travel/travel_item_ul_bg_1.png) repeat-y 36px 0 }
+
+.bbs_travel_list .bbs_travel_list_li_bg:hover
+.bbs_travel_list_ldiv{ background:url(/images/bbs/travel/travel_item_ul_bg_1.png) repeat-y 36px 0 }
+
+.bbs_travel_list
+.listaddclass{ background-image:url(/images/bbs/travel/travel_item_ul_bg.png) repeat-y 36px 0 !important }
+
+.bbs_travel_list
+li{ width:100%; float:left; padding-bottom:20px }
+
+.bbs_travel_list .bbs_travel_list_con_none
+.bbs_travel_list_ldiv{ background:#fff }
+
+.bbs_travel_list_con{ word-wrap:break-word; word-break:break-all }
+
+.bbs_travel_list_date{ float:left; width:55px; height:55px; background:url(/images/bbs/travel/travel_item_list_date.png) no-repeat 0 0; display:block; line-height:55px; text-align:center; font-size:14px; font-family:"hiragino sans gb", "Microsoft YaHei", \5b8b\4f53, sans-serif; color:#29a968; text-indent:0 }
+
+.bbs_travel_list_wenh{ width:25px; margin:0 15px; display:inline; float:left; text-indent:-9999px; height:24px; background:url(/images/bbs/travel/travel_item_list_wenh.png) no-repeat }
+
+.bbs_travel_list_all{ width:559px; float:left; margin-left:10px; display:inline }
+
+.bbs_travel_list_city
+strong{ line-height:28px; float:left; font-size:14px; font-weight:700; padding-left:17px; margin-right:10px; background:url(/images/bbs/travel/bbs_travel_list_city_sequence.png) no-repeat 0 center; color:#000; white-space:nowrap }
+
+.bbs_travel_list_city strong
+a{ color:#000; text-decoration:underline }
+
+.bbs_travel_list_city strong a:hover{ color:#006aad }
+
+.bbs_travel_city_hover{ width:16px; height:15px; float:right; margin-left:10px; display:inline }
+
+.bbs_travel_city_hover:hover{ position:relative; z-index:100 }
+
+.bbs_travel_city_hover
+a{ background:url(/images/bbs/travel/bbs_travel_list_city_bg2.png) no-repeat right center; height:24px; display:block; float:right; width:16px; text-indent:-9999px }
+
+.bbs_travel_city_hover a:hover{ background:#fff url(/images/bbs/travel/bbs_travel_list_city_bg2.png) no-repeat right center; text-decoration:none; width:48px; padding-right:21px; padding-left:10px; line-height:24px; text-indent:0; position:absolute; right:0; top:0 }
+
+.bbs_travel_list_ul .bbs_travel_city_hover
+a{ color:#005826 }
+
+.bbs_travel_list_ul .bbs_travel_city_hover a:hover{ background-color:#eff6e9 }
+
+.bbs_travel_city_tips{ width:16px; height:15px; float:right; margin-left:10px; display:inline; background:url(/images/bbs/travel/bbs_travel_list_city_bg1.png) no-repeat; margin-top:6px }
+
+.bbs_travel_city_tips
+p{ position:absolute; top:-64px; left:-80px; width:158px; height:55px; background:url(/images/bbs/travel/bbs_travel_city_tips_bg.png) no-repeat; line-height:20px; padding:4px 10px 0; letter-spacing:-1px; z-index:101 }
+
+.bbs_travel_city_tips p
+span{ position:absolute; top:5px; right:5px; width:8px; height:8px; overflow:hidden; line-height:200px; background:url(http://static.qyer.com/images/bbs/tips_addroute_close.png) no-repeat; cursor:pointer }
+
+.bbs_travel_city_hover_tips{ width:16px; height:24px; float:right; margin-left:10px; display:inline; background:url(/images/bbs/travel/bbs_travel_list_city_bg1.png) no-repeat left center }
+
+.bbs_travel_city_hover_tips:hover{ background:none; position:relative; z-index:100 }
+
+.bbs_travel_city_hover_tips
+a{ height:24px; display:block; float:right; width:16px; text-indent:-9999px }
+
+.bbs_travel_city_hover_tips a:hover{ background:#fff url(/images/bbs/travel/bbs_travel_list_city_bg1.png) no-repeat right center; text-decoration:none; width:48px; padding-right:21px; padding-left:10px; line-height:24px; text-indent:0; position:absolute; right:0; top:0 }
+
+.bbs_travel_list_disabled{ font-size:14px; font-weight:700; color:#c8c8c8; line-height:24px }

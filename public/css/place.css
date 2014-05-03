@@ -1,0 +1,4 @@
+/*并列图片*/
+#img_list{}
+#img_list .abox{ padding-left: 130px;width: 200px; margin-bottom: 10px; float: left}
+#img_list .abox img{ margin-left: -130px; float: left}

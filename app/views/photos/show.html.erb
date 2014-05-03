@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Img path:</b>
+  <%= @photo.img_path %>
+</p>
+
+<p>
+  <b>Is verify:</b>
+  <% = @photo.is_verify %>
+</p>
+
+<%= image_tag(@photo.img_path.url(:mini)) %>
+<%= image_tag(@photo.img_path.url(:medium)) %>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

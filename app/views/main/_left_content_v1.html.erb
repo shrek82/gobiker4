@@ -1,0 +1,163 @@
+<p>让我们从这里出发，一起去发现世界，去发现更好的自己</p>
+
+<div class="content_box">
+  <div class="rec1 float_left">
+    <div class="con_title"><h2 class="name">热门目的地</h2>
+      （<a href="<%= places_url %>" title="更多">更多</a>）<span class="float_right gray">更新最快的免费旅行指南&nbsp;</span></div>
+    <ul class="img_list_box">
+      <% @hot_place.each do |p| %>
+          <li>
+            <div class="img">
+              <a href="<%= place_path(p) %>"><%= image_tag(p.img_path, {:width => '100px', :height => '75px', :alt => p.name}) %></a>
+            </div>
+            <h3><a href="<%= place_path(p) %>"><%= truncate(p.name, :lenght => 6) %></a></h3>
+            <span class="date"><%= p.created_at.to_formatted_s(:ymd) %></span>
+          </li>
+      <% end %>
+    </ul>
+    <div class="rec_more clear">立即下载 <a href="http://app.qyer.com/guide/" target="_blank">穷游锦囊应用</a> 或PDF文件。</div>
+  </div>
+
+  <div class="rec2 float_right">
+    <div class="con_title"><h2 class="name">骑行攻略</h2>
+      （<a href="<%= guides_path %>" title="更多穷游er">更多</a>）
+    </div>
+    <div class="rec2_current">
+      <a href="scroll_box64"><img src="uploads/pics/201212/15/20121213013135215.jpg" width="80" height="80" alt="daitouyan" title="daitouyan"></a>
+
+      <div><a href="scroll_box64"><b>seeyoup</b></a>大学教师，却不止于学术。把玩当做毕生职业，把学会玩，当做人生必修课。本期穷游er：daitouyan...</div>
+      <div class="full"><a href="scroll_box64">完整内容</a></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!--滚动评论 -->
+<div class="scroll_box">
+  <div class="con_title"><h2 class="name">目的地点评</h2>（<a href="<%= places_path %>" title="更多目的地">更多</a>）</div>
+  <div class="scroll_box_roll" id="citycommentindex">
+    <ul class="scroll_box_list" style="padding: 0">
+      <% @reviews_places.each do |c| %>
+          <li>
+            <a href="#"><img src="/images/14_avatar_middle.jpg" width="48" height="48" alt="big_being" title="big_being"></a>
+            <a href="#"><%= c.user.username %></a> 在 <a href="<%= place_path(c.place_id) %>" title="香港" class="fb"><%= c.place.name %></a> 说：
+            <div><%= truncate(c.content.html_safe, :length => 100) %></div>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!--相册 -->
+<div class="ind_album">
+  <div class="con_title">
+    <h2 class="name">旅行相册</h2>
+            <span class="float_right">
+                <a href="http://user.qyer.com/album_action_upload" rel="nofollow" style="color: #f26434" target="_blank">立即上传你的照片，就有机会出现在这里！</a></span>
+  </div>
+  <ul class="ind_album_list">
+    <li>
+      <div class="cover"><a href=""><img src="uploads/pics/201212/19/200.jpg" width="150" alt="迷失在京都" title="迷失在京都"></a>
+      </div>
+      <h3><a href="#" title="迷失在京都">迷失在京都</a></h3>
+
+      <p>照片 137 | 查看 3950<br>来自：<a href="http://user.qyer.com/user_uid_1639659">文乃香</a></p>
+    </li>
+    <li>
+      <div class="cover">
+        <a href="#"><img src="uploads/pics/201212/19/21.jpg" width="150" alt="印度，不可思议" title="印度，不可思议"></a></div>
+      <h3><a href="" title="印度，不可思议">印度，不可思议</a></h3>
+
+      <p>照片 132 | 查看 951<br>来自：<a href="http://user.qyer.com/user_uid_482838">chrlong81</a></p>
+    </li>
+    <li>
+      <div class="cover">
+        <a href="#"><img src="uploads/pics/201212/19/22.jpg" width="150" alt="璐璐和娜娜的瑞意之旅" title="璐璐和娜娜的瑞意之旅"></a></div>
+      <h3><a href="" title="璐璐和娜娜的瑞意之旅">璐璐和娜娜的瑞意之旅</a></h3>
+
+      <p>照片 192 | 查看 3243<br>来自：<a href="http://user.qyer.com/user_uid_651579">laurie_hou</a></p>
+    </li>
+    <li>
+      <div class="cover"><a href=""><img src="uploads/pics/201212/19/200.jpg" width="150" alt="迷失在京都" title="迷失在京都"></a>
+      </div>
+      <h3><a href="#" title="迷失在京都">迷失在京都</a></h3>
+
+      <p>照片 137 | 查看 3950<br>来自：<a href="http://user.qyer.com/user_uid_1639659">文乃香</a></p>
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<!--//相册结束 -->
+
+<!--forums -->
+<div class="ind_bbs">
+  <div class="ind_travels float_left">
+    <div class="con_title"><h2 class="name">骑行攻略</h2>
+      （<a href="<%= guides_url %>" title="更多游记攻略" rel="nofollow">更多</a>）
+    </div>
+
+      <% if @guides.blank? %>
+      <div>暂无内容</div>
+
+      <% else %> <ul class="ind_travels_list">
+<% @guides.each do |g| %>
+          <li>
+            <a href="#"><img src="/avatar/def.jpg" width="48" height="48" alt="sunqin70" title="sunqin70"></a>
+
+            <h3 class="ind_travels_list_title">
+              <a href="<%= show_topics_path g.id %>" ><%= g.title %></a></h3>
+
+            <div class="ind_travels_list_info">
+              <span class="float_right">查看 <%= g.hits_num %></span><a href="u_path g.user_id"></a> 来自
+              <a href="<%= list_forums_path g.forum_id %>" ><%= g.forum.name %></a></div>
+          </li>
+              <% end %></ul>
+      <% end %>
+
+  </div>
+  <div class="ind_hotbbs float_right">
+    <div class="con_title"><h2 class="name">论坛热门版块</h2>（<a href="<%= forums_path %>" title="更多论坛板块">更多</a>）</div>
+    <ul class="ind_hotbbs_list">
+      <% @hot_forums.each do |f| %>
+          <li>
+            <a href="<%= list_forums_path f.id %>"><img src="<%= f.ico_path %>" width="48" height="48"></a>
+
+            <h3 class="ind_hotbbs_list_title"><a href="<%= list_forums_path f.id %>"><%= f.name %></a></h3>
+
+            <div class="ind_hotbbs_list_info"><%= truncate(f.intro, :length => 10) %></div>
+            <div class="gray"><%= f.topics_num %>个主题</div>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
+<!--//forums -->
+
+<!--tag -->
+<div class="ind_askbox">
+  <div class="ind_ask float_left">
+    <div class="con_title"><h2 class="name">热门话题</h2>（<a href="<%= forums_url %>" >更多</a>）</div>
+    <ul class="ind_ask_list">
+      <% @hots_topics.each do |f| %>
+      <li>
+        <h3 class="ind_ask_list_title">
+          <a href="<%= show_topics_path f.id %>" title="<%= f.title %>"><%= f.title %></a></h3>
+        <div class="ind_ask_list_info">
+          <span class="float_right">评论 <%= f.comments_num %></span><a href="<%= u_path f.user_id %>"><%= f.user.username %></a> |
+          <span><%= f.created_at.to_formatted_s(:ymd) %></span></div>
+      </li>
+     <% end %>
+    </ul>
+  </div>
+  <div class="ind_hottag float_right">
+    <div class="con_title"><h2 class="name">热门城市</h2>（<a href="<%= places_path %>" >更多</a>）</div>
+    <div class="ind_hottag_list">
+      <a class="green_tag" href="/places/city/hangzhou/"><strong class="green_tag_strong">杭州</strong></a>
+      <a class="green_tag" href="/places/city/suzhou/"><strong class="green_tag_strong">苏州</strong></a>
+      <a class="green_tag" href="/places/city/beijing/"><strong class="green_tag_strong">北京</strong></a>
+
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!--//tag -->

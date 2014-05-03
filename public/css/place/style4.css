@@ -1,0 +1,1753 @@
+.qyer_header{ width:980px }
+
+.qyer_head_crumb{ width:980px }
+
+.qyer_footerBox{ width:980px }
+
+.main{ width:980px }
+
+.place_album_list{ margin-left:-20px }
+
+.place_album_list_item{ margin:0 0 20px 20px }
+
+.impress_list{ margin-left:-10px }
+
+.impress_list_item{ padding:0 0 10px 10px }
+
+.impress_comment_item_subbg{ max-width:863px }
+
+.bbscontent{ width:100% }
+
+.pl_main{ width:980px; margin:0 auto 100px }
+
+.pl_side{ float:left; width:270px }
+
+.pl_cont{ float:right; width:680px }
+
+.pl_title{ width:100%; height:20px; margin-bottom:20px }
+
+.pl_title_name{ float:left; font:18px/20px "hiragino sans gb", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif; color:#636363 }
+
+.pl_title_more{ float:left; margin:4px 0 0 10px; padding-left:17px; line-height:14px; background:url(/images/place/four/title_morebg.png) no-repeat 0 center }
+
+.pl_title_gap{ padding-right:16px; margin-right:15px; background:url(/images/place/four/title_gap.png) no-repeat right center }
+
+.pl_titbig{ width:100%; height:26px; margin-bottom:20px }
+
+.pl_titbig_name{ display:inline; font:24px/26px "hiragino sans gb", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif; color:#636363 }
+
+.pl_titbig_gap{ padding-right:28px; margin-right:27px; background:url(/images/place/four/titbig_gap.png) no-repeat right center }
+
+.pl_tittag{ font-size:14px; line-height:16px; color:#636363 }
+
+.pl_tittag .current{ }
+
+.pl_tittag .gap{ padding:0 15px; color:#e1e1e1 }
+
+.pl_tittag3{ margin:-4px 0; font-size:14px; line-height:24px; color:#636363 }
+
+.pl_tittag3 .current{ }
+
+.pl_tittag3 .gap{ padding:0 15px; color:#e1e1e1 }
+.pl_tittag2{ width:100%; overflow:hidden; font-size:14px; line-height:24px }
+.pl_tittag2 li{ float:left; padding-right:22px; margin-right:21px; background:url(/images/place/four/bar_h14a.png) no-repeat right center }
+.pl_tittag2 li.last{ padding-right:0; margin-right:0; background:none }
+.pl_tittag2 .current{ color:#636363 }
+.pl_tittag4{ font-size:12px; line-height:14px; color:#636363 }
+.pl_tittag4 .current{ }
+.pl_tittag4 .gap{ padding:0 10px; color:#e1e1e1 }
+.pl_titmore{ width:100%; height:16px; font-size:14px; line-height:16px }
+.pl_titmore a{ padding-left:20px; background:url(/images/place/four/title_morebg.png) no-repeat 0 center }
+.ui_seqencing{ }
+
+.ui_seqencing_item{ }
+
+.ui_seqencing_item
+span{ font-family:"\5b8b\4f53", sans-serif }
+
+.ui_seqencing_item_current, .ui_seqencing_item_current:hover{ color:#636363 }
+
+.pl_sldline1{ width:100%; height:1px; overflow:hidden; margin:20px 0; background-color:#ebebeb }
+
+.pl_sldline2{ width:100%; height:2px; overflow:hidden; margin:30px 0; background-color:#d7d7d7 }
+
+.pl_sldline2_20{ width:100%; height:2px; overflow:hidden; margin:20px 0; background-color:#d7d7d7 }
+
+.icon_more14{ padding-left:22px; font-size:14px; line-height:16px; background:url(/images/place/four/icon_more.png) no-repeat 0 center }
+
+.icon_arrow{ padding-left:22px; font-size:14px; line-height:16px; background:url(/images/place/four/icon_more.png) no-repeat left center }
+
+.icon_hot{ width:56px; height:56px; overflow:hidden; line-height:500px; background:url(/images/place/four/icon_hot.png) no-repeat }
+
+.icon_recommend{ width:56px; height:56px; overflow:hidden; line-height:500px; background:url(/images/place/four/icon_recommend.png) no-repeat }
+
+.icon_special{ width:56px; height:56px; overflow:hidden; line-height:500px; background:url(/images/place/four/icon_special.png) no-repeat }
+
+.icon_essence{ width:56px; height:56px; overflow:hidden; line-height:500px; background:url(/images/place/four/icon_essence.png) no-repeat }
+
+.pl_topbox_wrap{ width:100%; border-bottom:2px solid #d7d7d7; margin-bottom:20px; padding-bottom:20px }
+
+.pl_topbox{ width:980px; margin:0 auto }
+
+.pl_topbox_name{ float:left; width:680px }
+
+.pl_topbox_en{ font-size:36px; line-height:40px; margin-bottom:5px; color:#147850; word-break:break-all }
+
+.pl_topbox_cn{ float:left; font-size:30px; line-height:1.2; color:#147850 }
+
+.pl_topbox_en a, .pl_topbox_cn
+a{ color:#147850; text-decoration:none }
+
+.pl_topbox_en a:hover, .pl_topbox_cn a:hover{ color:#5fa678; text-decoration:none }
+
+.pi_prompt{ position:relative; z-index:2; top:4px; left:20px; float:left; padding:0 10px; background-color:#ee162d }
+
+.pi_prompt
+.initial{ padding-left:14px; background:url(/images/place/four/prompt_icon.png) no-repeat 0 -16px; color:#fff; font-size:14px; line-height:28px; cursor:pointer }
+
+.pi_prompt_lay{ display:none; position:absolute; left:-1px; top:-1px; width:398px; border:1px solid #ee162d; background-color:#fff }
+
+.pi_prompt_lay
+.top{ height:28px; padding:0 10px; background-color:#ee162d }
+
+.pi_prompt_lay
+.title{ padding-left:14px; background:url(/images/place/four/prompt_icon.png) no-repeat 0 -36px; font-size:14px; line-height:28px; color:#fff; cursor:pointer }
+
+.pi_prompt_lay
+.close{ float:right; width:9px; height:9px; overflow:hidden; margin-top:8px; background:url(/images/place/four/prompt_icon.png) no-repeat; cursor:pointer }
+
+.pi_prompt_lay
+.text{ padding:17px 20px; color:#636363 }
+
+.pl_topbox_right{ float:right }
+
+.pl_topbox_numbeen{ padding-top:6px; text-align:right; color:#0073b6; font-size:24px; line-height:1.2 }
+
+.pl_topbox_numbeen
+em{ font-size:36px; line-height:1.2 }
+
+.pl_topbox_btn{ width:100%; height:32px }
+
+.pl_topbox_btn li{ position:relative; float:left; height:32px; margin-left:30px }
+
+.pl_topbox_btn .click{ display:block; height:32px; font-size:14px; line-height:32px; padding-left:33px; background:url(/images/place/four/want_been_lived.png) no-repeat 0 0; color:#636363 }
+
+.pl_topbox_btn .click:hover{ text-decoration:none }
+
+.pl_topbox_btn span.tips{display:none;alpha(opacity=100); opacity:1;width:15px;height:15px;color:#f60;position:absolute;font-family:verdana;font-size:16px;font-weight:bold;top:-18px;left:20px}
+.pl_topbox_btn span.num{width:15px;height:15px;color:#f60;position:absolute;font-family:verdana;font-size:16px;font-weight:bold;top:-18px;left:20px}
+
+
+.pl_topbox_want .click{ background-position:0 0 }
+.pl_topbox_want .click:hover{ background-position:0 -105px}
+
+.pl_topbox_been .click{ background-position:0 -35px }
+.pl_topbox_been .click:hover{ background-position:0 -140px }
+
+.pl_topbox_lived .click{ background-position:0 -70px }
+
+.pl_topbox_want_hav .click{ background-position:0 -105px }
+
+.pl_topbox_been_hav .click{ background-position:0 -140px }
+
+.pl_topbox_lived_hav .click{ background-position:0 -175px }
+
+.pl_topbox_want_ed .click, .pl_topbox_been_ed .click, .pl_topbox_lived_ed
+.click{ background-position:0 -210px }
+.pl_topbox_want_cls .click, .pl_topbox_been_cls .click, .pl_topbox_lived_cls .click{ background-position:0 -245px }
+.pl_topbox_want_hav .num, .pl_topbox_been_hav .num, .pl_topbox_lived_hav .num{ display:block }
+.pl_topbox_want_cls .num, .pl_topbox_been_cls .num, .pl_topbox_lived_cls .num{ display:block }
+.pl_infonav{ margin:-12px 0 0 -20px }
+.pl_infonav li{ float:left; width:125px; margin:12px 0 0 20px }
+.pl_infonav a{ display:block; padding-left:25px; background:url(/images/place/four/infonav.png) no-repeat; font-size:14px; line-height:22px; color:#636363 }
+.pl_infonav a.profile{ background-position:0 0 }
+.pl_infonav a.utility{ background-position:0 -25px }
+.pl_infonav a.visa{ background-position:0 -50px }
+.pl_infonav a.money{ background-position:0 -75px }
+.pl_infonav a.date{ background-position:0 -100px }
+.pl_infonav a.counsel{ background-position:0 -125px }
+.pl_infonav .current a, .pl_infonav a:hover{ text-decoration:none; color:#fff; background-color:#6faf8e }
+.pl_infonav .current a.profile, .pl_infonav a.profile:hover{ background-position:0 -150px }
+.pl_infonav .current a.utility, .pl_infonav a.utility:hover{ background-position:0 -175px }
+.pl_infonav .current a.visa, .pl_infonav a.visa:hover{ background-position:0 -200px }
+.pl_infonav .current a.money, .pl_infonav a.money:hover{ background-position:0 -225px }
+.pl_infonav .current a.date, .pl_infonav a.date:hover{ background-position:0 -250px }
+.pl_infonav .current a.counsel, .pl_infonav a.counsel:hover{ background-position:0 -275px }
+.pl_sortnav{ margin:-18px 0 0 -22px }
+
+.pl_sortnav
+li{ float:left; width:75px; margin:18px 0 0 22px }
+
+.pl_sortnav
+a{ display:block; height:26px; overflow:hidden; background:url(/images/place/four/sortnav.png) no-repeat; line-height:200px }
+
+.pl_sortnav
+a.spot{ background-position:0 0 }
+
+.pl_sortnav
+a.exp{ background-position:0 -30px }
+
+.pl_sortnav
+a.traffic{ background-position:0 -60px }
+
+.pl_sortnav
+a.hotel{ background-position:0 -90px }
+
+.pl_sortnav
+a.shop{ background-position:0 -120px }
+
+.pl_sortnav
+a.cate{ background-position:0 -150px }
+
+.pl_sortnav
+a.all{ background-position:0 -360px }
+
+.pl_sortnav .current a.spot, .pl_sortnav a.spot:hover{ background-position:0 -180px }
+
+.pl_sortnav .current a.exp, .pl_sortnav a.exp:hover{ background-position:0 -210px }
+
+.pl_sortnav .current a.traffic, .pl_sortnav a.traffic:hover{ background-position:0 -240px }
+
+.pl_sortnav .current a.hotel, .pl_sortnav a.hotel:hover{ background-position:0 -270px }
+
+.pl_sortnav .current a.shop, .pl_sortnav a.shop:hover{ background-position:0 -300px }
+
+.pl_sortnav .current a.cate, .pl_sortnav a.cate:hover{ background-position:0 -330px }
+
+.pl_sortnav .current a.all, .pl_sortnav a.all:hover{ background-position:0 -390px }
+
+.pl_channav
+li{ float:left }
+
+.pl_channav
+li.gap{ width:42px; height:30px; background:url(/images/place/four/chan_gap.png) no-repeat center 0 }
+
+.pl_channav li
+a{ display:block; width:62px; height:30px; overflow:hidden; background:url(/images/place/four/channav.png) no-repeat; line-height:200px }
+
+.pl_channav li
+a.ask{ background-position:0 0 }
+
+.pl_channav li
+a.travel{ background-position:0 -35px }
+
+.pl_channav li
+a.route{ background-position:0 -70px }
+
+.pl_channav li a.ask:hover{ background-position:0 -105px }
+
+.pl_channav li a.travel:hover{ background-position:0 -140px }
+
+.pl_channav li a.route:hover{ background-position:0 -175px }
+
+.pl_subnav
+.pl_sldline1{ margin:18px 0 }
+
+.pl_subnav
+.pl_channav{ margin:0 0 -16px }
+
+.pl_hotqyer{ margin:-10px 0 0 -10px }
+
+.pl_hotqyer
+li{ float:left; margin:10px 0 0 10px }
+
+.pl_hotqyer li
+img{ display:block; border-radius:50px }
+
+.pl_jnang
+li{ width:160; height:150px; padding-left:110px; margin-bottom:20px; color:#636363 }
+
+.pl_jnang
+.pic{ float:left; margin-left:-110px }
+
+.pl_jnang
+.title{ font-size:14px; line-height:16px }
+
+.pl_jnang
+.info{ padding-top:5px }
+
+.pl_jnang
+.text{ padding-top:10px }
+
+.pl_jnang
+.down{ padding-top:19px }
+
+.pl_jnang2{ margin:-20px 0 0 -15px }
+
+.pl_jnang2
+li{ float:left; width:80px; margin:20px 0 0 15px }
+
+.pl_jnang2 li
+.pic{ height:120px; overflow:hidden }
+
+.pl_jnang2
+.title{ padding-top:7px; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_jnang2
+.down{ margin-top:3px; padding-left:15px; line-height:14px; background:url(/images/place/four/down_icon.png) no-repeat left center; color:#636363 }
+
+.pl_aboutask{ }
+
+.pl_aboutask
+.pl_title_name{ max-width:200px; height:20px; overflow:hidden }
+
+.pl_aboutask .ui_tab_trigger
+ul{ widht:100%; overflow:hidden; margin-bottom:10px }
+
+.pl_aboutask .ui_tab_trigger
+li{ float:left; line-height:14px }
+
+.pl_aboutask .ui_tab_trigger
+li.gap{ margin:0 10px; color:#d7d7d7 }
+
+.pl_aboutask .ui_tab_trigger li.ui_tab_trigger_item_current
+a{ color:#323232; cursor:default }
+
+.pl_aboutask .ui_tab_trigger li.ui_tab_trigger_item_current a:hover{ text-decoration:none }
+
+.pl_aboutask
+.ui_tab_cnt_item{ border-top:1px solid #ebebeb }
+
+.pl_aboutask .ui_tab_cnt_item
+li{ width:230px; padding:7px 0 7px 40px; border-bottom:1px solid #ebebeb }
+
+.pl_aboutask .ui_tab_cnt_item li
+.pic{ float:left; margin-left:-40px; margin-top:3px }
+
+.pl_aboutask .ui_tab_cnt_item li .pic
+img{ display:block; border-radius:50px }
+
+.pl_aboutask .ui_tab_cnt_item li
+.text{ height:36px; display:table-cell; vertical-align:middle; line-height:18px }
+
+.pl_rimplace{ }
+
+.pl_rimplace
+li{ width:212px; height:48px; padding-left:58px; margin-bottom:20px }
+
+.pl_rimplace li
+.pic{ float:left; margin-left:-58px }
+
+.pl_rimplace li
+.title{ font-size:14px; line-height:24px; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_rimplace li
+.text{ margin-top:4px }
+
+.pl_rimplace li .text .grade
+img{ margin-right:5px }
+
+.pl_focuspic_big{ position:relative; float:left; width:500px; height:280px; overflow:hidden }
+
+.pl_focuspic_big
+.bigpic{ position:absolute; top:-25px }
+
+.pl_focuspic_big
+img{ display:block }
+
+.pl_focuspic_big
+.writer{ position:absolute; left:0; bottom:0; float:left; height:28px; padding:0 10px; background:rgba(0, 0, 0, 0.5); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#7f000000', EndColorStr='#7f000000') }
+
+:root .pl_focuspic_big
+.writer{ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000') }
+
+.pl_focuspic_big .writer
+span{ padding-left:20px; background:url(/images/place/four/writer_icon.png) no-repeat 0 center; line-height:28px; color:#d7d7d7 }
+
+.pl_focuspic_right{ position:relative; float:right; width:170px; height:280px }
+
+.pl_focuspic_list{ height:180px; overflow:hidden; margin:-10px 0 0 -10px }
+
+.pl_focuspic_list
+li{ position:relative; float:left; width:80px; margin:10px 0 0 10px; cursor:pointer }
+
+.pl_focuspic_list li
+img{ display:block }
+
+.pl_focuspic_list li
+.mask{ position:absolute; left:0; top:0; display:block; width:80px; height:80px; background:rgba(0, 0, 0, 0.2); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33000000', EndColorStr='#33000000') }
+
+:root .pl_focuspic_list li
+.mask{ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000') }
+
+.pl_focuspic_list
+li.current{ cursor:default }
+
+.pl_focuspic_list li.current
+.mask{ display:none }
+
+.pl_focuspic_add{ margin-top:10px }
+
+.pl_focuspic_add
+.btn{ display:block; width:100%; height:38px; line-height:38px; background-color:#6faf8e; border-radius:3px; text-align:center; font-size:14px; font-weight:700; color:#fff }
+
+.pl_focuspic_add .btn
+span{ padding:2px 0 0 27px; background:url(/images/place/four/focuspic_add.png) no-repeat 0 center }
+
+.pl_focuspic_add .btn:hover{ background-color:#5fa678; text-decoration:none }
+
+.pl_focuspic_more{ position:absolute; right:0; bottom:0 }
+
+.pl_focuspic_more
+a{ padding-left:19px; background:url(/images/place/four/morebg01.png) no-repeat 0 center }
+
+.pl_cityphoto_null{ padding-left:120px; height:120px; background:#f5f4f0; text-align:center }
+
+.pl_cityphoto_null
+img{ float:left; display:inline; margin-left:-120px }
+
+.pl_cityphoto_null
+.text{ padding:25px 0 15px }
+
+.pl_recommend_fix{ width:100%; height:80px; overflow:hidden; margin:30px 0 }
+
+.pl_recommend{ border:1px solid #f8933c; box-shadow:0 0 4px #ccc; height:78px }
+
+.pl_recommend
+a{ display:block }
+
+.pl_recommend a:hover{ text-decoration:none }
+
+.pl_recommend
+img{ float:left }
+
+.pl_recommend
+.text{ float:left; height:54px; padding:12px 0 0 20px; overflow:hidden }
+
+.pl_recommend .text
+p{ display:table-cell; width:378px; height:54px; vertical-align:middle; font-size:18px; color:#636363 }
+
+.pl_recommend
+.price{ float:right; height:78px; padding-right:20px; font-size:24px; line-height:78px; color:#ee162d }
+
+.pl_recommend .price
+em{ font-size:36px; font-family:helvetica, arial, \5b8b\4f53, sans-serif }
+
+.pl_cityintro{ font-size:14px; color:#636363; margin:-3px 0 }
+
+.pl_comments_fix{ position:relative; width:100%; height:48px; overflow:hidden }
+
+.pl_comments{ width:100%; height:48px; overflow:hidden }
+
+.pl_comments
+.face{ float:left; width:58px }
+
+.pl_comments .face
+img{ display:block; border-radius:50% }
+
+.pl_comments
+.cnt{ position:relative; top:-3px; float:left; width:555px; height:48px; word-wrap:break-word; word-break:break-all }
+
+.pl_comments .cnt
+p{ display:table-cell; width:100%; height:54px; vertical-align:middle }
+
+.pl_comments
+.tool{ float:right; width:60px; height:48px; overflow:hidden; border-left:1px solid #d7d7d7 }
+
+.pl_comments
+.praise{ text-align:center }
+
+.pl_comments .praise
+a{ display:inline-block; height:18px; padding:5px 29px 0 0; background:url(/images/place/four/cmts_praise.png) no-repeat right 0; font-size:14px; line-height:16px }
+
+.pl_comments .praise a:hover{ text-decoration:none; opacity:0.7; filter:alpha(opacity=70) }
+
+.pl_comments
+.post{ padding-top:6px; text-align:center }
+
+.pl_oneday{ }
+
+.pl_oneday
+li{ position:relative; z-index:1; float:left; width:310px; height:200px; padding:15px; background:url(/images/place/four/oneday_bg.png) no-repeat }
+
+.pl_oneday .pic
+img{ display:block }
+
+.pl_oneday
+.face{ position:absolute; z-index:3; left:45px; top:15px; width:80px }
+
+.pl_oneday .face
+img{ display:block }
+
+.pl_oneday
+.title{ position:absolute; z-index:2; left:15px; bottom:15px; width:190px; height:34px; padding-left:120px; font-size:14px; line-height:34px; background:rgba(165, 0, 13, 0.75); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#bda5000d', EndColorStr='#bda5000d') }
+
+:root .pl_oneday
+.title{ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000') }
+
+.pl_oneday .title
+a{ color:#fff }
+
+.pl_hotelbox{ margin:-18px 0 0 -22px }
+
+.pl_hotelbox
+.item{ position:relative; float:left; width:200px; margin:18px 0 0 22px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd; color:#636363 }
+
+.pl_hotelbox
+.sale{ position:absolute; z-index:2; top:5px; right:5px; float:left; height:40px; padding:0 8px; background-color:#f7903c; font-size:14px; color:#fff }
+
+.pl_hotelbox .sale
+em{ font-size:26px; line-height:40px }
+
+.pl_hotelbox
+.pic{ position:relative; width:100%; height:133px }
+
+.pl_hotelbox .pic
+a{ display:block; color:#fff }
+
+.pl_hotelbox .pic
+.label{ position:absolute; top:0; right:0 }
+
+.pl_hotelbox
+.name{ position:absolute; left:0; bottom:10px; float:left; max-width:170px; padding:3px 8px; background:rgba(0, 0, 0, 0.75); font-size:14px; line-height:16px; filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#bd000000', EndColorStr='#bd000000') }
+
+:root .pl_hotelbox
+.name{ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000') }
+
+.pl_hotelbox .line1, .pl_hotelbox .line2, .pl_hotelbox
+.line3{ padding:0 5px }
+
+.pl_hotelbox
+.price{ font-size:14px }
+
+.pl_hotelbox .price
+em{ font-size:26px; font-weight:700; color:#f26434; font-family:helvetica, arial, \5b8b\4f53, sans-serif }
+
+.pl_hotelbox
+.cost{ padding-top:15px; font-size:14px }
+
+.pl_hotelbox .cost
+em{ text-decoration:line-through }
+
+.pl_hotelbox
+.grade{ font-size:14px }
+
+.pl_hotelbox
+.line3{ height:18px; overflow:hidden; color:#959595; margin:5px 0 }
+
+.pl_hotelbox
+.star{ padding-top:12px }
+
+.pl_hotelbox .star
+img{ float:left; margin-top:6px }
+
+.pl_hotelbox .star
+.ml5{ margin-top:0 }
+
+.pl_hotelbox
+.text{ height:73px; padding:10px 5px 0; margin-bottom:10px; font-size:16px; overflow:hidden; word-break:break-all; 　 word-wrap:break-word }
+
+.pl_hotelbox .text
+a{ color:#636363 }
+
+.pl_hotellist{ margin:-18px 0 0 -22px }
+
+.pl_hotellist
+.item{ position:relative; z-index:2; float:left; width:200px; margin:18px 0 0 22px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd; color:#636363 }
+
+.pl_hotellist .pic
+img{ display:block }
+
+.pl_hotellist
+.name{ height:32px; padding:10px 5px; font-size:14px; line-height:16px }
+
+.pl_hotellist
+.pricelay{ position:absolute; top:96px; right:-5px; height:32px; padding:0 10px; background:#f5802d; box-shadow:-2px 2px 1px rgba(0, 0, 0, 0.1) }
+
+.pl_hotellist
+.price{ font-size:14px; line-height:32px; color:#fff }
+
+.pl_hotellist .price
+em{ font-size:26px; font-weight:700; font-family:helvetica, arial, \5b8b\4f53, sans-serif }
+
+.pl_hotellist .pricelay
+.arrow{ position:absolute; right:0; bottom:-4px; width:5px; height:4px; background:url(/images/place/four/hotel_ydprice_arrow.png) no-repeat }
+
+.pl_hotellist
+.info{ padding:0 5px 5px }
+
+.pl_hotellist .info
+.star{ float:left; margin-right:5px; padding-top:5px }
+
+.pl_hotellist .info
+.praise{ float:left; margin-right:10px }
+
+.pl_hotellist .info
+.grade{ float:left; font-size:14px; line-height:16px; padding-top:4px }
+
+.pl_hotellist .info
+.cnhotel{ display:inline-block; padding:2px 0 1px 30px; background:url(/images/place/four/icon_cnhotle.png) no-repeat 0 center; font-size:14px; line-height:18px }
+
+.pl_hotellist
+.cnhotel_layer{ position:absolute; left:-1px; top:230px; width:180px; padding:10px 15px; border:1px solid #f0c36d; background:#fff7a5; box-shadow:0 1px 1px rgba(0, 0, 0, 0.1) }
+
+.pl_hotellist .cnhotel_layer
+.arrowbig{ position:absolute; left:38px; top:-7px; display:block; width:0; height:0; overflow:hidden; border-width:0 7px 7px; border-style:solid; border-color:transparent transparent #f0c36d }
+
+.pl_hotellist .cnhotel_layer
+.arrow{ position:absolute; left:39px; top:-6px; display:block; width:0; height:0; overflow:hidden; border-width:0 6px 6px; border-style:solid; border-color:transparent transparent #fff7a5 }
+
+.pl_hotellist .cnhotel_layer
+.tit{ font-size:14px; line-height:18px; font-weight:700 }
+
+.pl_hotellist .cnhotel_layer
+.txt{ padding:5px 0; color:#959595 }
+
+.pl_hotellist .cnhotel_layer
+.more{ text-align:right }
+
+.pl_hotellist
+.btnlay{ padding:5px }
+
+.pl_hotellist
+.btn{ display:block; width:190px; height:36px; overflow:hidden; background:url(/images/place/four/hotel_ydbtn.png) no-repeat; line-height:200px; border-radius:3px; box-shadow:0 1px 1px #ddd }
+
+.pl_hotellist .btn:hover{ background-position:0 -60px }
+
+.pl_hotellist2{ margin:-18px 0 0 -22px }
+
+.pl_hotellist2
+.item{ position:relative; z-index:2; float:left; width:210px; margin:18px 0 0 22px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd; color:#636363 }
+
+.pl_hotellist2 .item:hover{ border-color:#5fa678 }
+
+.pl_hotellist2
+a{ display:block; padding:5px; color:#636363 }
+
+.pl_hotellist2 .pic
+img{ display:block }
+
+.pl_hotellist2
+.names{ height:54px; padding:8px 5px 4px }
+
+.pl_hotellist2
+.name{ font-size:14px; line-height:18px; color:#0073b6 }
+
+.pl_hotellist2
+.locate{ padding-top:4px; height:14px; line-height:14px; overflow:hidden }
+
+.pl_hotellist2
+.pricelay{ position:absolute; top:96px; right:-5px; height:32px; padding:0 10px; background:#f5802d; box-shadow:-2px 2px 1px rgba(0, 0, 0, 0.1) }
+
+.pl_hotellist2
+.price{ font-size:14px; line-height:32px; color:#fff }
+
+.pl_hotellist2 .price
+em{ font-size:26px; font-weight:700; font-family:helvetica, arial, \5b8b\4f53, sans-serif }
+
+.pl_hotellist2 .pricelay
+.arrow{ position:absolute; right:0; bottom:-4px; width:5px; height:4px; background:url(/images/place/four/hotel_ydprice_arrow.png) no-repeat }
+
+.pl_hotellist2
+.info{ padding:0 5px 5px }
+
+.pl_hotellist2 .info
+.star{ float:left; margin-right:5px; padding-top:5px }
+
+.pl_hotellist2 .info
+.praise{ float:left; margin-right:10px }
+
+.pl_hotellist2 .info
+.grade{ float:left; font-size:14px; line-height:16px; padding-top:4px }
+
+.pl_hotellist2 .info
+.cnhotel{ display:inline-block; padding:2px 0 1px 30px; background:url(/images/place/four/icon_cnhotle.png) no-repeat 0 center; font-size:14px; line-height:18px }
+
+.pl_hotellist2
+.cnhotel_layer{ position:absolute; left:-1px; top:230px; width:180px; padding:10px 15px; border:1px solid #f0c36d; background:#fff7a5; box-shadow:0 1px 1px rgba(0, 0, 0, 0.1) }
+
+.pl_hotellist2 .cnhotel_layer
+.arrowbig{ position:absolute; left:38px; top:-7px; display:block; width:0; height:0; overflow:hidden; border-width:0 7px 7px; border-style:solid; border-color:transparent transparent #f0c36d }
+
+.pl_hotellist2 .cnhotel_layer
+.arrow{ position:absolute; left:39px; top:-6px; display:block; width:0; height:0; overflow:hidden; border-width:0 6px 6px; border-style:solid; border-color:transparent transparent #fff7a5 }
+
+.pl_hotellist2 .cnhotel_layer
+.tit{ font-size:14px; line-height:18px; font-weight:700 }
+
+.pl_hotellist2 .cnhotel_layer
+.txt{ padding:5px 0; color:#959595 }
+
+.pl_hotellist2 .cnhotel_layer
+.more{ text-align:right }
+
+.pl_hotellist2
+.icons{ padding:3px 5px 5px }
+
+.pl_hotellist2 .icons
+li{ float:left; margin-right:5px; position:relative }
+
+.pl_hotellist2 .icons li:hover
+.cn_icon_layout{ display:block }
+
+.pl_hotellist2
+.cn_icon_layout{ position:absolute; left:-6px; top:32px; width:180px; padding:5px 10px; border:1px solid #f0c36d; background:#fff7a5; box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); color:#323232 }
+
+.pl_hotellist2 .cn_icon_layout
+.arrowbig{ position:absolute; left:10px; top:-7px; display:block; width:0; height:0; overflow:hidden; border-width:0 7px 7px; border-style:solid; border-color:transparent transparent #f0c36d }
+
+.pl_hotellist2 .cn_icon_layout
+.arrow{ position:absolute; left:11px; top:-6px; display:block; width:0; height:0; overflow:hidden; border-width:0 6px 6px; border-style:solid; border-color:transparent transparent #fff7a5 }
+
+.pl_hotellist2 .cn_icon_layout
+.tit{ font-size:14px; line-height:18px; font-weight:700 }
+
+.pl_hotellist2 .cn_icon_layout
+.txt{ padding:5px 0 }
+
+.pl_hotellist2 a:hover{ text-decoration:none; cursor:pointer }
+
+.pl_hotellist2 a:hover
+.name{ text-decoration:underline }
+
+.hotelist_contents
+.listl{ float:left; width:320px; padding-right:20px; border-right:1px solid #c0c0c0 }
+
+.hotelist_contents
+.listr{ float:right; width:320px }
+
+.hotelist_contents
+li{ border-top:1px solid #ececec; width:100%; position:relative }
+
+.hotelist_contents li:first-child{ border-top:none }
+
+.hotelist_contents .alink
+a{ display:block; height:30px; overflow:hidden; line-height:30px; color:#636363; padding:0 10px }
+
+.hotelist_contents .alink a:hover{ text-decoration:none; background-color:#e0f1df; cursor:pointer }
+
+.hotelist_contents .alink
+.citys{ float:left; width:170px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.hotelist_contents .alink
+.price{ float:right }
+
+.hotelist_contents .alink .price
+em{ font-size:16px; line-height:30px; font-weight:700; color:#f26622; margin-left:5px }
+
+.hotelist_contents .alink .price
+del{ margin-left:5px }
+
+.hotel_layer{ position:absolute; left:0; top:0; z-index:999; width:200px; padding:5px; background:#fff; border:1px solid #c0c0c0; box-shadow:0 0 3px rgba(0, 0, 0, 0.15); color:#636363 }
+
+.hotel_layer
+.layarrow{ position:absolute; left:-8px; top:65px; width:8px; height:13px; overflow:hidden; background:url(/images/hotel/layer_arw.png) no-repeat }
+
+.hotel_layer
+.loading{ height:133px; background:url(/images/common/tpl/wait_34.gif) no-repeat center center }
+
+.hotel_layer .pic
+img{ display:block }
+
+.hotel_layer
+.names{ }
+
+.hotel_layer
+.name{ padding:6px 5px 8px; font-size:14px; line-height:18px }
+
+.hotel_layer
+.cnname{ line-height:16px; margin:0 5px 10px }
+
+.hotel_layer .cnname
+span{ margin-right:10px }
+
+.hotel_layer
+.pricelay{ position:absolute; top:96px; right:-5px; height:32px; padding:0 10px; background:#f5802d; box-shadow:-2px 2px 1px rgba(0, 0, 0, 0.1) }
+
+.hotel_layer
+.price{ font-size:14px; line-height:32px; color:#fff }
+
+.hotel_layer .price
+em{ font-size:26px; font-weight:700; font-family:helvetica, arial, \5b8b\4f53, sans-serif }
+
+.hotel_layer .pricelay
+.arrow{ position:absolute; right:0; bottom:-4px; width:5px; height:4px; background:url(/images/hotel/hotel_ydprice_arrow.png) no-repeat }
+
+.hotel_layer
+.info{ padding:0 5px 5px }
+
+.hotel_layer .info
+.star{ float:left; margin-right:5px; padding-top:5px }
+
+.hotel_layer .info
+.praise{ float:left; margin-right:10px }
+
+.hotel_layer .info
+.grade{ float:left; font-size:14px; line-height:16px; padding-top:4px }
+
+.hotel_layer
+.btnlay{ padding:5px }
+
+.hotel_layer
+.btn{ display:block; width:190px; height:36px; overflow:hidden; background:url(/images/hotel/hotel_ydbtn.png) no-repeat; line-height:200px; border-radius:3px; box-shadow:0 1px 1px #ddd }
+
+.hotel_layer .btn:hover{ background-position:0 -60px }
+
+.pl_title_poisort{ position:absolute; top:2px; right:0 }
+
+.pl_title_poisort
+a{ display:block; float:left; width:18px; height:17px; margin-left:30px; overflow:hidden; background:url(/images/place/four/sort18.png) no-repeat; line-height:200px }
+
+.pl_title_poisort a:hover{ opacity:0.6; filter:alpha(opacity=60) }
+
+.pl_title_poisort
+a.spot{ background-position:0 0 }
+
+.pl_title_poisort
+a.exp{ background-position:0 -20px }
+
+.pl_title_poisort
+a.traffic{ background-position:0 -40px }
+
+.pl_title_poisort
+a.hotel{ background-position:0 -60px }
+
+.pl_title_poisort
+a.shop{ background-position:0 -80px }
+
+.pl_title_poisort
+a.cate{ background-position:0 -100px }
+
+.pl_poibox{ margin:-18px 0 0 -22px }
+
+.pl_poibox
+.item{ float:left; width:200px; margin:18px 0 0 22px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd; color:#636363 }
+
+.pl_poibox
+.clear{ font-size:0 }
+
+.pl_poibox
+.pic{ position:relative; width:100%; height:133px }
+
+.pl_poibox .pic
+img{ display:block }
+
+.pl_poibox .pic
+.label{ position:absolute; top:0; right:0 }
+
+.pl_poibox
+.title{ margin:10px 0; padding:0 5px; font-size:14px; line-height:16px; width:190px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_poibox
+.title_en{ margin:-8px 0 15px; padding:0 5px; font-size:14px; line-height:16px; width:190px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_poibox
+.grade{ margin:10px 0; padding:0 5px; line-height:14px; color:#959595 }
+
+.pl_poibox .grade
+img{ margin-right:5px }
+
+.pl_poibox
+.wantbeen{ margin:10px 0; padding:0 5px }
+
+.pl_poibox
+.userlist{ height:30px; margin:20px 0 0 -4px; padding-bottom:5px }
+
+.pl_poibox .userlist
+li{ float:left; margin-left:4px }
+
+.pl_poibox .userlist li
+img{ display:block; border-radius:50px }
+
+.pl_poibox
+.text{ color:#636363; height:54px; overflow:hidden }
+
+.pl_poibox
+.tag{ color:#959595; height:18px; padding:5px 0; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_poiwant, .pl_poibeen, .pl_poiwant_ed, .pl_poibeen_ed{ display:inline-block; margin-right:10px; line-height:16px; background:url(/images/place/four/poi_wantbeen.png) no-repeat; cursor:pointer; color:#959595 }
+
+.pl_poiwant{ padding-left:21px; background-position:0 0 }
+
+.pl_poiwant_ed{ padding-left:21px; background-position:0 -20px }
+
+.pl_poibeen{ padding-left:19px; background-position:0 -40px }
+
+.pl_poibeen_ed{ padding-left:19px; background-position:0 -60px }
+
+.pl_bbsbox{ }
+
+.pl_bbsbox
+.item{ padding-bottom:19px; margin-bottom:19px; border-bottom:1px solid #ececec }
+
+.pl_bbsbox
+.pic{ position:relative; float:left; width:200px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd }
+
+.pl_bbsbox .pic
+img{ display:block }
+
+.pl_bbsbox .pic
+.label{ position:absolute; top:0; right:0 }
+
+.pl_bbsbox
+.cnt{ float:right; width:450px }
+
+.pl_bbsbox
+.top{ height:48px; padding:5px 0 0 58px; color:#636363 }
+
+.pl_bbsbox
+.face{ float:left; margin-left:-58px }
+
+.pl_bbsbox .face
+img{ display:block; border-radius:50px }
+
+.pl_bbsbox
+.title{ width:100%; padding:5px 0 7px; font-size:14px; font-weight:700; line-height:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#0073b6 }
+
+.pl_bbsbox .bbsview, .pl_bbsbox .bbsreply, .pl_bbsbox
+.bbslike{ margin-left:15px; background:url(/images/place/four/bbs_icon.png) no-repeat }
+
+.pl_bbsbox
+.bbsview{ padding-left:19px; background-position:0 1px }
+
+.pl_bbsbox
+.bbsreply{ padding-left:17px; background-position:0 -19px }
+
+.pl_bbsbox
+.bbslike{ padding-left:17px; background-position:0 -39px }
+
+.pl_bbsbox
+.bbstext1{ width:100%; height:63px; overflow:hidden; margin-top:15px; font-size:14px }
+
+.pl_bbsbox
+.bbstext2{ width:100%; height:42px; overflow:hidden; margin-top:15px; font-size:14px }
+
+.pl_bbsbox
+.bbsroute{ height:24px; margin-top:6px; padding-left:32px; overflow:hidden; line-height:24px; background:url(/images/place/four/route_icon.png) no-repeat }
+
+.pl_bbsbox .bbsroute
+.to{ padding:0 5px; font-family:\5b8b\4f53, sans-serif; font-weight:700; color:#f26434 }
+
+.pl_smallmap{ border:1px solid #d7d7d7 }
+
+.pl_hotcityhotellist{ margin:-5px 0 }
+
+.pl_hotcityhotellist
+li{ float:left; width:20%; line-height:24px }
+
+.pl_hotelyd{ position:relative; z-index:5; padding:10px 20px; margin:20px 0 10px; border:1px solid #d7d7d7; background-color:#f5f5f5; line-height:28px; box-shadow:0 0 5px rgba(0, 0, 0, 0.1) }
+
+.pl_hotelyd
+.tit{ float:left; font-size:14px }
+
+.pl_hotelyd
+.ui_input{ float:left; height:26px; padding:0 10px; font-size:14px; line-height:26px }
+
+.pl_hotelyd
+.city{ float:left; margin-right:20px }
+
+.pl_hotelyd .city
+.ui_input{ width:134px }
+
+.pl_hotelyd .city input:focus{ border-color:#60a673; box-shadow:0 0 2px #ddd inset }
+
+.pl_hotelyd
+.date{ float:left; margin-right:20px }
+
+.pl_hotelyd .date
+.ui_input{ width:105px; background:#fff url(/images/hotel/icon_calendar.png) no-repeat 106px 6px }
+
+.pl_hotelyd .date input:focus{ border-color:#60a673; box-shadow:0 0 2px #ddd inset; background-position:106px -24px }
+
+.pl_hotelyd .date
+.next{ float:left; width:26px; height:28px; background:url(/images/hotel/icon_arrowr.png) no-repeat center center }
+
+.pl_hotelyd
+.btn{ float:left }
+
+.pl_hotelyd .btn
+input{ width:68px; height:28px; overflow:hidden; border:none; background:url(/images/place/four/btn_hotel_search.png) no-repeat; cursor:pointer; border-radius:3px; box-shadow:0 1px 3px rgba(0, 0, 0, 0.2) }
+
+.pl_hotelyd_layhot{ position:absolute; z-index:9; left:62px; top:38px; width:201px; border:1px solid #ccc; border-top:0; background:#fff; box-shadow:0 0 1px rgba(0, 0, 0, 0.3) }
+
+.pl_hotelyd_layhot
+h4{ border-bottom:1px solid #ededed; line-height:32px; font-weight:700; text-indent:10px; color:#636363 }
+
+.pl_hotelyd_layhot
+ul{ padding:5px; overflow:hidden; zoom:1 }
+
+.pl_hotelyd_layhot ul
+li{ width:50%; float:left; line-height:24px; text-indent:5px }
+
+.pl_hotelyd_layhot ul li
+a{ display:block; color:#077345 }
+
+.pl_hotelyd_layhot ul li a:hover{ background:#e6f4d9; text-decoration:none }
+
+.pl_hotelyd_laydrop{ position:absolute; left:62px; top:38px; width:201px; border:1px solid #ccc; border-top:0; background-color:#fff; box-shadow:0 0 1px rgba(0, 0, 0, 0.3) }
+
+.pl_hotelyd_laydrop
+.related{ font-weight:bold; color:#007345 }
+
+.pl_hotelyd_laydrop_list{ width:100%; overflow:hidden }
+
+.pl_hotelyd_laydrop_list
+li{ border-bottom:1px solid #ebebeb; line-height:18px }
+
+.pl_hotelyd_laydrop_list li
+a{ display:block; padding:6px 5px 6px 10px; color:#323232 }
+
+.pl_hotelyd_laydrop_list li a:hover{ background-color:#e6f4d9; text-decoration:none; color:#323232 }
+
+.pl_hotelyd_laydrop_list li
+.title_cn{ display:block }
+
+.pl_hotelyd_laydrop_list li
+.title_en{ display:block; color:#959595 }
+
+.pl_hotelyd_laydrop_list li .title_cn, .pl_hotelyd_laydrop_list li
+.title_en{ width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_hotelyd_laydrop_null{ text-align:center; line-height:32px }
+
+.hotel_info{ margin:10px 0 30px }
+
+.hotel_info
+li{ float:left; width:210px; margin-left:25px; text-align:center }
+
+.hotel_info li:first-child{ margin-left:0 }
+
+.hotel_info
+span{ display:inline-block; height:18px; background:url(/images/hotel/icon_info.png) no-repeat; color:#959595 }
+
+.hotel_info
+span.place{ padding-left:18px; background-position:0 1px }
+
+.hotel_info
+span.sum{ padding-left:24px; background-position:0 -30px }
+
+.hotel_info
+span.coupon{ padding-left:22px; background-position:0 -60px }
+
+.pl_innbox{ }
+
+.pl_innbox
+.item{ padding:0 0 19px 236px; margin-bottom:19px; border-bottom:1px solid #ececec }
+
+.pl_innbox
+.pic{ float:left; margin-left:-236px; width:200px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd }
+
+.pl_innbox .pic
+img{ display:block }
+
+.pl_innbox
+.title{ padding-top:10px; font-size:14px; font-weight:700; line-height:16px }
+
+.pl_innbox .text, .pl_innbox
+.price{ margin-top:12px }
+
+.pl_innbox
+.text{ max-height:54px; overflow:hidden }
+
+.pl_innbox
+.price{ max-height:36px; overflow:hidden }
+
+.pl_innbox .text span, .pl_innbox .price
+span{ font-weight:700 }
+
+.pl_inntop{ }
+
+.pl_inntop
+.text{ float:left; width:390px }
+
+.pl_inntop
+.iconlist{ float:right; color:#636363 }
+
+.pl_inntop .iconlist
+li{ width:54px; float:left; display:inline; margin-left:18px; text-align:center }
+
+.pl_inntop .iconlist
+.txt{ padding-top:9px; line-height:14px }
+
+.pl_innlist{ }
+
+.pl_innlist
+.item{ border-bottom:1px solid #ececec; padding-bottom:19px; margin-bottom:19px }
+
+.pl_innlist
+.left{ float:left; width:132px }
+
+.pl_innlist
+.center{ float:left; width:365px; padding-left:18px }
+
+.pl_innlist
+.right{ float:right; width:160px; text-align:right }
+
+.pl_innlist .pic
+img{ display:block; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #f0f0f0 }
+
+.pl_innlist
+.iconlist{ margin-top:5px }
+
+.pl_innlist .iconlist
+li{ float:left; display:inline; height:24px; margin-right:5px; position:relative }
+
+.pl_innlist
+.title{ font-size:18px; line-height:20px }
+
+.pl_innlist
+.address{ margin-top:5px; color:#636363 }
+
+.pl_innlist
+.icon{ margin-top:3px }
+
+.pl_innlist .icon
+span{ background:url(/images/place/four/bbs_icon.png) no-repeat; color:#959595 }
+
+.pl_innlist .icon
+.view{ padding-left:21px; background-position:0 1px; margin-right:16px }
+
+.pl_innlist .icon
+.reply{ padding-left:17px; background-position:0 -19px }
+
+.pl_innlist
+.intro{ margin-top:5px; font-size:14px }
+
+.pl_innlist
+.price{ font-size:14px; line-height:34px }
+
+.pl_innlist .price
+em{ font-size:40px; font-weight:700; color:#f26434 }
+
+.pl_innlist
+.btn{ width:122px; height:38px; display:inline-block; text-indent:-9999px; cursor:pointer; background:url(/images/place/four/cnhotel_chk_btn.png) no-repeat; overflow:hidden; text-align:left }
+
+.pl_innlist .btn:hover{ background-position:left bottom }
+
+.cn_icon_layout{ font-size:12px; position:absolute; left:-5px; top:30px; width:156px; padding:5px 10px; border:1px solid #ccc; background:#fff; color:#959595; display:none }
+
+.cn_icon_layout
+strong{ display:block; font-size:14px; color:#323232 }
+
+.cn_icon_layout
+.cn_icon_arrow{ background:url(/images/place/four/cn_icon_arrow.png) no-repeat; position:absolute; top:-7px; left:9px; width:13px; height:7px; overflow:hidden }
+
+.cn_icon_list:hover{ position:relative; z-index:2 }
+
+.cn_icon_list:hover
+.cn_icon_layout{ display:block }
+
+.pl_listnull{ padding-left:340px }
+
+.pl_listnull
+.pic{ float:left; margin-left:-340px; width:300px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd }
+
+.pl_listnull
+.text{ padding-top:30px; font-size:14px; color:#636363 }
+
+.pl_listnull
+.btn{ padding-top:30px }
+
+.pl_listnull_other{ margin:30px 0 }
+
+.pl_listnull_other
+dt{ margin-bottom:8px; font-size:14px; font-weight:700; line-height:16px; color:#636363 }
+
+.pl_listnull_other
+dd{ font-size:14px; line-height:28px }
+
+.pl_listnull_other dd
+a{ padding-left:20px; background:url(/images/place/four/li_icon.png) no-repeat left center }
+
+.pl_listnull_search{ float:left; padding:2px; background:#f5f4f0; border-radius:2px }
+
+.pl_listnull_search
+.ui_input{ float:left; width:296px; height:34px; padding:0 10px; font-size:14px; line-height:34px }
+
+.pl_listnull_search
+.btn{ float:left; width:44px; height:36px; border:1px solid #ccc; border-left:none; overflow:hidden; text-indent:-100px; background:#fff url(/images/place/four/search_icon.png) no-repeat center center; cursor:pointer }
+
+.pl_word_lsatedit{ margin-bottom:30px; font-size:14px; line-height:48px }
+
+.pl_word_lsatedit
+.list{ float:left }
+
+.pl_word_lsatedit .list
+li{ float:left; margin-right:10px }
+
+.pl_word_lsatedit .list li
+img{ display:block; border-radius:50% }
+
+.pl_word_lsatedit
+.time{ float:right }
+
+.pl_wordcnt{ margin:-3px 0; font-size:14px }
+
+.pl_wordcnt
+.illustration{ float:right; margin-left:10px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd; color:#636363 }
+
+.pl_wordcnt .illustration
+img{ display:block }
+
+.pl_wordcnt_btn{ text-align:right; line-height:14px; margin-top:10px }
+
+.pl_word_subtit{ margin:30px 0; font-size:14px; font-weight:700; line-height:16px; color:#636363 }
+
+.pl_wordplace{ margin:-4px 0 30px }
+
+.pl_wordplace
+li{ margin-top:26px; padding-left:63px }
+
+.pl_wordplace li
+.pic{ float:left; margin-left:-63px; padding-top:4px }
+
+.pl_wordplace li
+.text{ font-size:14px }
+
+.pl_wordphoto{ margin-left:-22px }
+
+.pl_wordphoto
+li{ float:left; width:200px; margin:18px 0 0 22px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd; color:#636363 }
+
+.pl_wordphoto li
+img{ display:block }
+
+.pl_word_correct{ margin-bottom:15px; font-size:14px; line-height:16px; text-align:right }
+
+.pl_word_allface{ margin-top:-10px }
+
+.pl_word_allface
+li{ float:left; margin:10px 10px 0 0 }
+
+.pl_word_allface li
+img{ display:block; border-radius:50% }
+
+.pl_wordnull{ }
+
+.pl_wordnull
+.ui_textarea{ width:660px; height:168px; padding:5px 9px; font-size:14px }
+
+.calendar_class{ margin-top:-20px }
+
+.calendar_class
+h4{ width:50px; margin-top:20px; line-height:50px; text-align:center; font-size:22px; color:#fff; float:left; background:#6FAF8E }
+
+.calendar_main{ width:600px; float:right; margin-top:20px }
+
+.calendar_main
+img{ width:180px; float:left; height:120px }
+
+.calendar_main
+dl{ width:400px; float:right; font-size:14px }
+
+.calendar_main dl
+dt{ font-weight:700 }
+
+.calendar_main dl
+dd{ margin-top:2px }
+
+.pl_planbox{ }
+
+.pl_planbox
+.item{ padding:0 0 19px 58px; margin-bottom:19px; border-bottom:1px solid #ececec }
+
+.pl_planbox
+.face{ float:left; margin-left:-58px }
+
+.pl_planbox .face
+img{ display:block; border-radius:50px }
+
+.pl_planbox
+.title{ padding:4px 0 6px; font-size:14px; font-weight:700; line-height:18px }
+
+.pl_planbox .title
+.travel{ display:inline-block; margin-left:5px; padding:0 4px; border-radius:2px; background-color:#008ed8; font-size:12px; font-weight:500; color:#fff }
+
+.pl_planbox .bbsview, .pl_planbox
+.bbslike{ margin-left:15px; background:url(/images/place/four/bbs_icon.png) no-repeat }
+
+.pl_planbox
+.bbsview{ padding-left:19px; background-position:0 1px }
+
+.pl_planbox
+.bbslike{ padding-left:17px; background-position:0 -39px }
+
+.pl_planbox
+.writer{ color:#636363 }
+
+.pl_planbox
+.text{ margin:7px 0; font-family:\5b8b\4f53, sans-serif; color:#000 }
+
+.pl_planbox
+.info{ color:#636363 }
+
+.pl_allcity{ margin:-10px 0 0 -22px }
+
+.pl_allcity
+.list{ float:left; width:212px; margin-left:22px }
+
+.pl_allcity
+li{ width:100%; margin-top:10px; overflow:hidden; font-size:14px; line-height:16px; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_hotcitypoi{ }
+
+.pl_hotcitypoi
+li{ margin-top:14px; font-size:14px; line-height:16px }
+
+.pl_indall_top{ float:left; width:700px }
+
+.pl_indall_search{ width:320px; padding:10px 0 25px }
+
+.pl_indall_back{ float:right; text-align:right }
+
+.pl_indall_back .map
+img{ display:block }
+
+.pl_indall_back
+.goback{ margin-top:12px }
+
+.pl_indall_list{ float:left; width:325px; margin-top:-14px }
+
+.pl_indall_list
+li{ padding:14px 95px 0 0; font-size:14px; line-height:16px; width:230px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.pl_indmap_bg{ width:100%; height:383px; margin:-20px 0 30px; background:#f4f3ed url(/images/place/four/ind_mapbg.png) repeat-x 0 bottom }
+
+.pl_indmap{ width:980px; margin:0 auto }
+
+.pl_indmap_cnt{ position:relative; float:left; width:660px; height:383px; overflow:hidden; background:url(/images/place/four/ind_maps.png) no-repeat }
+
+.pl_indmap_pic{ position:absolute; z-index:3 }
+
+.pl_indmap_pic :focus{ outline:none }
+
+.pl_indmap_pic
+area{ star:expression(this.onFocus=this.blur()) }
+
+.place_ind_maphovlist{ position:absolute; z-index:2; left:0; top:0 }
+
+.place_ind_maphov{ display:none; position:absolute; z-index:2; width:48px; height:20px; background:url(/images/place/four/ind_maphov.png) no-repeat; line-height:200px; overflow:hidden }
+
+#place_maphov_NAmerica{ background-position:0 0; left:103px; top:137px }
+
+#place_maphov_SAmerica{ background-position:0 -25px; left:181px; top:231px }
+
+#place_maphov_Africa{ background-position:0 -50px; left:298px; top:186px }
+
+#place_maphov_Europe{ background-position:0 -75px; left:342px; top:107px }
+
+#place_maphov_Asia{ background-position:0 -100px; left:421px; top:142px }
+
+#place_maphov_Oceania{ background-position:0 -125px; left:506px; top:258px; width:64px }
+
+#place_maphov_Antarctica{ background-position:0 -150px; left:351px; top:354px }
+
+.place_ind_popup{ display:none; position:absolute; z-index:8; top:30px; left:80px; width:422px; padding:10px 20px; border:1px solid #d7d7d7; box-shadow:0 0 3px rgba(200, 200, 200, 0.5); background-color:rgba(255, 255, 255, 0.95); filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#f3ffffff', EndColorStr='#f3ffffff') }
+
+:root
+.place_ind_popup{ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000') }
+
+.place_ind_popup_top{ width:100%; height:16px; border-bottom:1px solid #c2c2c2; padding:10px 0; font-size:14px; line-height:16px }
+
+.place_ind_popup_tit{ float:left; font-weight:bold; font-size:14px }
+
+.place_ind_popup_more{ float:left; margin-left:12px }
+
+.place_ind_popup_more
+.icon_arrow{ font-size:12px }
+
+.place_ind_popup_close{ position:absolute; top:9px; right:9px; width:26px; height:26px; background:url(/images/common/tpl/pup_close.png) no-repeat 0 0; cursor:pointer }
+
+.place_ind_popup_close:hover{ background-position:0 -26px }
+
+.place_ind_popup_list{ padding:12px 0 2px }
+
+.place_ind_popup_list
+dl{ width:100%; height:30px; overflow:hidden; line-height:30px }
+
+.place_ind_popup_list
+dt{ float:left; width:80px; margin-right:10px; font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.place_ind_popup_list
+dd{ float:left; margin-right:13px }
+
+.pl_indmap_right{ float:right; width:320px; padding-top:50px }
+
+.place_ind_search{ position:relative }
+
+.place_ind_search
+.ui_input{ width:270px; height:30px; padding:0 10px 0 38px; font-size:14px; line-height:30px; background:#fff url(/images/place/four/ind_search.png) no-repeat 10px center }
+
+.place_ind_search_drop{ display:none; position:absolute; left:0; top:32px; width:268px; border:1px solid #ccc; background-color:#fff }
+
+.place_ind_search_drop
+.related{ font-weight:bold; color:#007345 }
+
+.place_ind_search_drop
+.current{ background-color:#e6f4d9; text-decoration:none; color:#323232 }
+
+.place_ind_search_drop_list{ width:100%; overflow:hidden }
+
+.place_ind_search_drop_list
+dt{ float:left; display:inline; width:45px; padding-top:6px; text-align:right; color:#959595 }
+
+.place_ind_search_drop_list
+dd{ float:right; border-left:1px solid #ebebeb; border-bottom:1px solid #ebebeb }
+
+.place_ind_search_drop_list dd
+a{ display:block; width:200px; padding:6px 5px 6px 10px; color:#323232 }
+
+.place_ind_search_drop_list dd a:hover{ background-color:#e6f4d9; text-decoration:none; color:#323232 }
+
+.place_ind_search_drop_list dd
+.title_cn{ display:block }
+
+.place_ind_search_drop_list dd
+.title_en{ display:block; color:#959595 }
+
+.place_ind_search_drop_list dd .title_cn, .place_ind_search_drop_list dd
+.title_en{ width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+.place_ind_search_drop_null{ line-height:30px; text-align:center; color:#666 }
+
+.pl_ind_search_hot{ width:284px; max-height:36px; overflow:hidden; padding-left:60px; margin-top:10px; color:#636363 }
+
+.pl_ind_search_hot
+dt{ float:left; width:60px; margin-left:-60px }
+
+.pl_ind_search_hot
+dd{ float:left; margin-right:12px; white-space:nowrap }
+
+.pl_ind_search_lately{ width:260px; max-height:36px; overflow:hidden; padding-left:60px; margin-top:10px; color:#636363 }
+
+.pl_ind_search_lately
+dt{ float:left; width:60px; margin-left:-60px }
+
+.pl_ind_search_lately
+dd{ float:left; margin-right:12px; white-space:nowrap }
+
+.pl_ind_allct{ margin-top:20px; line-height:20px }
+
+.pl_ind_lastm
+.pl_hotelbox{ margin-left:-44px }
+
+.pl_ind_lastm .pl_hotelbox
+.item{ margin-left:44px }
+
+.pl_ind_theme{ margin-top:-20px }
+
+.pl_ind_theme
+.item{ float:left; width:230px; padding:20px 30px 0 230px }
+
+.pl_ind_theme
+.pic{ float:left; width:200px; margin-left:-230px; padding:5px; border:1px solid #e5e5e5; box-shadow:0 0 3px #ddd }
+
+.pl_ind_theme .pic
+img{ display:block }
+
+.pl_ind_theme
+.title{ font-size:18px; line-height:20px; color:#636363 }
+
+.pl_ind_theme
+.text{ margin-top:10px; font-size:14px; line-height:24px }
+
+.pl_ind_theme .text
+li{ float:left; margin-right:10px }
+
+.pl_ind_theme .text
+a{ white-space:nowrap }
+
+.pl_poiphoto{ position:relative; width:270px; max-height:600px; overflow:hidden }
+
+.pl_poiphoto
+img{ display:block; width:270px }
+
+.pl_poiphoto_writer{ display:none; position:absolute; left:0; bottom:0; width:270px; height:24px; line-height:24px; text-indent:5px; color:#fff; background-color:rgba(0, 0, 0, 0.7); filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B2000000, endcolorstr=#B2000000) }
+
+:root
+.pl_poiphoto_writer{ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000') }
+
+.pl_poiphoto_writer
+a{ color:#fff }
+
+.pl_poiphoto_no{ width:100%; height:176px; background:url(/images/place/nothing/nothing_poi_photo.png) no-repeat }
+
+.pl_poiphoto_no
+p{ padding-top:95px; text-align:center; color:#636363 }
+
+.pl_poiphoto_more{ margin-top:10px; line-height:14px }
+
+.pl_poiphoto_album{ margin-right:10px; padding-left:19px; background:url(/images/place/upload_album.png) no-repeat left center }
+
+.pl_poiphoto_native{ padding-left:14px; background:url(/images/place/upload_native.png) no-repeat left center }
+
+.pl_poiphoto_more
+a.more{ padding-right:13px; background:url(/images/place/icon_more.png) no-repeat right center }
+
+.pl_poidetail{ }
+
+.pl_poidetail
+li{ margin-top:15px; overflow:hidden; font-size:14px }
+
+.pl_poidetail
+.title{ float:left; width:70px; text-align:right; display:block }
+
+.pl_poidetail
+.text{ overflow:hidden; zoom:1 }
+
+.pl_poidetail .text
+.gap{ color:#d7d7d7 }
+
+.pl_poidetail .grade
+img{ margin-right:5px }
+
+.pl_poitips{ margin:30px 0; padding:18px 20px; border:1px solid #f0c36d; box-shadow:0 0 4px #ddd; background-color:#fff7a5; font-size:14px }
+
+.pl_poitips
+.title{ margin-bottom:10px; font-weight:700 }
+
+.pl_yelpsift{ position:relative }
+
+.pl_yelpsift
+.gap{ padding:0 5px; color:#d7d7d7 }
+
+.pl_yelpsift
+.empty{ color:#959595 }
+
+.pl_yelpsift
+.rank{ line-height:14px }
+
+.pl_yelpsift .rank
+.current{ color:#323232; cursor:default; text-decoration:none }
+
+.pl_yelpsift
+.btn{ position:absolute; right:0; bottom:0 }
+
+.pl_yelpsift
+.grade{ font-size:14px; line-height:16px; color:#636363 }
+
+.pl_yelpsift .grade
+img{ margin-right:5px }
+
+.pl_yelp{ padding-bottom:30px; margin-top:30px; border-bottom:1px solid #ececec }
+
+.pl_yelp
+.report{ display:none }
+
+.pl_yelp_main{ }
+
+.pl_yelp_face{ float:left; width:48px }
+
+.pl_yelp_face
+img{ display:block; border-radius:50px }
+
+.pl_yelp_cnt{ float:right; width:622px }
+
+.pl_yelp_cnt
+.text{ font-size:14px; word-break:break-all }
+
+.pl_yelp_cnt
+.info{ padding-top:5px; line-height:16px }
+
+.pl_yelp_cnt .grade
+img{ margin-right:5px }
+
+.pl_yelp_cnt
+.time{ margin-left:10px; color:#959595 }
+
+.pl_yelp_cnt .tool
+a{ margin-left:20px }
+
+.pl_yelp_cnt
+.icon_reply{ display:inline-block; padding-left:19px; background:url(/images/place/four/yelp_icon.png) no-repeat 0 2px }
+
+.pl_yelp_cnt
+.icon_useful{ display:inline-block; padding:2px 0 0 23px; background:url(/images/place/four/yelp_icon.png) no-repeat 0 -20px }
+
+.pl_yelp_reply{ margin-top:6px; padding-left:48px; display:none }
+
+.pl_yelp_reply
+.item{ padding:10px 10px 10px 50px }
+
+.pl_yelp_reply
+.enter{ padding:10px 0 0 50px }
+
+.pl_yelp_reply
+.face{ float:left; margin-left:-40px }
+
+.pl_yelp_reply .face
+img{ display:block; border-radius:50px }
+
+.pl_yelp_reply
+.info{ }
+
+.pl_yelp_reply
+.time{ color:#959595 }
+
+.pl_yelp_reply .tool
+a{ margin-left:15px }
+
+.pl_yelp_reply
+.icon_del{ display:inline-block; width:7px; height:7px; margin-left:10px; background:url(/images/place/four/yelp_icon.png) no-repeat 0 -45px; cursor:pointer }
+
+.pl_yelp_reply
+.ipttxt{ width:560px; height:18px; min-height:18px; padding:5px 10px; border:1px solid #c0c0c0 }
+
+.pl_yelp_reply .ipttxt:focus{ border-color:#80bd95; box-shadow:0 0 3px rgba(0, 0, 0, 0.2) inset }
+
+.pl_yelp_reply
+.btns{ height:22px; margin-top:10px }
+
+.pl_yelp_reply .btns
+.words{ line-height:14px; color:#a0a0a0 }
+
+.pl_yelp_reply .btns .words
+.error{ color:#f00 }
+
+.pl_yelp_reply_hv{ background-color:#f5f5f5 }
+
+.pl_yelp_reply_hv
+.report{ display:inline }
+
+.pl_addyelp{ margin-top:20px }
+
+.pl_addyelp_face{ float:left; width:48px }
+
+.pl_addyelp_face
+img{ display:block; border-radius:50px }
+
+.pl_addyelp_cnt{ float:right; width:632px }
+
+.pl_addyelp_cnt
+li{ padding-left:72px }
+
+.pl_addyelp_cnt
+.title{ float:left; width:72px; margin-left:-72px; text-align:right; font-size:14px; font-weight:700 }
+
+.pl_addyelp_cnt .title
+span{ color:#ee162d }
+
+.pl_addyelp_cnt
+.grade{ padding-top:4px }
+
+.pl_addyelp_cnt .grade
+img{ margin-right:5px; cursor:pointer }
+
+.pl_addyelp_cnt
+.ipttxt{ width:538px; height:108px; min-height:108px; padding:5px 10px; border:1px solid #c0c0c0 }
+
+.pl_addyelp_cnt .ipttxt:focus{ border-color:#80bd95; box-shadow:0 0 3px rgba(0, 0, 0, 0.2) inset }
+
+.pl_addyelp_cnt
+.btns{ height:28px; margin-top:10px }
+
+.pl_addyelp_cnt .btns
+.words{ line-height:14px; color:#a0a0a0 }
+
+.pl_addyelp_cnt .btns .words
+.error{ color:#f00 }
+
+.travelrefer{ }
+
+.travelrefer
+li{ padding:0 0 30px 58px; border-bottom:1px solid #ececec; margin-bottom:30px }
+
+.travelrefer
+.face{ float:left; margin-left:-58px }
+
+.travelrefer .face
+img{ display:block; border-radius:50% }
+
+.travelrefer
+.title{ font-size:14px; line-height:18px }
+
+.travelrefer .title
+.name{ font-weight:700; margin-right:6px }
+
+.travelrefer
+.text{ margin-top:5px; font-size:14px; color:#636363 }
+
+.travelrefer
+.time{ margin-top:5px; line-height:14px; color:#959595 }
+
+.travelrefer_more
+a{ float:right; padding-left:17px; line-height:14px; background:url(/images/place/four/title_morebg.png) no-repeat 0 center }
+
+.talklist_object{ height:50px; padding-left:60px }
+
+.talklist_object
+.pic{ float:left; margin-left:-60px }
+
+.talklist_object
+.title{ font-size:18px; line-height:22px }
+
+.talklist_object
+.link{ margin-top:4px; color:#d7d7d7; font-size:14px }
+
+.pl_hottalk{ margin-top:-20px }
+
+.pl_hottalk
+li{ padding-left:58px; padding-top:20px }
+
+.pl_hottalk
+.pic{ float:left; margin-left:-58px }
+
+.pl_hottalk
+.title{ font-size:14px; line-height:16px }
+
+.pl_hottalk
+.text{ max-height:72px; overflow:hidden; margin-top:5px; color:#636363 }
+
+.pl_hottalk
+.name{ line-height:14px; margin-top:5px }
+
+.pl_hottalk .name
+a{ margin-right:10px }
+
+.pl_hottalk .name
+img{ margin-right:5px }
+
+.body_fullmap{ width:100%; overflow:hidden }
+
+.place_fullmap{ }
+
+.place_fullmap_top{ width:100%; height:40px; background-color:#f4f3ef }
+
+.place_fullmap_tit{ padding-left:13px; font-size:14px; font-weight:bold; line-height:40px; color:#636363 }
+
+.place_fullmap_close{ float:right; width:33px; height:33px; margin:3px 15px 0 0; overflow:hidden; background:url(/images/place/map_colse.png) no-repeat; line-height:100px; cursor:pointer }
+
+.place_fullmap_close:hover{ background-position:0 -33px }
+
+.place_fullmap_cnt{ position:relative; width:100% }
+
+.place_fullmap_map{ background:#fff }
+
+.place_fullmap_sidebar{ position:absolute; top:0; left:0; width:270px; padding:20px 15px; background:#fff }
+
+.place_fullmap_select{ margin:5px 0 }
+
+.place_fullmap_select .dropdown dt
+a{ min-width:150px }
+
+.place_fullmap_maptab{ width:116px; height:28px; background:#e2e2e2; border:1px solid #c6c6c6; border-radius:3px; text-align:center; font:14px/28px tahoma, Arial, \5b8b\4f53, sans-serif }
+
+.place_fullmap_maptab
+span{ padding:0 8px }
+
+.wbba{ word-break:break-all }
+
+.pl_banner680{ position:relative }
+
+.pl_banner680
+.close{ position:absolute; top:5px; right:5px; width:22px; height:21px; background:url(/images/place/app/ad_close.png) no-repeat; cursor:pointer }
+
+.pl_banner680 .close:hover{ background-position:0 -21px }
+
+.pl_banner680
+.cnt{ }
+
+.app_puplayer{ display:none; position:absolute; left:0; top:118px; width:480px; height:240px }
+
+.app_puplayer
+.close{ position:absolute; right:19px; top:23px; width:28px; height:27px; background:url(/images/place/app/pup_close.png) no-repeat; cursor:pointer }
+
+.app_puplayer .close:hover{ background-position:0 -27px }
+
+.app_puplayer
+.btns{ position:absolute; bottom:42px; right:90px }
+
+.app_puplayer .btns
+a{ display:block; width:155px; height:34px; overflow:hidden; margin:0 auto; background:url(/images/place/app/btn_down.png) no-repeat; line-height:200px }
+
+.app_puplayer .btns a:hover{ background-position:0 -40px }

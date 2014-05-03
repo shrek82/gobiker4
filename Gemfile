@@ -50,3 +50,9 @@ group :development do
   gem "thin"
   gem "better_errors"
 end
+
+#图片和文件上传组件
+gem "paperclip", "~> 4.1"
+
+#添加水印的，忘记imagemagick复杂的命令把
+gem 'image_clipper'

@@ -1,0 +1,48 @@
+<div class="ind_topbg">
+  <div class="ind_topmain">
+    <% if cookies[:uid] %>
+        <p class="ind_slogan" id="_jsloginedtips" style="height:10px"></p>
+    <% else %>
+        <div class="ind_slogan2_fix" id="_jslogintips">
+          <div class="ind_slogan2">
+            <p class="btns">
+              <a href="javascript:;" class="weibo _jsweibologin">微博登录</a><a href="javascript:;" class="qq _jsqqlogin">QQ登录</a><a href="<%= register_path %>" class="regist" data-bn-ipg="top-rl-mail">邮件注册</a>
+            </p>
+          </div>
+        </div>
+    <% end %>
+    <div id="ind_focus" class="ind_focus">
+      <div class="slides_container">
+        <div class="slides_control">
+          <% @focus.each do |f| %>
+              <div class="slide">
+                <a href="<%= f.redirect %>"><img src="<%= img_style f.img_path, 'original' %>" alt="<%= f.name %>"/></a>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="ind_toprbox">
+      <ul class="ind_navlist">
+        <li class="place">
+          <a href="<%= places_path %>" data-bn-ipg="leftnav-place"><span class="title fontYaHei">目的地</span><span class="text"><%= @places_count %>个目的地</span></a>
+        </li>
+        <li class="bbs">
+          <a href="<%= forums_path %>" data-bn-ipg="leftnav-bbs"><span class="title fontYaHei">论坛</span>
+            <span class="text"><%= @topics_count %>篇帖子</span></a>
+        </li>
+        <li class="ask">
+          <a href="<%= asks_path %>" data-bn-ipg="leftnav-ask"><span class="title fontYaHei">问答</span><span class="text"><%=@asks_count %>个旅行问题</span></a>
+        </li>
+        <li class="plan">
+          <a href="plan" data-bn-ipg="leftnav-plan"><span class="title fontYaHei">行程助手</span><span class="text">旅行计划工具</span></a>
+        </li>
+      </ul>
+      <div class="ind_app clearfix" id="_jsiconrand">
+
+      </div>
+    </div>
+    <div class="cb"></div>
+  </div>
+</div>

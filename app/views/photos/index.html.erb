@@ -1,0 +1,70 @@
+<h1>Listing photos</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Img path</th>
+    <th>Is verify</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.title %></td>
+    <td><%= photo.img_path %></td>
+    <td><%= photo.is_verify %></td>
+    <td><%= link_to 'Show', photo %></td>
+    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+    <td><%= link_to 'Destroy', photo, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+<style type="text/css">
+
+  .btn{margin: 20px}
+</style>
+
+<%= link_to 'New Photo', new_photo_path %>
+
+<link rel="stylesheet" href="/css/google_dev_button.css"/>
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="/css/button.css"/>
+
+<button class="btn"><i class="icon-refresh icon-spin"></i> 提交</button>
+<button class="btn" disabled><i class="icon-refresh icon-spin"></i> 发布</button>
+<br>
+<button class="btn btn-mint">发布</button>
+<button class="btn btn-mint" disabled>发布</button>
+<br>
+<button class="btn btn-green">发布</button>
+<button class="btn btn-green" disabled><i class="icon-search"></i> 发布</button>
+<br>
+<button class="btn btn-blue "><i class="icon-cog"></i> 发布</button>
+<button class="btn btn-blue " disabled><i class="icon-refresh icon-spin"></i> 发布</button>
+<br>
+<button class="btn btn-light-gray"><i class="icon-refresh icon-spin"></i> 发布</button>
+<br>
+<button class="btn btn-orange"><i class="icon-refresh icon-spin"></i> 发布</button>
+<br>
+
+<button class="btn btn-red" id="testbutton"><span>发布</span></button>
+<button class="btn btn-red" disabled><span>发布</span></button>
+
+<br>
+<a class="btn" href="#"><i class="icon-refresh icon-spin"></i> Synchronizing Content...</a>
+<br>
+<br>
+<br>
+<br>
+
+<script type="text/javascript">
+    readyScript.testbutton = function () {
+        $('#testbutton').bind('click', function (e) {
+            $(this).attr('disabled', true).html('提交中 <i class="icon-spinner icon-spin icon-large"></i>');
+        });
+    }
+</script>

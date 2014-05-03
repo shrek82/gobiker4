@@ -1,0 +1,243 @@
+.s_clear:after{ content:"."; display:block; height:0; clear:both; visibility:hidden }
+
+.s_clear{ zoom:1 }
+
+#modlayer{ position:absolute; right:0; padding:12px; width:275px; background-color:#FFF; border:4px solid #7FCAE2 }
+
+#modlayer
+a{ color:#09C }
+
+#modlayer
+label{ float:right; margin-top:5px }
+
+#modcount{ padding:0 2px; font-size:24px; font-weight:400; color:#F60 }
+
+#modlayer
+.collapse{ position:absolute; right:0; top:5px; padding:0 5px }
+
+#modlayer.collapsed{ margin-right:-23px; padding:0; width:27px; height:35px; border:none; background:#F60; overflow:hidden }
+
+#modlayer.collapsed
+#modcount{ display:block; position:absolute; left:0; top:0; z-index:999; width:27px; height:35px; border-color:#09C; background-color:#09C; color:#FFF; font-size:12px; text-align:center; line-height:35px; cursor:pointer }
+
+.listtopicadmin{ margin:10px 0; border-top:1px solid #C5DAEB }
+
+.listtopicadmin
+li{ *overflow:hidden; *margin-bottom:-2px; height:28px; line-height:18px; border-top:1px solid #FFF; border-bottom:1px solid #C5DAEB; zoom:1 }
+
+.listtopicadmin
+.currentopt{ height:auto }
+
+.detailopt{ visibility:hidden; overflow:hidden; white-space:nowrap }
+
+.currentopt
+.detailopt{ visibility:visible }
+
+.detailopt p
+.txt{ width:100px }
+
+.detailopt span
+.txt{ width:18px; border-right:none }
+
+.detailopt
+a{ float:left; text-indent:-999px; margin-right:3px; width:22px; height:20px; text-align:center }
+
+.detailopt_bold, .detailopt_italic, .detailopt_underline{ border:1px solid #F1F5FA; outline:none }
+
+.detailopt
+.current{ border:1px solid #999; background-color:#FFF }
+
+.listtopicadmin
+table{ width:100% }
+
+.listtopicadmin
+td{ vertical-align:top }
+
+.listtopicadmin
+.labeltxt{ display:block; cursor:pointer; width:100%; background:url(http://bbs.qyer.com/images/go2eu/arrow_down.gif) no-repeat 100% 8px }
+
+.currentopt
+.labeltxt{ float:left; cursor:default; width:45px; background:none; color:#09C }
+
+.listtopicadmin
+.checkbox{ margin-top:3px; *margin-top:-2px }
+
+.listtopicadmin
+img{ vertical-align:middle }
+
+.tah_fixiesel{ overflow:hidden; white-space:nowrap; width:217px; *border-right:1px solid #CCC }
+
+.tah_fixiesel
+select{ width:160px; *width:expression(this.offsetWidth > 180 ? 'auto':'180') }
+
+.dropmenu{ padding-right:15px; background:url(http://bbs.qyer.com/images/go2eu/arrow_down.gif) 100% 50% no-repeat; cursor:pointer }
+
+.headermenu_popup a:hover{ text-decoration:none; color:#005826 }
+
+.headermenu_popup
+.active{ font-weight:700 }
+
+.titlemenu_popup{ padding:0 }
+
+.titlemenu_popup
+li{ margin:0 }
+
+.titlemenu_popup
+a{ display:block; padding:3px 8px }
+
+* html .titlemenu_popup
+a{ display:inline-block }
+
+.titlemenu_popup .current
+a{ background:#F1F5FA }
+
+.filter_popup{ width:5em }
+
+.filter_popup
+li{ width:60px }
+
+.showselect_menu{ margin-bottom:0.8em; padding:5px; text-align:left; border:1px solid #636363; background:#FEFEFE }
+
+.headactions .popupmenu_popup a, .headactions .popupmenu_popup
+strong{ color:#636363; background:none; white-space:nowrap }
+
+.headactions
+.popupmenu_popup{ overflow:visible }
+
+.hasdropdownbtn{ }
+
+.hasdropdownbtn
+input{ float:left; width:129px }
+
+.hasdropdownbtn
+.spmediuminput{ width:115px }
+
+.dropdownbtn{ float:left; overflow:hidden; text-indent:-9999px; width:20px; height:20px; border-width:1px 1px 1px 0; border-style:solid; border-color:#999 #CCC #CCC #999; background:#FFF url(http://bbs.qyer.com/images/go2eu/newarow.gif) no-repeat 0 0 }
+
+.dropdownbtn:hover{ background-position:0 -20px }
+
+.fwinmask{ }
+
+.fwin{ overflow-x:hidden; margin:0 auto; text-align:left }
+
+.t_l, .t_c, .t_r, .m_l, .m_r, .b_l, .b_c, .b_r{ overflow:hidden; opacity:0.9; filter:alpha(opacity=90); background:#636363 }
+
+.t_l, .t_r, .b_l, .b_r{ width:8px; height:8px }
+
+.t_c, .b_c{ height:8px }
+
+.m_l, .m_r{ width:8px }
+
+.m_c{ background:#EBEBEB }
+
+.fcontent{ margin:15px }
+
+.float_ctrl{ margin-bottom:15px; height:20px; line-height:20px }
+
+.float_ctrl
+em{ float:left; font-size:14px; font-weight:700; color:#005826 }
+
+.float_ctrl em
+a{ text-decoration:none }
+
+.float_ctrl
+.needverify{ margin-left:8px; padding-left:13px; width:45px; height:21px; line-height:21px; background:url(http://bbs.qyer.com/images/go2eu/re_unsolved.gif) no-repeat 0 0; font-size:12px; color:#636363; font-weight:400 }
+
+.float_ctrl .onerror, .float_ctrl
+.onright{ white-space:nowrap; height:auto; line-height:140%; color:#252525; font-size:12px; font-weight:400 }
+
+.float_ctrl
+span{ float:right; color:#999 }
+
+.float_ctrl span a, .float_ctrl
+strong{ float:left; text-decoration:none; margin-left:8px; font-weight:400; color:#252525 }
+
+.float_ctrl span a:hover{ color:#999 }
+
+.float_close{ float:left; width:20px; height:20px; overflow:hidden; text-indent:-9999px; background:url(http://bbs.qyer.com/images/go2eu/newclose.gif) no-repeat 0 0 }
+
+.float_close:hover{ background-position:0 -20px }
+
+.floatwrap{ overflow:auto; overflow-x:hidden; margin-bottom:10px; height:280px }
+
+.fcontent
+li{ list-style:none }
+
+.fcontent
+a{ color:#005826; text-decoration:underline }
+
+.fcontent
+.list{ margin:0 auto; width:570px; border-top:3px solid #d7d7d7; border-bottom:3px solid #d7d7d7 }
+
+.fcontent .list th, .fcontent .list
+td{ padding:3px !important; height:auto; border-bottom:1px dashed #d7d7d7 }
+
+.fcontent .list .btns th, .fcontent .list .btns
+td{ border-bottom:none }
+
+.fcontent .list
+th{ width:150px; background:none }
+
+.postbox{ clear:both }
+
+.moreconf{ margin-top:10px }
+
+.moreconf button, .moreconf
+a{ margin-right:3px }
+
+.loginform{ float:left; margin-bottom:10px; *margin-bottom:-10px; padding:20px 0; width:280px; border-right:1px solid #d7d7d7 }
+
+.regsec{ margin-bottom:10px }
+
+.channelinfo .onerror, .channelinfo
+.onright{ background-position:2px 0 }
+
+.deloption{ float:left; margin:4px; width:12px; height:12px; background:url(http://bbs.qyer.com/images/go2eu/close.gif) no-repeat 0 0; overflow:hidden; text-indent:-9999px }
+
+.deloption:hover{ background-position:0 -12px }
+
+.color_menu{ overflow:hidden; width:63px }
+
+.color_menu
+a{ overflow:hidden; float:left; width:20px; height:20px }
+
+.chosemagic{ margin-bottom:9px; width:220px }
+
+.topicadminhigh{ height:200px }
+
+.topicadminhigh
+.tah_body{ margin:5px 0 15px }
+
+.topicadminhigh .tah_body
+select{ width:217px }
+
+.topicadminlow{ height:50px }
+
+.topicadminlow
+table{ width:100% }
+
+.topicadminlow
+td{ padding:0 5px }
+
+.topicadminlow
+.txt{ width:100px }
+
+.topicadminlow .wide
+.txt{ width:50px }
+
+.topicadminlog{ }
+
+.topicadminlog
+h4{ font-weight:400 }
+
+.topicadminlog
+.dropdownbtn{ border-left-width:1px }
+
+.topicadminlog
+.txtarea{ margin:5px 0; width:212px; height:40px }
+
+.inlinelist
+li{ float:left; width:33% }
+
+.inlinelist
+li.wide{ width:49.5% }

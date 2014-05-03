@@ -1,0 +1,62 @@
+<% content_for:head do %>
+    <link rel="stylesheet" type="text/css" href="/static/uploadify/uploadify.css">
+    <script type="text/javascript" src="/static/uploadify/jquery.uploadify-3.1.min.js"></script>
+<% end %>
+<% @title="上传照片" %>
+<%= form_for @photo, :url => photos_path, :html => { :multipart => true } do |f| %>
+    <div class="field">
+      <div class="controls">
+        <input type="hidden" name='img_ids' id="img_ids"/>
+        <input type="file" name="photo[img]" id="file_upload"/>
+      </div>
+    </div>
+
+    <div id="uploadify_preview">
+        <ul>
+          <li id="includBefore" style="display: none"></li>
+        </ul>
+    </div>
+
+    <div class="actions" style="">
+      <%= f.button :class => "btn btn-mint", :id => 'submit_button' %>
+      <button type="button" class="btn" id="cancel_button" onclick="history.back()">取消</button>
+    </div>
+
+<% end %>
+
+
+<script type="text/javascript">
+    readyScript.bind = function () {
+        $('#form1').bind("submit", function (e) {
+            e.preventDefault();
+            new ajaxForm($(this), {
+                dataType: 'json'
+            }).send();
+        });
+        window.img_ids = $('#img_ids');
+        window.includBefore = $('#includBefore');
+        var uploader = new go_uploader({
+            'formData':{
+                "_uploader":"uploadify",
+                "_format":"json",
+                "<%= key = Rails.application.config.session_options[:key] %>":"<%= cookies[key] %>",
+                "<%= request_forgery_protection_token %>":"<%= form_authenticity_token %>"
+            },
+            'uploader':'/photos/upload',
+            onUploadSuccess: function (file, data, response) {
+                if (data) {
+                    var json = eval("(" + data + ")");
+                    if (json.state == "SUCCESS") {
+                        img_ids.val(img_ids.val().length > 0 ? img_ids.val() + ',' + json['file_id'] : json['file_id']);
+                        includBefore.before('<li><img src="' + json['url'] + '"></li>')
+                    }
+                    else {
+                        alert('很抱歉，照片上传失败，原因：\n\n' + json.error);
+                    }
+                }
+            }
+        });
+        uploader.preview();
+        uploader.uploadify();
+    }
+</script>

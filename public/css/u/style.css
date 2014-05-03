@@ -1,0 +1,269 @@
+body {
+    background: #fafafa
+}
+
+.qyer_header {
+    width: 980px
+}
+
+.qyer_footerBox {
+    width: 980px
+}
+
+.qyer_head_crumb {
+    width: 980px
+}
+
+.u_title {
+    border-bottom: 2px solid #d7d7d7
+}
+
+.u_title_main {
+    width: 980px;
+    margin: 0 auto;
+    height: 36px;
+    padding-bottom: 30px
+}
+
+.u_title_main
+.text {
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    font-size: 36px;
+    color: #147850
+}
+
+.u_ind_more {
+    padding-left: 17px;
+    background: url(http://static.qyer.com/images/user2/more_bg.png) no-repeat 0 center
+}
+
+.ui_private_btn {
+    margin: 0 0 0 10px;
+    float: left
+}
+
+.ui_attent_btn {
+    float: left
+}
+
+.u_headbar {
+    position: relative;
+    z-index: 30;
+    width: 978px;
+    margin: 0 auto;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #eaeaea;
+    border-bottom-color: #cacaca;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    background: #fff
+}
+
+.u_headbar
+.infos {
+    height: 68px
+}
+
+.u_headbar .infos
+.face {
+    margin: 10px 0 0 10px;
+    float: left
+}
+
+.u_headbar .infos .face
+a {
+    display: block;
+    float: left;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    overflow: hidden
+}
+
+.u_headbar .infos .face a
+img {
+    float: left;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px
+}
+
+.u_headbar .infos
+.name {
+    margin-left: 10px;
+    float: left
+}
+
+.u_headbar .infos .name
+strong {
+    line-height: 48px;
+    font-size: 22px;
+    float: left;
+    margin-top: 10px
+}
+
+.u_headbar .infos .name .icon_gender_he, .u_headbar .infos .name
+.icon_gender_she {
+    float: left;
+    margin: 28px 0 0 5px
+}
+
+.u_headbar .infos
+.text {
+    float: left;
+    line-height: 20px;
+    margin-top: 24px;
+    padding-left: 20px
+}
+
+.u_headbar
+.menu {
+    background: #f8f8f8;
+    line-height: 40px;
+    border-top: 1px solid #dde0df
+}
+
+.u_headbar .menu
+ul {
+    float: left
+}
+
+.u_headbar .menu ul
+li {
+    float: left;
+    border-right: 1px solid #dde0df
+}
+
+.u_headbar .menu
+.a_list {
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #605951;
+    font-weight: 700
+}
+
+.u_headbar .menu .a_list:hover {
+    background: #fff;
+    text-decoration: none
+}
+
+.u_headbar .menu .current
+.a_list {
+    color: #72af8b;
+    background: #fff
+}
+
+.u_headbar .menu .more_select .a_list
+span {
+    background: url(/images/user2/index/down_icon.png) no-repeat right center;
+    padding-right: 10px
+}
+
+.u_headbar .menu
+.more_select {
+    position: relative
+}
+
+.u_headbar .menu .more_select
+.more_item {
+    display: none;
+    position: absolute;
+    right: -1px;
+    top: 40px;
+    background: #fff;
+    border: 1px solid #cbcbcb;
+    border-top: 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
+}
+
+.u_headbar .menu .more_select .more_item
+a {
+    display: block;
+    text-align: left;
+    border-top: 1px solid #dde0df;
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #605951;
+    white-space: nowrap
+}
+
+.u_headbar .menu .more_select .more_item a:hover {
+    background: #f8f8f8;
+    text-decoration: none
+}
+
+.u_headbar .menu .more_select:hover
+.more_item {
+    display: block
+}
+
+.u_headbar .menu
+.seting {
+    float: right;
+    margin-right: 30px;
+    line-height: 18px;
+    font-size: 14px;
+    margin-top: 11px;
+    background: url(/images/user2/index/set_icon.png) no-repeat;
+    padding-left: 23px;
+    font-weight: 700;
+    color: #605951
+}
+
+.u_headbar .menu .seting:hover {
+    background-position: 0 -18px;
+    color: #000;
+    text-decoration: none
+}
+
+.u_headbar .menu
+.data {
+    float: right;
+    margin-right: 30px;
+    line-height: 18px;
+    font-size: 14px;
+    margin-top: 11px;
+    background: url(/images/user2/index/data_icon.png) no-repeat;
+    padding-left: 22px;
+    font-weight: 700;
+    color: #605951
+}
+
+.u_headbar .menu .data:hover {
+    background-position: 0 -18px;
+    color: #000;
+    text-decoration: none
+}
+
+.u_medalbar_top {
+    margin-top: 30px
+}
+
+.u_medalbar_top
+.title {
+    height: 18px;
+    line-height: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd
+}
+
+.u_medalbar_top .title
+h3 {
+    float: left;
+    font-size: 16px
+}
+
+.u_medalbar_top
+li {
+    margin-top: 15px;
+    color: #636363;
+    padding-left: 25px
+}
+
+.u_sidebar_abanner {
+    margin-top: 50px
+}
