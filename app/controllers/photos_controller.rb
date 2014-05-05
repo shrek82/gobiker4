@@ -37,12 +37,12 @@ class PhotosController < ApplicationController
 
   #上传图片
   def upload
-    @photo = Photo.new(params[:photo])
+    @photo = Photo.new(photo_params)
     @photo.user_id=1
     if @photo.save
       file_extension=@photo.img_file_name[/\.[a-z]{3,4}$/]
       file_path="/uploads/photos/"+@photo[:created_at].strftime('%Y').to_s+'/'+@photo[:created_at].strftime('%m%d').to_s+'/'+@photo[:id].to_s+"_thumb"+file_extension
-      respond :state=>'SUCCESS',:url=>file_path,:file_id => @photo[:id], :fileName => @photo[:img_file_name],:fileType=>@photo[:img_content_type],:fileSize => @photo[:img_file_size], :success => '资料修改成功'
+      respond :state=>'SUCCESS',:url=>file_path,:file_id => @photo[:id], :fileName => @photo[:img_file_name],:fileType=>@photo[:img_content_type],:fileSize => @photo[:img_file_size], :success => '文件上传成功'
     else
       respond :error=>@photo.errors.full_messages, :status=>500
     end
