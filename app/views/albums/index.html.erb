@@ -1,0 +1,45 @@
+<h1>Listing albums</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+    <th>Place</th>
+    <th>Event</th>
+    <th>Club</th>
+    <th>Pics num</th>
+    <th>Hits num</th>
+    <th>Tags</th>
+    <th>Cover path</th>
+    <th>Order num</th>
+    <th>Is close</th>
+    <th>Is recommended</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @albums.each do |album| %>
+  <tr>
+    <td><%= album.name %></td>
+    <td><%= album.user_id %></td>
+    <td><%= album.place_id %></td>
+    <td><%= album.event_id %></td>
+    <td><%= album.club_id %></td>
+    <td><%= album.pics_num %></td>
+    <td><%= album.hits_num %></td>
+    <td><%= album.tags %></td>
+    <td><%= album.cover_path %></td>
+    <td><%= album.order_num %></td>
+    <td><%= album.is_close %></td>
+    <td><%= album.is_recommended %></td>
+    <td><%= link_to 'Show', album %></td>
+    <td><%= link_to 'Edit', edit_album_path(album) %></td>
+    <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Album', new_album_path %>

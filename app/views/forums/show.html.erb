@@ -1,54 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%@title=@forum.name %>
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="http://www.qyer.com/">首页</a></span>
+    <span class="space">&gt;</span>
+    <a href="<%= forums_path %>">论坛</a>&nbsp;&gt;&nbsp;<%= @forum.name %>
+  </div>
+</div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @forum.category_id %>
-</p>
+<%= render 'forums/list_head' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @forum.name %>
-</p>
 
-<p>
-  <strong>Intro:</strong>
-  <%= @forum.intro %>
-</p>
+<div>
+  <%= render 'forums/list_main' %>
+  <%= render 'forums/list_siebar' %>
+</div>
 
-<p>
-  <strong>Province:</strong>
-  <%= @forum.province_id %>
-</p>
 
-<p>
-  <strong>City:</strong>
-  <%= @forum.city_id %>
-</p>
-
-<p>
-  <strong>Club:</strong>
-  <%= @forum.club_id %>
-</p>
-
-<p>
-  <strong>Topics num:</strong>
-  <%= @forum.topics_num %>
-</p>
-
-<p>
-  <strong>Order num:</strong>
-  <%= @forum.order_num %>
-</p>
-
-<p>
-  <strong>Is systemic:</strong>
-  <%= @forum.is_systemic %>
-</p>
-
-<p>
-  <strong>Icon path:</strong>
-  <%= @forum.icon_path %>
-</p>
-
-<%= link_to 'Edit', edit_forum_path(@forum) %> |
-<%= link_to 'Back', forums_path %>
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['global','forum/latest/forum'], function(global,forum) {
+            //global.button('place_href_button');
+            global.logged_button('post_href_button');
+            forum.list_events();
+            forum.post_button();
+        });
+    </script>
+<% end %>

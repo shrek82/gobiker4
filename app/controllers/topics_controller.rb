@@ -67,7 +67,7 @@ class TopicsController < ApplicationController
       @topic = Topic.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white show through.
     def topic_params
       params.require(:topic).permit(:forum_id, :subject_id, :title, :title_color, :user_id, :is_fixed, :is_good, :is_recommend, :hits_num, :comments_num, :last_comment_user_id, :last_comment_time)
     end

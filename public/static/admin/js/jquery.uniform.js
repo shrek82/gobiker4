@@ -515,7 +515,7 @@ Enjoy!
         //reset inline style
         $(this).css("opacity", "1");
         
-        //remove item from list of uniformed elements
+        //remove item from show of uniformed elements
         var index = $.inArray($(elem), $.uniform.elements);
         $.uniform.elements.splice(index, 1);
       });

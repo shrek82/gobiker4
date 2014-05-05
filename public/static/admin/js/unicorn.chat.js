@@ -52,7 +52,7 @@ $(document).ready(function(){
 	}
     function remove_user(userid,name) {
         i = i + 1;
-        $('.contact-list li#user-'+userid).addClass('offline').delay(1000).slideUp(800,function(){
+        $('.contact-show li#user-'+userid).addClass('offline').delay(1000).slideUp(800,function(){
             $(this).remove();
         });
         var  inner = $('#chat-messages-inner');

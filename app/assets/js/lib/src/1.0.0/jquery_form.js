@@ -987,7 +987,7 @@ define(function(require,exports,moudles){
        * Clears the selected form elements.
        */
       $.fn.clearFields = $.fn.clearInputs = function(includeHidden) {
-        var re = /^(?:color|date|datetime|email|month|number|password|range|search|tel|text|time|url|week)$/i; // 'hidden' is not in this list
+        var re = /^(?:color|date|datetime|email|month|number|password|range|search|tel|text|time|url|week)$/i; // 'hidden' is not in this show
         return this.each(function() {
           var t = this.type, tag = this.tagName.toLowerCase();
           if (re.test(t) || tag == 'textarea') {

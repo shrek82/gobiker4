@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @attached.name %>
+</p>
+
+<p>
+  <b>Img:</b>
+  <%= @attached[:created_at] %>
+  <%="/uploads/pics/"+@attached[:created_at].strftime('%Y').to_s+'/'+@attached[:created_at].strftime('%m%n').to_s+'/'+@attached[:id].to_s+"_thumb.jpg"  %>
+  <%= image_tag(@attached.img.url(:medium)) %>
+</p>
+
+<p>
+  <b>Att:</b>
+  <%= link_to 'Back', @attached.att.url %>
+</p>
+
+<%= link_to 'Edit', edit_attached_path(@attached) %> |
+<%= link_to 'Back', attacheds_path %>

@@ -115,19 +115,19 @@ define("global/1.1.0/global", [ "lib/latest/lib", "./ueditor_config" ], function
         strVar += '  <div class="clearfix"><strong class="fl f16 fontYaHei fb cGray">使用穷游帐号登录</strong><span class="fr cGray">没有帐号？<a id="tab_register_sw" href="javascript:void(0);">立即注册</a></span></div>';
         strVar += '  <form method="post" action="/login" name="loginform" id="login_form">';
         strVar += '    <div class="login_form" style="margin-bottom:10px;">';
-        strVar += '      <div class="list clearfix">';
+        strVar += '      <div class="show clearfix">';
         strVar += '        <span class="fl">帐号：</span>';
         strVar += '        <input type="text" class="ui_input fl" name="login[account]" id="account" maxlength="40" placeholder="邮箱或用户名">';
         strVar += "      </div>";
-        strVar += '      <div class="list clearfix">';
+        strVar += '      <div class="show clearfix">';
         strVar += '        <span class="fl">密码：</span>';
         strVar += '        <input type="password" class="ui_input fl" autocomplete="off" maxlength="16" name="login[password]" id="password">';
         strVar += "      </div>";
-        strVar += '      <div class="list clearfix">';
+        strVar += '      <div class="show clearfix">';
         strVar += '        <label class="fl cGray"><input type="checkbox" checked="checked" id="tagpass" name="login[reme]" class="fl">记住我</label>';
         strVar += '        <a target="_blank" href="getpass" class="fr">忘记密码？</a>';
         strVar += "      </div>";
-        strVar += '      <div class="list clearfix">';
+        strVar += '      <div class="show clearfix">';
         strVar += '        <button type="submit" class="btn btn-mint" id="login_submit_button" style="width:80%;padding:8px 0;font-size:16px">立即登录</button>';
         strVar += "      </div>";
         strVar += "    </div>";
@@ -203,7 +203,7 @@ define("global/1.1.0/global", [ "lib/latest/lib", "./ueditor_config" ], function
     //载入某条评论
     global.loadComments = function(query_param) {
         $.ajax({
-            url: "/comments/list",
+            url: "/comments/show",
             dataType: "html",
             type: "get",
             data: query_param + "&_format=html",

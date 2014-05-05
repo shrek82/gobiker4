@@ -1,0 +1,10 @@
+<select name="<%=@object?@object+'[area_id]':'area_id'%>" id="areas">
+  <% if @areas.blank? %>
+      <option>请先善区数据库...</option>
+  <% else %>
+      <option>选择区</option>
+      <% @areas.each do |a| %>
+          <option value="<%= a.id %>"><%= a.name %></option>
+      <% end %>
+  <% end %>
+</select>

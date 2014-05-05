@@ -1,0 +1,25 @@
+<div class="gui_all">
+<h2 class="gui_title">全部穷游锦囊</h2>
+<div class="ui_sort gui_tab">
+  <a href="javascript:;" class="ui_sort_item ui_sort_item_current jsorderupdate" data-bn-ipg="20-1">按更新时间</a><span class="ui_sort_gap">|</span><a href="javascript:;" class="ui_sort_item jsorderdown" data-bn-ipg="20-2">最近7天下载量</a>
+</div>
+<div class="jsajaxshowpage">
+<ul class="gui_jnlist clearfix">
+  <% @places.each do |p| %>
+      <li class="gui_jnlist_item">
+        <div class="gui_jnlist_item_pic">
+          <% img_path=(p.img_path.nil?)?'/images/default_img_thumb.png':p.img_path %>
+          <a href="<%= place_path p %>" target="_blank" ><%=image_tag(img_path,{:width=>'130px',:height=>'90px',:alt=>p.name})%></a>
+        </div>
+        <p class="gui_jnlist_item_tit"><%=link_to truncate(p.name,:lenght=>6),p,{:target => '_blank'}%></p>
+        <p class="gui_jnlist_item_text"><%= p.city.name %><br> <%= localize p.created_at,:format => :default %>更新</p>
+      </li>
+  <% end %>
+</ul>
+
+<%= go_pager @places %>
+
+<div class="cb"></div>
+</div>
+<div class="cb"></div>
+</div>

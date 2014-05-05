@@ -1,43 +1,301 @@
-<h1>Listing forums</h1>
+<% @title='论坛' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Name</th>
-      <th>Intro</th>
-      <th>Province</th>
-      <th>City</th>
-      <th>Club</th>
-      <th>Topics num</th>
-      <th>Order num</th>
-      <th>Is systemic</th>
-      <th>Icon path</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="<%= main_path %>" data-bn-ipg="3-1">首页</a></span>
+    <span class="space">&gt;</span>
 
-  <tbody>
-    <% @forums.each do |forum| %>
-      <tr>
-        <td><%= forum.category_id %></td>
-        <td><%= forum.name %></td>
-        <td><%= forum.intro %></td>
-        <td><%= forum.province_id %></td>
-        <td><%= forum.city_id %></td>
-        <td><%= forum.club_id %></td>
-        <td><%= forum.topics_num %></td>
-        <td><%= forum.order_num %></td>
-        <td><%= forum.is_systemic %></td>
-        <td><%= forum.icon_path %></td>
-        <td><%= link_to 'Show', forum %></td>
-        <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
-        <td><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <h1 class="current">论坛</h1>
+  </div>
+</div>
 
-<br>
+<div class="bbs_indtop fontYaHei">
+  <p class="title">穷游论坛</p>
 
-<%= link_to 'New Forum', new_forum_path %>
+  <p class="slogen">大家帮助大家,分享精彩游记</p>
+
+  <p class="slogen2"><em>6,793,238</em> 篇分享等你探索</p>
+</div>
+
+
+<div class="bbs_sldline2"></div>
+
+<div class="lay_wrap">
+  <div class="lay_main">
+
+    <div class="bbs_maintit">
+      <h2 class="title fontYaHei">论坛版块</h2>
+
+      <p class="info">53 个版面 &nbsp;&nbsp;今日更新 1639 篇贴子</p>
+
+      <div class="bbs_tabsearch">
+        <input type="text" id="bbs_tabsearch_ipt" class="inputxt" autocomplete="off" placeholder="搜索帖子或问答" value=""><input type="text" style="display:none;">
+
+        <div style="display:none;" id="bbs_tabsearch_lay" class="bbs_tabsearch_lay">
+          <!--ul class="show">
+          <li><a href="#">法国 / 摩纳哥</a></li>
+          <li><a href="#">欧洲多国</a></li>
+          <li><a href="#">欧洲交通</a></li>
+          <li class="sou"><a href="#">搜“<em>法国</em>”相关帖子欧洲交通</a></li>
+          </ul-->
+        </div>
+      </div>
+    </div>
+    <ul class="bbs_subnav fontYaHei">
+      <li><a href="javascript:void(0);">公共版块</a></li>
+      <li><a href="javascript:void(0);">热门城市</a></li>
+      <li><a href="javascript:void(0);">俱乐部</a></li>
+      <li><a href="javascript:void(0);">后花院</a></li>
+    </ul>
+
+
+    <dl class="bbs_indlist clearfix">
+      <dt class="fontYaHei" id="category78">公共版块</dt>
+
+      <% @public.each do |f| %>
+          <dd id="forum3">
+            <p class="pic">
+              <a href="<%= forum_path f %>"><img src="<%= f.ico_path %>" align="left" alt="<%= f.name %>" title="<%= f.name %>" border="0"></a>
+            </p>
+
+            <div class="box">
+              <h3 class="tit"><a href="<%= forum_path f %>"><span><%= f.name %></span></a></h3>
+
+              <p class="text"><%= f.intro %></p>
+
+              <p class="nums"><%= f.topics_num %>个主题</p>
+            </div>
+          </dd>
+      <% end %>
+
+    </dl>
+    <div class="bbs_sldline2"></div>
+
+    <dl class="bbs_indlist clearfix">
+      <dt class="fontYaHei" id="category65">穷游欧洲</dt>
+
+      <% @hot_cities.each do |f| %>
+          <dd id="forum3">
+            <p class="pic">
+              <a href="<%= forum_path f %>"><img src="<%= f.ico_path %>" align="left" alt="<%= f.name %>" title="<%= f.name %>" border="0"></a>
+            </p>
+
+            <div class="box">
+              <h3 class="tit"><a href="<%= forum_path f %>"><span><%= f.name %></span></a></h3>
+
+              <p class="text"><%= f.intro %></p>
+
+              <p class="nums"><%= f.topics_num %>个主题</p>
+            </div>
+          </dd>
+      <% end %>
+    </dl>
+
+  </div>
+  <div class="lay_side">
+    <div class="bbs_sidetool2">
+      <p><a href="javascript:void(0);" class="btn_newbbs2" id="forums_post_button">写新帖</a></p>
+    </div>
+    <div id="bbs_lastread" class="bbs_lastread" style="">
+      <p class="bbs_lastread_tit"><span id="bbs_lastread_tit">上次读到</span></p>
+
+      <div style="display: none;" id="bbs_lastread_lay" class="bbs_lastread_lay">
+        <p class="bbs_lastread_lay_arrow"></p>
+
+        <p class="bbs_lastread_lay_arrow2"></p>
+        <ul id="bbs_lastread_laylist" class="list">
+          <li class="item"><p class="tit">
+            <a href="http://bbs.qyer.com/thread-817824-1.html" data-bn-ipg="bbs-historylist-1" title="从心发现——新加坡&amp;民丹岛　8天热力亲子之旅（环球影城/海洋馆/摩天轮/金沙泳池）">从心发现——新加坡&amp;民丹岛　8天热力亲子之旅（环球影城/海洋馆/摩天轮/金沙泳池）</a>
+          </p>
+
+            <p class="info">
+              <span class="del"><a href="javascript:void(0)" onclick="clear_history_read_thread(this,817824);" data-bn-ipg="bbs-historyclear-1">清除</a></span><span class="page">第1/1页</span><span class="link"><a href="http://bbs.qyer.com/thread-817824-1.html" data-bn-ipg="bbs-historyread-1">继续阅读</a></span>
+            </p></li>
+          <li class="item"><p class="tit">
+            <a href="http://bbs.qyer.com/thread-817762-1.html" data-bn-ipg="bbs-historylist-2" title="七月中旬登少女峰 求同游 团体票省钱游~！">七月中旬登少女峰
+              求同游 团体票省钱游~！</a></p>
+
+            <p class="info">
+              <span class="del"><a href="javascript:void(0)" onclick="clear_history_read_thread(this,817762);" data-bn-ipg="bbs-historyclear-2">清除</a></span><span class="page">第1/1页</span><span class="link"><a href="http://bbs.qyer.com/thread-817762-1.html" data-bn-ipg="bbs-historyread-2">继续阅读</a></span>
+            </p></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="bbs_sldline1"></div>
+    <div class="bbs_lianhot">
+      <h3 class="bbs_sidetit fontYaHei">热门连载</h3>
+      <ol class="bbs_tiehotlist">
+        <li class="item1"><p>
+          <a href="http://bbs.qyer.com/thread-654208-1.html" data-bn-ipg="bbs-hotseries-1" title="花生游世界之2012.7-10三洲十国，斋普尔琥珀堡~">花生游世界之2012.7-10三洲十国，斋普尔琥珀堡~</a>
+        </p></li>
+        <li class="item2"><p>
+          <a href="http://bbs.qyer.com/thread-741708-1.html" data-bn-ipg="bbs-hotseries-2" title="关于猫力和瘦肉的无国界壮游">关于猫力和瘦肉的无国界壮游</a>
+        </p></li>
+        <li class="item3"><p>
+          <a href="http://bbs.qyer.com/thread-786855-1.html" data-bn-ipg="bbs-hotseries-3" title="Super Mario@Thailand 曼谷.清迈.Pai.普吉岛.PP岛">Super
+            Mario@Thailand 曼谷.清迈.Pai.普吉岛.PP岛</a></p></li>
+        <li class="item4"><p>
+          <a href="http://bbs.qyer.com/thread-803894-1.html" data-bn-ipg="bbs-hotseries-4" title="来生与你有个约定——新西兰！(全文完，已增设电梯)">来生与你有个约定——新西兰！(全文完，已增设电梯)</a>
+        </p></li>
+        <li class="item5"><p>
+          <a href="http://bbs.qyer.com/thread-569533-1.html" data-bn-ipg="bbs-hotseries-5" title="大鱼小猫法瑞德奥意希六国21天欧游记（更新至圣托里尼）">大鱼小猫法瑞德奥意希六国21天欧游记（更新至圣托里尼）</a>
+        </p></li>
+      </ol>
+    </div>
+
+    <div class="mt30" id="ad_footerbanner3">
+      <img src="/images/forum/ff956254af84e8dc41551540501a47c4.jpg" alt=""/>
+    </div>
+  </div>
+  <div class="cb"></div>
+
+  <div class="bbs_sldline2"></div>
+  <div class="bbs_btmlists clearfix">
+    <div class="bbs_btmlist">
+      <h3 class="title">国内热门地区</h3>
+
+      <div class="lists">
+        <ul class="list">
+          <li><a href="http://place.qyer.com/thailand/" title="泰国旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-1">泰国</a></li>
+          <li><a href="http://place.qyer.com/malaysia/" title="马来西亚旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-2">马来西亚</a>
+          </li>
+          <li><a href="http://place.qyer.com/france/" title="法国旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-3">法国</a></li>
+          <li><a href="http://place.qyer.com/italy/" title="意大利旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-4">意大利</a></li>
+          <li><a href="http://place.qyer.com/singapore/" title="新加坡旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-5">新加坡</a>
+          </li>
+          <li><a href="http://place.qyer.com/germany/" title="德国旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-6">德国</a></li>
+          <li><a href="http://place.qyer.com/japan/" title="日本旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-7">日本</a></li>
+          <li><a href="http://place.qyer.com/usa/" title="美国旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-8">美国</a></li>
+          <li><a href="http://place.qyer.com/cambodia/" title="柬埔寨旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-9">柬埔寨</a>
+          </li>
+          <li><a href="http://place.qyer.com/south-korea/" title="韩国旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-10">韩国</a>
+          </li>
+        </ul>
+        <ul class="list">
+          <li><a href="http://place.qyer.com/spain/" title="西班牙旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-11">西班牙</a></li>
+          <li><a href="http://place.qyer.com/netherlands/" title="荷兰旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-12">荷兰</a>
+          </li>
+          <li><a href="http://place.qyer.com/austria/" title="奥地利旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-13">奥地利</a>
+          </li>
+          <li><a href="http://place.qyer.com/uk/" title="英国旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-14">英国</a></li>
+          <li><a href="http://place.qyer.com/vietnam/" title="越南旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-15">越南</a></li>
+          <li>
+            <a href="http://place.qyer.com/australia/" title="澳大利亚旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-16">澳大利亚</a>
+          </li>
+          <li><a href="http://place.qyer.com/switzerland/" title="瑞士旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-17">瑞士</a>
+          </li>
+          <li><a href="http://place.qyer.com/vatican/" title="梵蒂冈旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-18">梵蒂冈</a>
+          </li>
+          <li>
+            <a href="http://place.qyer.com/czech-republic/" title="捷克旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-19">捷克</a>
+          </li>
+          <li><a href="http://place.qyer.com/belgium/" title="比利时旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-20">比利时</a>
+          </li>
+        </ul>
+        <ul class="list">
+          <li>
+            <a href="http://place.qyer.com/indonesia/" title="印度尼西亚旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-21">印度尼西亚</a>
+          </li>
+          <li>
+            <a href="http://place.qyer.com/philippines/" title="菲律宾旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-22">菲律宾</a>
+          </li>
+          <li><a href="http://place.qyer.com/nepal/" title="尼泊尔旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-23">尼泊尔</a></li>
+          <li><a href="http://place.qyer.com/greece/" title="希腊旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-24">希腊</a></li>
+          <li><a href="http://place.qyer.com/sweden/" title="瑞典旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-25">瑞典</a></li>
+          <li><a href="http://place.qyer.com/denmark/" title="丹麦旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-26">丹麦</a></li>
+          <li><a href="http://place.qyer.com/hungary/" title="匈牙利旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-27">匈牙利</a>
+          </li>
+          <li>
+            <a href="http://place.qyer.com/new-zealand/" title="新西兰旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-28">新西兰</a>
+          </li>
+          <li><a href="http://place.qyer.com/canada/" title="加拿大旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-29">加拿大</a>
+          </li>
+          <li><a href="http://place.qyer.com/turkey/" title="土耳其旅游攻略" data-bn-ipg="bbs-bottom-hotcountry-30">土耳其</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bbs_btmlist">
+      <h3 class="title">热门目的地</h3>
+
+      <div class="lists">
+        <ul class="list">
+          <li><a href="http://place.qyer.com/hong-kong/" title="香港旅游攻略" data-bn-ipg="bbs-bottom-hotcity-1">香港</a></li>
+          <li><a href="http://place.qyer.com/macau/" title="澳门旅游攻略" data-bn-ipg="bbs-bottom-hotcity-2">澳门</a></li>
+          <li><a href="http://place.qyer.com/bangkok/" title="曼谷旅游攻略" data-bn-ipg="bbs-bottom-hotcity-3">曼谷</a></li>
+          <li><a href="http://place.qyer.com/paris/" title="巴黎旅游攻略" data-bn-ipg="bbs-bottom-hotcity-4">巴黎</a></li>
+          <li><a href="http://place.qyer.com/kuala-lumpur/" title="吉隆坡旅游攻略" data-bn-ipg="bbs-bottom-hotcity-5">吉隆坡</a>
+          </li>
+          <li><a href="http://place.qyer.com/rome/" title="罗马旅游攻略" data-bn-ipg="bbs-bottom-hotcity-6">罗马</a></li>
+          <li><a href="http://place.qyer.com/singapore/" title="新加坡旅游攻略" data-bn-ipg="bbs-bottom-hotcity-7">新加坡</a></li>
+          <li><a href="http://place.qyer.com/venice/" title="威尼斯旅游攻略" data-bn-ipg="bbs-bottom-hotcity-8">威尼斯</a></li>
+          <li><a href="http://place.qyer.com/florence/" title="佛罗伦萨旅游攻略" data-bn-ipg="bbs-bottom-hotcity-9">佛罗伦萨</a>
+          </li>
+          <li><a href="http://place.qyer.com/milan/" title="米兰旅游攻略" data-bn-ipg="bbs-bottom-hotcity-10">米兰</a></li>
+        </ul>
+        <ul class="list">
+          <li><a href="http://place.qyer.com/siem-reap/" title="暹粒旅游攻略" data-bn-ipg="bbs-bottom-hotcity-11">暹粒</a></li>
+          <li><a href="http://place.qyer.com/tokyo/" title="东京旅游攻略" data-bn-ipg="bbs-bottom-hotcity-12">东京</a></li>
+          <li><a href="http://place.qyer.com/barcelona/" title="巴塞罗那旅游攻略" data-bn-ipg="bbs-bottom-hotcity-13">巴塞罗那</a>
+          </li>
+          <li><a href="http://place.qyer.com/seoul/" title="首尔旅游攻略" data-bn-ipg="bbs-bottom-hotcity-14">首尔</a></li>
+          <li><a href="http://place.qyer.com/amsterdam/" title="阿姆斯特丹旅游攻略" data-bn-ipg="bbs-bottom-hotcity-15">阿姆斯特丹</a>
+          </li>
+          <li><a href="http://place.qyer.com/munich/" title="慕尼黑旅游攻略" data-bn-ipg="bbs-bottom-hotcity-16">慕尼黑</a></li>
+          <li><a href="http://place.qyer.com/chiang-mai/" title="清迈旅游攻略" data-bn-ipg="bbs-bottom-hotcity-17">清迈</a></li>
+          <li><a href="http://place.qyer.com/london/" title="伦敦旅游攻略" data-bn-ipg="bbs-bottom-hotcity-18">伦敦</a></li>
+          <li><a href="http://place.qyer.com/new-york/" title="纽约旅游攻略" data-bn-ipg="bbs-bottom-hotcity-19">纽约</a></li>
+          <li><a href="http://place.qyer.com/los-angeles/" title="洛杉矶旅游攻略" data-bn-ipg="bbs-bottom-hotcity-20">洛杉矶</a>
+          </li>
+        </ul>
+        <ul class="list">
+          <li><a href="http://place.qyer.com/phuket-island/" title="普吉岛旅游攻略" data-bn-ipg="bbs-bottom-hotcity-21">普吉岛</a>
+          </li>
+          <li><a href="http://place.qyer.com/kyoto/" title="京都旅游攻略" data-bn-ipg="bbs-bottom-hotcity-22">京都</a></li>
+          <li><a href="http://place.qyer.com/vienna/" title="维也纳旅游攻略" data-bn-ipg="bbs-bottom-hotcity-23">维也纳</a></li>
+          <li><a href="http://place.qyer.com/taipei/" title="台北旅游攻略" data-bn-ipg="bbs-bottom-hotcity-24">台北</a></li>
+          <li><a href="http://place.qyer.com/san-francisco/" title="旧金山旅游攻略" data-bn-ipg="bbs-bottom-hotcity-25">旧金山</a>
+          </li>
+          <li><a href="http://place.qyer.com/prague/" title="布拉格旅游攻略" data-bn-ipg="bbs-bottom-hotcity-26">布拉格</a></li>
+          <li><a href="http://place.qyer.com/sydney/" title="悉尼旅游攻略" data-bn-ipg="bbs-bottom-hotcity-27">悉尼</a></li>
+          <li><a href="http://place.qyer.com/berlin/" title="柏林旅游攻略" data-bn-ipg="bbs-bottom-hotcity-28">柏林</a></li>
+          <li>
+            <a href="http://place.qyer.com/ho-chi-minh-city/" title="胡志明市旅游攻略" data-bn-ipg="bbs-bottom-hotcity-29">胡志明市</a>
+          </li>
+          <li><a href="http://place.qyer.com/nice/" title="尼斯旅游攻略" data-bn-ipg="bbs-bottom-hotcity-30">尼斯</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="test" type="text/html">
+  <h1><?=title?></h1>
+  <ul>
+    <?for(i = 0; i < list.length; i ++) {?>
+    <li>条目内容 <?=i + 1?> ：<?=list[i]?></li>
+    <?}?>
+  </ul>
+</script>
+
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['global', 'forum/latest/forum', 'template'], function (global, forum, template) {
+            global.log();
+            global.logs();
+            //global.editComment();
+
+            global.logged_button('forums_post_button', function () {
+                forum.post_topic();
+            });
+
+            var data = {
+                title: '标签',
+                list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+            };
+            var html = template.render('test', data);
+        });
+    </script>
+<% end %>

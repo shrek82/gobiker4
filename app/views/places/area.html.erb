@@ -1,0 +1,858 @@
+<% content_for:style do %>
+    <link rel="stylesheet" href="/css/common/comments.css"/>
+    <link rel="stylesheet" href="/css/place5/style.css"/>
+<% end %>
+
+
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="<%= main_path %>">首页</a></span>
+    <span class="space">&gt;</span>
+    <span class="text"><a href="<%= places_path %>">目的地</a></span>
+    <span class="space">&gt;</span>
+
+    <h1 class="current"><%= @province.name %></h1>
+  </div>
+</div>
+
+<div class="pla_topbar clearfix">
+  <div class="clearfix">
+    <div class="pla_topbar_names">
+      <p class="pl_topbox_en" id="pl_topbox_en"><a href="http://place.qyer.com/china/" data-bn-ipg="place-country-top-title"><%= @province.pinyin.upcase %></a></p>
+
+      <div class="clearfix">
+        <p class="pl_topbox_cn fontYaHei"><a href="http://place.qyer.com/china/" data-bn-ipg="place-country-top-title"><%= @province.name %></a></p>
+      </div>
+    </div>
+    <div class="pla_topbar_tools">
+      <ul class="pl_topbox_btn">
+        <li class="pl_topbox_want_ed" id="pl_topbox_want">
+          <p class="num"><span><strong id="doings_planto_counts">25610</strong>人想去</span><em></em></p>
+          <a href="javascript:void(0);" class="click" id="doings_planto_button" data-bn-ipg="place-country-top-planto">想去</a>
+        </li>
+        <li class="pl_topbox_been" id="pl_topbox_been">
+          <p class="num"><span><strong id="doings_beento_counts">76910</strong>人去过</span><em></em></p>
+          <a href="javascript:void(0);" class="click" id="doings_beento_button" data-bn-ipg="place-country-top-beento">去过</a>
+        </li>
+        <li class="pl_topbox_lived" id="pl_topbox_lived">
+          <p class="num"><span><strong id="doings_lived_counts">34243</strong>人生活过</span><em></em></p>
+          <a href="javascript:void(0);" class="click" id="doings_lived_button" data-bn-ipg="place-country-top-lived">生活过</a>
+        </li>
+      </ul>
+      <p class="pl_topbox_numbeen fontYaHei"><em id="doings_beento_counts_big">76910</em>人去过这里</p>
+    </div>
+  </div>
+</div>
+
+<div id="place_menu_hold" class="pla_menubar_hold">
+  <div id="place_memu_fix" class="pla_menubar" style="">
+    <div class="wrap clearfix">
+      <div class="pla_topnavs" id="pla_topnavs">
+        <ul class="nav fontYaHei" id="topnavfirst">
+          <li><a href="http://place.qyer.com/china/ctyprofile/" data-bn-ipg="place-country-nav-ctyprofile">国家指南</a></li>
+          <li><a href="http://place.qyer.com/china/nvisa/" data-bn-ipg="place-country-nav-nvisa">签证</a></li>
+          <li><a href="http://place.qyer.com/china/ctytransport/" data-bn-ipg="place-country-nav-ctytransport">交通</a></li>
+        </ul>
+        <ul class="nav fontYaHei">
+          <li><a href="http://place.qyer.com/china/sight/" data-bn-ipg="place-country-sight">景点</a></li>
+          <li><a href="http://place.qyer.com/china/food/" data-bn-ipg="place-country-food">美食</a></li>
+          <li><a href="http://place.qyer.com/china/shopping/" data-bn-ipg="place-country-shopping">购物</a></li>
+          <li><a href="http://place.qyer.com/china/activity/" data-bn-ipg="place-country-activity">活动</a></li>
+        </ul>
+        <ul class="nav fontYaHei">
+          <li><a href="http://plan.qyer.com/search.php?tags=%E4%B8%AD%E5%9B%BD" data-bn-ipg="place-country-plan" target="_blank">行程计划</a></li>
+          <li><a href="http://place.qyer.com/china/travel-notes/" data-bn-ipg="place-country-travelnote">热门游记</a></li>
+        </ul>
+        <div class="pla_topnavlay" id="topnavfirstlay" style="display: none;">
+          <p class="linemask" id="topnavfirstlay_mask"></p>
+          <ul class="navtab fontYaHei" id="topnavfirstlay_tab">
+            <li><a href="http://place.qyer.com/china/ctyprofile/" data-bn-ipg="place-country-nav-ctyprofile">国家指南</a></li>
+            <li><a href="http://place.qyer.com/china/nvisa/" data-bn-ipg="place-country-nav-nvisa">签证</a></li>
+            <li><a href="http://place.qyer.com/china/ctytransport/" data-bn-ipg="place-country-nav-ctytransport">交通</a></li>
+          </ul>
+          <ul class="navlist" id="topnavfirstlay_list">
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/ctyprofile/" data-bn-ipg="place-country-ctyprofile">国家概况</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/ctyprofile#cate_734">介绍</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctyprofile#cate_735">当地人生活</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctyprofile#cate_736">历史</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctyprofile#cate_737">文化</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctyprofile#cate_738">环境</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctyprofile#cate_758">日常对话</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctyprofile#cate_1349">文字标识</a>
+              </p>
+            </li>
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/nvisa/" data-bn-ipg="place-country-nvisa">签证与出入境</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/nvisa#cate_755">签证信息</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/nvisa#cate_1240">出入境</a>
+              </p>
+            </li>
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/ctytransport/" data-bn-ipg="place-country-ctytransport">交通</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/ctytransport#cate_1553">飞机</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctytransport#cate_1554">火车</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctytransport#cate_1555">长途汽车</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctytransport#cate_1556">自驾</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctytransport#cate_1557">船</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ctytransport#cate_1558">其他</a>
+              </p>
+            </li>
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/whentogo/" data-bn-ipg="place-country-whentogo">旅行时间</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/whentogo#cate_754">当地节日</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/whentogo#cate_1252">旅行季节</a>
+              </p>
+            </li>
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/pracinfo/" data-bn-ipg="place-country-pracinfo">实用信息</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/pracinfo#cate_756">使领馆</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/pracinfo#cate_757">紧急救助</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/pracinfo#cate_1241">手机与电话卡</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/pracinfo#cate_1242">邮政与明信片</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/pracinfo#cate_1243">网络</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/pracinfo#cate_1253">医疗</a>
+              </p>
+            </li>
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/ncost/" data-bn-ipg="place-country-ncost">货币与花费</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/ncost#cate_1246">消费水平</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ncost#cate_1247">货币兑换</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ncost#cate_1248">银联</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ncost#cate_1249">小费</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ncost#cate_1250">信用卡</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/ncost#cate_1251">退税</a>
+              </p>
+            </li>
+            <li>
+              <em class="tit"><a href="http://place.qyer.com/china/nadvice/" data-bn-ipg="place-country-nadvice">网友忠告</a></em>
+
+              <p>
+                <a href="http://place.qyer.com/china/nadvice#cate_1332">危险与陷阱</a>
+                <span>｜</span> <a href="http://place.qyer.com/china/nadvice#cate_1333">重要提示</a>
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="pla_topbtns">
+        <a href="javascript:void(0);" onclick="ask();" class="ui_button ask" data-bn-ipg="place-country-ask">提问</a>
+        <a href="javascript:void(0);" class="ui_button yelp" onclick="batchcomment(11,'country');" data-bn-ipg="place-country-comment">写点评</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="pla_wrap mb60">
+<div class="pla_bigtits pla_citylisttit">
+  <h2 class="pla_bigtit fontYaHei current" id="hotcitytab"><a href="javascript:void(0);">热门城市</a></h2>
+
+  <p class="pla_biggap"></p>
+
+  <h2 class="pla_bigtit fontYaHei" id="allcitytab"><a href="javascript:void(0);" >全部城市</a></h2>
+</div>
+<ul class="pla_citypiclist clearfix" id="hotcitylist">
+  <%@hot_city.each do |c| %>
+  <li>
+    <a href="<%= city_places_path c.pinyin %>" class="pics" target="_blank">
+      <img src="http://pic.qyer.com/album/user/213/10/Q0hWQxoGYg/index/300_200" width="300" height="200" alt="香港" data-bn-ipg="place-country-hotcity-pic">
+      <h3 class="title fontYaHei"><%= c.name %></h3>
+    </a>
+    <div class="infos">
+      <p class="intro">香港，是张爱玲笔下那座华丽摩登的悲情之城，是王家卫...</p>
+      <p class="sights">
+        <span>代表景点：</span><a href="http://place.qyer.com/poi/59047/" target="_blank" data-bn-ipg="place-country-hotcity-poi" title="尖沙咀">尖沙咀</a>、<a href="http://place.qyer.com/poi/56501/" target="_blank" data-bn-ipg="place-country-hotcity-poi" title="星光大道">星光大道</a>、<a href="http://place.qyer.com/poi/59049/" target="_blank" data-bn-ipg="place-country-hotcity-poi" title="中环">中环</a>、<a href="http://place.qyer.com/poi/83131/" target="_blank" data-bn-ipg="place-country-hotcity-poi" title="维多利亚港">维多利亚港</a>、<a href="http://place.qyer.com/poi/59070/" target="_blank" data-bn-ipg="place-country-hotcity-poi" title="香港海洋公园">香港海洋公园</a>
+      </p>
+    </div>
+  </li>
+  <% end %>
+
+</ul>
+<div class="pla_citytxtlist clearfix" id="allcitylist" style="display:none;">
+
+<div class="line">
+  <ul class="list">
+
+
+    <li class="item"><p class="hot"><a href="http://place.qyer.com/macau/" >澳门 <span class="en">Macau</span></a></p></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/tamsui/" >淡水 <span class="en">Tamsui</span></a></li>
+
+
+    <li class="item"><p class="hot"><a href="http://place.qyer.com/kaohsiung-city/" >高雄市 <span class="en">Kaohsiung City</span></a></p></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/hengchun/" >恒春 <span class="en">Hengchun</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/hualien-county/" >花莲县 <span class="en">Hualien County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/chiayi/" >嘉义 <span class="en">Chiayi</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/keelung-city/" >基隆市 <span class="en">Keelung City</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/jinguashi/" >金瓜石 <span class="en">Jinguashi</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/kinmen-county/" >金门县 <span class="en">Kinmen County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/jioufen/" >九份 <span class="en">Jioufen</span></a></li>
+
+
+    <li class="item"><p class="hot"><a href="http://place.qyer.com/kenting/" >垦丁 <span class="en">Kenting</span></a></p></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/orchid-island/" >兰屿 <span class="en">Orchid Island</span></a></li>
+
+
+  </ul>
+</div>
+<div class="line">
+  <ul class="list">
+
+
+    <li class="item"><a href="http://place.qyer.com/liouciou/" >琉球屿 <span class="en">Liouciou</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/lukang/" >鹿港 <span class="en">Lukang</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/green-island/" >绿岛 <span class="en">Green Island</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/matsu/" >马祖 <span class="en">Matsu</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/miaoli-county/" >苗栗县 <span class="en">Miaoli County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/nantou-county/" >南投县 <span class="en">Nantou County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/penghu-county/" >澎湖县 <span class="en">Penghu County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/pingtung-county/" >屏东县 <span class="en">Pingtung County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/pingxi/" >平溪 <span class="en">Pingxi</span></a></li>
+
+
+    <li class="item"><p class="hot"><a href="http://place.qyer.com/taipei/" >台北 <span class="en">Taipei</span></a></p></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/taitung-county/" >台东县 <span class="en">Taitung County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/taroko-national-park/" >太鲁阁国家公园 <span class="en">Taroko National Park</span></a></li>
+
+
+  </ul>
+</div>
+<div class="line">
+  <ul class="list">
+
+
+    <li class="item"><a href="http://place.qyer.com/tainan-city/" >台南市 <span class="en">Tainan City</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/taichung-city/" >台中市 <span class="en">Taichung City</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/taoyuan-county/" >桃园县 <span class="en">Taoyuan County</span></a></li>
+
+
+    <li class="item"><p class="hot"><a href="http://place.qyer.com/hong-kong/" >香港 <span class="en">Hong Kong</span></a></p></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/hsinchu/" >新竹 <span class="en">Hsinchu</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/yilan-county/" >宜兰县 <span class="en">Yilan County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/yunlin-county/" >云林县 <span class="en">Yunlin County</span></a></li>
+
+
+    <li class="item"><a href="http://place.qyer.com/changhua-county/" >彰化县 <span class="en">Changhua County</span></a></li>
+
+
+  </ul>
+</div>
+
+<div class="arealist">
+  <h3 class="tit fontYaHei">国家公园或区域</h3>
+  <ul class="clearfix">
+    <li><a href="http://place.qyer.com/taiwan/" >台湾 Taiwan</a></li>
+    <li><a href="http://place.qyer.com/new-taipei-city/" >新北市 New Taipei City</a></li>
+
+  </ul>
+</div>
+</div>
+
+</div>
+
+
+<div class="pla_wrap mb60">
+<div class="pla_main">
+
+<div>
+<div class="pla_bigtits pla_travelstit" id="placetravellistdiv">
+  <h2 class="pla_bigtit fontYaHei">中国游记攻略</h2>
+
+  <p class="pla_bigmore"><a href="http://place.qyer.com/china/travel-notes/" target="_blank" data-bn-ipg="place-country-moretravelnotes">更多</a></p>
+  <ul class="tabs" id="bbslistswitch">
+    <li class="current"><a href="javascript:void(0);" data-type="0" data-bn-ipg="place-country-hottravelnotes">热门</a></li>
+    <li><a href="javascript:void(0);" data-type="1" data-bn-ipg="place-country-newtravelnotes">最新</a></li>
+    <li><a href="javascript:void(0);" data-type="2" data-bn-ipg="place-country-travelnotes">精华</a></li>
+  </ul>
+</div>
+<div id="travelajax">
+<ul class="pla_travellist clearfix">
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-869459-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/541/31/RE1UQRsPaA/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="缅甸自讨苦吃之旅（皎漂——中国西海岸的洛杉矶？）" title="缅甸自讨苦吃之旅（皎漂——中国西海岸的洛杉矶？）"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/1710469" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/001/71/04/69_avatar_small.jpg" alt="克鲁亚克" height="48"></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-869459-1.html" title="缅甸自讨苦吃之旅（皎漂——中国西海岸的洛杉矶？）" data-bn-ipg="place-country-travelnotes-average-title">缅甸自讨苦吃之旅（皎漂——中国西海岸的洛杉矶？）</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-11-26</span><span class="bbsview" title="浏览">29480</span><span class="bbslike" title="喜欢">14</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/1710469" data-bn-ipg="place-country-travelnotes-average-username">克鲁亚克</a></span></div>
+    </div>
+    <div class="bbstext2">
+      妙乌落日。
+      缅甸的微笑。
+      钦族妇女的面部刺青。
+      卑缪古城
+
+      妙乌
+
+      **************************************************************************************
+
+      试试自建楼梯吧，俺对这个挺笨的，链接有误的话，请多包涵。
+
+      1，得努布：警察全程护送————————————3楼
+
+      2，贸易重镇：兴实达——————————————38楼
+
+      3，骠族古都：卑缪———————————————61楼
+
+      4，昂山将军的老家：马圭————————————82楼
+
+      5、漫长山路进妙乌———————————————108楼
+
+      6、佛都妙乌——————————————————137楼
+
+      7、钦族的纹脸女人———————————————177楼
+
+      8、实兑：穆斯林佛教冲突的中心——————————229楼
+
+      9、皎漂：中国西海岸的洛杉矶？——————————243楼
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>仰光</span><span class="to">&gt;</span><span>得努布</span><span class="to">&gt;</span><span>兴实达</span><span class="to">&gt;</span><span>卑缪</span><span class="to">&gt;</span><span>马圭</span><span class="to">&gt;</span><span>敏布</span><span class="to">&gt;</span><span>安</span><span class="to">&gt;</span><span>妙乌</span><span class="to">&gt;</span><span>实兑</span><span class="to">&gt;</span><span>皎漂</span><span class="to">&gt;</span><span>洞鸽</span><span class="to">&gt;</span><span>仰光</span><span class="to">&gt;</span><span>勃生</span><span class="to">&gt;</span><span>Twante</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-838874-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/465/49/RU9QRhMHZQ/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="我来到了潘多拉--中国张家界国家森林公园" title="我来到了潘多拉--中国张家界国家森林公园"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/2724377" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/images/noavatar_small.gif" alt="shangtaiyan" height="48"></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-838874-1.html" title="我来到了潘多拉--中国张家界国家森林公园" data-bn-ipg="place-country-travelnotes-average-title">我来到了潘多拉--中国张家界国家森林公园</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-08-31</span><span class="bbsview" title="浏览">10546</span><span class="bbslike" title="喜欢">8</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/2724377" data-bn-ipg="place-country-travelnotes-average-username">shangtaiya...</a></span></div>
+    </div>
+    <div class="bbstext2">从湘西旅游回来已有一段时间，一直没时间整理照片（事实上也没什么拍得好的：（），好容易把手上的工作搞完，还是延续惯例吧。不知为什么，最讨厌写东西的我，现在居然有了那么点记录生活，记录世界想法。也许是人老了吧，还是留下点回忆的痕迹，免得以后老年痴呆，什么也想不起。呵呵。顺便也给没去过的朋友们做点贡献，这次打算简单介绍下行程供参考。工程量还是挺大。话不多说，还是先谈谈旅行中的随感。
+      张家界位于湖南省的西北部，是中国第一个国家森林公园，随着《阿凡达》热映，导演詹姆斯。卡梅隆不讳言片中潘多拉星球景色的构思就源自张家界，“哈利路亚“悬浮山更是”乾坤一柱“的翻版，为世人所熟知的张家界武陵源，从此多了一个洋气而带点邪恶的名字：“潘多拉”。说实话，总有那么点鄙视这种崇洋媚外做法，但如果不是五年前一场突如其来的暴雨，08年就应与张家界相遇，不知这五年漫长的旅途，是否恰恰印证了遥远的”星际旅行“的说法？
+      张家界的雄、奇、峻，已然无须多说，登上山顶，还是让人为它的“异”所深深震动。坐上索道，仿佛登上星际飞船，穿越形态各异的“陨石阵”，却又都像刀峰一般指向浩翰太空。搭乘百龙电梯，在穿出山体的一刹那，黑暗而拥挤的狭小空间突然一片光明，俨然已经穿越时空。踏上凌空步道，笔直的峭壁就在脚下，总有一种冲动想跃过护栏，象影片中的阿凡达骑着神兽，沿着绝壁俯冲直下，似乎地心引力已经不起作用。走累了，坐在山顶小凳上休憩下，望着沐浴在正午阳光中山峰，象一排排锋利的刺刀，笔直地刺向天空，像来到《魔兽世界》中的千针石林，又像登上太平山俯瞰维港，一座座超级摩天大厦鳞次栉比，不知该感叹是大自然，还是人类的鬼斧神工。六月的阳光似乎不知疲倦，拼命地放射光芒与能量，仿佛是想把一切化为火海，甚至让白云也感到畏惧而悄悄溜走，把绝壁的表面烧蚀得伤痕累累，寸草不生，但却无法让高傲的山峰为之折服，只在身后拖下长长的阴影，忽明忽暗，其间穿梭的是，我们漫步金鞭溪时那习习凉风。入住丁香树榕，来来往往的游客提醒我们尚在天地之间;穿越乡间小道，老屋场的神兵们被夕阳照得金光闪闪，让我想起长津江边在风雪中傲然挺立的志愿军战士，为之动容。
+      张家界的山，直立而挺拔，纤细而坚强，许多都象乾坤一柱般上大下小，悬浮在天地之间，仿佛危如垒卵，轻轻踩上一脚都会让它失去平衡；细细一看，却是一枚枚钢钉，已然深深地扎入地壳之中。总想一跃而上，看看站在悬浮山顶，景色是否有所不同？语言固然难以描述自然之美，所以此次张家界之旅，我几乎带上了所有廉价而又心爱的宝贝，长焦、广角，偏振、渐变，心想虽然技术有限，仙境固然容纳不下，小小一个外星，总问题不大？只可惜，我依然遗忘了最重要的器材：我忘记带上翅膀，但我却来到了潘多拉。
+    </div>
+    <div class="bbsroute" title="行程单"><span>张家界国家森林公园</span><span class="to">&gt;</span><span>凤凰古城</span></div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-869841-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/542/10/RE1XQxoAZg/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="3900,7天5晚，泳池酒店，附普吉岛、芭东卡塔中文地图、行程费用，首次出国-普吉自由行" title="3900,7天5晚，泳池酒店，附普吉岛、芭东卡塔中文地图、行程费用，首次出国-普吉自由行"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/3157051" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/003/15/70/51_avatar_small.jpg" alt="无沙水" height="48"></a>
+      </p>
+
+      <h3 class="title">
+        <a target="_blank" href="http://bbs.qyer.com/thread-869841-1.html" title="3900,7天5晚，泳池酒店，附普吉岛、芭东卡塔中文地图、行程费用，首次出国-普吉自由行" data-bn-ipg="place-country-travelnotes-average-title">3900,7天5晚，泳池酒店，附普吉岛、芭东卡塔中文地图、行程费用，首次出国-普吉自由行</a>
+      </h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-11-27</span><span class="bbsview" title="浏览">24437</span><span class="bbslike" title="喜欢">20</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/3157051" data-bn-ipg="place-country-travelnotes-average-username">无沙水</a></span></div>
+    </div>
+    <div class="bbstext2">这是说走就走的旅行，香港直飞普吉7天5晚人均3900，住的酒店都有游泳池，不豪华但干净。头回出国，自由行，提前6天订机票酒店，原来出国也是这么容易的，感谢穷游锦囊手机APP啊，超级方便，直飞往返机票2400含税，香港快运，不用像亚航要提前大半年的抢票。
+      ------------------------天然分割线--------------------------------------------
+      这是行程表，内含酒店名称和详细费用。
+      可惜是后面几天才在酒店看到有普吉岛中文地图，含有各个沙滩的，我也会扫描上来，要是刚到时就看到了就方便很多了，特意带了张回来扫描成电子版共享，地图很重要，超清晰，全岛中文地图&amp;lt;10M，已上传，芭东沙滩、卡塔沙滩、普集镇、甘玛拉沙滩，拉威海滩
+      局部地图的分别大于10M，只传个QQ截图版，无法上传10M版，有需要芭东和卡塔地图的，请在帖子里回复邮箱地址，千万别留hotmail、gmail、Live,21CN的邮箱，附件大会被退信。
+
+      芭东地图如下：（截图2次，有点对不上）
+
+
+      准备篇：（需要信用卡和护照，我的护照是10月21号去办的，31号拿到，才开始看攻略考虑去哪个岛，3号确定了去普吉岛，3号晚上开始准备）
+
+      签证：本来想自己去办泰国领事馆办签证，但自己办需要机票，担心万一签证不成功，机票白买了，考虑再三还是在淘宝找的代理办，因时间原因，找的广州淘宝代理，4号上午自送到旅游公司，5号他们送签，7号下午出签，3天出签，约好领事馆门口自取，头回办感觉不放心，自取早看到放心些，时间不赶的可以快递。
+
+      机票：http://www.tianxun.cn/ 天巡(廉价机票搜索，含亚航)，搜索香港直飞往返，跳到越途网（全中文）http://www.cheaptickets.cn/上用信用卡付款，扣款成功后当天出票，可电话越途或网上在线客服咨询。
+      10号去，16号回，两人来回含税，含服务费2401，不含保险。
+
+      酒店：在booking.com先订PP岛1晚的酒店，再定芭东沙滩4晚的酒店，特意挑选有游泳池的酒店，芭东的这个还有健身房，PP岛的酒店靠通赛湾背面的海，很方便，因不想搬来搬去行李，自由行要轻松，订的都是同一家酒店，酒店名字见行程费用表里。（因为是红眼航班到，订芭东酒店时虽然看到有24小时接待台，还是不放心，发邮件确认，酒店回复很快），虽然算是两人世界游，但本着经济过日子的原则，选了两个经济型酒店，和喜欢的人一起，只要干净舒适就好，不要豪华。
+      建议1：订单里留言honeymoon 或 clean,quiet等要求。
+
+      保险：在淘宝网订的美亚7天保险，买个保险心里舒服些，飞机晚点，医疗啊，丢失护照，财物等对应都有赔偿。
+
+      接机：对比了，还是信赖携程网的接机，毕竟是红眼航班到，120元包车，值得推荐，携程网上订，比淘宝接机的放心多了，淘宝接机是一个司机在等，万一出来晚了会不好意思，携程网少了这层尴尬。
+
+      其它：广州来回香港车票，都是淘宝网
+      行李： 鞋子-因为不想带太多行李，鞋子只穿了一双洞洞凉鞋，事实证明，洞洞鞋超实用，一双鞋搞定所有，以前有穿人字拖洗澡时滑倒摔伤的经历，这次特意挑防滑的，凉鞋在离岛游的时候不容易掉水里），便宜又好穿。 男：T恤2件，五分裤2条，长裤1条，薄风衣外套1件，事实证明，飞机上很冷，应该带棉外套，回程时很冷，我老公在半睡半醒中冻的发抖，太困了，也没意识到找空姐调高点温度，冻到肚子不舒服。
+      女：裙子3条（花花裙子2条，蓝色裙子一条，拍完发现蓝色裙子效果最好，很仙，看看后面的图)，短T恤1件，长袖1件（没穿上），五分裤1条，长裤1条，棉外套1件。再加情侣装T恤1套（也很满意这次的霍利斯特情侣T，穿上很有度假风）。
+      普吉11月很热，白天晚上短裤短袖没问题，在房间里有时得开空调，外套只在飞机场和飞机上派上了用场。
+      薄传单-1件（在国内旅行也有带薄床单的习惯，折起来和件薄外套差不多，不占多少地方）
+      相机防水套，纸巾等，创口贴，蚊子怕怕膏，眼镜等，机票、酒店订单纸版（一式二分，分开放），护照原件，扫描版发邮箱，手机，平板电脑等。
+      总共才1个行李箱，1个背包，行李箱9kg，免费托运。
+
+      手机APP：穷游锦囊，旅行翻译官（强烈推荐，超级好用，输入中文直接转化成英文或泰语，播放给对方听，沟通方便很多了，还有入境单上面的英文不懂的查就好，入境单填写攻略都可以不看了），如果要还价就用计算器或手机带的计算器也行。
+      为什么普吉岛决定自由行，因为看到攻略上说泰国人民很友好，而且普吉岛治安很好，所以很放心，如果是菲律宾，印尼海岛啥的，可能得考虑考虑。
+      行程篇：
+      香港机场：
+      越途网跟在线客服选座位，4E和4F，前三排都没人。座位可以调斜度，可以斜躺，比较舒服，全程基本都在睡，飞机是空客320.飞机的水啊，食物都是付费的。
+
+      失败1：我们的位置很靠前，相当于是第一排有人的，结果我们在飞机上忘填空姐发的出入境单，飞机停了才想起，才开始填，填到所有人的都下机了，空姐都建议下机后也可以填后，我们才下的，一到大厅，如下图，人很多，虽然是凌晨，可发现四川航空团购游的也是这个点下机，排队应该拍了快1个小时，没有给小费，顺利入境。
+      建议2：选座位尽量靠前，尽早下飞机，早出来可以少排些队，早点到酒店，出入境单也可以在入境大厅填写，有桌子，先排上队
+
+      失败2：排队时心情很着急，总担心携程接机的人看不到我们，会撤掉，而且还担心如果司机等太久要付多些小费，因为在邮件里写的是2:15到达，焦急的心情影响了旅游情绪，这就是第一次出国的囧心情啊
+      建议3：即使队伍很长，也不着急，携程是派个穿着印有携程网字样]衣服的泰国人在门口迎接，见到我们后再电话司机过来，5分钟就来了，03:15上的车，120订的是1-3人的包车，结果来的是面包车，加司机可坐6个人，刚好碰上一对未定接机的不会说英文的退休夫妇，一起坐车到芭东沙滩，酒店位置很好找，打印的地图完全没用上。
+      到达
+
+      4点多到达酒店
+      这是前台，以为能还价，结果不行，想想是旺季，YK酒店跟lemon grass酒店挨着的，柠檬草酒店淡季就可以讲价的。
+      房间挺干净的，
+      落地窗，大阳台，
+      卫生间也可以，
+      冰箱里每天会放2瓶水，最后一天才发现，不过很难喝，感觉很咸，区级去7-11买的select 7的水，还挺好喝的
+
+      楼顶的游泳池，最后一天派上大用场
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>香港</span><span class="to">&gt;</span><span>- 普吉岛</span><span class="to">&gt;</span><span>皮皮岛</span><span class="to">&gt;</span><span>普吉岛</span><span class="to">&gt;</span><span>香港</span></div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-870666-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/543/94/RE1WSx4GaQ/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="我的故事:印象微笑佛国(曼谷,大城,清迈,拜县9天自助游:详细攻略+图文)【持续更新中】" title="我的故事:印象微笑佛国(曼谷,大城,清迈,拜县9天自助游:详细攻略+图文)【持续更新中】"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/3158729" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/003/15/87/29_avatar_small.jpg" alt="Nick_YCJ" height="48"></a>
+      </p>
+
+      <h3 class="title">
+        <a target="_blank" href="http://bbs.qyer.com/thread-870666-1.html" title="我的故事:印象微笑佛国(曼谷,大城,清迈,拜县9天自助游:详细攻略+图文)【持续更新中】" data-bn-ipg="place-country-travelnotes-average-title">我的故事:印象微笑佛国(曼谷,大城,清迈,拜县9天自助游:详细攻略+图文)【持续更新中】</a>
+      </h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-11-29</span><span class="bbsview" title="浏览">10818</span><span class="bbslike" title="喜欢">9</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/3158729" data-bn-ipg="place-country-travelnotes-average-username">Nick_YCJ</a></span></div>
+    </div>
+    <div class="bbstext2">
+      旅行到最后，终究我们要看的都不再是风景，而是一路上的际遇，希望你在未来能够学会坦然接受并享受每种突变，不再为某些不如你意的际遇而感到烦忧！
+      ——Nichole
+
+
+      行程扫描
+      10.05-06 大城
+
+      10.06-07 曼谷
+
+      10.08-10 清迈
+
+      10.11-12 拜县（PAI）
+
+      10.13 清迈返航
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>澳门</span><span class="to">&gt;</span><span>曼谷廊曼机场</span><span class="to">&gt;</span><span>大城</span><span class="to">&gt;</span><span>曼谷考山路附近</span><span class="to">&gt;</span><span>曼谷黎明寺</span><span class="to">&gt;</span><span>考山路附近</span><span class="to">&gt;</span><span>四面佛</span><span class="to">&gt;</span><span>乍都乍</span><span class="to">&gt;</span><span>清迈</span><span class="to">&gt;</span><span>松撇市场</span><span class="to">&gt;</span><span>清迈大学</span><span class="to">&gt;</span><span>素贴山</span><span class="to">&gt;</span><span>宁曼路</span><span class="to">&gt;</span><span>凤飞飞</span><span class="to">&gt;</span><span>清迈古城</span><span class="to">&gt;</span><span>Kad Suan Kaew商场</span><span class="to">&gt;</span><span>BOOTS商店</span><span class="to">&gt;</span><span>清迈滨河</span><span class="to">&gt;</span><span>Muang Mai Market/果菜批发市场</span><span class="to">&gt;</span><span>松撇市场</span><span class="to">&gt;</span><span>清迈夜市</span><span class="to">&gt;</span><span>清迈柴迪龙寺</span><span class="to">&gt;</span><span>PAI 伊甸园</span><span class="to">&gt;</span><span>PAI中国村</span><span class="to">&gt;</span><span>二战桥</span><span class="to">&gt;</span><span>草莓园</span><span class="to">&gt;</span><span>COFFEE IN LOVE</span><span class="to">&gt;</span><span>PAI镇夜市</span><span class="to">&gt;</span><span>PAI COFFEE IN LOVE</span><span class="to">&gt;</span><span>非洲屋</span><span class="to">&gt;</span><span>草莓园</span><span class="to">&gt;</span><span>峡谷</span><span class="to">&gt;</span><span>二战桥</span><span class="to">&gt;</span><span>美音寺</span><span class="to">&gt;</span><span>PAI 镇夜市</span><span class="to">&gt;</span><span>清迈塔佩门</span><span class="to">&gt;</span><span>清迈机场</span><span class="to">&gt;</span><span>澳门</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-872424-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/552/59/RExXRxMHaA/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="RP爆棚-----2013.10.08-10.23美西最棒自驾游记（含路线 购物 美食 看房报价 GPS地址等）" title="RP爆棚-----2013.10.08-10.23美西最棒自驾游记（含路线 购物 美食 看房报价 GPS地址等）"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/1340087" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/001/34/00/87_avatar_small.jpg" alt="linghao" height="48"></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-872424-1.html" title="RP爆棚-----2013.10.08-10.23美西最棒自驾游记（含路线 购物 美食 看房报价 GPS地址等）" data-bn-ipg="place-country-travelnotes-average-title">RP爆棚-----2013.10.08-10.23美西最棒自驾游记（含路线
+        购物 美食 看房报价 GPS地址等）</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-12-05</span><span class="bbsview" title="浏览">14625</span><span class="bbslike" title="喜欢">84</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/1340087" data-bn-ipg="place-country-travelnotes-average-username">linghao</a></span></div>
+    </div>
+    <div class="bbstext2">如果你觉得此篇游记对你有用。请点击页面右上方的“喜欢”
+      为我加分。我会更加努力。。。。谢谢！！！为什么说RP爆棚？A：2013年10月12日美国国家公园重新开门，我12号到达大峡谷。是重新开门第一批游客。B:全程将近4000公里自驾，有超速、无罚单、无事故。C：一车一世界，穿越“死亡谷”国家公园。D：走1号沿海公路，全路段阳光明媚，蓝天白云、海天一色、风景优美，令人心旷神怡。我就简单说说原因作为开场白。美国政府是2013.10.01开始关门。2013.10.12重新开门。这个想必大家都知道吧。而我是10.08日到达美国。但我的美国行程安排是在9月中旬完成（机票、住宿等等）。面对10.01传来的坏消息。面对已订好的行程，我是根本无法做大的调整。我做的行程安排本来就是为了倒时差（洛杉矶机场至圣迭戈做为第一天的行程，后期由于大哥、大姐他们到美国，所以我把圣迭戈安排到10月19号。10月8号与大哥、大姐在洛杉矶团聚）。于10月9日去拉斯维加斯游调整好玩后于10月12日去大峡谷国家公园。就在我到达美国之后得到的官方消息：美国政府与2013.10.12重新开门。这就是说，10.12国家公园对外开放。各位朋友，你们知道为何我说：RP爆棚了吧。下面上图看一下大峡谷门票日期为证。正式前言：我为什么去美国自驾游？美国是目前世界上最强大的国家，俗称美帝。美帝的经济、文化、政治、军事、航天等均处于世界首位。因本人喜爱汽车，身边又有个地理优势。就是天津港保税区。提到保税区自然会联想到进口汽车，保税区内有保税仓库，仓储着全国大批量的4S店到港进口汽车。只能用量形容其气势。但其中的小贸进口豪车才是看点之一。可以说自上个世纪80年代进口汽车至今，我国的汽车进口形式多种多样。进口汽车之数量与品种堪比世界之最。特别提出的：一是上个世纪的90年代国家为了促进国内经济发展，鼓励外国人投资保税区内的所谓外资企业。从而有了进口汽车指标的概念。二是本世纪初逐渐开放外国人来中国开办公司的自带二手车指标。三是目前的民营私企的小贸进口汽车。这三项基本上是大家知道的进口汽车贸易形式。无需我做政策解答。我只关心我能够看到这么多喜爱的进口汽车品牌与型号。说的有点跑题了。因为我喜欢汽车自然平时总上一些汽车网站浏览相关信息。曾经看到过无数篇自驾游记，但一直未触动过我的灵魂。总是默默羡慕别人的大胆与经历。想去美国旅游看一看人文、地理风光，可以说去美国游玩是以前不敢想象的梦想。但这个梦想一直到我无意中来到穷游才得以实现。美国是我想去的。汽车是我喜爱的。当这2件事碰撞到一起时，我知道了。知道了。可以去美国旅游了。机会终于来了。在这里我要感谢穷游提供这么棒的交流平台。感谢穷游各位前辈大虾的攻略指南等等。总之，我要做我该做的事。那就是写一下我自驾游的感受。与大家一起交流一下。虽然自驾4000余公里，路程长，时间较赶，景点有些匆匆而过。或许留有诸多遗憾。能在美国开车自由行走，走走停停，真是幸事。我一路开车而行。满足了我的美国自驾欲望。秉承：送人玫瑰，手有余香。精彩大片，进行中。。。。。。
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>北京</span><span class="to">&gt;</span><span>洛杉矶</span><span class="to">&gt;</span><span>Desert Hills Premium Outlets</span><span class="to">&gt;</span><span>拉斯维加斯</span><span class="to">&gt;</span><span>大峡谷国家公园</span><span class="to">&gt;</span><span>佩吉市</span><span class="to">&gt;</span><span>拉斯维加斯</span><span class="to">&gt;</span><span>死亡谷国家公园</span><span class="to">&gt;</span><span>Mammoth lake</span><span class="to">&gt;</span><span>优胜美地国家公园</span><span class="to">&gt;</span><span>Manteca</span><span class="to">&gt;</span><span>旧金山</span><span class="to">&gt;</span><span>蒙特雷</span><span class="to">&gt;</span><span>圣巴巴拉</span><span class="to">&gt;</span><span>圣地亚哥</span><span class="to">&gt;</span><span>洛杉矶</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-819732-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/429/46/RUtcRhwEYg/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="遥远的欧洲有一个中国名叫意大利——小白本带妈一路向南(好吧，贡献130页攻略吧)" title="遥远的欧洲有一个中国名叫意大利——小白本带妈一路向南(好吧，贡献130页攻略吧)"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/1676409" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/001/67/64/09_avatar_small.jpg" alt="天琊向左" height="48"></a>
+      </p>
+
+      <h3 class="title">
+        <a target="_blank" href="http://bbs.qyer.com/thread-819732-1.html" title="遥远的欧洲有一个中国名叫意大利——小白本带妈一路向南(好吧，贡献130页攻略吧)" data-bn-ipg="place-country-travelnotes-average-title">遥远的欧洲有一个中国名叫意大利——小白本带妈一路向南(好吧，贡献130页攻略吧)</a>
+      </h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-07-14</span><span class="bbsview" title="浏览">21295</span><span class="bbslike" title="喜欢">36</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/1676409" data-bn-ipg="place-country-travelnotes-average-username">天琊向左</a></span></div>
+    </div>
+    <div class="bbstext2">写一篇小小的攻略，纪念一下姐的出境处女游。
+      坛子里实在有太多的穷游大神，还有各种单反技术帝，姐修炼的程度不高着实不敢班门弄斧，只想尽我所能地给像我一样准备踏上穷游这条不归路的同志们一点点参考，也给自己留下一点念想，时而信手翻来，回味在意大利度过的十五个日日夜夜。
+
+      先上一点前菜吧！
+
+
+      第一章 米兰——一座教堂一幅画
+
+      第二章 维罗纳——爱情的朝圣地
+
+      第三章 威尼斯——摇曳的贡多拉
+
+      第四章 佛罗伦萨——追寻大师的足迹
+
+      第五章 卢卡——绿色的音乐之乡
+
+
+      第六章 比萨——倾斜的异次元
+
+
+      第七章 五渔村——上帝打翻了调色板
+
+      第八章 罗马——血与沙的交织
+
+      第九章 梵蒂冈——世界的中心
+
+      第十章 索伦托——水手的故里，重归苏莲托
+
+      第十一章 卡普里岛——海妖塞壬的居所
+
+      第十二章 阿马尔菲海岸——散落在第勒尼安海岸的珍珠
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>上海</span><span class="to">&gt;</span><span>莫斯科</span><span class="to">&gt;</span><span>米兰</span><span class="to">&gt;</span><span>维罗纳</span><span class="to">&gt;</span><span>威尼斯</span><span class="to">&gt;</span><span>佛罗伦萨</span><span class="to">&gt;</span><span>卢卡</span><span class="to">&gt;</span><span>比萨</span><span class="to">&gt;</span><span>拉斯佩齐亚</span><span class="to">&gt;</span><span>五渔村</span><span class="to">&gt;</span><span>罗马</span><span class="to">&gt;</span><span>梵蒂冈</span><span class="to">&gt;</span><span>罗马</span><span class="to">&gt;</span><span>那不勒斯</span><span class="to">&gt;</span><span>索伦托</span><span class="to">&gt;</span><span>卡普里岛</span><span class="to">&gt;</span><span>索伦托</span><span class="to">&gt;</span><span>阿马菲</span><span class="to">&gt;</span><span>波西塔诺</span><span class="to">&gt;</span><span>拉韦洛</span><span class="to">&gt;</span><span>阿马菲</span><span class="to">&gt;</span><span>萨莱诺</span><span class="to">&gt;</span><span>罗马</span><span class="to">&gt;</span><span>莫斯科</span><span class="to">&gt;</span><span>上海</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-876060-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/557/10/RExSQxoFaA/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="Honeymoon——2013年10月初行走在意大利希腊（罗马、米兰、威尼斯、雅典、圣托里尼 ）" title="Honeymoon——2013年10月初行走在意大利希腊（罗马、米兰、威尼斯、雅典、圣托里尼 ）"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/1028989" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/001/02/89/89_avatar_small.jpg" alt="缘驴行天涯" height="48"></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-876060-1.html" title="Honeymoon——2013年10月初行走在意大利希腊（罗马、米兰、威尼斯、雅典、圣托里尼 ）" data-bn-ipg="place-country-travelnotes-average-title">Honeymoon——2013年10月初行走在意大利希腊（罗马、米兰、威尼斯、雅典、圣托里尼
+        ）</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-12-15</span><span class="bbsview" title="浏览">6231</span><span class="bbslike" title="喜欢">24</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/1028989" data-bn-ipg="place-country-travelnotes-average-username">缘驴行天涯</a></span></div>
+    </div>
+    <div class="bbstext2">
+      经过漫长的等待、期待，我们的意大利、希腊蜜月之旅终于开始了。关于希腊申根签证的办理详见我在穷游网的另外一篇帖子：http://bbs.qyer.com/thread-818061-1.html为什么选择意大利和希腊度蜜月？选择意大利是因为我是国际米兰的球迷，人生第一次去欧洲怎能不去梅阿查球场看场球！选择希腊是因为老婆对圣托里尼蓝白的一见钟情！所以我出发前千百次对老婆说：意大利是我的，希腊是你的！你是我的，所以希腊也是我的！
+      罗马风情
+      梵蒂冈的神圣
+
+
+      圆梦梅阿查
+
+      米兰大教堂的深邃
+
+      迷情威尼斯
+
+      帕特农神庙
+      蓝白圣托里尼
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>香港</span><span class="to">&gt;</span><span>罗马</span><span class="to">&gt;</span><span>梵蒂冈</span><span class="to">&gt;</span><span>罗马</span><span class="to">&gt;</span><span>米兰</span><span class="to">&gt;</span><span>威尼斯</span><span class="to">&gt;</span><span>米兰</span><span class="to">&gt;</span><span>雅典</span><span class="to">&gt;</span><span>圣托里尼</span><span class="to">&gt;</span><span>雅典</span><span class="to">&gt;</span><span>中国</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-808231-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/405/48/RUlQRhIGYA/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="小火柴的旅行日记（180天越柬泰斯尼以及中国西部西南部）" title="小火柴的旅行日记（180天越柬泰斯尼以及中国西部西南部）"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/1743373" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/001/74/33/73_avatar_small.jpg" alt="Daisy_邱邱" height="48"></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-808231-1.html" title="小火柴的旅行日记（180天越柬泰斯尼以及中国西部西南部）" data-bn-ipg="place-country-travelnotes-average-title">小火柴的旅行日记（180天越柬泰斯尼以及中国西部西南部）</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-06-11</span><span class="bbsview" title="浏览">85503</span><span class="bbslike" title="喜欢">81</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/1743373" data-bn-ipg="place-country-travelnotes-average-username">Daisy_邱邱</a></span></div>
+    </div>
+    <div class="bbstext2">（以下为7月中旬所写）小的时候总是坚信自己的人生会丰富多彩，长大后，却发现它早已变成了单色调，其实人生不仅仅只有生与死，既然来到这个世界，就要停下来好好地去看看它。
+      出来90多天，4个国家6个岛21座城，一切仿若一场梦，真实而又不可思议。在越南，一路向来，抚摸越南越美的蔚蓝；在柬埔寨，于微观的吴哥感受皓渺宇宙的瞬息万变，感应旧梦新生的力量；在泰北，小乘佛教浓厚的文化气息渗入心底，在无处不在的小清新里学习水彩画，静心、沉淀；在泰南，美丽的海岛风情让人不由自主地热情奔放；在斯里兰卡，带回来当地人最HIGH的热情。。。梦在继续，我依然在路上。下一站：西藏。
+      回复：我的微博：小火柴要乖哦 地址：http://weibo.com/u/2815451784?wvr=5&amp;amp;sudaref=cn.hao123.com 拍摄器材：D5100标配 拍照问题：越南部分是有同行的welly帮忙拍摄，后面都是自拍的，自拍没有神器，就是找好点（比如石头啊，桌子啊等等一切可以利用的支撑物，再进行拍摄。）
+
+      穷游的原因：2012年六月，我自己一个人坐上了去香格里拉的飞机，仅仅是因为这个名字。过程中遇到了许多热爱旅游的朋友的，那个时候我才知道，还有穷游这种事情，我才知道有穷游网、蚂蜂窝等等；回去之后的一个月，深受途中朋友们的影响于是萌发了想要独自旅行的想法，于是我开始慢慢了解需要的各种准备，钱，攻略等等。。。
+
+
+      到目前：3个多月，4个国家，按时间顺序路线如下：越南：河内、顺会、会安、芽庄、大叻、美奈、胡志明；柬埔寨：金边、吴哥窟；泰国：曼谷、清迈、Pai县、清莱、素可泰、洛布里、大城、普吉岛、皮皮岛、皇帝岛、苏梅岛、涛岛、象岛。斯里兰卡：科伦坡、康提、埃利耶、美蕊沙、Galle。
+      游记按泰南、泰北、越南、柬埔寨、斯里兰卡。。。的顺序进行编辑。顺便透露一下，泰国我尝试了搭车的方式，免费搭私家车，皮卡车，TAXI,
+      鬼佬的摩托车。泰国，58天，七座城，六个海岛深度游。从北清迈开始，一路向南，在清迈感受无数寺庙带来的惊喜，在PAI县体会小清新的怡人气息，在清莱感叹白庙的奇妙，在素可泰的缩影中看泰王朝的屈起、兴盛、衰败的故事；在洛布里与猴子神一般的生活；在大城被佛头与千年树根的爱情震憾；在曼谷感受七彩拼盘的魅力；在普吉岛疯狂于骑行带来的快感；在皮皮岛嬉戏于泰国最美的海滩；在皇帝岛浮潜中欣赏五彩海底的奇妙，在苏梅学习与世无争的态度；在涛岛重新发觉海岛新生的力量；而现在泰国最后一站，象岛。。。狂风暴雨中，发贴！
+      首先放一组预告片：
+      涛岛
+      普吉岛：
+      皮皮岛：
+
+
+      皇帝岛：
+      Pai县：
+
+      清莱：
+      素可泰：
+      洛布里：
+      大城：
+
+      吴哥窟：
+
+
+      顺化：
+      会安：
+
+
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>越南</span><span class="to">&gt;</span><span>柬埔寨</span><span class="to">&gt;</span><span>泰国</span><span class="to">&gt;</span><span>斯里兰卡</span><span class="to">&gt;</span><span>中国西部，西南部</span><span class="to">&gt;</span><span>尼泊尔</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-868714-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/549/91/RE1cSxsDYw/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="安妮和索尼克旅行日记之十一：13.2.26-3.5中国福建之旅" title="安妮和索尼克旅行日记之十一：13.2.26-3.5中国福建之旅"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/56703" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/avatar/000/05/67/03_avatar_small.jpg" alt="索尼克" height="48"></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-868714-1.html" title="安妮和索尼克旅行日记之十一：13.2.26-3.5中国福建之旅" data-bn-ipg="place-country-travelnotes-average-title">安妮和索尼克旅行日记之十一：13.2.26-3.5中国福建之旅</a>
+      </h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-11-24</span><span class="bbsview" title="浏览">1132</span><span class="bbslike" title="喜欢">3</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/56703" data-bn-ipg="place-country-travelnotes-average-username">索尼克</a></span></div>
+    </div>
+    <div class="bbstext2">我们选择了位于祖国东南方拥有古老语言和文化的沿海省份-福建。去福建玩过的朋友不少，比如去土楼，武夷山，厦门的攻略都有。但总体线路较散乱，也没有涉及到我们家索尼克特别想去的一个古村落，于是我们在网上查询，设计了一条自己的线路。它覆盖了福建的山，海，历史和人文。不过，这条线路还真是有点远有点绕，从闽北一路到了闽西南，最后以回到闽中结束。
+      在去福建之前，我们对福建的了解比较少，仅限于一点地理知识和去过2次的厦门，还有那永远也听不懂的方言。其实对福建的印象非常一般化，也至于它在我们众多想去的中国省份里排名总是很靠后。
+      这次福建回来首先我知道了很多以前听也没听过的地名，丰富了我们的地理知识，而且它改变了我们对福建的一些成见。福建在沿海省份的发展确实不能算是排列前茅，但我们发现这次我们所走过的乡镇和城市，人民群众很友好热情，比起我们长期生活过的许多发达省份城市的老百姓更较之淳朴和勤劳。当然，这只是我们一家之言。中国各省份城市都有其美好的地方，均需要细细体味。
+
+      我们的路线图，以1-6顺序标注
+
+      霞浦日落图
+
+      霞浦景色
+
+      土楼
+
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>上海</span><span class="to">&gt;</span><span>太姥山</span><span class="to">&gt;</span><span>霞浦</span><span class="to">&gt;</span><span>龙岩</span><span class="to">&gt;</span><span>土楼</span><span class="to">&gt;</span><span>龙岩</span><span class="to">&gt;</span><span>朋口</span><span class="to">&gt;</span><span>培田</span><span class="to">&gt;</span><span>朋口</span><span class="to">&gt;</span><span>龙岩</span><span class="to">&gt;</span><span>福州</span><span class="to">&gt;</span><span>上海</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-863061-1.html" data-bn-ipg="place-country-travelnotes-average-pic"><img src="http://pic.qyer.com/album/user/524/55/REtRRx8BZw/index/300_200" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="227" height="151" alt="新西兰南岛15天自驾游，冰川直升机湖泊峡湾海狮大海萤火虫企鹅雪山羊驼海豚" title="新西兰南岛15天自驾游，冰川直升机湖泊峡湾海狮大海萤火虫企鹅雪山羊驼海豚"></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://www.qyer.com/u/236618" data-bn-ipg="place-country-travelnotes-average-avater"><img src="http://static.qyer.com/data/images/noavatar_small.gif" alt="liuzhanzhong" height="48"></a>
+      </p>
+
+      <h3 class="title">
+        <a target="_blank" href="http://bbs.qyer.com/thread-863061-1.html" title="新西兰南岛15天自驾游，冰川直升机湖泊峡湾海狮大海萤火虫企鹅雪山羊驼海豚" data-bn-ipg="place-country-travelnotes-average-title">新西兰南岛15天自驾游，冰川直升机湖泊峡湾海狮大海萤火虫企鹅雪山羊驼海豚</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-11-06</span><span class="bbsview" title="浏览">21959</span><span class="bbslike" title="喜欢">21</span></p>
+        <span>作者：<a target="_blank" href="http://www.qyer.com/u/236618" data-bn-ipg="place-country-travelnotes-average-username">liuzhanzho...</a></span></div>
+    </div>
+    <div class="bbstext2">从新西兰南岛回来已经1月了，但仍然沉浸在旅游的回忆当中，有时候在睡梦里还是以为自己身处新西兰。新西兰是一个令我印象深刻的地方，在那里有壮美的自然风光，可以近距离和动物玩耍，有各种刺激肾上腺素的活动参加，有观光式的可有体验式的，总有一样你喜欢。1年前，我和老婆就决定要去新西兰，我们觉得一方面新西兰地广人稀，是一个很适合自驾车旅游的地方，另一方面新西兰有原始纯净的自然资源，比起城市观光，我们更喜欢亲近大自然。计划的初期，我们打算15天游南北岛，后来发现南岛的自然资源更加丰富，最后就决定只去南岛了。新西兰是一个很容易签证的国家，提交的资料比较简单不需要翻译，要填写的表格少，签证费用不算高，而且今年5月1日开始实施了新政策，我们因此顺利拿到了两年多次往返的签证。接着先看看部分美图吧!
+      Lake Mapourika
+
+      Franz Joseph Helihike
+
+      Franz Joseph冰川的古怪地貌
+
+      Lake Metherson
+
+      Queenstown
+
+      Slope Point
+
+      Nugget Point
+
+      Otago半岛观黄眼企鹅
+      Mount Cook
+
+      牛奶蓝湖Lake Pukaki
+
+      Lake Tekapo
+
+      Akaroa羊驼之旅
+
+      Akaroa海豚之旅
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>广州</span><span class="to">&gt;</span><span>奥克兰</span><span class="to">&gt;</span><span>基督城</span><span class="to">&gt;</span><span>霍基蒂卡</span><span class="to">&gt;</span><span>福克斯冰川</span><span class="to">&gt;</span><span>瓦纳卡</span><span class="to">&gt;</span><span>皇后镇</span><span class="to">&gt;</span><span>蒂阿瑙</span><span class="to">&gt;</span><span>奥瓦卡</span><span class="to">&gt;</span><span>但尼丁</span><span class="to">&gt;</span><span>奥马鲁</span><span class="to">&gt;</span><span>库克山国家公园</span><span class="to">&gt;</span><span>蒂卡普湖</span><span class="to">&gt;</span><span>阿卡罗阿</span><span class="to">&gt;</span><span>基督城</span><span class="to">&gt;</span><span>奥克兰</span><span class="to">&gt;</span><span>广州</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+
+</ul>
+<div class="clearfix mt20">
+  <div class="ui_page"><a data-bn-ipg="pages-3" href="javascript:bbslistajaxpage(1)" class="ui_page_item ui_page_item_current">1</a>
+    <a data-bn-ipg="pages-3" href="javascript:bbslistajaxpage(2)" class="ui_page_item">2</a>
+    <a data-bn-ipg="pages-3" href="javascript:bbslistajaxpage(3)" class="ui_page_item">3</a>
+    <a data-bn-ipg="pages-3" href="javascript:bbslistajaxpage(4)" class="ui_page_item">4</a>
+    <a data-bn-ipg="pages-3" href="javascript:bbslistajaxpage(5)" class="ui_page_item">5</a>
+    <a data-bn-ipg="pages-4" href="javascript:bbslistajaxpage(200)" class="ui_page_item" title="...200">...200</a>
+    <a data-bn-ipg="pages-5" href="javascript:bbslistajaxpage(2)" class="ui_page_item ui_page_next" title="下一页">下一页</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="pla_side" id="rightdownside">
+  <div>
+    <div class="pla_titles">
+      <h2 class="pla_title fontYaHei">正在打折</h2>
+
+      <p class="pla_titmore"><a href="http://www.qyer.com/lastminute/" data-bn-ipg="place-country-morelm" target="_blank">更多</a></p>
+    </div>
+    <ul class="pla_nowlmlist">
+      <li>
+        <h3 class="title"><a href="http://www.qyer.com/lastminute/deal/2840/" data-bn-ipg="place-country-lm-title" target="_blank">香港航空周末48小时机票促销</a></h3>
+
+        <p class="price fontYaHei">立减 500 港币起</p>
+      </li>
+      <li>
+        <h3 class="title"><a href="http://www.qyer.com/lastminute/deal/2837/" data-bn-ipg="place-country-lm-title" target="_blank">杭州往返香港4天3晚自由行特价</a></h3>
+
+        <p class="price fontYaHei"> 2680 元</p>
+      </li>
+    </ul>
+  </div>
+  <p class="pla_sldline1"></p>
+
+  <div>
+    <div class="pla_titles">
+      <h2 class="pla_title fontYaHei">周边国家</h2>
+    </div>
+    <ul class="pla_rimcitylist clearfix">
+      <li class="item">
+        <p><a href="http://place.qyer.com/mongolia/" data-bn-ipg="place-country-near-pic"><img src="http://pic.qyer.com/album/1dd/a8/433169/index/200x133" width="128" height="85" alt="蒙古"></a></p>
+
+        <h3 class="title"><a href="http://place.qyer.com/mongolia/" data-bn-ipg="place-country-near-Mongolia">蒙古</a></h3>
+      </li>
+      <li class="item">
+        <p><a href="http://place.qyer.com/bhutan/" data-bn-ipg="place-country-near-pic"><img src="http://pic.qyer.com/album/143/14/1878311/index/200x133" width="128" height="85" alt="不丹"></a></p>
+
+        <h3 class="title"><a href="http://place.qyer.com/bhutan/" data-bn-ipg="place-country-near-Bhutan">不丹</a></h3>
+      </li>
+      <li class="item">
+        <p><a href="http://place.qyer.com/myanmar/" data-bn-ipg="place-country-near-pic"><img src="http://pic.qyer.com/album/user/339/43/QkpcRhkHYQ/index/200x133" width="128" height="85" alt="缅甸"></a></p>
+
+        <h3 class="title"><a href="http://place.qyer.com/myanmar/" data-bn-ipg="place-country-near-Myanmar">缅甸</a></h3>
+      </li>
+      <li class="item">
+        <p><a href="http://place.qyer.com/laos/" data-bn-ipg="place-country-near-pic"><img src="http://pic.qyer.com/album/1be/e2/1930967/index/200x133" width="128" height="85" alt="老挝"></a></p>
+
+        <h3 class="title"><a href="http://place.qyer.com/laos/" data-bn-ipg="place-country-near-Laos">老挝</a></h3>
+      </li>
+    </ul>
+  </div>
+
+  <p class="pla_sldline1"></p>
+
+  <div>
+    <iframe id="af07eea8" name="af07eea8" src="http://ad.qyer.com/www/delivery/afr.php?zoneid=268&amp;cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="270" height="170">&lt;a
+      href='http://ad.qyer.com/www/delivery/ck.php?n=a4cf26bb&amp;amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'&gt;&lt;img src='http://ad.qyer.com/www/delivery/avw.php?zoneid=268&amp;amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;amp;n=a4cf26bb'
+      border='0' alt='' /&gt;&lt;/a&gt;</iframe>
+  </div>
+</div>
+<div class="cb"></div>
+</div>

@@ -1,0 +1,65 @@
+<%= form_for(@place) do |f| %>
+    <% if @place.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+          <ul>
+            <% @place.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <br/>
+      <%= f.text_field :name,:class=>'ui_input' %>
+    </div>
+    <div class="field">
+      <%= f.label :img_path %>
+      <br/>
+      <%= f.text_field :img_path,:class=>'ui_input'  %>
+    </div>
+    <div class="field">
+      <%= f.label :good_num %>
+      <br/>
+      <%= f.text_field :good_num,:class=>'ui_input'  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :been_num %>
+      <br/>
+      <%= f.text_field :been_num,:class=>'ui_input'  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :interested_num %>
+      <br/>
+      <%= f.text_field :interested_num,:class=>'ui_input'  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :favorites_num %>
+      <br/>
+      <%= f.text_field :favorites_num,:class=>'ui_input'  %>
+    </div>
+    <div class="field">
+      <%= f.label :intro %>
+      <br/>
+      <%= f.text_field :intro,:class=>'ui_input'  %>
+    </div>
+    <div class="field">
+      <%= f.label :content %>
+      <br/>
+      <%= f.text_area :content,:style=>'width:70%;height:300px' %>
+    </div>
+    <div class="field">
+      <%= f.label :user_id %>
+      <br/>
+      <%= f.text_field :user_id,:class=>'ui_input'  %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

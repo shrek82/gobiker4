@@ -1,0 +1,29 @@
+<% @comments=[@comment] if @comment %>
+<% @comments.each do |c| %>
+    <li>
+      <div class="avatar">
+        <a target="_blank" href="<%= u_path c.user.id %>" title="<%= c.user.username %>"><img src="/avatar/up.jpeg" alt="<%= c.user.username %>"></a>
+      </div>
+      <div class="cmt-body">
+        <div class="cmt-header"><a href="<%= u_path c.user.id %>" target="_blank" ><%= c.user.username %></a>
+          <span class="time" title="<%= c.created_at.to_s :db %>"><%= to_pretty c.created_at %></span>
+        </div>
+        <div class="cmt-body-content"><%= c.content %></div>
+        <div class="cmt-footer">
+          <a class="post-reply" href="javascript:void(0);"><span class="icon icon-reply"></span> 回复</a>&nbsp;&nbsp;<a class="post-likes" href="javascript:void(0);"><span class="icon icon-like"></span>顶</a>
+        </div>
+      </div>
+    </li>
+<% end %>
+
+
+<% if @comments.blank? %>
+    <li id="nodata_topic">暂时还没有评论</li>
+<% end %>
+
+<% if @comment.nil? %>
+    <li style="border-top-width: none" id="cmts_pager">
+      <%= cmt_pager @comments %>
+    </li>
+<% end %>
+

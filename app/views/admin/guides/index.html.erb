@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="area-top clearfix">
+      <div class="pull-left header">
+        <h3 class="title">
+          <i class="icon-flag"></i>
+          <%= I18n.t 'activerecord.models.guide' %>
+        </h3>
+        <h5>
+          <% if local_assigns.has_key? :headline %>
+              Headline: <%= headline %>
+          <% else %>
+              Headline not defined
+          <% end %>
+          <%= request.fullpath %>
+          <%= request.protocol %>--<%= request.host_with_port %><br>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid padded">
+  <div class="row-fluid">
+    <%= block_alert %>
+    <div class="box">
+      <div class="box-header">
+        <span class="title"><i class="icon-list"></i>&nbsp;所有记录</span>
+        <ul class="box-toolbar">
+          <li>
+            <form class="fill-up" style="width:200px">
+              <label class="input-with-submit">
+                <input name="q" type="text" guideholder="Search...">
+                <button type="submit" class="submit-icon">
+                  <i class="icon-search"></i>
+                </button>
+              </label>
+            </form>
+          </li>
+
+
+          <li class="toolbar-link">
+            <a href="#" data-toggle="dropdown"><i class="icon-cog"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="<%= new_admin_guide_path %>"><i class="icon-plus-sign"></i> Add</a></li>
+              <li><a href="#"><i class="icon-remove-sign"></i> Remove</a></li>
+              <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box-content">
+        <table class="table table-normal" id="record_table">
+          <thead>
+          <tr>
+            <td class="record-checkbox">审核</td>
+            <td class="record-title">标题</td>
+            <td class="record-cmthit">评论/点击</td>
+            <td class="record-author">作者</td>
+            <td class="record-date">发布日期</td>
+            <td class="record-operate">操作</td>
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <% @guides.each do |r| %>
+              <tr id="record_<%= r.id %>">
+                <td class="record-checkbox"><input type="checkbox" name="cid[]" value="1"></td>
+                <td class="record-title"><a href="<%= edit_admin_guide_path(r, :format => 'html') %>"><%= r.title %></a></td>
+                <td class="record-cmthit"><span><%= r.comments_num %></span>/<%= r.hits_num %></td>
+                <td class="record-author"><%= r.user.username if r.user %></td>
+                <td class="record-date"><%= to_pretty(r.created_at) %>
+                  <% r.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
+                <td class="record-operate">
+                  <a href="<%= admin_guide_path(r) %>"><i class="icon-search"></i></a>
+                  <a href="<%= edit_admin_guide_path(r) %>"><i class="icon-edit"></i></a>
+                  <a href="javascript:;"><i class="icon-remove" cid="<%= r.id %>"></i></a>
+                </td>
+              </tr>
+          <% end %>
+
+          </tbody>
+        </table>
+
+        <div class="table-footer">
+          <div class="dataTables_info" id="DataTables_Table_0_info"><%# page_entries_info @guides, :html => false %></div>
+          <%= go_pager @guides %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript">
+    readyScript.bind = function () {
+        $("#record_table .icon-remove").each(function () {
+            $(this).bind("click", function () {
+                var cid=$(this).attr('cid');
+                new candyLayer().deleteRecord(cid,{
+                    url:'/admin/guides/'+cid
+                });
+            });
+        });
+    }
+</script>

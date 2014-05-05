@@ -1655,7 +1655,7 @@ $.ui.plugin.add("draggable", "connectToSortable", {
 
 					this.instance.isOver = 1;
 					//Now we fake the start of dragging for the sortable instance,
-					//by cloning the list group item, appending it to the sortable and using it as inst.currentItem
+					//by cloning the show group item, appending it to the sortable and using it as inst.currentItem
 					//We can then fire the start event of the sortable with our passed browser event, and our own helper (so it doesn't create a new one)
 					this.instance.currentItem = $(self).clone().removeAttr('id').appendTo(this.instance.element).data("sortable-item", true);
 					this.instance.options._helper = this.instance.options.helper; //Store helper option to later restore it
@@ -1700,7 +1700,7 @@ $.ui.plugin.add("draggable", "connectToSortable", {
 					this.instance._mouseStop(event, true);
 					this.instance.options.helper = this.instance.options._helper;
 
-					//Now we remove our currentItem, the list group clone again, and the placeholder, and animate the helper back to it's original size
+					//Now we remove our currentItem, the show group clone again, and the placeholder, and animate the helper back to it's original size
 					this.instance.currentItem.remove();
 					if(this.instance.placeholder) this.instance.placeholder.remove();
 
@@ -4832,7 +4832,7 @@ $.widget("ui.menu", {
 	refresh: function() {
 		var self = this;
 
-		// don't refresh list items that are already adapted
+		// don't refresh show items that are already adapted
 		var items = this.element.children("li:not(.ui-menu-item):has(a)")
 			.addClass("ui-menu-item")
 			.attr("role", "menuitem");

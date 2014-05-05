@@ -1,0 +1,109 @@
+<% content_for:head do %>
+    <link rel="stylesheet" type="text/css" href="/static/uploadify/uploadify.css">
+    <script type="text/javascript" src="/static/uploadify/jquery.uploadify-3.1.min.js"></script>
+<% end %>
+
+<%
+   if @recommend.new_record?
+     method_path=admin_recommends_path
+   else
+     method_path=admin_recommend_path(@recommend.id)
+   end
+%>
+
+<%= form_for(@recommend, :url => method_path, :html => {:id => 'form1', :class => 'form-horizontal'}) do |f| %>
+
+    <%= block_alert @recommend %>
+
+    <div class="control-group">
+      <%= f.label :category, :class => 'control-label' %>
+      <div class="controls">
+        <%= select("recommend", "category", Recommend::ALL_CATEGORY.invert, {:include_blank => '选择分类'}) %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :name, '自定义标题', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'input-xxlarge' %>
+      </div>
+    </div>
+
+
+    <div class="control-group">
+      <%= f.label :order_num, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :order_num, :class => 'input-xxlarge' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :intro, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :intro, :rows => '3', :class => 'span10' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :redirect, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :redirect, :class => 'input-xxlarge' %>
+      </div>
+    </div>
+
+    <div class="control-group" id="uploadify_preview" style="display:<%= (@pics.blank?) ? 'none' : 'block' %>">
+      <div class="controls">
+        <ul>
+          <% if @pics %>
+              <% @pics.each do |p| %>
+                  <li><img src="<%= img_path p %>" alt=""/></li>
+              <% end %>
+          <% end %>
+          <li id="includBefore" style="display: none"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.hidden_field :img_ids, :class => 'input-xxlarge', :id => "img_ids" %>
+        <%= f.hidden_field :img_path, :class => 'input-xxlarge', :id => "img_path" %>
+        <input type="file" name="file_upload" id="file_upload"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :is_close,'属性', :class => 'control-label' %>
+
+      <div class="controls">
+        <label class="checkbox inline">
+          <input type="checkbox" name="recommend[is_close]" <%= 'checked' if @recommend.is_close %> > 关闭
+        </label>
+
+        <label class="checkbox inline">
+        <input type="checkbox" name="recommend[is_fixed]" <%= 'checked' if @recommend.is_fixed %>> 置顶
+        </label>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.button :class => "btn btn-primary", :id => 'submit_button',:disable_with => "提交中..." %>
+        <%= f.button '取消',:type=>"button",:class => "btn",:id=>'cancel_button',:onclick=>'history.back()'  %>
+      </div>
+    </div>
+<% end %>
+
+<script type="text/javascript">
+    readyScript.bind = function () {
+        $('#form1').bind("submit", function (e) {
+            e.preventDefault();
+            new ajaxForm($(this), {
+                dataType: 'json'
+            }).send();
+        });
+        var uploader = new go_uploader();
+        uploader.preview();
+        uploader.uploadify();
+    }
+</script>

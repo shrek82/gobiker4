@@ -17245,7 +17245,7 @@ Base.extend = function (e, t) {
         var t = rangy.createRange(this.doc);
         return t.setStartAfter(e), t.setEndAfter(e), this.setSelection(t)
     }, selectNode: function (n) {
-        var r = rangy.createRange(this.doc), i = n.nodeType === e.ELEMENT_NODE, s = "canHaveHTML"in n ? n.canHaveHTML : n.nodeName !== "IMG", o = i ? n.innerHTML : n.data, u = o === "" || o === e.INVISIBLE_SPACE, a = t.getStyle("display").from(n), f = a === "block" || a === "list-item";
+        var r = rangy.createRange(this.doc), i = n.nodeType === e.ELEMENT_NODE, s = "canHaveHTML"in n ? n.canHaveHTML : n.nodeName !== "IMG", o = i ? n.innerHTML : n.data, u = o === "" || o === e.INVISIBLE_SPACE, a = t.getStyle("display").from(n), f = a === "block" || a === "show-item";
         if (u && i && s)try {
             n.innerHTML = e.INVISIBLE_SPACE
         } catch (l) {
@@ -18355,7 +18355,7 @@ Base.extend = function (e, t) {
         return"<li><div class='btn-group'><a class='btn btn-default" + n + "' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'>" + e.emphasis.bold + "</a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'>" + e.emphasis.italic + "</a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='underline' title='CTRL+U' tabindex='-1'>" + e.emphasis.underline + "</a>" + "</div>" + "</li>"
     }, lists: function (e, t) {
         var n = t && t.size ? " btn-" + t.size : "";
-        return"<li><div class='btn-group'><a class='btn btn-default" + n + "' data-wysihtml5-command='insertUnorderedList' title='" + e.lists.unordered + "' tabindex='-1'><i class='icon-list'></i></a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='insertOrderedList' title='" + e.lists.ordered + "' tabindex='-1'><i class='icon-th-list'></i></a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='Outdent' title='" + e.lists.outdent + "' tabindex='-1'><i class='icon-indent-right'></i></a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='Indent' title='" + e.lists.indent + "' tabindex='-1'><i class='icon-indent-left'></i></a>" + "</div>" + "</li>"
+        return"<li><div class='btn-group'><a class='btn btn-default" + n + "' data-wysihtml5-command='insertUnorderedList' title='" + e.lists.unordered + "' tabindex='-1'><i class='icon-show'></i></a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='insertOrderedList' title='" + e.lists.ordered + "' tabindex='-1'><i class='icon-th-show'></i></a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='Outdent' title='" + e.lists.outdent + "' tabindex='-1'><i class='icon-indent-right'></i></a>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='Indent' title='" + e.lists.indent + "' tabindex='-1'><i class='icon-indent-left'></i></a>" + "</div>" + "</li>"
     }, link: function (e, t) {
         var n = t && t.size ? " btn-" + t.size : "";
         return"<li><div class='bootstrap-wysihtml5-insert-link-modal modal hide fade'><div class='modal-header'><a class='close' data-dismiss='modal'>&times;</a><h3>" + e.link.insert + "</h3>" + "</div>" + "<div class='modal-body'>" + "<input value='http://' class='bootstrap-wysihtml5-insert-link-url input-xlarge'>" + "</div>" + "<div class='modal-footer'>" + "<a href='#' class='btn btn-default' data-dismiss='modal'>" + e.link.cancel + "</a>" + "<a href='#' class='btn btn-blue' data-dismiss='modal'>" + e.link.insert + "</a>" + "</div>" + "</div>" + "<a class='btn btn-default" + n + "' data-wysihtml5-command='createLink' title='" + e.link.insert + "' tabindex='-1'><i class='icon-share'></i></a>" + "</li>"
@@ -18463,7 +18463,7 @@ Base.extend = function (e, t) {
     }, e.fn.wysihtml5.Constructor = i;
     var o = e.fn.wysihtml5.defaultOptions = {"font-styles": !0, color: !1, emphasis: !0, lists: !0, html: !1, link: !0, image: !0, events: {}, parserRules: {classes: {"wysiwyg-color-silver": 1, "wysiwyg-color-gray": 1, "wysiwyg-color-white": 1, "wysiwyg-color-maroon": 1, "wysiwyg-color-red": 1, "wysiwyg-color-purple": 1, "wysiwyg-color-fuchsia": 1, "wysiwyg-color-green": 1, "wysiwyg-color-lime": 1, "wysiwyg-color-olive": 1, "wysiwyg-color-yellow": 1, "wysiwyg-color-navy": 1, "wysiwyg-color-blue": 1, "wysiwyg-color-teal": 1, "wysiwyg-color-aqua": 1, "wysiwyg-color-orange": 1}, tags: {b: {}, i: {}, br: {}, ol: {}, ul: {}, li: {}, h1: {}, h2: {}, h3: {}, blockquote: {}, u: 1, img: {check_attributes: {width: "numbers", alt: "alt", src: "url", height: "numbers"}}, a: {set_attributes: {target: "_blank", rel: "nofollow"}, check_attributes: {href: "url"}}, span: 1, div: 1, code: 1, pre: 1}}, stylesheets: ["./lib/css/wysiwyg-color.css"], locale: "en"};
     typeof e.fn.wysihtml5.defaultOptionsCache == "undefined" && (e.fn.wysihtml5.defaultOptionsCache = e.extend(!0, {}, e.fn.wysihtml5.defaultOptions));
-    var u = e.fn.wysihtml5.locale = {en: {font_styles: {normal: "Normal text", h1: "Heading 1", h2: "Heading 2", h3: "Heading 3"}, emphasis: {bold: "Bold", italic: "Italic", underline: "Underline"}, lists: {unordered: "Unordered list", ordered: "Ordered list", outdent: "Outdent", indent: "Indent"}, link: {insert: "Insert link", cancel: "Cancel"}, image: {insert: "Insert image", cancel: "Cancel"}, html: {edit: "Edit HTML"}, colours: {black: "Black", silver: "Silver", gray: "Grey", maroon: "Maroon", red: "Red", purple: "Purple", green: "Green", olive: "Olive", navy: "Navy", blue: "Blue", orange: "Orange"}}}
+    var u = e.fn.wysihtml5.locale = {en: {font_styles: {normal: "Normal text", h1: "Heading 1", h2: "Heading 2", h3: "Heading 3"}, emphasis: {bold: "Bold", italic: "Italic", underline: "Underline"}, lists: {unordered: "Unordered show", ordered: "Ordered show", outdent: "Outdent", indent: "Indent"}, link: {insert: "Insert link", cancel: "Cancel"}, image: {insert: "Insert image", cancel: "Cancel"}, html: {edit: "Edit HTML"}, colours: {black: "Black", silver: "Silver", gray: "Grey", maroon: "Maroon", red: "Red", purple: "Purple", green: "Green", olive: "Olive", navy: "Navy", blue: "Blue", orange: "Orange"}}}
 }(window.jQuery, window.wysihtml5), function (e) {
     var t = "0.3.4", n = "hasOwnProperty", r = /[\.\/]/, i = "*", s = function () {
     }, o = function (e, t) {
@@ -22346,7 +22346,7 @@ var getColorForPercentage = function (e, t, n) {
     }, isActive: function () {
         return this.nav.hasClass("active")
     }}, Wizard = function (t, n) {
-        var r = ['<div class="modal hide wizard-modal" role="dialog">', '<div class="wizard-modal-header modal-header">', '<button class="wizard-close close" type="button">x</button>', '<h3 class="wizard-title"></h3>', '<span class="wizard-subtitle"></span>', "</div>", '<div class="pull-left wizard-steps">', '<div class="wizard-nav-container">', '<ul class="nav nav-list" style="padding-bottom:30px;">', "</ul>", "</div>", '<div class="wizard-progress-container">', , '<div class="progress progress-striped">', '<div class="bar"></div>', "</div>", "</div>", "</div>", "<form>", '<div class="wizard-cards">', '<div class="wizard-card-container">', "</div>", '<div class="wizard-modal-footer">', '<div class="wizard-buttons-container">', '<button class="btn btn-default wizard-back" type="button">Back</button>', '<button class="btn btn-blue wizard-next" type="button">Next</button>', "</div>", "</div>", "</div>", "</form>", "</div>"];
+        var r = ['<div class="modal hide wizard-modal" role="dialog">', '<div class="wizard-modal-header modal-header">', '<button class="wizard-close close" type="button">x</button>', '<h3 class="wizard-title"></h3>', '<span class="wizard-subtitle"></span>', "</div>", '<div class="pull-left wizard-steps">', '<div class="wizard-nav-container">', '<ul class="nav nav-show" style="padding-bottom:30px;">', "</ul>", "</div>", '<div class="wizard-progress-container">', , '<div class="progress progress-striped">', '<div class="bar"></div>', "</div>", "</div>", "</div>", "<form>", '<div class="wizard-cards">', '<div class="wizard-card-container">', "</div>", '<div class="wizard-modal-footer">', '<div class="wizard-buttons-container">', '<button class="btn btn-default wizard-back" type="button">Back</button>', '<button class="btn btn-blue wizard-next" type="button">Next</button>', "</div>", "</div>", "</div>", "</form>", "</div>"];
         this.args = {submitUrl: "", width: 750, progressBarCurrent: !1, increaseHeight: 0, buttons: {nextText: "Next", backText: "Back", submitText: "Submit", submittingText: "Submitting..."}}, e.extend(this.args, n || {}), this.markup = e(t), this.submitCards = this.markup.find(".wizard-error,.wizard-failure,.wizard-success,.wizard-loading"), this.el = e(r.join("\n")), this.el.find(".wizard-card-container").append(this.markup.find(".wizard-card")).append(this.submitCards), e("body").append(this.el), this.closeButton = this.el.find("button.wizard-close"), this.footer = this.el.find(".wizard-modal-footer"), this.backButton = this.footer.find(".wizard-back"), this.nextButton = this.footer.find(".wizard-next"), this.progress = this.el.find(".progress"), this._cards = [], this.cards = {}, this._readyToSubmit = !1, this.percentComplete = 0, this._submitting = !1, this._events = {}, this._firstShow = !0, this._createCards(), this.nextButton.click(this, this._handleNextClick), this.backButton.click(this, this._handleBackClick), this.backButton.text(this.args.buttons.backText), this.nextButton.text(this.args.buttons.nextText);
         var i = 360, s = i + this.args.increaseHeight;
         this.el.find(".wizard-nav-container").css("height", s), this.el.find(".wizard-steps").css("height", s + 65 + "px"), this.el.find(".wizard-card").css("height", s - 60 + "px"), this.submitCards.css("height", s - 60 + "px"), this.el.css("margin-top", -(this.el.height() / 2)), this.el.css("width", this.args.width), this.el.css("margin-left", -(this.args.width / 2));
@@ -22505,7 +22505,7 @@ var getColorForPercentage = function (e, t, n) {
     }, _createCards: function () {
         var t = null, n = null, r = 0, i = null, s = this, o = this, u = this.el.find(".wizard-cards .wizard-card");
         e.each(u, function (r, u) {
-            u = e(u), t = i, i = new WizardCard(s, u, r, t, n), o._cards.push(i), i.name && (o.cards[i.name] = i), t && (t.next = i), o.el.find(".wizard-steps .nav-list").append(i.nav)
+            u = e(u), t = i, i = new WizardCard(s, u, r, t, n), o._cards.push(i), i.name && (o.cards[i.name] = i), t && (t.next = i), o.el.find(".wizard-steps .nav-show").append(i.nav)
         })
     }, showSubmitCard: function (e) {
         this.log("showing " + e + " submit card");
@@ -22563,7 +22563,7 @@ var getColorForPercentage = function (e, t, n) {
         var e = $("#wizard-demo").wizard();
         e.el.find(".wizard-ns-select").change(function () {
             e.el.find(".wizard-ns-detail").show()
-        }), e.el.find(".create-server-service-list").change(function () {
+        }), e.el.find(".create-server-service-show").change(function () {
             var t = $(this).find("option:selected").length == 0;
             e.getCard(this).toggleAlert(null, t)
         }), e.cards.name.on("validated", function (e) {
@@ -22579,7 +22579,7 @@ var getColorForPercentage = function (e, t, n) {
             e.reset().close()
         }), e.el.find(".wizard-success .create-another-server").click(function () {
             e.reset()
-        }), $(".wizard-group-list").click(function () {
+        }), $(".wizard-group-show").click(function () {
             alert("Disabled for demo.")
         }), $("#open-wizard").click(function () {
             e.show()
@@ -24198,7 +24198,7 @@ var getColorForPercentage = function (e, t, n) {
         return i
     }, option: function (e, t) {
         this.options[e] = t, e === "source" && (this.sourceData = null), e === "prepend" && (this.prependData = null)
-    }}), t.defaults = e.extend({}, e.fn.editabletypes.abstractinput.defaults, {source: null, prepend: !1, sourceError: "Error when loading list", sourceCache: !0}), e.fn.editabletypes.list = t
+    }}), t.defaults = e.extend({}, e.fn.editabletypes.abstractinput.defaults, {source: null, prepend: !1, sourceError: "Error when loading show", sourceCache: !0}), e.fn.editabletypes.list = t
 }(window.jQuery), function (e) {
     var t = function (e) {
         this.init("text", e, t.defaults)

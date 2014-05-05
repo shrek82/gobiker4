@@ -1,0 +1,356 @@
+<% @title=@place.name+' - 目的地' %>
+<% content_for:style do %>
+    <link rel="stylesheet" href="/css/common/comments.css"/>
+    <link rel="stylesheet" href="/css/place/style4.css"/>
+<% end %>
+<% content_for:script do %>
+    <script srcc="/js/place/crumbbox.js" type="text/javascript"></script>
+<% end %>
+
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="<%= main_path %>">首页</a></span>
+    <span class="space">&gt;</span>
+    <span class="text"><a href="<%= places_path %>">目的地</a></span>
+    <% if @place.province && @place.city %>
+        <span class="space">&gt;</span><span class="text"><a href="<%= area_places_path @place.city.province.pinyin %>"><%= @place.province.name %></a></span><span class="space">&gt;</span><span class="text"><a href="<%= city_places_path @place.city.pinyin %>" data-bn-ipg="3-4"><%= @place.city.name %></a></span>
+    <% end %>
+    <span class="space">&gt;</span>
+    <h1 class="current"><%= @place.name %></h1>
+  </div>
+</div>
+
+<div class="pl_topbox_wrap">
+  <div class="pl_topbox clearfix">
+    <div class="pl_topbox_name">
+      <div class="clearfix">
+        <p class="pl_topbox_cn fontYaHei">
+          <a href="<%= place_path @place %>"><%= @place.province.name %>,<%= @place.city.name %></a></p>
+      </div>
+      <div class="clearfix">
+        <p class="pl_topbox_cn fontYaHei"><a href="<%= place_path @place %>"><%= @place.name %></a></p>
+      </div>
+    </div>
+    <div class="pl_topbox_right">
+      <ul class="pl_topbox_btn">
+        <li class="pl_topbox_want" id="pl_topbox_want">
+          <span class="tips">+1</span>
+          <a href="javascript:void(0);" class="click" id="doings_planto_button" title="<%= @place.wantgoto_num.to_i.to_s %>人想去这里">想去</a>
+        </li>
+        <li class="pl_topbox_been" id="pl_topbox_been">
+          <span class="tips">+1</span>
+          <a href="javascript:void(0);" class="click" id="doings_beento_button" title="<%= @place.beengo_num.to_i.to_s %>人去过这里">去过</a>
+        </li>
+      </ul>
+      <p class="pl_topbox_numbeen fontYaHei"><em id="doings_beento_counts_big"><%= @place.beengo_num.to_i.to_s %></em>人去过这里
+      </p>
+    </div>
+  </div>
+</div>
+<div class="pl_main">
+  <div class="pl_side">
+    <div>
+      <div class="pl_title">
+        <h2 class="pl_title_name">相册</h2>
+      </div>
+      <!--有图时start-->
+      <div class="pl_poiphoto _jsheight">
+        <p id="poiphoto">
+          <a href="<%= photos_place_path %>" target="_blank"><img src="<%= img_style @place.img_path, "medium" %>" width="270" alt="<%= @place.name %>"></a>
+        </p>
+      </div>
+      <div class="pl_poiphoto_more">
+        <span class="fr"><a href="<%= photos_place_path %>" target="_blank" class="more">更多照片 <%= @place.albums.first.photos.count %>
+          张</a></span><a href="#" class="pl_poiphoto_album">相册上传</a><a href="#" class="pl_poiphoto_native">本地上传</a>
+      </div>
+    </div>
+    <div class="pl_sldline2"></div>
+    <div>
+      <div class="pl_title">
+        <h2 class="pl_title_name">谁最近去过</h2>
+      </div>
+      <ul class="pl_hotqyer clearfix">
+        <% @place.been_to_places.each do |b| %>
+            <li>
+              <a href="<%= u_path b.user %>" title="<%= b.user.username %>"><img src="<%= b.user.avatar_path %>" width="30" height="30"></a>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="pl_sldline2"></div>
+    <div>
+      <div class="pl_title">
+        <h2 class="pl_title_name">地图</h2>
+      </div>
+      <div class="pl_smallmap">
+        <a href="http://place.qyer.com/poi/59047/map/" target="_blank"><img src="http://maps.google.com/maps/api/staticmap?size=270x180&amp;markers=icon:/images/place/icon_coord_current.png|22.297604,114.172173&amp;sensor=false"></a>
+      </div>
+    </div>
+
+    <div class="pl_sldline2"></div>
+    <div>
+      <div class="pl_title">
+        <h2 class="pl_title_name">周边景点</h2>
+      </div>
+      <ul class="pl_rimplace">
+        <li>
+          <a href="http://place.qyer.com/poi/99951/" class="pic"><img src="/images/80.jpg" width="48" height="48" title="1881 1881 Heritage"></a>
+
+          <p class="title"><a href="http://place.qyer.com/poi/99951/" title="1881 1881 Heritage">1881 1881 Heritage</a>
+          </p>
+
+          <p class="text">
+            <span title="四星"><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star_null.png" alt=""></span><span class="ml10">点评 <em class="fb">5</em></span>
+          </p>
+        </li>
+        <li>
+          <a href="http://place.qyer.com/poi/36563/" class="pic"><img src="/images/80.jpg" onerror="this.src='/images/place/no/poi_48_48.png'" width="48" height="48" alt="香港文化中心 Hong Kong Cultural Centre" title="香港文化中心 Hong Kong Cultural Centre"></a>
+
+          <p class="title">
+            <a href="http://place.qyer.com/poi/36563/" title="香港文化中心 Hong Kong Cultural Centre">香港文化中心 Hong Kong
+              Cultural Centre</a></p>
+
+          <p class="text">
+            <span title="四星"><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star_null.png" alt=""></span><span class="ml10">点评 <em class="fb">12</em></span>
+          </p>
+        </li>
+        <li>
+          <a href="http://place.qyer.com/poi/94446/" class="pic"><img src="/images/80.jpg" onerror="this.src='/images/place/no/poi_48_48.png'" width="48" height="48" alt="香港太空馆 Hong Kong  Space Museum" title="香港太空馆 Hong Kong  Space Museum"></a>
+
+          <p class="title">
+            <a href="http://place.qyer.com/poi/94446/" title="香港太空馆 Hong Kong  Space Museum">香港太空馆 Hong Kong Space
+              Museum</a></p>
+
+          <p class="text">
+            <span title="四星"><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star.png" alt=""><img src="/images/poi_star_null.png" alt=""></span><span class="ml10">点评 <em class="fb">7</em></span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pl_cont">
+    <div class="pl_title">
+      <h2 class="pl_title_name">概述</h2>
+    </div>
+
+    <div class="pl_wordcnt">
+      <%= raw @place.content %>
+    </div>
+
+    <div class="pl_sldline2"></div>
+
+    <div class="pl_title">
+      <h2 class="pl_title_name">相关话题</h2>
+    </div>
+
+    <div class="pl_wordcnt">
+      <%= raw @place.intro %>
+    </div>
+
+
+    <div class="pl_sldline2"></div>
+    <%= comment_list :hidden_field => {:place_id => @place.id}, :query_param => {:place_id => @place.id, :review => true} %>
+  </div>
+  <div class="cb"></div>
+</div>
+
+
+<div class="app_puplayer" id="app_puplayer" style="display: none;">
+  <p class="imgs"><img src="http://pic.qyer.com/album/user/388/30/QkFdQRoAYw/index" width="480" height="240" alt=""></p>
+
+  <p class="close"></p>
+
+  <p class="btns"><a href="http://app.qyer.com/cityguide/hong-kong/
+" target="_blank">前往下载</a></p>
+</div>
+
+
+<div class="cb"></div>
+
+<div class="qyer_head_crumb_pulldown crumb_continents" style="width: 160px; display: none;">
+  <ul>
+    <li><a href="http://place.qyer.com/asia/" data-bn-ipg="3-2-1">亚洲 Asia</a></li>
+    <li><a href="http://place.qyer.com/europe/" data-bn-ipg="3-2-2">欧洲 Europe</a></li>
+    <li><a href="http://place.qyer.com/africa/" data-bn-ipg="3-2-3">非洲 Africa</a></li>
+    <li><a href="http://place.qyer.com/north-america/" data-bn-ipg="3-2-4">北美 North America</a></li>
+    <li><a href="http://place.qyer.com/south-america/" data-bn-ipg="3-2-5">南美 South America</a></li>
+    <li><a href="http://place.qyer.com/oceania/" data-bn-ipg="3-2-6">大洋洲 Oceania</a></li>
+    <li><a href="http://place.qyer.com/antarctica/" data-bn-ipg="3-2-7">南极洲 Antarctica</a></li>
+  </ul>
+  <div class="cb"></div>
+</div>
+
+
+<div class="qyer_head_crumb_pulldown crumb_country" style="display: none;">
+  <ul>
+    <li><a href="http://place.qyer.com/china/" data-bn-ipg="3-3-2">中国 China</a></li>
+    <li><a href="http://place.qyer.com/thailand/" data-bn-ipg="3-3-2">泰国 Thailand</a></li>
+    <li><a href="http://place.qyer.com/malaysia/" data-bn-ipg="3-3-2">马来西亚 Malaysia</a></li>
+    <li><a href="http://place.qyer.com/singapore/" data-bn-ipg="3-3-2">新加坡 Singapore</a></li>
+    <li><a href="http://place.qyer.com/japan/" data-bn-ipg="3-3-2">日本 Japan</a></li>
+    <li><a href="http://place.qyer.com/south-korea/" data-bn-ipg="3-3-2">韩国 South Korea</a></li>
+    <li><a href="http://place.qyer.com/cambodia/" data-bn-ipg="3-3-2">柬埔寨 Cambodia</a></li>
+    <li><a href="http://place.qyer.com/vietnam/" data-bn-ipg="3-3-2">越南 Vietnam</a></li>
+    <li><a href="http://place.qyer.com/indonesia/" data-bn-ipg="3-3-2">印度尼西亚 Indonesia</a></li>
+    <li><a href="http://place.qyer.com/philippines/" data-bn-ipg="3-3-2">菲律宾 Philippines</a></li>
+  </ul>
+  <ul>
+    <li><a href="http://place.qyer.com/nepal/" data-bn-ipg="3-3-2">尼泊尔 Nepal</a></li>
+    <li><a href="http://place.qyer.com/india/" data-bn-ipg="3-3-2">印度 India</a></li>
+    <li><a href="http://place.qyer.com/maldives/" data-bn-ipg="3-3-2">马尔代夫 Maldives</a></li>
+    <li><a href="http://place.qyer.com/united-arab-emirates/" data-bn-ipg="3-3-2">阿联酋 United Arab Emirates</a></li>
+    <li><a href="http://place.qyer.com/laos/" data-bn-ipg="3-3-2">老挝 Laos</a></li>
+    <li><a href="http://place.qyer.com/sri-lanka/" data-bn-ipg="3-3-2">斯里兰卡 Sri Lanka</a></li>
+    <li><a href="http://place.qyer.com/myanmar/" data-bn-ipg="3-3-2">缅甸 Myanmar</a></li>
+    <li><a href="http://place.qyer.com/jordan/" data-bn-ipg="3-3-2">约旦 Jordan</a></li>
+    <li><a href="http://place.qyer.com/israel-and-the-palestinian-territories/" data-bn-ipg="3-3-2">以色列与巴勒斯坦领土
+      Israel &amp; The Palestinian Territories</a></li>
+    <li><a href="http://place.qyer.com/north-korea/" data-bn-ipg="3-3-2">朝鲜 North Korea</a></li>
+  </ul>
+
+
+  <div class="cb"></div>
+  <p class="more"><a href="http://place.qyer.com/asia/" data-bn-ipg="3-3-2">更多国家&gt;&gt;</a></p>
+
+</div>
+
+
+
+<div class="qyer_head_crumb_pulldown crumb_city" style="display: none;">
+
+
+  <ul>
+
+    <li><a href="http://place.qyer.com/hong-kong/" data-bn-ipg="3-4-2">香港 Hong Kong</a></li>
+
+
+    <li><a href="http://place.qyer.com/macau/" data-bn-ipg="3-4-2">澳门 Macau</a></li>
+
+
+    <li><a href="http://place.qyer.com/taipei/" data-bn-ipg="3-4-2">台北 Taipei</a></li>
+
+
+    <li><a href="http://place.qyer.com/kaohsiung-city/" data-bn-ipg="3-4-2">高雄市 Kaohsiung City</a></li>
+
+
+    <li><a href="http://place.qyer.com/kenting-national-park/" data-bn-ipg="3-4-2">垦丁国家公园 Kenting national park</a></li>
+
+
+    <li><a href="http://place.qyer.com/hualien-county/" data-bn-ipg="3-4-2">花莲县 Hualien County</a></li>
+
+
+    <li><a href="http://place.qyer.com/tainan-city/" data-bn-ipg="3-4-2">台南市 Tainan City</a></li>
+
+
+    <li><a href="http://place.qyer.com/taichung-city/" data-bn-ipg="3-4-2">台中市 Taichung City</a></li>
+
+
+    <li><a href="http://place.qyer.com/new-taipei-city/" data-bn-ipg="3-4-2">新北市 New Taipei City</a></li>
+
+
+    <li><a href="http://place.qyer.com/keelung-city/" data-bn-ipg="3-4-2">基隆市 Keelung City</a></li>
+  </ul>
+
+  <ul>
+
+
+    <li><a href="http://place.qyer.com/taitung-county/" data-bn-ipg="3-4-2">台东县 Taitung County</a></li>
+
+
+    <li><a href="http://place.qyer.com/taoyuan-county/" data-bn-ipg="3-4-2">桃园县 Taoyuan County</a></li>
+
+
+    <li><a href="http://place.qyer.com/yilan-county/" data-bn-ipg="3-4-2">宜兰县 Yilan County</a></li>
+
+
+    <li><a href="http://place.qyer.com/chiayi/" data-bn-ipg="3-4-2">嘉义 Chiayi</a></li>
+
+
+    <li><a href="http://place.qyer.com/nantou-county/" data-bn-ipg="3-4-2">南投县 Nantou County</a></li>
+
+
+    <li><a href="http://place.qyer.com/pingtung-county/" data-bn-ipg="3-4-2">屏东县 Pingtung County</a></li>
+
+
+    <li><a href="http://place.qyer.com/hsinchu/" data-bn-ipg="3-4-2">新竹 Hsinchu</a></li>
+
+
+    <li><a href="http://place.qyer.com/changhua-county/" data-bn-ipg="3-4-2">彰化县 Changhua County</a></li>
+
+
+    <li><a href="http://place.qyer.com/kinmen-county/" data-bn-ipg="3-4-2">金门县 Kinmen County</a></li>
+
+
+    <li><a href="http://place.qyer.com/miaoli-county/" data-bn-ipg="3-4-2">苗栗县 Miaoli County</a></li>
+  </ul>
+
+
+  <div class="cb"></div>
+  <p class="more"><a href="http://place.qyer.com/china/" data-bn-ipg="3-4-2">更多城市&gt;&gt;</a></p>
+
+</div>
+
+
+
+<div class="qyer_head_crumb_pulldown crumb_cate" style="width: 160px; display: none;">
+
+
+  <ul>
+
+    <li><a href="http://place.qyer.com/hong-kong/sight/">景点</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/activity/">体验</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/transportation/">交通</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/hotel/">住宿</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/shopping/">购物</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/food/">美食</a></li>
+
+
+  </ul>
+  <div class="cb"></div>
+
+</div>
+
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['lib'], function (lib) {
+            $("#pl_topbox_want a").click(function () {
+                var $wanta = $(this);
+                $(this).parent().find('span.tips').show().animate({'opacity': 0, 'top': '-50px'}, 400, 'linear', function () {
+                    $(this).hide().css({'opacity': 1, 'top': '-18px'});
+                    $.ajax({
+                        url: '<%= wantgoto_place_path %>',
+                        type: 'post',
+                        success: function (res) {
+                            $wanta.attr('title', res.wantgoto_num + '人想去这里');
+                        }
+                    });
+                });
+            });
+            $("#pl_topbox_been a").click(function () {
+                var $beena = $(this);
+                $(this).parent().find('span.tips').show().animate({'opacity': 0, 'top': '-50px'}, 400, 'linear', function () {
+                    $(this).hide().css({'opacity': 1, 'top': '-18px'});
+                });
+                $.ajax({
+                    url: '<%= beento_place_path %>',
+                    type: 'post',
+                    success: function (res) {
+                        $beena.attr('title', res.beengo_num + '人去过这里');
+                        $("#doings_beento_counts_big").html(res.beengo_num);
+                    }
+                });
+            })
+        });
+
+    </script>
+<% end %>

@@ -1,0 +1,50 @@
+<div class="reg_main">
+      <form id="login_form" action="<%= login_path %>" class="reg_form" method="post" >
+        <div class="clearfix"><strong class="fl f16 fontYaHei fb cGray">使用以下帐号直接登录</strong></div>
+        <div class="tc mt15">
+          <a href="javascript:void(0);" onfocus="this.blur();" class="weibo_btn _jsweibologin" url="http%3A%2F%2Fwww.qyer.com%2F">微博登录</a>
+          <a href="javascript:void(0);" onfocus="this.blur();" class="qq_btn _jsqqlogin" url="http%3A%2F%2Fwww.qyer.com%2F">QQ登录</a>
+        </div>
+        <div class="tc mt20">
+          <img src="/static/media/huo_icon.png" width="400" height="16" alt=""/>
+        </div>
+
+        <div class="clearfix mt15">
+          <strong class="fl f16 fontYaHei fb cGray">使用骑趣网帐号</strong><span class="fr cGray">还没有有帐号？<a href="/register/">注册</a></span>
+        </div>
+
+
+        <div class="list clearfix" style="margin-top: 10px">
+          <span class="fl">账号：</span>
+
+          <div class="input_div">
+            <input type="text" class="ui_input fl" autocomplete="off" id="login_email" maxlength="15" name="login[account]" >
+            <span class="i_zt"></span>
+            <span class="i_tips"></span>
+          </div>
+          <p class="dl_p cGray">请输入注册时邮箱或用户名</p>
+        </div>
+
+        <div class="list clearfix">
+          <span class="fl">密码：</span>
+
+          <div class="input_div" style="z-index:12;">
+            <input type="password" class="ui_input fl" autocomplete="off" value="" placeholder="" id="login_password" maxlength="16" name="login[password]">
+            <span class="i_zt"></span>
+            <span class="i_tips"></span>
+          </div>
+        </div>
+
+        <div class="list email clearfix">
+          <span class="fl email_t"></span>
+          <span class="fontArial cGray"><label><input type="checkbox" checked="checked" id="reg_checkbox_agree" name="login[reme]"/>下次自动登陆</label></span>
+        </div>
+
+        <div class="list mt10 clearfix">
+          <button type="submit" id="submit_button" class="btn btn-mint big_btn" style="padding:8px 0;font-size:16px" >立即登陆</button>
+        </div>
+
+        <input id="previous_url" type="hidden" name="login[previous_url]" value="<%= previous_url %>"/>
+
+      </form>
+    </div>

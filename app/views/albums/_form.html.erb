@@ -1,0 +1,65 @@
+<%= form_for(@album) do |f| %>
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :place_id %><br />
+    <%= f.number_field :place_id %>
+  </div>
+  <div class="field">
+    <%= f.label :event_id %><br />
+    <%= f.number_field :event_id %>
+  </div>
+  <div class="field">
+    <%= f.label :club_id %><br />
+    <%= f.number_field :club_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pics_num %><br />
+    <%= f.number_field :pics_num %>
+  </div>
+  <div class="field">
+    <%= f.label :hits_num %><br />
+    <%= f.number_field :hits_num %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :cover_path %><br />
+    <%= f.text_field :cover_path %>
+  </div>
+  <div class="field">
+    <%= f.label :order_num %><br />
+    <%= f.number_field :order_num %>
+  </div>
+  <div class="field">
+    <%= f.label :is_close %><br />
+    <%= f.check_box :is_close %>
+  </div>
+  <div class="field">
+    <%= f.label :is_recommended %><br />
+    <%= f.check_box :is_recommended %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

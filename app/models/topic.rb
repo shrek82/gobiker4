@@ -50,7 +50,7 @@ class Topic < ActiveRecord::Base
   #belongs_to :forum,:touch=>true
 
   #查询基本字段
-  scope :base_field, select("topics.id,topics.title,topics.forum_id,topics.subject_id,topics.user_id,topics.title_color,topics.last_comment_user_id,topics.last_comment_time,topics.hits_num,topics.comments_num,topics.is_fixed,topics.is_good,topics.created_at")
+  scope :base_field, ->{select("topics.id,topics.title,topics.forum_id,topics.subject_id,topics.user_id,topics.title_color,topics.last_comment_user_id,topics.last_comment_time,topics.hits_num,topics.comments_num,topics.is_fixed,topics.is_good,topics.created_at")}
 
   #自定义详情字段
   def content

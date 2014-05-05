@@ -1,0 +1,122 @@
+<div class="lay_main">
+
+  <div class="bbs_maintit">
+    <h2 class="title fontYaHei titcur" id="bbs_list_action"><a href="javascript:void(0);" data-bn-ipg="board-type-thread">帖子<em>（7172条）</em></a></h2>
+
+    <p class="titgap">|</p>
+
+    <h2 class="title fontYaHei" id="ask_list_action"><a href="javascript:void(0);" data-bn-ipg="board-type-ask">问答<em>（5323条）</em></a></h2>
+
+    <div class="bbs_tabsearch">
+      <a href="javascript:;" data-href="/forums/topics/post?fid=<%= @forum.id %>" class="btn2 btn2-mint" id="post_href_button" ><i class="icon-plus"></i> 新帖</a>
+    </div>
+  </div>
+
+  <div id="bbs_list_div">
+
+
+    <!--列表nav分类-->
+    <ul class="bbs_tabnav">
+      <li class="first  current"><a href="<%= forum_path @forum.id%>" >全部</a></li>
+      <li><a href="<%= forum_path @forum.id%>" >精华</a></li>
+      <% @subject_categories.each do |c| %>
+          <li><a href="<%= forum_path @forum.id%>?cid=<%= c.id %>" ><%= c.name %></a></li>
+      <% end %>
+    </ul>
+
+
+    <div class="bbs_listinfos">
+
+      <%# go_pager @topics %>
+
+      <div class="types">
+        <span class="tit">列表样式</span>
+
+        <p class="icons">
+          <span id="textlist" class="text" title="文字" >文字</span><span id="piclist" class="onpic" title="图文" >图文</span>
+        </p>
+      </div>
+
+    </div>
+
+
+    <!--纯文列表-->
+    <div id="threadlist" style="position: relative;min-height: 400px;">
+
+      <ul class="bbs_threadlist">
+        <li class="item">
+
+          <div class="avatar">
+            <a target="_blank" href="1" title="seeyoup"><img src="/avatar/up.jpeg" alt="seeyoup" style="display: block; width: 50px; height: 50px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22); -webkit-border-radius: 3px; border-radius: 3px;"></a>
+          </div>
+
+          <h3 class="titles fontYaHei">
+            <a href="thread-755222-1.html" class="tit titjh" title="2012年9月加拿大15日游--落基山&amp;枫叶大道">2012年9月加拿大15日游--落基山&amp;枫叶大道</a>
+            <span class="showprompt" data-title="三级精华"><img class="icon" alt="" src="/images/digest.png"> <img class="icon" alt="" src="/images/digest.png"> <img class="icon" alt="" src="/images/digest.png"> </span>
+            <span class="showprompt" data-title="含行程单"> <img class="icon" alt="" src="/images/route.png"> </span>
+          </h3>
+          <p class="pics">
+            <a href="http://bbs.qyer.com/thread-755222-1.html"><img height="75" src="/images/forum/200x1331.jpg"></a><a href="http://bbs.qyer.com/thread-755222-1.html"><img height="75" alt="2012年9月加拿大15日游--落基山&amp;枫叶大道" src="/images/forum/200x1332.jpg"></a><a href="http://bbs.qyer.com/thread-755222-1.html" data-bn-ipg="board-threadlist-pic-12"><img height="75" alt="2012年9月加拿大15日游--落基山&amp;枫叶大道" src="http://static.qyer.com/album/user/310/2/QkhVQhgHYQ/200x133"></a>
+          </p>
+          <div class="infos">
+            <p class="info"><span class="views">43080</span><span class="sum">292</span><span class="gap">|</span><span class="time">最后回复：4小时前</span></p>
+            <p><a href="forum-54-5-1.html" class="tag" data-bn-ipg="board-threadlist-type-5">游记攻略</a><span class="reply"><a href="http://user.qyer.com/user_uid_153890" >zygao</a>&nbsp;&nbsp;|&nbsp;&nbsp;2012-12-23</span> </p>
+          </div>
+        </li>
+
+        <% @topics.each do |t| %>
+            <li class="item">
+
+              <div class="avatar">
+                <a target="_blank" href="<%= u_path t.user_id %>" title="seeyoup"><img src="/avatar/up.jpeg" alt="seeyoup" ></a>
+              </div>
+
+              <h3 class="titles fontYaHei">
+                <a href="<%= show_topics_path t %>" class="tit" target="_blank" title="<%= t.title%>"><%= t.title.truncate(27) %></a>
+              </h3>
+
+              <div class="infos">
+                <p class="info"><span class="views" title="浏览"><%= t.hits_num %></span><span class="sum" title="评论"><%= t.comments_num %></span></p>
+
+                <p><a href="<%= forum_path @forum.id%>?cid=<%= t.subject_id %>" class="tag"><%= t.subject_category.name %></a><span class="reply"><a href="<%= u_path t.user_id %>"><%= t.user.username %></a>&nbsp;发表于<%= to_pretty t.created_at %>&nbsp;&nbsp;&nbsp;<%= t.reply_user.username+to_pretty(t.last_comment_time)+"回复" if t.last_comment_time&&t.last_comment_user_id %></span>
+                </p>
+
+              </div>
+
+            </li>
+
+
+
+        <% end %>
+
+
+      </ul>
+
+    </div>
+
+    <div class="clearfix">
+      <%=go_pager @topics %>
+    </div>
+
+  </div>
+
+  <div id="ask_list_div" style="display: none;">
+    <ul class="bbs_tabnav">
+      <li class="first current" data-asktype="0"><a href="javascript:void(0);" data-bn-ipg="board-ask-new">最新问题</a></li>
+      <li data-asktype="1"><a href="javascript:void(0);" data-bn-ipg="board-ask-hot">热门问题</a></li>
+      <li data-asktype="2"><a href="javascript:void(0);" data-bn-ipg="board-ask-wait">待回答问题</a></li>
+    </ul>
+    <div class="bbs_listinfos">
+      <p class="fr"><a href="http://ask.qyer.com/addquestion?fid=54" class="ui_buttonB fr" target="_blank" data-bn-ipg="board-asklist-ask">提 问</a></p>
+      <span class="sums"></span>
+    </div>
+    <ul class="bbs_asklist"></ul>
+    <div class="clearfix"></div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+
+</script>

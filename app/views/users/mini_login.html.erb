@@ -1,0 +1,32 @@
+<div class="reg_main">
+  <div class="clearfix"><strong class="fl f16 fontYaHei fb cGray">使用穷游帐号登录</strong><span class="fr cGray">没有帐号？<a id="tab_register_sw" href="javascript:void(0);">立即注册</a></span></div>
+  <form method="post" action="<%= login_path %>" name="loginform" id="login_form">
+    <div class="login_form" style="margin-bottom:10px;">
+      <div class="list clearfix">
+        <span class="fl">帐号：</span>
+        <input type="text" class="ui_input fl" name="login[account]" id="account" maxlength="40" placeholder="邮箱或用户名">
+      </div>
+      <div class="list clearfix">
+        <span class="fl">密码：</span>
+        <input type="password" class="ui_input fl" autocomplete="off" maxlength="16" name="login[password]" id="password">
+      </div>
+      <div class="list clearfix">
+        <label class="fl cGray"><input type="checkbox" checked="checked" id="tagpass" name="login[reme]" class="fl">记住我</label>
+        <a target="_blank" href="getpass" class="fr">忘记密码？</a>
+      </div>
+      <div class="list clearfix">
+        <button type="button" class="btn btn-mint" id="login_submit_button" style="width:80%;padding:8px 0;font-size:16px">立即登录</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="tc mt20">
+    <img src="http://static.qyer.com/images/login/login2/huo_icon.png" width="400" height="16" alt=""></div>
+  <div class="clearfix mt15" style="color:#999"><strong>使用以下帐号直接登录</strong></div>
+  <div class="tc mt15">
+    <a href="javascript:void(0);" onfocus="this.blur();" class="weibo_btn _jsweibologin">微博登录</a>
+    <a href="javascript:void(0);" onfocus="this.blur();" class="qq_btn _jsqqlogin">QQ登录</a>
+  </div>
+  <p id="synlogin"></p>
+</div>
+

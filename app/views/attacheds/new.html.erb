@@ -1,0 +1,60 @@
+<h1>New attached</h1>
+
+<form action="/attacheds/upload" enctype="multipart/form-data" method="post">
+  <input id="attached_att" name="attached[img]" type="file"/>
+  <input type="hidden" name="_format" value="json"/>
+  <input name="commit" type="submit" value="发布Attached"/>
+</form>
+<br>
+
+<link rel="stylesheet" type="text/css" href="/static/uploadify/uploadify.css">
+<script type="text/javascript" src="/static/uploadify/jquery.uploadify-3.1.min.js"></script>
+<style type="text/css">
+    #upload-browse {
+        float: left;
+        background: url(/static/images/album_button_select.gif) no-repeat;
+        display: block;
+        width: 135px;
+        height: 34px;
+        margin-right: 5px
+    }
+
+    #upload-clear {
+        float: left;
+        background: url(/static/images/album_button_delete.gif) no-repeat;
+        display: block;
+        width: 135px;
+        height: 34px;
+        margin-right: 5px
+    }
+
+    #upload-upload {
+        float: left;
+        background: url(/static/images/album_button_upload.gif) no-repeat;
+        display: block;
+        width: 135px;
+        height: 34px;
+        margin-right: 5px
+    }
+</style>
+<script type="text/javascript">
+    var uploadedNum = 0;
+    var uploaded_id = null;
+    $(document).ready(function () {
+        $(function () {
+
+        });
+    });
+
+</script>
+
+  <input type="file" name="file_upload" id="file_upload"/>
+<div style=" text-align: center; margin: 10px;  display: none">
+  <input type="button" onclick="upload_pic()" class="button_blue" value="开始上传" id="start_button">
+</div>
+<script type="text/javascript">
+    function upload_pic() {
+        $('#file_upload').uploadify('upload');
+    }
+</script>
+

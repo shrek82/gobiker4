@@ -1,0 +1,38 @@
+<form id="reg_form">
+  <% if flash[:error] %>
+      <div class="reg_error">
+        <span class="icon_error cGray"></span>
+        <strong class="fontYaHei f16"><%= flash[:error] %></strong>
+      </div>
+  <% end %>
+  <div class="reg_main">
+    <div class="clearfix"><strong class="fl f16 fontYaHei fb cGray">使用以下帐号直接登录</strong></div>
+    <div class="tc mt15">
+      <a href="javascript:void(0);" onfocus="this.blur();" class="weibo_btn _jsweibologin" url="http%3A%2F%2Fwww.qyer.com%2F">微博登录</a>
+      <a href="javascript:void(0);" onfocus="this.blur();" class="qq_btn _jsqqlogin" url="http%3A%2F%2Fwww.qyer.com%2F">QQ登录</a>
+    </div>
+    <div class="tc mt20">
+      <img src="/static/media/huo_icon.png" width="400" height="16" alt=""/></div>
+    <div class="clearfix mt15"><strong class="fl f16 fontYaHei fb cGray">注册骑趣帐号</strong><span class="fr cGray">已有帐号？<a href="/login/">登录</a></span>
+    </div>
+    <div class="clearfix mt15 reg_input">
+      <div class="input_div">
+        <input type="text" autocomplete="off" class="ui_input fl f14" id="reg_email" name="email" maxlength="40" placeholder="输入邮箱，用于登录和找回密码"/>
+        <span class="i_zt"></span>
+        <span class="i_tips"></span>
+      </div>
+    </div>
+    <div class="clearfix mt10 cGray reg_checkbox">
+      <label><input type="checkbox" checked="checked" id="reg_checkbox_agree"/>我同意接受穷游网
+        <a target="_blank" href="/pages/member.html">会员条款</a> 和
+        <a target="_blank" href="/pages/exemption.html">免责声明</a></label></div>
+    <div class="tc mt20"><input type="submit" id="reg_submit" class="btn btn-mint big_btn" value="立即注册"/></div>
+  </div>
+</form>
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['reglogin/latest/reglogin'], function (reglogin) {
+            reglogin.register.bindActiveButton();
+        });
+    </script>
+<% end %>

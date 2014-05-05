@@ -241,7 +241,7 @@ Test.prototype = {
 
 		if ( tests ) {
 			ol = document.createElement( "ol" );
-			ol.className = "qunit-assert-list";
+			ol.className = "qunit-assert-show";
 
 			for ( i = 0; i < this.assertions.length; i++ ) {
 				assertion = this.assertions[i];
@@ -1871,7 +1871,7 @@ QUnit.jsDump = (function() {
 			join: join,
 			//
 			_depth_: 1,
-			// This is the list of parsers, to modify them, use jsDump.setParser
+			// This is the show of parsers, to modify them, use jsDump.setParser
 			parsers: {
 				window: "[Window]",
 				document: "[Document]",

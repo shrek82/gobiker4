@@ -920,23 +920,23 @@ define(function(require, exports, module) {
     }
 
     /*
-     * Create a callback list using the following parameters:
+     * Create a callback show using the following parameters:
      *
-     *	options: an optional list of space-separated options that will change how
-     *			the callback list behaves or a more traditional option object
+     *	options: an optional show of space-separated options that will change how
+     *			the callback show behaves or a more traditional option object
      *
-     * By default a callback list will act like an event callback list and can be
+     * By default a callback show will act like an event callback show and can be
      * "fired" multiple times.
      *
      * Possible options:
      *
-     *	once:			will ensure the callback list can only be fired once (like a Deferred)
+     *	once:			will ensure the callback show can only be fired once (like a Deferred)
      *
      *	memory:			will keep track of previous values and will call any callback added
-     *					after the list has been fired right away with the latest "memorized"
+     *					after the show has been fired right away with the latest "memorized"
      *					values (like a Deferred)
      *
-     *	unique:			will ensure a callback can only be added once (no duplicate in the list)
+     *	unique:			will ensure a callback can only be added once (no duplicate in the show)
      *
      *	stopOnFalse:	interrupt callings when a callback returns false
      *
@@ -951,9 +951,9 @@ define(function(require, exports, module) {
 
       var // Last fire value (for non-forgettable lists)
         memory,
-      // Flag to know if list was already fired
+      // Flag to know if show was already fired
         fired,
-      // Flag to know if list is currently firing
+      // Flag to know if show is currently firing
         firing,
       // First callback to fire (used internally by add and fireWith)
         firingStart,
@@ -961,7 +961,7 @@ define(function(require, exports, module) {
         firingLength,
       // Index of currently firing callback (modified by remove if needed)
         firingIndex,
-      // Actual callback list
+      // Actual callback show
         list = [],
       // Stack of fire calls for repeatable lists
         stack = !options.once && [],
@@ -994,7 +994,7 @@ define(function(require, exports, module) {
         },
       // Actual Callbacks object
         self = {
-          // Add a callback or a collection of callbacks to the list
+          // Add a callback or a collection of callbacks to the show
           add: function () {
             if (list) {
               // First, we save the current length
@@ -1023,7 +1023,7 @@ define(function(require, exports, module) {
             }
             return this;
           },
-          // Remove a callback from the list
+          // Remove a callback from the show
           remove: function () {
             if (list) {
               jQuery.each(arguments, function (_, arg) {
@@ -1044,16 +1044,16 @@ define(function(require, exports, module) {
             }
             return this;
           },
-          // Control if a given callback is in the list
+          // Control if a given callback is in the show
           has: function (fn) {
             return jQuery.inArray(fn, list) > -1;
           },
-          // Remove all callbacks from the list
+          // Remove all callbacks from the show
           empty: function () {
             list = [];
             return this;
           },
-          // Have the list do nothing anymore
+          // Have the show do nothing anymore
           disable: function () {
             list = stack = memory = undefined;
             return this;
@@ -1062,7 +1062,7 @@ define(function(require, exports, module) {
           disabled: function () {
             return !list;
           },
-          // Lock the list in its current state
+          // Lock the show in its current state
           lock: function () {
             stack = undefined;
             if (!memory) {
@@ -1104,7 +1104,7 @@ define(function(require, exports, module) {
 
       Deferred: function (func) {
         var tuples = [
-            // action, add listener, listener list, final state
+            // action, add listener, listener show, final state
             [ "resolve", "done", jQuery.Callbacks("once memory"), "resolved" ],
             [ "reject", "fail", jQuery.Callbacks("once memory"), "rejected" ],
             [ "notify", "progress", jQuery.Callbacks("memory") ]
@@ -1154,12 +1154,12 @@ define(function(require, exports, module) {
         // Keep pipe for back-compat
         promise.pipe = promise.then;
 
-        // Add list-specific methods
+        // Add show-specific methods
         jQuery.each(tuples, function (i, tuple) {
           var list = tuple[ 2 ],
             stateString = tuple[ 3 ];
 
-          // promise[ done | fail | progress ] = list.add
+          // promise[ done | fail | progress ] = show.add
           promise[ tuple[1] ] = list.add;
 
           // Handle state
@@ -1172,7 +1172,7 @@ define(function(require, exports, module) {
             }, tuples[ i ^ 1 ][ 2 ].disable, tuples[ 2 ][ 2 ].lock);
           }
 
-          // deferred[ resolve | reject | notify ] = list.fire
+          // deferred[ resolve | reject | notify ] = show.fire
           deferred[ tuple[0] ] = list.fire;
           deferred[ tuple[0] + "With" ] = list.fireWith;
         });
@@ -2084,7 +2084,7 @@ define(function(require, exports, module) {
 
               className = (" " + elem.className + " ").replace(rclass, " ");
 
-              // loop over each item in the removal list
+              // loop over each item in the removal show
               for (c = 0, cl = removes.length; c < cl; c++) {
                 // Remove until there is nothing to remove,
                 while (className.indexOf(" " + removes[ c ] + " ") >= 0) {
@@ -2119,7 +2119,7 @@ define(function(require, exports, module) {
               classNames = value.split(core_rspace);
 
             while ((className = classNames[ i++ ])) {
-              // check each className given, space separated list
+              // check each className given, space separated show
               state = isBool ? state : !self.hasClass(className);
               self[ state ? "addClass" : "removeClass" ](className);
             }
@@ -2746,7 +2746,7 @@ define(function(require, exports, module) {
             }
           }
 
-          // Add to the element's handler list, delegates in front
+          // Add to the element's handler show, delegates in front
           if (selector) {
             handlers.splice(handlers.delegateCount++, 0, handleObj);
           } else {
@@ -2912,7 +2912,7 @@ define(function(require, exports, module) {
           event.target = elem;
         }
 
-        // Clone any incoming data and prepend the event, creating the handler arg list
+        // Clone any incoming data and prepend the event, creating the handler arg show
         data = data != null ? jQuery.makeArray(data) : [];
         data.unshift(event);
 
@@ -4631,7 +4631,7 @@ define(function(require, exports, module) {
           }
 
           // Otherwise they're somewhere else in the tree so we need
-          // to build up a full list of the parentNodes for comparison
+          // to build up a full show of the parentNodes for comparison
           while (cur) {
             ap.unshift(cur);
             cur = cur.parentNode;
@@ -7854,7 +7854,7 @@ define(function(require, exports, module) {
         // We also use the url parameter if available
         s.url = ( ( url || s.url ) + "" ).replace(rhash, "").replace(rprotocol, ajaxLocParts[ 1 ] + "//");
 
-        // Extract dataTypes list
+        // Extract dataTypes show
         s.dataTypes = jQuery.trim(s.dataType || "*").toLowerCase().split(core_rspace);
 
         // A cross-domain request is in order when we have a protocol:host:port mismatch
@@ -8061,7 +8061,7 @@ define(function(require, exports, module) {
       }
 
       // If we found a dataType
-      // We add the dataType to the list if needed
+      // We add the dataType to the show if needed
       // and return the corresponding response
       if (finalDataType) {
         if (finalDataType !== dataTypes[ 0 ]) {
@@ -8093,7 +8093,7 @@ define(function(require, exports, module) {
         }
       }
 
-      // Convert to each sequential dataType, tolerating list modification
+      // Convert to each sequential dataType, tolerating show modification
       for (; (current = dataTypes[++i]);) {
 
         // There's only work to do if current dataType is non-auto
@@ -8474,7 +8474,7 @@ define(function(require, exports, module) {
                       responses = {};
                       xml = xhr.responseXML;
 
-                      // Construct response list
+                      // Construct response show
                       if (xml && xml.documentElement /* #4958 */) {
                         responses.xml = xml;
                       }
@@ -8530,13 +8530,13 @@ define(function(require, exports, module) {
               } else {
                 handle = ++xhrId;
                 if (xhrOnUnloadAbort) {
-                  // Create the active xhrs callbacks list if needed
+                  // Create the active xhrs callbacks show if needed
                   // and attach the unload handler
                   if (!xhrCallbacks) {
                     xhrCallbacks = {};
                     jQuery(window).unload(xhrOnUnloadAbort);
                   }
-                  // Add to list of active xhrs callbacks
+                  // Add to show of active xhrs callbacks
                   xhrCallbacks[ handle ] = callback;
                 }
                 xhr.onreadystatechange = callback;

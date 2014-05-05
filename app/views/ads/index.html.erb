@@ -1,0 +1,65 @@
+<div id="content-header">
+  <h1>ads</h1>
+
+  <form class="form-search float_right" style="margin-top: -25px;margin-right: 10px">
+    <div class="input-append">
+      <input type="text" class="span3 search-query">
+      <button type="submit" class="btn">Search</button>
+    </div>
+  </form>
+</div>
+
+<div id="breadcrumb">
+  <a href="#"><i class="icon-search"></i> 快速筛选</a>
+  <%= link_to '所有', admin_ad_path %>
+  <a href="#" class="current">ads</a>
+</div>
+
+<div class="container-fluid padding_top10">
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th class="td_id_select">选择</th>
+                <th>Name</th>
+                <th>Js path</th>
+                <th>Type</th>
+                <th>Img path</th>
+                <th>Info</th>
+                <th>Url</th>
+                <th>Hits</th>
+                <th>Is close</th>
+            <th class="td_id_select">审核</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @ads.each do |ad| %>
+    <tr>
+      <td class="td_id_select"><input type="checkbox" name="id" value="<%= ad.id %>"></td>
+                <td><%= ad.name %></td>
+                <td><%= ad.js_path %></td>
+                <td><%= ad.type %></td>
+                <td><%= ad.img_path %></td>
+                <td><%= ad.info %></td>
+                <td><%= ad.url %></td>
+                <td><%= ad.hits %></td>
+                <td><%= ad.is_close %></td>
+            <td class="td_id_select"><input type="checkbox" name=""></td>
+      <td>
+        <%= link_to '查看', admin_ad_path(ad) %>
+        <%= link_to '编辑', edit_admin_ad_path(ad) %>
+        <%= link_to '删除', admin_ad_path(ad), method: :delete, data: { confirm: 'Are you sure?' }
+        %>
+      </td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+    <div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers" id="DataTables_Table_0_paginate">
+      <a tabindex="0" class="first ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default ui-state-disabled" id="DataTables_Table_0_first">First</a><a tabindex="0" class="previous fg-button ui-button ui-state-default ui-state-disabled" id="DataTables_Table_0_previous">Previous</a><span><a tabindex="0" class="fg-button ui-button ui-state-default ui-state-disabled">1</a><a tabindex="0" class="fg-button ui-button ui-state-default">2</a><a tabindex="0" class="fg-button ui-button ui-state-default">3</a><a tabindex="0" class="fg-button ui-button ui-state-default">4</a><a tabindex="0" class="fg-button ui-button ui-state-default">5</a></span><a tabindex="0" class="next fg-button ui-button ui-state-default" id="DataTables_Table_0_next">Next</a><a tabindex="0" class="last ui-corner-tr ui-corner-br fg-button ui-button ui-state-default" id="DataTables_Table_0_last">Last</a>
+    </div>
+  </div>
+</div>

@@ -4,43 +4,45 @@
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br>
+    <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password %><br />
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :avatar_path %><br>
+    <%= f.label :reg_date %><br />
+    <%= f.datetime_select :reg_date %>
+  </div>
+  <div class="field">
+    <%= f.label :login_date %><br />
+    <%= f.datetime_select :login_date %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_path %><br />
     <%= f.text_field :avatar_path %>
   </div>
   <div class="field">
-    <%= f.label :memo %><br>
-    <%= f.text_field :memo %>
-  </div>
-  <div class="field">
-    <%= f.label :signatures %><br>
-    <%= f.text_field :signatures %>
-  </div>
-  <div class="field">
-    <%= f.label :point %><br>
+    <%= f.label :point %><br />
     <%= f.number_field :point %>
   </div>
-
-
+  <div class="field">
+    <%= f.label :memo %><br />
+    <%= f.text_field :memo %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

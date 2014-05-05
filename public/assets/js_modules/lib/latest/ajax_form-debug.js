@@ -1,4 +1,4 @@
-/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-04-17 23:01:46*/
+/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-10-23 16:08:44*/
 define("lib/latest/ajax_form-debug", [], function(require, exports, moudles) {
     return function(jquery) {
         (function($) {
@@ -879,7 +879,7 @@ define("lib/latest/ajax_form-debug", [], function(require, exports, moudles) {
        */
             $.fn.clearFields = $.fn.clearInputs = function(includeHidden) {
                 var re = /^(?:color|date|datetime|email|month|number|password|range|search|tel|text|time|url|week)$/i;
-                // 'hidden' is not in this list
+                // 'hidden' is not in this show
                 return this.each(function() {
                     var t = this.type, tag = this.tagName.toLowerCase();
                     if (re.test(t) || tag == "textarea") {
@@ -957,4 +957,5 @@ define("lib/latest/ajax_form-debug", [], function(require, exports, moudles) {
         })(jQuery);
     };
 });
+
 

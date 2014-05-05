@@ -1,0 +1,66 @@
+<div id="content-header">
+  <h1>managers</h1>
+
+  <form class="form-search float_right" style="margin-top: -25px;margin-right: 10px">
+    <div class="input-append">
+      <input type="text" class="span3 search-query">
+      <button type="submit" class="btn">Search</button>
+    </div>
+  </form>
+</div>
+
+<div id="breadcrumb">
+  <a href="#"><i class="icon-search"></i> 快速筛选</a>
+  <%= link_to '所有', admin_ads_path %>
+  <a href="#" class="current">managers</a>
+</div>
+
+<div class="container-fluid padding_top10">
+
+  <p id="notice"><%= notice %></p>
+
+
+        <p>
+        <b>Name:</b>
+        <%= @ad.name %>
+      </p>
+
+        <p>
+        <b>Js path:</b>
+        <%= @ad.js_path %>
+      </p>
+
+        <p>
+        <b>Type:</b>
+        <%= @ad.type %>
+      </p>
+
+        <p>
+        <b>Img path:</b>
+        <%= @ad.img_path %>
+      </p>
+
+        <p>
+        <b>Info:</b>
+        <%= @ad.info %>
+      </p>
+
+        <p>
+        <b>Url:</b>
+        <%= @ad.url %>
+      </p>
+
+        <p>
+        <b>Hits:</b>
+        <%= @ad.hits %>
+      </p>
+
+        <p>
+        <b>Is close:</b>
+        <%= @ad.is_close %>
+      </p>
+
+  
+  <%= link_to '编辑', edit_admin_ad_path(@ad) %> |
+  <%= link_to '所有', admin_ads_path %>
+</div>

@@ -1,0 +1,10 @@
+<select name="<%=@object?@object+'[city_id]':'city_id'%>" id="cities" onchange="get_areas(this.value,'<%=@object%>')">
+  <% if @cities.blank? %>
+      <option>请完善市数据库...</option>
+  <% else %>
+      <option>选择县市</option>
+      <% @cities.each do |c| %>
+          <option value="<%= c.id %>"><%= c.name %></option>
+      <% end %>
+  <% end %>
+</select>

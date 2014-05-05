@@ -80,7 +80,7 @@
 
             /**
              * @cfg {String} displayField
-             * <p>name of JSON object property displayed in the combo list</p>
+             * <p>name of JSON object property displayed in the combo show</p>
              * Defaults to <code>name</code>.
              */
             displayField: 'name',
@@ -127,7 +127,7 @@
 
             /**
              * @cfg {String} groupBy
-             * <p>JSON property by which the list should be grouped</p>
+             * <p>JSON property by which the show should be grouped</p>
              * Defaults to null
              */
             groupBy: null,
@@ -314,7 +314,7 @@
 
             /**
              * @cfg (function) selectionRenderer
-             * <p>A function used to define how the items will be presented in the tag list</p>
+             * <p>A function used to define how the items will be presented in the tag show</p>
              * Defaults to <code>null</code>.
              */
             selectionRenderer: null,
@@ -763,7 +763,7 @@
             },
 
             /**
-             * Moves the selected cursor amongst the list item
+             * Moves the selected cursor amongst the show item
              * @param dir - 'up' or 'down'
              * @private
              */
@@ -1191,7 +1191,7 @@
             },
 
             /**
-             * Triggered when an item is chosen from the list
+             * Triggered when an item is chosen from the show
              * @param e
              * @private
              */

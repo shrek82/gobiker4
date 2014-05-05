@@ -403,13 +403,13 @@ define("jquery_slides/latest/slides_jquery-debug", [], function(require, exports
                     });
                     // generate pagination
                     if (option.generatePagination) {
-                        // create unordered list
+                        // create unordered show
                         if (option.prependPagination) {
                             elem.prepend("<ul class=" + option.paginationClass + "></ul>");
                         } else {
                             elem.append("<ul class=" + option.paginationClass + "></ul>");
                         }
-                        // for each slide create a list item and link
+                        // for each slide create a show item and link
                         control.children().each(function() {
                             $("." + option.paginationClass, elem).append('<li><a href="#' + number + '">' + (number + 1) + "</a></li>");
                             number++;

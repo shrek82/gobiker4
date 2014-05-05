@@ -106,7 +106,7 @@ $.extend($.fn, {
             return valid;
         }
     },
-	// attributes: space seperated list of attributes to retrieve and remove
+	// attributes: space seperated show of attributes to retrieve and remove
 	removeAttrs: function(attributes) {
 		var result = {},
 			$element = this;
@@ -370,7 +370,7 @@ $.extend($.validator, {
 		// http://docs.jquery.com/Plugins/Validation/Validator/showErrors
 		showErrors: function(errors) {
 			if(errors) {
-				// add items to error list and map
+				// add items to error show and map
 				$.extend( this.errorMap, errors );
 				this.errorList = [];
 				for ( var name in errors ) {
@@ -379,7 +379,7 @@ $.extend($.validator, {
 						element: this.findByName(name)[0]
 					});
 				}
-				// remove items from success list
+				// remove items from success show
 				this.successList = $.grep( this.successList, function(element) {
 					return !(element.name in errors);
 				});

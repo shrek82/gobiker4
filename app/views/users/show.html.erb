@@ -1,49 +1,45 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Username:</strong>
+  <b>Username:</b>
   <%= @user.username %>
 </p>
 
 <p>
-  <strong>Password:</strong>
+  <b>Password:</b>
   <%= @user.password %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <b>Email:</b>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Avatar path:</strong>
-  <%= @user.avatar_path %>
-</p>
-
-<p>
-  <strong>Memo:</strong>
-  <%= @user.memo %>
-</p>
-
-<p>
-  <strong>Signatures:</strong>
-  <%= @user.signatures %>
-</p>
-
-<p>
-  <strong>Point:</strong>
-  <%= @user.point %>
-</p>
-
-<p>
-  <strong>Reg date:</strong>
+  <b>Reg date:</b>
   <%= @user.reg_date %>
 </p>
 
 <p>
-  <strong>Login date:</strong>
+  <b>Login date:</b>
   <%= @user.login_date %>
 </p>
+
+<p>
+  <b>Avatar path:</b>
+  <%= @user.avatar_path %>
+</p>
+
+<p>
+  <b>Point:</b>
+  <%= @user.point %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @user.memo %>
+</p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

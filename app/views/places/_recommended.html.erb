@@ -1,0 +1,19 @@
+<div class="gui_news">
+  <div class="ui_sort">
+    <a href="javascript:;" class="ui_sort_item ui_sort_item_current jsrecommcon" type="1" data-bn-ipg="7-1">编辑推荐</a><span class="ui_sort_gap">|</span><a href="javascript:;" class="ui_sort_item jsrecommcon" type="0" data-bn-ipg="7-2">当季热门</a>
+  </div>
+  <ul class="gui_jnlist clearfix jsrecommcontent">
+
+        <% @recommended.each do |p| %>
+            <li class="gui_jnlist_item gui_jnlist_item_first">
+              <div class="gui_jnlist_item_pic">
+                <a href="/places/<%= p.id %>" target="_blank"><img src="<%= p.img_path %>" alt="<%= p.name %>" title="<%= p.name %>" width="130" height="90px"></a>
+                <span class="new"></span>
+              </div>
+              <p class="gui_jnlist_item_tit"><%= link_to p.name, p, {:target => '_blank'} %></p>
+
+              <p class="gui_jnlist_item_text"><%= p.city.name %><br><span class="sum"><%= p.beengo_num.to_i.to_s %></span>人去过</p>
+            </li>
+        <% end %>
+  </ul>
+</div>

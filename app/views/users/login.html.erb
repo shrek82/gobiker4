@@ -1,0 +1,21 @@
+<%@title='用户注册' %>
+
+<!--注册内容 -->
+<div class="reg_cnt">
+  <div class="reg_layout">
+    <!--标题提示 -->
+    <div class="reg_tips"></div>
+    <div class="reg_margin" id="content_reg_email">
+      <!--注册内容 -->
+          <%= render :partial => 'login' %>
+    </div>
+  </div>
+</div>
+
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['reglogin/latest/reglogin'], function (reglogin) {
+            reglogin.login.bindLoginForm();
+        });
+    </script>
+<% end %>

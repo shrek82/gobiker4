@@ -1,0 +1,77 @@
+<% if  @user.blank? %><ul class="qyer_head_login_entry">
+    <li class="qyer_head_login_entry_tit">
+      <a href="/login">登录</a> | <a href="/register">注册</a>
+    </li>
+    <li>
+      <a href="javascript:void(0);"><img src="/static/media/connect_logo_qq.png" width="16" height="16" alt="使用QQ账号登录" title="使用QQ账号登录"/></a>
+    </li>
+    <li>
+      <a href="javascript:void(0);"> <img src="/static/media/head_weibo.png" width="20" height="16" alt="使用微博账号登录" title="使用微博账号登录"/></a>
+    </li>
+    </ul>
+<% else %>
+
+    <div class="qyer_head_new" id="qyer_head_new">
+      <span class="qyer_head_new_icon">新建</span>
+      <div class="qyer_head_new_drop" id="qyer_head_new_drop" style="display:none;">
+        <p class="qyer_head_new_drop_arrow"></p>
+        <ul class="qyer_head_new_drop_list">
+          <!--<li class="qyer_head_new_drop_bbs"><a href="#" data-bn-ipg='topnav-traveltip'>写游记</a></li>-->
+          <li class="qyer_head_new_drop_photo"><a href="http://user.qyer.com/album_action_upload" target="_blank" data-bn-ipg="topnav-album">传照片</a></li>
+          <li class="qyer_head_new_drop_plan"><a href="http://plan.qyer.com" target="_blank" data-bn-ipg="topnav-plan">做计划</a></li>
+          <li class="qyer_head_new_drop_ask"><a href="http://ask.qyer.com/addquestion" target="_blank" data-bn-ipg="topnav-ask">提问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="qyer_head_login_user">
+      <a class="qyer_head_login_hotspot" id="qyer_head_login_hotspot" href="<%= u_path @user %>" >
+        <span class="qyer_head_login_face"><img src="/static/media/noavatar_middle.gif" alt="seeyoup"><em></em></span>
+        <span class="qyer_head_login_name"><%= @user.username %></span>
+        <span class="qyer_head_login_message" style="display:none;">1</span>
+      </a>
+
+      <div class="qyer_head_login_drop" id="qyer_head_login_inform" style="display:none;">
+        <div class="qyer_head_login_drop_trigon"><span></span></div>
+        <div class="qyer_head_login_dropbox">
+          <ul class="qyer_head_login_dropbox_inform">
+            <li><a href="http://user.qyer.com/notice_action_default" data-bn-ipg="1020">通知&nbsp;
+              <span class="cnotice" style="color:#636363;">(0)</span>
+            </a></li>
+            <li><a href="http://user.qyer.com/notice_m_pms" data-bn-ipg="1021">私信&nbsp;
+              <span class="cprivate" style="color:#636363;">(0)</span></a></li>
+          </ul>
+          <div class="qyer_head_login_dropbox_close"></div>
+        </div>
+      </div>
+      <div class="qyer_head_login_drop" id="qyer_head_login_drop" style="display: none;">
+        <div class="qyer_head_login_drop_trigon"><span></span></div>
+        <div class="qyer_head_login_dropbox">
+          <ul class="qyer_head_login_dropbox_inform">
+            <li><a href="http://user.qyer.com/notice_action_default" data-bn-ipg="1020">通知&nbsp;
+              <span class="cnotice" style="color:#636363;">(0)</span></a></li>
+            <li><a href="http://user.qyer.com/notice_m_pms" data-bn-ipg="1021">私信&nbsp;
+              <span class="cprivate" style="color:#636363;">(0)</span></a></li>
+          </ul>
+          <ul class="qyer_head_login_dropbox_list">
+            <!--<li><a href="#">我的足迹</a></li> -->
+            <li><a href="http://user.qyer.com/user_uid_2307263" data-bn-ipg="1022">我的首页</a></li>
+            <li><a href="http://user.qyer.com/place_uid_2307263" data-bn-ipg="1023">我的足迹</a></li>
+
+            <li><a href="http://user.qyer.com/album_uid_2307263" data-bn-ipg="1024">我的相册</a></li>
+            <li><a href="http://bbs.qyer.com/my.php?item=favorites&amp;type=thread" data-bn-ipg="1025">我的收藏</a></li>
+
+            <li><a href="http://user.qyer.com/user.php?action=thread&amp;uid=2307263" data-bn-ipg="1026">我的帖子</a></li>
+            <li><a href="http://user.qyer.com/ask_m_ask" data-bn-ipg="1028">我的问答</a></li>
+
+            <li><a href="http://user.qyer.com/plan_uid_2307263">我的行程</a></li>
+            <li><a href="http://user.qyer.com/order.php?action=list">我的订单</a></li>
+          </ul>
+          <ul class="qyer_head_login_dropbox_inform">
+            <li><a href="http://user.qyer.com/profile.php" data-bn-ipg="1027">账号设置</a></li>
+            <!-- <li><a href="http://bbs.qyer.com/faq.php" target="_blank">帮助</a></li> -->
+            <li><a href="http://login.qyer.com/login.php?action=userlogout" data-bn-ipg="1029">退出</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<% end %>

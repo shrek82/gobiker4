@@ -1,0 +1,17 @@
+<div class="lay_side">
+
+
+  <div class="bbs_lianhot">
+    <h3 class="bbs_sidetit fontYaHei">本周热帖</h3>
+    <ol class="bbs_tiehotlist">
+      <% i=1 %>
+      <% @week_hots.each do |t| %>
+          <li class="item<%= i %>"><p><a href="<%= t.id %>" title="<%= t.title %>"><%= t.title %></a></p></li>
+          <% i+=1 %>
+    <% end %>
+    </ol>
+  </div>
+
+
+
+</div>

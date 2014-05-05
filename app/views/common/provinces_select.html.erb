@@ -1,0 +1,6 @@
+<select name="<%=@object?@object+'[province_id]':'province_id'%>" id="provinces" onchange="get_cities(this.value,'<%=@object%>')">
+  <option>选择省份</options>
+  <% @provinces.each do |p| %>
+      <option value="<%= p.id %>"><%= p.name %></option>
+  <% end %>
+</select>

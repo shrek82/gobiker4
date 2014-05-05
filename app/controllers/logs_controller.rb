@@ -67,7 +67,7 @@ class LogsController < ApplicationController
       @log = Log.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white show through.
     def log_params
       params.require(:log).permit(:title, :controller, :action, :user_id)
     end

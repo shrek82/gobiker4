@@ -45,6 +45,10 @@ gem "rails-settings-cached", "0.4.0"
 #rails4会被移除，但如果添加了如下gem,model没有指定就会添加不成功
 #gem "protected_attributes"
 
+#分页插件
+gem 'will_paginate', '~> 3.0'
+gem 'will-paginate-i18n'
+
 #开发模式用到的
 group :development do
   gem "thin"

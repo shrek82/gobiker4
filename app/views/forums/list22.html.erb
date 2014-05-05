@@ -1,0 +1,125 @@
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="<%= main_path %>">首页</a></span>
+    <span class="space">&gt;</span>
+    <a href="<%= forums_path %>">论坛</a>&nbsp;&gt;&nbsp;<%= @forum.name %>
+  </div>
+</div>
+
+<div class="bbs_listtop clearfix">
+  <p class="pic"><img src="http://bbs.qyer.com/images/go2eu/bbsicon/jnd.jpg" width="80" height="80" alt="加拿大"></p>
+
+  <div class="info">
+    <h2 class="title fontYaHei"><%= @forum.name %></h2>
+
+    <p class="text"><%= @forum.intro %><a href="http://www.qyer.com/htmlpages/bbsguide.html" target="_blank"><font color="darkgreen">社区指南</font></a></p>
+  </div>
+
+  <div class="moderators">
+    <dl class="moderator">
+      <dt>版主</dt>
+      <dd><a href="http://user.qyer.com/user_uid_121066" data-bn-ipg="board-host-1-1"><img src="http://static.qyer.com/data/avatar/000/12/10/66_avatar_big.jpg" width="30" height="30" alt="raynor_y"><span>raynor_y</span></a></dd>
+    </dl>
+  </div>
+</div>
+
+<div class="bbs_sldline2"></div>
+
+<!--列表导航-->
+<div class="bbs_maintit">
+  <h2 class="title fontYaHei titcur" id="bbs_list_action"><a href="javascript:void(0);" data-bn-ipg="board-type-thread">帖子<em>（27505条）</em></a></h2>
+
+  <p class="titgap">|</p>
+
+  <h2 class="title fontYaHei" id="ask_list_action"><a href="javascript:void(0);" data-bn-ipg="board-type-ask">问答<em>（19224条）</em></a></h2>
+
+  <div class="bbs_tabsearch">
+    <a href="<%= new_topic_path %>" class="btn btn-mint">发布新帖</a>
+  </div>
+</div>
+
+<div id="bbs_list_div">
+
+  <!--列表nav分类-->
+  <ul class="bbs_tabnav">
+    <li class="first  current"><a href="forum-3-1.html" data-bn-ipg="board-thread-all">全部</a></li>
+    <li><a href="forum-3-digest-1.html" rel="nofollow" data-bn-ipg="board-thread-digest">精华</a></li>
+
+    <li><a href="forum-3-59-1.html" data-bn-ipg="board-thread-59">资讯信息</a></li>
+    <li><a href="forum-3-61-1.html" data-bn-ipg="board-thread-61">亚洲国家签证</a></li>
+
+
+  </ul>
+  <!--列表信息-->
+  <div class="bbs_listinfos">
+
+    <div class="types">
+      <span class="tit">列表样式</span>
+
+      <p class="icons">
+        <span id="textlist" class="text" title="文字" data-bn-ipg="board-liststyle-nopic">文字</span><span id="piclist" class="onpic" title="图文" data-bn-ipg="board-liststyle-pic">图文</span>
+      </p>
+    </div>
+    <span class="sums">27505篇贴子</span>
+  </div>
+
+  <!--纯文列表-->
+  <div id="threadlist" style="position: relative;">
+    <form method="post" name="moderate" id="moderate" action="topicadmin.php?action=moderate&amp;fid=3&amp;infloat=yes&amp;nopost=yes">
+      <input type="hidden" name="formhash" value="f259db94">
+      <input type="hidden" name="listextra" value="page%3D1">
+
+      <ul class="bbs_threadlist">
+
+        <li class="item">
+          <h3 class="titles fontYaHei">
+
+            <a href="thread-813258-1.html" class="tit titjh" title="#刘总陪你聊签证# 中国护照免签落地签详细版" data-bn-ipg="board-threadlist-title-4" target="_blank">#刘总陪你聊签证# 中国护照免签落地签详细版</a>
+
+                                            <span class="showprompt" data-title="二级精华">
+                                                    <img class="icon" alt="" src="http://static.qyer.com/images/bbs/two/digest.png">
+                                                    <img class="icon" alt="" src="http://static.qyer.com/images/bbs/two/digest.png">
+                                                </span>
+          </h3>
+
+          <div class="infos">
+            <p class="info"><span class="views">28782</span><span class="sum">71</span><span class="gap">|</span><span class="time">最后回复：13分钟前</span></p>
+
+            <p><a href="forum-3-59-1.html" class="tag" data-bn-ipg="board-threadlist-type-59">资讯信息</a><span class="reply"><a href="http://user.qyer.com/user_uid_49865" data-bn-ipg="board-threadlist-user-4">troyliu</a>&nbsp;&nbsp;|&nbsp;&nbsp;2013-6-26</span>
+            </p>
+
+            <p class="pics" style="display: none;">
+              <a href="http://bbs.qyer.com/thread-813258-1.html" data-bn-ipg="board-threadlist-pic-4" target="_blank"><img height="75" alt="#刘总陪你聊签证# 中国护照免签落地签详细版" src="http://pic.qyer.com/album/user/431/45/RUpURh8GYA/index/200x133"></a><a href="http://bbs.qyer.com/thread-813258-1.html" data-bn-ipg="board-threadlist-pic-4" target="_blank"><img height="75" alt="#刘总陪你聊签证# 中国护照免签落地签详细版" src="http://pic.qyer.com/album/user/415/55/RUhQRx8HZw/index/200x133"></a><a href="http://bbs.qyer.com/thread-813258-1.html" data-bn-ipg="board-threadlist-pic-4" target="_blank"><img height="75" alt="#刘总陪你聊签证# 中国护照免签落地签详细版" src="http://pic.qyer.com/album/user/415/55/RUhQRx8HZg/index/200x133"></a>
+            </p>
+          </div>
+
+        </li>
+
+        <% @topics.each do |t| %>
+            <li class="item">
+              <h3 class="titles fontYaHei">
+                <a href="<%= show_topics_path t %>" class="tit" target="_blank"><%= t.title %></a>
+              </h3>
+
+              <div class="infos">
+                <p class="info"><span class="views">91</span><span class="sum">2</span><span class="gap"></span><span class="time"><%= t.reply_user.username+'18分钟前' if t.last_comment_user_id %></span></p>
+
+                <p><a href="forum-3-61-1.html" class="tag">亚洲国家签证</a><span class="reply"><a href="<%= u_path t.user_id %>"><%= t.user.username %></a>&nbsp;&nbsp;|&nbsp;&nbsp;2013-8-16</span>
+                </p>
+
+                <p class="pics" style="display: none;">
+                  <a href="http://bbs.qyer.com/thread-833054-1.html" target="_blank"><img height="75" alt="北京韩国大使馆签证处搬家啦！~~" src="http://pic.qyer.com/album/user/453/18/RUxWQxIDaQ/index/200x133"></a><a href="http://bbs.qyer.com/thread-833054-1.html" data-bn-ipg="board-threadlist-pic-5" target="_blank"><img height="75" alt="北京韩国大使馆签证处搬家啦！~~" src="http://pic.qyer.com/album/user/453/18/RUxWQxIDaA/index/200x133"></a>
+                </p>
+              </div>
+
+            </li>
+        <% end %>
+      </ul>
+    </form>
+  </div>
+
+  <div class="clearfix">
+    <%= go_pager @topics %>
+  </div>
+
+</div>

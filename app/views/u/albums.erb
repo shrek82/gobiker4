@@ -1,0 +1,99 @@
+<% content_for:style do %>
+    <link rel="stylesheet" href="/css/u/style.css"/>
+    <link rel="stylesheet" href="/css/u/album.css"/>
+<% end %>
+
+<div class="u_headbar">
+  <div class="infos">
+    <!--用户图像 -->
+    <div class="face"><a href="http://www.qyer.com/u/2307263"><img src="http://static.qyer.com/data/images/noavatar_middle.gif"></a></div>
+    <!--用户名字 -->
+    <h3 class="name">
+      <strong data-bn-ipg="usercenter-username" class="fontYaHei">seeyoup</strong>
+
+    </h3>
+    <!--用户信息 -->
+    <div class="text fontSong">
+      等级：<a data-bn-ipg="usercenter-grade" href="http://www.qyer.com/u/2307263/level" class="fb cBlue pr20">新进弟子</a>
+      穷币：<a data-bn-ipg="usercenter-wealth" href="http://www.qyer.com/u/2307263/level" class="fb cBlue pr20">0</a>
+    </div>
+
+  </div>
+  <!--个人中心导航 -->
+  <div class="menu clearfix">
+    <ul class="fontSong">
+      <li data-bn-ipg="usercenter-tab-home"><a href="http://www.qyer.com/u/2307263" class="a_list">首页</a></li>
+      <li data-bn-ipg="usercenter-tab-footprint"><a href="http://www.qyer.com/u/2307263/footprint" class="a_list">足迹与点评</a></li>
+      <li data-bn-ipg="usercenter-tab-thread"><a href="http://www.qyer.com/u/2307263/travel" class="a_list">帖子</a></li>
+      <li data-bn-ipg="usercenter-tab-album" class="current"><a href="http://user.qyer.com/album_uid_2307263" class="a_list">相册</a></li>
+      <li data-bn-ipg="usercenter-tab-ask"><a href="http://www.qyer.com/u/2307263/ask" class="a_list">问答</a></li>
+      <li data-bn-ipg="usercenter-tab-plan"><a href="http://www.qyer.com/u/2307263/plan" class="a_list">行程计划</a></li>
+      <!--
+      <li ><a href="#" class="a_list">想去</a></li>
+       -->
+      <li class="more_select">
+        <a href="javascript:void(0);" class="a_list"><span>更多</span></a>
+        <div class="more_item">
+          <a data-bn-ipg="usercenter-tab-event" href="http://www.qyer.com/u/2307263/event">活动专题</a>
+          <a data-bn-ipg="usercenter-tab-audit" href="http://www.qyer.com/u/profile.php?action=userguide">投稿纠错</a>
+          <a data-bn-ipg="usercenter-tab-lm" href="http://www.qyer.com/u/lastmin">折扣</a>
+          <a data-bn-ipg="usercenter-tab-level" href="http://www.qyer.com/u/2307263/level">经验和穷币</a>
+          <a data-bn-ipg="usercenter-tab-medal" href="http://www.qyer.com/u/2307263/badgegalary">勋章</a>
+        </div>
+      </li>
+    </ul>
+    <a data-bn-ipg="usercenter-set-profile" href="http://www.qyer.com/u/editprofile" class="seting">设置</a>
+  </div>
+</div>
+
+<div class="album_wp">
+  <!--相册首页列表 -->
+  <div class="album_index ui_tab">
+    <div class="album_index_title ui_tab_trigger clearfix">
+      <span class="fl ui_tab_trigger_item ui_tab_trigger_item_current"><a data-bn-ipg="usercenter-album-mine" href="#">我的相册 (1)</a></span>
+      <span class="fl ui_tab_trigger_item"><a data-bn-ipg="usercenter-album-likephoto" href="#">我喜欢的照片(0)</a></span>
+      <span class="cBlue fb fr"><a data-bn-ipg="usercenter-album-upload" href="/album_action_upload" class="cBlue">上传照片</a> / <a data-bn-ipg="usercenter-album-new" href="/album_action_upload_albumid_-1" class="cBlue">新建相册</a></span>    </div>
+    <!--相册列表开始 -->
+    <div class="ui_tab_cnt">
+      <!--我的相册列表 -->
+      <div class="ui_tab_cnt_item_current">
+
+        <div data-bn-ipg="usercenter-album-list" class="album_index_cnt">
+          <div class="album_index_cnt_year fl">
+            <strong class="fontYaHei">默认相册</strong>
+          </div>
+          <ul class="album_index_cnt_list fr">
+            <li class="album_index_cnt_list_item">
+              <div class="album_index_cnt_list_item_img">
+                <a href="http://user.qyer.com/album_action_list_albumid_184829">
+                  <img src="http://pic.qyer.com/album/user/450/38/RUxVQRIGYQ/index/cover" title="默认相册" alt="默认相册" onerror="this.src='http://static.qyer.com/images/user/nothing/nothing_cover.png';">
+                </a>
+              </div>
+              <p><a href="http://user.qyer.com/album_action_list_albumid_184829">默认相册</a></p>
+              <p class="cGray">照片 2 | 查看 12</p>
+            </li>
+          </ul>
+          <div class="cb"></div>
+        </div>
+      </div>
+
+      <!--喜欢的列表 -->
+      <div class="ui_tab_cnt_item">
+        <div data-bn-ipg="usercenter-album-photo-list" class="album_index_like_photo clearfix">
+          <ul>
+
+          </ul>
+        </div>
+        <div class="clear"></div>
+        <ul class="pagination">
+
+        </ul>
+        <div class="clear"></div>
+        <div class="album_index_link_none f18 fontYaHei">
+          你还没有任何喜欢的照片，现在就开始你<a href="http://discover.qyer.com">发现之旅</a>吧！
+        </div>
+      </div>
+    </div>
+    <!--相册列表结束 -->
+  </div>
+  <!--相册首页列表 -->    </div>

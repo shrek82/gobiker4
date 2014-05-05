@@ -1,0 +1,22 @@
+<% content_for:head do%>
+    <script type="text/javascript" src="/study_js/study.js/"></script>
+<% end%>
+
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><%= link_to '首页', main_path %></span>
+    <span class="space">&gt;</span>
+    <h1 class="current">javascript秘密花园</h1>
+  </div>
+</div>
+
+<% content_for:script do%>
+    <script type="text/javascript">
+//      seajs.use('study',function(study){
+//         var s=study.createNew();
+//          s.version();
+//          s.hello();
+//          study.hasMethod();
+//      })
+    </script>
+<% end%>

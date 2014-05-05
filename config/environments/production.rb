@@ -80,4 +80,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #可以设置convert环境变量
+  #Paperclip.options[:command_path] = "C:\Program Files\ImageMagick-6.8.8-Q16"
+  #Paperclip.options[:command_path] = "/usr/local/bin/"
 end

@@ -1,0 +1,37 @@
+<h1>Listing admin_ads</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Js path</th>
+    <th>Type</th>
+    <th>Img path</th>
+    <th>Info</th>
+    <th>Url</th>
+    <th>Hits</th>
+    <th>Is close</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_ads.each do |admin_ad| %>
+  <tr>
+    <td><%= admin_ad.name %></td>
+    <td><%= admin_ad.js_path %></td>
+    <td><%= admin_ad.type %></td>
+    <td><%= admin_ad.img_path %></td>
+    <td><%= admin_ad.info %></td>
+    <td><%= admin_ad.url %></td>
+    <td><%= admin_ad.hits %></td>
+    <td><%= admin_ad.is_close %></td>
+    <td><%= link_to 'Show', admin_ad %></td>
+    <td><%= link_to 'Edit', edit_admin_ad_path(admin_ad) %></td>
+    <td><%= link_to 'Destroy', admin_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad', new_admin_ad_path %>

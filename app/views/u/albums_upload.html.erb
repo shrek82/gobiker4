@@ -1,0 +1,123 @@
+<% content_for:head do %>
+    <link rel="stylesheet" type="text/css" href="/static/uploadify/uploadify.css">
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/uploadify/jquery.uploadify-3.1.min.js"></script>
+<% end %>
+
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><%= link_to '首页', main_path %></span>
+    <span class="space">&gt;</span>
+
+    <h1 class="current">上传照片</h1>
+  </div>
+</div>
+
+<div class="control-group">
+  <div class="controls">
+    <%= text_field :img_ids, :class => 'input-xxlarge', :id => "img_ids" %>
+    <%= text_field :img_path, :class => 'input-xxlarge', :id => "img_path" %>
+    <input type="file" name="file_upload" id="file_upload"/>
+  </div>
+</div>
+
+<div class="control-group" id="uploadify_preview" style="display:block">
+  <div class="controls">
+    <ul>
+      <li id="includBefore" style="display: none"></li>
+    </ul>
+  </div>
+</div>
+
+<% content_for:script do %>
+    <script type="text/javascript">
+        //seajs.use(['upload/latest/upload'], function (upload) {
+        //    var uploader = upload.uploaders;
+        //    //uploader.bindPreview();
+        //    uploader.bindUpload();
+        //});
+
+        var upload = {};
+        upload.uploaders = (function () {
+            var upload_file_ids = '';
+            var img_ids = $('#img_ids');
+            var img_path = $('#img_path');
+            var includBefore = $('#includBefore');
+            var uploadify_preview = $('#uploadify_preview');
+            var opt = {};
+            var default_opt = {
+                'auto': true,
+                'fileTypeExts': '*.gif; *.jpg; *.png',
+                'removeCompleted': true,
+                'fileSizeLimit': '3MB',
+                'width': 160,
+                'queueSizeLimit': 20,
+                'uploadLimit': 20,
+                'method': 'post',
+                'multi': true,
+                'removeTimeout': 0.5,
+                'successTimeout': 30,
+                'buttonText': '添加照片...',
+                'swf': '/static/uploadify/uploadify.swf',
+                'uploader': '/photos/upload',
+                'fileObjName': 'photo[img]',
+                'formData': {
+                    "_uploader": "uploadify",
+                    "_format": "json",
+                    "<%= key = Rails.application.config.session_options[:key] %>": "<%= cookies[key] %>",
+                    "<%= request_forgery_protection_token %>": "<%= form_authenticity_token %>"
+                },
+                //初始化完成
+                'onInit': function (instance) {
+                    console.log('onInit');
+                },
+                //即将上传
+                'onUploadStart': function (file) {
+                    console.log('onUploadStart');
+                },
+                //当每一个文件上传成功时触发
+                'onUploadSuccess': function (file, data, response) {
+                    uploadify_preview.css('display', 'block');
+                    if (data) {
+                        var json = eval("(" + data + ")");
+                        if (json.state == "SUCCESS") {
+                            upload_file_ids = upload_file_ids ? upload_file_ids + ',' + json['file_id'] : json['file_id'];
+                            img_ids.val(img_ids.val().length > 0 ? img_ids.val() + ',' + json['file_id'] : json['file_id']);
+                            img_path.val(img_path.val().length == 0 ? json['url'] : img_path.val());
+                            includBefore.before('<li><img src="' + json['url'] + '"></li>')
+                        }
+                        else {
+                            alert('很抱歉，照片上传失败，原因：\n\n' + json.error);
+                        }
+                    }
+                },
+                //队列完成时触发
+                'onQueueComplete': function (queueData) {
+                    //preview();
+                }
+            };
+
+            return {
+                bindPreview: function () {
+                    var preview = uploadify_preview.find('li');
+                    preview.bind('click', function (e) {
+                        preview.removeClass('cur');
+                        $('#img_path').val($(this).addClass('cur').find('img').attr('src'));
+                    });
+                },
+                bindUpload: function (option) {
+                    opt = $.extend({}, default_opt, option);
+                    $("#file_upload").uploadify(opt);
+                    console.log(opt);
+
+                }
+            }
+
+        })();
+
+        var up = upload.uploaders;
+        up.bindPreview();
+        up.bindUpload();
+
+    </script>
+<% end %>

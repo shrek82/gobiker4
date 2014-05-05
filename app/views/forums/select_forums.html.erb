@@ -1,0 +1,31 @@
+<div class="bbspup_box clearfix">
+  <ul class="forumnav">
+    <li class="current"><a href="javascript:void(0);" >近期选择</a></li>
+    <li ><a href="javascript:void(0);" >公共论坛</a></li>
+    <li ><a href="javascript:void(0);" >热门城市</a></li>
+    <li ><a href="javascript:void(0);" >俱乐部后院园</a></li>
+  </ul>
+  <div class="subcnt">
+    <ul class="list" style="display: block;">
+      <%@last.each do |t| %>
+          <li><a href="javascript:void(0);" fid="<%= t.forum_id %>"><%= t.forum.name %></a></li>
+      <%end %>
+    </ul>
+    <ul class="list" style="display: none;">
+      <%@public_forums.each do |f| %>
+          <li><a href="javascript:void(0);" fid="<%= f.id %>"><%= f.name %></a></li>
+      <%end %>
+    </ul>
+    <ul class="list" style="display: none;">
+      <%@hot_cities.each do |f| %>
+          <li><a href="javascript:void(0);" fid="<%= f.id %>"><%= f.name %></a></li>
+      <%end %>
+    </ul>
+    <ul class="list" style="display: none;">
+      <li class="current"><a href="javascript:void(0);" >美国</a></li>
+      <li><a href="javascript:void(0);" >加拿大</a></li>
+      <li><a href="javascript:void(0);" >拉丁美洲/南极</a></li>
+    </ul>
+  </div>
+</div>
+<div class="bbspup_boxbtm clearfix" style="text-align:right"><a href="javascript:void(0);" class="btn2 btn2-mint" id="post_link" defid="1">下一步</a></div>

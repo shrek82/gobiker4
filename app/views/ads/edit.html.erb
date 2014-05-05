@@ -1,0 +1,24 @@
+<div id="content-header">
+  <h1>编辑ad</h1>
+  <form class="form-search float_right" style="margin-top: -25px;margin-right: 10px" action="/admin/ads">
+    <div class="input-append">
+      <input type="text" class="span3 search-query">
+      <button type="submit" class="btn">Search</button>
+    </div>
+  </form>
+</div>
+
+
+<div id="breadcrumb">
+  <a href="#"><i class="icon-search"></i> 快速筛选</a>
+  <a href="#">Dashboard</a>
+  <a href="#" class="current">修改记录</a>
+</div>
+
+
+<div class="container-fluid">
+  <%= render 'form' %>
+  <%= link_to 'Show', @ad %> |
+  <%= link_to 'Back', ads_path %>
+</div>
+

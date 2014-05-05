@@ -1,0 +1,11 @@
+<div>
+  <a href="/seajs">seajs</a>
+</div>
+
+
+<script type="text/javascript">
+    // 加载多个模块，在加载完成时，执行回调
+    seajs.use(['index/latest/index'], function(m) {
+        console.log('index loaded~~');
+    });
+</script>

@@ -1,4 +1,4 @@
-/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-04-17 23:01:42*/
+/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-10-23 16:08:43*/
 define("lib/1.0.0/popup-debug", [], function(require, exports, module) {
     var popup = function(opt) {
         var opt = opt || {};
@@ -111,4 +111,5 @@ define("lib/1.0.0/popup-debug", [], function(require, exports, module) {
     };
     module.exports = popup;
 });
+
 

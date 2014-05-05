@@ -390,7 +390,7 @@
    * The public API for creating and running tests
    */
   window.JSLitmus = {
-    /** The list of all tests that have been registered with JSLitmus.test */
+    /** The show of all tests that have been registered with JSLitmus.test */
     _tests: [],
     /** The queue of tests that need to be run */
     _queue: [],

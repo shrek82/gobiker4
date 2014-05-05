@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="widget-box">
+        <div class="widget-title">
+								<span class="icon">
+									<i class="icon-align-justify"></i>
+								</span>
+          <h5>Text inputs</h5>
+        </div>
+        <div class="widget-content nopadding">
+          <%= form_for(@ad,:url=>admin_ad_path,:html=>{:class=>"form-horizontal"}) do |f| %>
+          <% if @ad.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@ad.errors.count, "error") %> prohibited
+              this ad
+              from being saved:</h2>
+
+            <ul>
+              <% @ad.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :name %></label>
+
+                <div class="controls">
+                  <%= f.text_field :name %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :js_path %></label>
+
+                <div class="controls">
+                  <%= f.text_field :js_path %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :type %></label>
+
+                <div class="controls">
+                  <%= f.text_field :type %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :img_path %></label>
+
+                <div class="controls">
+                  <%= f.text_field :img_path %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :info %></label>
+
+                <div class="controls">
+                  <%= f.text_field :info %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :url %></label>
+
+                <div class="controls">
+                  <%= f.text_field :url %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :hits %></label>
+
+                <div class="controls">
+                  <%= f.number_field :hits %>
+                </div>
+              </div>
+          
+              <div class="control-group">
+                <label class="control-label"><%= f.label :is_close %></label>
+
+                <div class="controls">
+                  <%= f.check_box :is_close %>
+                </div>
+              </div>
+          
+          <div class="form-actions">
+            <%= f.submit :class=>"btn btn-primary" %>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

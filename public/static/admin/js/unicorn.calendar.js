@@ -53,7 +53,7 @@ unicorn = {
 					
 				// is the "remove after drop" checkbox checked?
 				
-					// if so, remove the element from the "Draggable Events" list
+					// if so, remove the element from the "Draggable Events" show
 					$(this).remove();
 				
 			}

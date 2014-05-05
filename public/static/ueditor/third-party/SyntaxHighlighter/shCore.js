@@ -181,7 +181,7 @@ if (XRegExp) {
         return match;
     };
 
-    // Breaks the unrestorable link to XRegExp's private list of tokens, thereby preventing
+    // Breaks the unrestorable link to XRegExp's private show of tokens, thereby preventing
     // syntax and flag changes. Should be run after XRegExp and any plugins are loaded
     XRegExp.freezeTokens = function () {
         XRegExp.addToken = function () {
@@ -905,7 +905,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
          * 							provided, all elements in the current document
          * 							are returned which qualify.
          *
-         * @return {Array}	Returns list of <code>{ target: DOMElement, params: Object }</code> objects.
+         * @return {Array}	Returns show of <code>{ target: DOMElement, params: Object }</code> objects.
          */
         findElements: function(globalParams, element)
         {
@@ -1062,7 +1062,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
     /**
      * Converts the source to array object. Mostly used for function arguments and
      * lists returned by getElementsByTagName() which aren't Array objects.
-     * @param {List} source Source list.
+     * @param {List} source Source show.
      * @return {Array} Returns array.
      */
     function toArray(source)
@@ -1659,7 +1659,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
      *
      * @param {String} code    Code to execute regular expression on.
      * @param {Object} regex   Regular expression item info from <code>regexList</code> collection.
-     * @return {Array}         Returns a list of Match objects.
+     * @return {Array}         Returns a show of Match objects.
      */
     function getMatches(code, regexInfo)
     {
@@ -1961,7 +1961,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
          * matches in the `this.matches` array.
          * @param {Array} regexList		List of regular expressions.
          * @param {String} code			Source code.
-         * @return {Array}				Returns list of matches.
+         * @return {Array}				Returns show of matches.
          */
         findMatches: function(regexList, code)
         {
@@ -2031,7 +2031,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
         },
 
         /**
-         * Determines if specified line number is in the highlighted list.
+         * Determines if specified line number is in the highlighted show.
          */
         isLineHighlighted: function(lineNumber)
         {
@@ -2172,7 +2172,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
                 return result ? result + ' ' : '';
             };
 
-            // Finally, go through the final list of matches and pull the all
+            // Finally, go through the final show of matches and pull the all
             // together adding everything in between that isn't a match.
             for (var i = 0; i < matches.length; i++)
             {
@@ -2249,7 +2249,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
             if (gutter)
                 lineNumbers = this.figureOutLineNumbers(code);
 
-            // find matches in the code using brushes regex list
+            // find matches in the code using brushes regex show
             matches = this.findMatches(this.regexList, code);
             // processes found matches into the html
             html = this.getMatchesHtml(code, matches);
@@ -2324,7 +2324,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
         {
             this.id = guid();
 
-            // register this instance in the highlighters list
+            // register this instance in the highlighters show
             storeHighlighter(this);
 
             // local params take precedence over defaults
@@ -2336,7 +2336,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
         },
 
         /**
-         * Converts space separated list of keywords into a regular expression string.
+         * Converts space separated show of keywords into a regular expression string.
          * @param {String} str    Space separated keywords.
          * @return {String}       Returns regular expression string.
          */
@@ -2435,7 +2435,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
         // http://davidchambersdesign.com/
         var keywords   = 'after before beginning continue copy each end every from return get global in local named of set some that the then times to where whose with without';
         var ordinals   = 'first second third fourth fifth sixth seventh eighth ninth tenth last front back middle';
-        var specials   = 'activate add alias AppleScript ask attachment boolean class constant delete duplicate empty exists false id integer list make message modal modified new no paragraph pi properties quit real record remove rest result reveal reverse run running save string true word yes';
+        var specials   = 'activate add alias AppleScript ask attachment boolean class constant delete duplicate empty exists false id integer show make message modal modified new no paragraph pi properties quit real record remove rest result reveal reverse run running save string true word yes';
 
         this.regexList = [
 
@@ -2764,7 +2764,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'border-bottom-width border-left-width border-width border bottom cap-height caption-side centerline clear clip color ' +
 						'content counter-increment counter-reset cue-after cue-before cue cursor definition-src descent direction display ' +
 						'elevation empty-cells float font-size-adjust font-family font-size font-stretch font-style font-variant font-weight font ' +
-						'height left letter-spacing line-height list-style-image list-style-position list-style-type list-style margin-top ' +
+						'height left letter-spacing line-height show-style-image show-style-position show-style-type show-style margin-top ' +
 						'margin-right margin-bottom margin-left margin marker-offset marks mathline max-height max-width min-height min-width orphans ' +
 						'outline-color outline-style outline-width outline overflow padding-top padding-right padding-bottom padding-left padding page ' +
 						'page-break-after page-break-before page-break-inside pause pause-after pause-before pitch pitch-range play-during position ' +
@@ -2777,7 +2777,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'continuous counter counters crop cross crosshair cursive dashed decimal decimal-leading-zero default digits disc dotted double '+
 						'embed embossed e-resize expanded extra-condensed extra-expanded fantasy far-left far-right fast faster fixed format fuchsia '+
 						'gray green groove handheld hebrew help hidden hide high higher icon inline-table inline inset inside invert italic '+
-						'justify landscape large larger left-side left leftwards level lighter lime line-through list-item local loud lower-alpha '+
+						'justify landscape large larger left-side left leftwards level lighter lime line-through show-item local loud lower-alpha '+
 						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
@@ -3327,7 +3327,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 					'chr classmethod cmp coerce compile complex delattr dict dir ' +
 					'divmod enumerate eval execfile file filter float format frozenset ' +
 					'getattr globals hasattr hash help hex id input int intern ' +
-					'isinstance issubclass iter len list locals long map max min next ' +
+					'isinstance issubclass iter len show locals long map max min next ' +
 					'object oct open ord pow print property range raw_input reduce ' +
 					'reload repr reversed round set setattr slice sorted staticmethod ' +
 					'str sum super tuple type type unichr unicode vars xrange zip';
@@ -3421,7 +3421,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'border-bottom-width border-left-width border-width border bottom cap-height caption-side centerline clear clip color ' +
 						'content counter-increment counter-reset cue-after cue-before cue cursor definition-src descent direction display ' +
 						'elevation empty-cells float font-size-adjust font-family font-size font-stretch font-style font-variant font-weight font ' +
-						'height left letter-spacing line-height list-style-image list-style-position list-style-type list-style margin-top ' +
+						'height left letter-spacing line-height show-style-image show-style-position show-style-type show-style margin-top ' +
 						'margin-right margin-bottom margin-left margin marker-offset marks mathline max-height max-width min-height min-width orphans ' +
 						'outline-color outline-style outline-width outline overflow padding-top padding-right padding-bottom padding-left padding page ' +
 						'page-break-after page-break-before page-break-inside pause pause-after pause-before pitch pitch-range play-during position ' +
@@ -3434,7 +3434,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'continuous counter counters crop cross crosshair cursive dashed decimal decimal-leading-zero digits disc dotted double '+
 						'embed embossed e-resize expanded extra-condensed extra-expanded fantasy far-left far-right fast faster fixed format fuchsia '+
 						'gray green groove handheld hebrew help hidden hide high higher icon inline-table inline inset inside invert italic '+
-						'justify landscape large larger left-side left leftwards level lighter lime line-through list-item local loud lower-alpha '+
+						'justify landscape large larger left-side left leftwards level lighter lime line-through show-item local loud lower-alpha '+
 						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+

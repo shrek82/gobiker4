@@ -1,0 +1,107 @@
+<% content_for:style do %>
+    <link rel="stylesheet" href="/css/place/style.css"/>
+    <link rel="stylesheet" href="/css/place/style4.css"/>
+<% end %>
+
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="<%= main_path %>">首页</a></span>
+    <span class="space">&gt;</span>
+    <span class="text drop"><a href="<%= places_path %>">目的地</a><em class="arrow" data="crumb_continents"></em></span>
+    <% if @place.province && @place.city %>
+        <span class="space">&gt;</span><span class="text drop"><a href="<%= city_places_path @place.city.pinyin %>" data-bn-ipg="3-3"><%= @place.province.name %></a><em class="arrow" data="crumb_country"></em></span><span class="space">&gt;</span><span class="text drop"><a href="<%= city_places_path @place.city.pinyin %>" data-bn-ipg="3-4"><%= @place.city.name %></a><em class="arrow" data="crumb_city"></em></span>
+    <% end %>
+    <span class="space">&gt;</span>
+
+    <h1 class="current"><%= @place.name %></h1>
+  </div>
+</div>
+
+<div class="pl_topbox_wrap">
+  <div class="pl_topbox clearfix">
+    <div class="pl_topbox_name">
+      <div class="clearfix">
+        <p class="pl_topbox_cn fontYaHei">
+          <a href="<%= place_path @place %>"><%= @place.province.name %>,<%= @place.city.name %></a></p>
+      </div>
+      <div class="clearfix">
+        <p class="pl_topbox_cn fontYaHei"><a href="<%= place_path @place %>"><%= @place.name %></a></p>
+      </div>
+    </div>
+    <div class="pl_topbox_right">
+      <ul class="pl_topbox_btn">
+        <li class="pl_topbox_want" id="pl_topbox_want">
+          <span class="tips">+1</span>
+          <a href="javascript:void(0);" class="click" id="doings_planto_button" title="<%= @place.wantgoto_num.to_i.to_s %>人想去这里">想去</a>
+        </li>
+        <li class="pl_topbox_been" id="pl_topbox_been">
+          <span class="tips">+1</span>
+          <a href="javascript:void(0);" class="click" id="doings_beento_button" title="<%= @place.beengo_num.to_i.to_s %>人去过这里">去过</a>
+        </li>
+      </ul>
+      <p class="pl_topbox_numbeen fontYaHei"><em id="doings_beento_counts_big"><%= @place.beengo_num.to_i.to_s %></em>人去过这里
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="clearfix">
+    <h3 class="ui_title fr"><a href="http://place.qyer.com/paris/" class="fontSong cRed">返回城市首页 &lt;&lt;</a></h3>
+
+  </div>
+  <div class="place_album_sharebox clearfix">
+    <div class="place_album_sharebox_text fl">欢迎在这里和旅行者分享你的精彩照片，优秀作品将可能会被选入这个城市的官方相册，快来分享吧！</div>
+    <div class="place_album_sharebox_button fr">
+      <a class="ui_button14 _jsurl" rel="nofollow" href="http://user.qyer.com/album_action_upload_city_20">我要添加照片</a>
+    </div>
+  </div>
+  <div class="ui_seqencing mt20">排序:&nbsp;&nbsp;
+    <a href="http://place.qyer.com/paris/photo/" class="ui_seqencing_item ui_seqencing_item_current">最热门的<span></span></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://place.qyer.com/paris/photo/new/" class="ui_seqencing_item">最新添加<span></span></a>
+  </div>
+  <ul class="place_album_list clearfix mt10" id="photo_list_item">
+    <% @photos.each do |p| %>
+        <li class="place_album_list_item">
+          <div><a href=""><img src="<%= p.img_path.sub(/thumb/, 'sqr_thumb') %>"></a></div>
+          <div class="place_album_list_item_mask"></div>
+          <div class="place_album_list_item_tips">
+            <div>
+              <span class="icon_album_look">174</span>
+            </div>
+            <div>巴黎</div>
+            <div>来自：<%= p.user.username %></div>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+  <div class="place_album_page">
+    <div class="place_album_page_position">
+      <ul class="pagination">
+        <div class="ui_page">
+          <a data-bn-ipg="pages-3" href="/paris/photo/page1/" class="ui_page_item ui_page_item_current">1</a>
+          <a data-bn-ipg="pages-3" href="/paris/photo/page2/" class="ui_page_item">2</a>
+          <a data-bn-ipg="pages-3" href="/paris/photo/page3/" class="ui_page_item">3</a>
+          <a data-bn-ipg="pages-3" href="/paris/photo/page4/" class="ui_page_item">4</a>
+          <a data-bn-ipg="pages-3" href="/paris/photo/page5/" class="ui_page_item">5</a>
+          <a data-bn-ipg="pages-4" href="/paris/photo/page261/" class="ui_page_item" title="...261">...261</a>
+          <a data-bn-ipg="pages-5" href="/paris/photo/page2/" class="ui_page_item ui_page_next" title="下一页">下一页</a>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="cb"></div>
+</div>
+
+<script type="text/javascript">
+    readyScript.photoTips = function () {
+        var $photos_list_items = $("#photo_list_item li.place_album_list_item");
+        $photos_list_items.on("mouseover",function () {
+            $(this).find('.place_album_list_item_mask').show();
+            $(this).find('.place_album_list_item_tips').show();
+        }).mouseout(function () {
+                    $(this).find('.place_album_list_item_mask').hide();
+                    $(this).find('.place_album_list_item_tips').hide();
+                });
+    }
+
+</script>

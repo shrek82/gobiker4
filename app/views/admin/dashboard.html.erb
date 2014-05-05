@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="area-top clearfix">
+      <div class="pull-left header">
+        <h3 class="title">
+          <i class="icon-flag"></i>
+          目的地
+        </h3>
+        <h5>
+          <% if local_assigns.has_key? :headline %>
+              Headline: <%= headline %>
+          <% else %>
+              Headline not defined
+          <% end %>
+          <%= request.fullpath %>
+          <%= request.protocol %>--<%= request.host_with_port %><br>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

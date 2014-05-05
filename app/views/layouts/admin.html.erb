@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>骑趣管理中心</title>
+  <link rel="stylesheet" href="/css/common/bootstrap.css"/>
+  <link rel="stylesheet" href="/css/common/todc-bootstrap.css"/>
+  <link href="/static/core-admin/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="/static/core-admin/stylesheets/additional.css"/>
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" href="/static/artDialog5/skins/default.css" />
+  <script type="text/javascript" src="/js/jQuery-1.9.1.js"></script>
+  <script type="text/javascript" src="/js/jquery.form.js"></script>
+  <script type="text/javascript" src="/js/lib.js"></script>
+  <script type="text/javascript" src="/static/artDialog5/source/jquery.artDialog.js"></script>
+  <script type="text/javascript" src="/js/global.js"></script>
+  <%= yield :head %>
+  <script type="text/javascript">
+      readyScript={};
+  </script>
+</head>
+<body>
+<%= yield %>
+<script type="text/javascript"  src="/js/bootstrap-dropdown.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        readyScript.auto_login = function () {
+        }
+        runReadyScript();
+    });
+</script>
+
+</body>
+</html>

@@ -1,64 +1,126 @@
-<p id="notice"><%= notice %></p>
+<% @title=@topic.title %>
 
-<p>
-  <strong>Forum:</strong>
-  <%= @topic.forum_id %>
-</p>
+<% content_for:style do %>
+    <link rel="stylesheet" href="/css/forum/text.css"/>
+    <link rel="stylesheet" href="/css/common/comments.css"/>
+    <style type="text/css">
+      #main_body{width: 90%}
+    </style>
+<% end %>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @topic.subject_id %>
-</p>
+<% content_for:full_body do %>
+    <div class="qyer_head_crumbg">
+      <div class="qyer_head_crumb">
+        <a href="<%= main_path %>">首页</a>&nbsp;&gt;&nbsp;<a href="<%= forums_path %>">论坛</a>&gt; <a href="<%= list_forums_path @topic.forum_id %>"><%= @topic.forum.name %></a> &nbsp;&gt;&nbsp;<%= @topic.title %>    </div>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
-</p>
+    <div class="bbs_titboxs">
+      <div class="bbs_titbox">
+        <h1 class="bbs_titbox_title fontYaHei qyer_spam_text_filter">经验分享：美国B1/B2签2个月的行政审理结束拿到签证有感</h1>
 
-<p>
-  <strong>Title color:</strong>
-  <%= @topic.title_color %>
-</p>
+        <div class="bbs_titbox_info">
 
-<p>
-  <strong>User:</strong>
-  <%= @topic.user_id %>
-</p>
 
-<p>
-  <strong>Is fixed:</strong>
-  <%= @topic.is_fixed %>
-</p>
+          <div class="infos">
+            <img src="/avatar/up.jpeg" alt="zhaojiangang_" style="position:absolute;left:0;top:0">
+            作者：<a href="<%= u_path @topic.user_id %>" class="ml10" ><%= @topic.user.username %></a>
+            <br>
+            发表于 <%= @topic.created_at.to_s(:db) %> <span class="ml15 mr15">|</span>
+            <span class="views"><%= @topic.hits_num %></span>
+            <span class="sum"><%= @topic.comments_num %></span>
+            <span class="like">0</span>
+          </div>
 
-<p>
-  <strong>Is good:</strong>
-  <%= @topic.is_good %>
-</p>
+          <div class="fr">
+                <div id="bbs_tools" class="bbs_tools" style="position: relative;top: 0px;background:#fff">
+                  <a href="javascript:;" id="share" class="share" rel="nofollow" data-bn-ipg="22">分享</a>
+                  <a href="javascript:;" class="collect" rel="nofollow" data-bn-ipg="21">收藏</a>
+                  <a id="recommend_add" style="" data-tid="837722" href="misc.php?action=recommend&amp;do=add&amp;tid=837722" onclick="if(QYER.uid&gt;0){ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate(1)');}else{ajaxlogin(0,'','bbsajax.php','pagereload');};doane(event);" class="like" rel="nofollow" data-bn-ipg="20">喜欢</a>
+                </div>
+          </div>
 
-<p>
-  <strong>Is recommend:</strong>
-  <%= @topic.is_recommend %>
-</p>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Hits num:</strong>
-  <%= @topic.hits_num %>
-</p>
+<% end %>
 
-<p>
-  <strong>Comments num:</strong>
-  <%= @topic.comments_num %>
-</p>
+<div>
 
-<p>
-  <strong>Last comment user:</strong>
-  <%= @topic.last_comment_user_id %>
-</p>
+<div class="bbs_main">
 
-<p>
-  <strong>Last comment time:</strong>
-  <%= @topic.last_comment_time %>
-</p>
+      <div class="bbs_txtbox" >
+        <% if @topic.post %>
+        <%=raw @topic.post.content %>
+        <% end %>
+      </div>
+<div>
+  分类：<a href="forum-3-62-1.html" class="category" >美洲国家签证</a>
+</div>
+  <%= comment_list :hidden_field => {:topic_id => @topic.id}, :query_param => {:topic_id => @topic.id} %>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+
+</div>
+<div class="bbs_sidebar">
+
+
+
+
+  <!--右侧目的地-->
+  <div class="mb20">
+    <h3 class="bbs_txttit"><span class="fb f14">相关目的地</span></h3>
+    <ul class="bbs_placelist clearfix">
+      <li class="clearfix">
+        <p class="bbs_placelist_pic"><a href="http://place.qyer.com/usa/" target="_blank" data-bn-ipg="24-1-1"><img src="/images/forum/48.jpg" width="48" height="48" alt="美国" title="美国"></a></p>
+
+        <p class="bbs_placelist_title"><a href="http://place.qyer.com/usa/" title="美国 USA" target="_blank" data-bn-ipg="24-1-2">美国 USA</a></p>
+
+        <p class="bbs_placelist_txt">景点&nbsp;<span class="fb">1268</span>&nbsp;&nbsp;&nbsp;&nbsp;照片&nbsp;<span class="fb">149213</span>&nbsp;&nbsp;&nbsp;&nbsp;问答&nbsp;<span class="fb">6581</span></p></li>
+    </ul>
+  </div>
+
+  <!--右侧游记-->
+  <div class="mb20">
+    <h3 class="bbs_txttit"><span class="fb f14">相关游记帖</span></h3>
+    <ul class="bbs_travellist">
+      <li class="first"><p class="title"><a href="thread-269212-1.html" target="_blank" title="人生第二杆系列之-----88天环游美加----直播结束 账单出炉 补图ING  （电梯直达各楼）" data-bn-ipg="25-1-1">人生第二杆系列之-----88天环游美加----直播结束 账单出炉 补图ING （电梯直达各楼）</a></p>
+
+        <p class="other"><span class="fr">回复 3577 | 查看 242960</span><a href="http://user.qyer.com/user_uid_368649" target="_blank" data-bn-ipg="25-1-2">来生</a></p></li>
+      <li><p class="title"><a href="thread-707307-1.html" target="_blank" title="#美洲去野#买车自驾横穿美国3个月，从LA到KW,露营+MOTEL。" data-bn-ipg="25-2-1">#美洲去野#买车自驾横穿美国3个月，从LA到KW,露营+MOTEL。</a></p>
+
+        <p class="other"><span class="fr">回复 614 | 查看 54696</span><a href="http://user.qyer.com/user_uid_1337055" target="_blank" data-bn-ipg="25-2-2">咏歌闪闪</a></p></li>
+      <li><p class="title"><a href="thread-756524-1.html" target="_blank" title="38天，17,000元，坐巴士穷游美加" data-bn-ipg="25-3-1">38天，17,000元，坐巴士穷游美加</a></p>
+
+        <p class="other"><span class="fr">回复 354 | 查看 40900</span><a href="http://user.qyer.com/user_uid_326962" target="_blank" data-bn-ipg="25-3-2">wxm1949</a></p></li>
+      <li><p class="title"><a href="thread-495312-1.html" target="_blank" title="160天环游美国   我的第一个长篇 （全文完 电梯2楼 感谢所有的朋友 再见）" data-bn-ipg="25-4-1">160天环游美国 我的第一个长篇 （全文完 电梯2楼 感谢所有的朋友 再见）</a></p>
+
+        <p class="other"><span class="fr">回复 800 | 查看 362998</span><a href="http://user.qyer.com/user_uid_1104629" target="_blank" data-bn-ipg="25-4-2">loyata</a></p></li>
+      <li><p class="title"><a href="thread-286122-1.html" target="_blank" title="行色美国-30天从美西到美东（15万文字，850幅图片，电梯首页，新增美国签经，全文完)" data-bn-ipg="25-5-1">行色美国-30天从美西到美东（15万文字，850幅图片，电梯首页，新增美国签经，全文完)</a></p>
+
+        <p class="other"><span class="fr">回复 508 | 查看 134451</span><a href="http://user.qyer.com/user_uid_128307" target="_blank" data-bn-ipg="25-5-2">kathyli</a></p></li>
+    </ul>
+  </div>
+
+  <div class="bbs_txttag_box mb10">
+    <h3 class="bbs_txttit"><span class="fb f14">标签</span></h3>
+
+    <div class="bbs_txttag_list">
+      <a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a><a href="#" class="ask_tag"><strong class="ask_tag_strong">尼泊尔</strong></a>
+    </div>
+  </div>
+
+
+</div>
+<div class="cb"></div>
+</div>
+
+<% content_for:script do %>
+    <script type="text/javascript">
+        seajs.use(['lib','forum/latest/forum'], function(lib,forum) {
+            forum.floatTool();
+            $('#forum_form').bind("submit", function (e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+<% end %>

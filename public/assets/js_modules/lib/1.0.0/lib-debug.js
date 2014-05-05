@@ -1,5 +1,5 @@
-/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-04-17 23:01:42*/
-define("lib/1.0.0/lib-debug", [ "./jquery-debug", "./popup-debug", "./class-debug", "./ajaxForm-debug", "./jquery_form-debug" ], function(require, exports, module) {
+/*! lib(1.0.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-10-23 16:08:43*/
+define("lib/1.0.0/lib-debug", [ "./jquery-debug", "./popup-debug", "./class-debug", "./ajaxForm-debug", "./jquery_form-debug.js" ], function(require, exports, module) {
     window.$ = window.jQuery = require("./jquery-debug");
     //定义基本功能
     var lib = {};
@@ -677,23 +677,23 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
             return object;
         }
         /*
-     * Create a callback list using the following parameters:
+     * Create a callback show using the following parameters:
      *
-     *	options: an optional list of space-separated options that will change how
-     *			the callback list behaves or a more traditional option object
+     *	options: an optional show of space-separated options that will change how
+     *			the callback show behaves or a more traditional option object
      *
-     * By default a callback list will act like an event callback list and can be
+     * By default a callback show will act like an event callback show and can be
      * "fired" multiple times.
      *
      * Possible options:
      *
-     *	once:			will ensure the callback list can only be fired once (like a Deferred)
+     *	once:			will ensure the callback show can only be fired once (like a Deferred)
      *
      *	memory:			will keep track of previous values and will call any callback added
-     *					after the list has been fired right away with the latest "memorized"
+     *					after the show has been fired right away with the latest "memorized"
      *					values (like a Deferred)
      *
-     *	unique:			will ensure a callback can only be added once (no duplicate in the list)
+     *	unique:			will ensure a callback can only be added once (no duplicate in the show)
      *
      *	stopOnFalse:	interrupt callings when a callback returns false
      *
@@ -703,12 +703,12 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
             // (we check in cache first)
             options = typeof options === "string" ? optionsCache[options] || createOptions(options) : jQuery.extend({}, options);
             var // Last fire value (for non-forgettable lists)
-            memory, // Flag to know if list was already fired
-            fired, // Flag to know if list is currently firing
+            memory, // Flag to know if show was already fired
+            fired, // Flag to know if show is currently firing
             firing, // First callback to fire (used internally by add and fireWith)
             firingStart, // End of the loop when firing
             firingLength, // Index of currently firing callback (modified by remove if needed)
-            firingIndex, // Actual callback list
+            firingIndex, // Actual callback show
             list = [], // Stack of fire calls for repeatable lists
             stack = !options.once && [], // Fire callbacks
             fire = function(data) {
@@ -739,7 +739,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                 }
             }, // Actual Callbacks object
             self = {
-                // Add a callback or a collection of callbacks to the list
+                // Add a callback or a collection of callbacks to the show
                 add: function() {
                     if (list) {
                         // First, we save the current length
@@ -766,7 +766,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                     }
                     return this;
                 },
-                // Remove a callback from the list
+                // Remove a callback from the show
                 remove: function() {
                     if (list) {
                         jQuery.each(arguments, function(_, arg) {
@@ -787,16 +787,16 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                     }
                     return this;
                 },
-                // Control if a given callback is in the list
+                // Control if a given callback is in the show
                 has: function(fn) {
                     return jQuery.inArray(fn, list) > -1;
                 },
-                // Remove all callbacks from the list
+                // Remove all callbacks from the show
                 empty: function() {
                     list = [];
                     return this;
                 },
-                // Have the list do nothing anymore
+                // Have the show do nothing anymore
                 disable: function() {
                     list = stack = memory = undefined;
                     return this;
@@ -805,7 +805,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                 disabled: function() {
                     return !list;
                 },
-                // Lock the list in its current state
+                // Lock the show in its current state
                 lock: function() {
                     stack = undefined;
                     if (!memory) {
@@ -844,7 +844,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
         };
         jQuery.extend({
             Deferred: function(func) {
-                var tuples = [ // action, add listener, listener list, final state
+                var tuples = [ // action, add listener, listener show, final state
                 [ "resolve", "done", jQuery.Callbacks("once memory"), "resolved" ], [ "reject", "fail", jQuery.Callbacks("once memory"), "rejected" ], [ "notify", "progress", jQuery.Callbacks("memory") ] ], state = "pending", promise = {
                     state: function() {
                         return state;
@@ -879,10 +879,10 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                 }, deferred = {};
                 // Keep pipe for back-compat
                 promise.pipe = promise.then;
-                // Add list-specific methods
+                // Add show-specific methods
                 jQuery.each(tuples, function(i, tuple) {
                     var list = tuple[2], stateString = tuple[3];
-                    // promise[ done | fail | progress ] = list.add
+                    // promise[ done | fail | progress ] = show.add
                     promise[tuple[1]] = list.add;
                     // Handle state
                     if (stateString) {
@@ -891,7 +891,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                             state = stateString;
                         }, tuples[i ^ 1][2].disable, tuples[2][2].lock);
                     }
-                    // deferred[ resolve | reject | notify ] = list.fire
+                    // deferred[ resolve | reject | notify ] = show.fire
                     deferred[tuple[0]] = list.fire;
                     deferred[tuple[0] + "With"] = list.fireWith;
                 });
@@ -1575,7 +1575,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                         elem = this[i];
                         if (elem.nodeType === 1 && elem.className) {
                             className = (" " + elem.className + " ").replace(rclass, " ");
-                            // loop over each item in the removal list
+                            // loop over each item in the removal show
                             for (c = 0, cl = removes.length; c < cl; c++) {
                                 // Remove until there is nothing to remove,
                                 while (className.indexOf(" " + removes[c] + " ") >= 0) {
@@ -1600,7 +1600,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                         // toggle individual class names
                         var className, i = 0, self = jQuery(this), state = stateVal, classNames = value.split(core_rspace);
                         while (className = classNames[i++]) {
-                            // check each className given, space separated list
+                            // check each className given, space separated show
                             state = isBool ? state : !self.hasClass(className);
                             self[state ? "addClass" : "removeClass"](className);
                         }
@@ -2093,7 +2093,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                             handleObj.handler.guid = handler.guid;
                         }
                     }
-                    // Add to the element's handler list, delegates in front
+                    // Add to the element's handler show, delegates in front
                     if (selector) {
                         handlers.splice(handlers.delegateCount++, 0, handleObj);
                     } else {
@@ -2220,7 +2220,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                 if (!event.target) {
                     event.target = elem;
                 }
-                // Clone any incoming data and prepend the event, creating the handler arg list
+                // Clone any incoming data and prepend the event, creating the handler arg show
                 data = data != null ? jQuery.makeArray(data) : [];
                 data.unshift(event);
                 // Allow special events to draw outside the lines
@@ -3523,7 +3523,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                     return 1;
                 }
                 // Otherwise they're somewhere else in the tree so we need
-                // to build up a full list of the parentNodes for comparison
+                // to build up a full show of the parentNodes for comparison
                 while (cur) {
                     ap.unshift(cur);
                     cur = cur.parentNode;
@@ -5889,7 +5889,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                 // Add protocol if not provided (#5866: IE7 issue with protocol-less urls)
                 // We also use the url parameter if available
                 s.url = ((url || s.url) + "").replace(rhash, "").replace(rprotocol, ajaxLocParts[1] + "//");
-                // Extract dataTypes list
+                // Extract dataTypes show
                 s.dataTypes = jQuery.trim(s.dataType || "*").toLowerCase().split(core_rspace);
                 // A cross-domain request is in order when we have a protocol:host:port mismatch
                 if (s.crossDomain == null) {
@@ -6053,7 +6053,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                 finalDataType = finalDataType || firstDataType;
             }
             // If we found a dataType
-            // We add the dataType to the list if needed
+            // We add the dataType to the show if needed
             // and return the corresponding response
             if (finalDataType) {
                 if (finalDataType !== dataTypes[0]) {
@@ -6076,7 +6076,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                     converters[conv.toLowerCase()] = s.converters[conv];
                 }
             }
-            // Convert to each sequential dataType, tolerating list modification
+            // Convert to each sequential dataType, tolerating show modification
             for (;current = dataTypes[++i]; ) {
                 // There's only work to do if current dataType is non-auto
                 if (current !== "*") {
@@ -6369,7 +6369,7 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                                             responseHeaders = xhr.getAllResponseHeaders();
                                             responses = {};
                                             xml = xhr.responseXML;
-                                            // Construct response list
+                                            // Construct response show
                                             if (xml && xml.documentElement) {
                                                 responses.xml = xml;
                                             }
@@ -6417,13 +6417,13 @@ define("lib/1.0.0/jquery-debug", [], function(require, exports, module) {
                             } else {
                                 handle = ++xhrId;
                                 if (xhrOnUnloadAbort) {
-                                    // Create the active xhrs callbacks list if needed
+                                    // Create the active xhrs callbacks show if needed
                                     // and attach the unload handler
                                     if (!xhrCallbacks) {
                                         xhrCallbacks = {};
                                         jQuery(window).unload(xhrOnUnloadAbort);
                                     }
-                                    // Add to list of active xhrs callbacks
+                                    // Add to show of active xhrs callbacks
                                     xhrCallbacks[handle] = callback;
                                 }
                                 xhr.onreadystatechange = callback;
@@ -7415,9 +7415,9 @@ define("lib/1.0.0/class-debug", [], function(require, exports, module) {
     };
 });
 
-define("lib/1.0.0/ajaxForm-debug", [ "lib/1.0.0/jquery_form-debug" ], function(require, exports, module) {
+define("lib/1.0.0/ajaxForm-debug", [ "./jquery_form-debug.js" ], function(require, exports, module) {
     //ajax提交插件
-    require("lib/1.0.0/jquery_form-debug")($);
+    require("./jquery_form-debug")($);
     //ajaxForm表单提交
     //ajaxForm表单提交
     //jquery.form.js定义的方法检查没有再去定义
@@ -8513,7 +8513,7 @@ define("lib/1.0.0/jquery_form-debug", [], function(require, exports, moudles) {
        */
             $.fn.clearFields = $.fn.clearInputs = function(includeHidden) {
                 var re = /^(?:color|date|datetime|email|month|number|password|range|search|tel|text|time|url|week)$/i;
-                // 'hidden' is not in this list
+                // 'hidden' is not in this show
                 return this.each(function() {
                     var t = this.type, tag = this.tagName.toLowerCase();
                     if (re.test(t) || tag == "textarea") {

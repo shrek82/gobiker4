@@ -1,0 +1,40 @@
+<% @comments=[@comment] if @comment %>
+
+<% if @comment.nil? %>
+<%= cmt_pager @comments %>
+<table class="view_table view_cmt">
+<% end %>
+
+<% @comments.each do |c| %>
+      <tr>
+        <td class="user_info">
+          <a href="sdf">seeyoup</a>
+          <img src="/avatar/1_o.jpg" width="80" height="80" alt="zhaojiangang_">
+        </td>
+        <td class="view_content">
+          <div class="infos" style="color:#999;font-size:12px;border-bottom:1px dashed #eee;padding:7px 0">
+            <span style="color:#f60;font-weight:bold">楼主</span> 发表于 <%= c.created_at.to_s(:db) %>
+          </div>
+          <div style="line-height:1.7em;font-size:14px;padding:15px 0 100px 0;">
+            <%= raw c.content %>
+          </div>
+
+          <div class="view_tools" >
+            <a href="javascript:;"><span class="icon-edit">&nbsp;编辑</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:;" ><span class="icon-thumbs-up-alt"></span>&nbsp;顶</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;"><span class="icon-quote-left"></span>&nbsp;引用</a></div>
+          <div class="signatures" ><span class="icon-pencil"></span>&nbsp;<%= c.user.signatures %></div>
+        </td>
+      </tr>
+<% end %>
+
+
+<% if @comments.blank? %>
+ <div id="nodata_topic">暂时还没有任何评论</div>
+<% end %>
+
+<% if @comment.nil? %>
+    <tr id="cmts_pager" style="display:none"></tr>
+    </table>
+<%= cmt_pager @comments %>
+<% end %>
+

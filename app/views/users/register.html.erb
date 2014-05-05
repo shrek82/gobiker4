@@ -1,0 +1,17 @@
+<% @title='账号注册' %>
+
+<!--注册内容 -->
+<div class="reg_cnt">
+  <div class="reg_layout">
+    <!--标题提示 -->
+    <div class="reg_tips"></div>
+    <div class="reg_margin" id="content_reg_email">
+      <!--邮箱验证 -->
+      <% if @act && @code && flash[:success] %>
+          <%= render 'verifyregister' %>
+      <% else %>
+          <%= render 'reg_input_mail' %>
+      <% end %>
+    </div>
+  </div>
+</div>

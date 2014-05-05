@@ -1,13 +1,16 @@
 <% content_for:head do %>
     <link rel="stylesheet" type="text/css" href="/static/uploadify/uploadify.css">
     <script type="text/javascript" src="/static/uploadify/jquery.uploadify-3.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/ueditor/ueditor.all.js"></script>
 <% end %>
 <% @title="上传照片" %>
-<%= form_for @photo, :url => photos_path, :html => { :multipart => true } do |f| %>
+<%= form_for(@photo, :html => {:id => "form1"}) do |f| %>
+
     <div class="field">
       <div class="controls">
         <input type="hidden" name='img_ids' id="img_ids"/>
-        <input type="file" name="photo[img]" id="file_upload"/>
+        <input type="file" name="file_upload" id="file_upload"/>
       </div>
     </div>
 
@@ -17,7 +20,7 @@
         </ul>
     </div>
 
-    <div class="actions" style="">
+    <div class="actions" style="display: none">
       <%= f.button :class => "btn btn-mint", :id => 'submit_button' %>
       <button type="button" class="btn" id="cancel_button" onclick="history.back()">取消</button>
     </div>

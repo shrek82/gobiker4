@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_ad.name %>
+</p>
+
+<p>
+  <b>Js path:</b>
+  <%= @admin_ad.js_path %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @admin_ad.type %>
+</p>
+
+<p>
+  <b>Img path:</b>
+  <%= @admin_ad.img_path %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @admin_ad.info %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @admin_ad.url %>
+</p>
+
+<p>
+  <b>Hits:</b>
+  <%= @admin_ad.hits %>
+</p>
+
+<p>
+  <b>Is close:</b>
+  <%= @admin_ad.is_close %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_ad_path(@admin_ad) %> |
+<%= link_to 'Back', admin_ads_path %>

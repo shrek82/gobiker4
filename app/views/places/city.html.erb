@@ -1,0 +1,1076 @@
+<% content_for:head do %>
+    <link rel="stylesheet" href="/css/place/city.css"/>
+<% end %>
+
+
+<div class="qyer_head_crumbg">
+  <div class="qyer_head_crumb">
+    <span class="text"><a href="<%= main_url %>">首页</a></span>
+    <span class="space">&gt;</span>
+    <span class="text"><a href="<%= places_url %>">目的地</a></span>
+    <span class="space">&gt;</span><span class="text"><a href="<%= area_places_path @city.province.pinyin %>"><%= @city.province.name %></a></span><span class="space">&gt;</span><span class="text"><%= @city.name %></span>
+  </div>
+</div>
+<script src="/js/place/crumbbox.js" type="text/javascript"></script>
+
+<div class="jsdownaction"></div>
+<div class="pl_topbox_wrap">
+  <div class="pl_topbox clearfix">
+    <div class="pl_topbox_name">
+      <p class="pl_topbox_en" id="pl_topbox_en"><a href="<%= city_places_url @city.pinyin %>"><%= @city.pinyin.upcase %>, CHINA</a></p>
+
+      <div class="clearfix">
+        <p class="pl_topbox_cn fontYaHei"><a href="<%= city_places_url @city.pinyin %>"><%= @city.name %>, <%= @city.province.name %></a></p>
+
+        <div class="pi_prompt">
+          <span class="initial">重要提示</span>
+
+          <div class="pi_prompt_lay">
+            <div class="top"><span class="close">&nbsp;</span><span class="title">重要提示</span></div>
+            <div class="text">从3月1日开始，香港特区政府颁布的&ldquo;限制婴幼儿奶粉出境&rdquo;正式实施，离境人士每天只可携带不超过1.8公斤（约两罐）奶粉离境。若违反即属犯罪，可罚款50万元（港元）及监禁2年。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pl_topbox_right">
+      <ul class="pl_topbox_btn">
+        <li class="pl_topbox_want" id="pl_topbox_want">
+          <p class="num"><span><strong id="doings_planto_counts">0</strong>人想去</span><em></em></p>
+          <a href="javascript:void(0);" class="click" id="doings_planto_button" data-bn-ipg="top-planto">想去</a>
+        </li>
+        <li class="pl_topbox_been" id="pl_topbox_been">
+          <p class="num"><span><strong id="doings_beento_counts">0</strong>人去过</span><em></em></p>
+          <a href="javascript:void(0);" class="click" id="doings_beento_button" data-bn-ipg="top-beento">去过</a>
+        </li>
+        <li class="pl_topbox_lived" id="pl_topbox_lived">
+          <p class="num"><span><strong id="doings_lived_counts">0</strong>人生活过</span><em></em></p>
+          <a href="javascript:void(0);" class="click" id="doings_lived_button" data-bn-ipg="top-lived">生活过</a>
+        </li>
+      </ul>
+      <p class="pl_topbox_numbeen fontYaHei"><em id="doings_beento_counts_big">还没有</em>人去过这里</p>
+    </div>
+  </div>
+</div>
+<div class="pl_main">
+<div class="pl_side">
+<div class="pl_subnav">
+  <!--左侧旅行指南-->
+  <div class="pl_title">
+    <h2 class="pl_title_name">香港旅行指南</h2>
+  </div>
+  <ul class="pl_infonav clearfix">
+    <li><a href="http://place.qyer.com/hong-kong/profile/" class="profile" data-bn-ipg="infonav-profile">城市概况</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/when-to-go/" class="date" data-bn-ipg="infonav-date">旅行时间</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/visa/" class="visa" data-bn-ipg="infonav-visa">签证与出入境</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/cost/" class="money" data-bn-ipg="infonav-money">货币与花费</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/information/" class="utility" data-bn-ipg="infonav-utility">实用信息</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/advice/" class="counsel" data-bn-ipg="infonav-counsel">网友忠告</a></li>
+
+
+  </ul>
+  <!--左侧POI类别-->
+  <div class="pl_sldline1"></div>
+  <ul class="pl_sortnav clearfix">
+    <li><a href="http://place.qyer.com/hong-kong/sight/" class="spot" alt="景点" data-bn-ipg="infonav-spot">景点</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/activity/" class="exp" alt="体验" data-bn-ipg="infonav-exp">体验</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/transportation/" class="traffic" alt="交通" data-bn-ipg="infonav-traffic">交通</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/hotel/" class="hotel" alt="住宿" data-bn-ipg="infonav-hotel">住宿</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/shopping/" class="shop" alt="购物" data-bn-ipg="infonav-shop">购物</a></li>
+    <li><a href="http://place.qyer.com/hong-kong/food/" class="cate" alt="美食" data-bn-ipg="infonav-cate">美食</a></li>
+  </ul>
+  <div class="pl_sldline1"></div>
+  <ul class="pl_channav clearfix">
+    <li class="text"><a target="_blank" href="http://ask.qyer.com/tag/%E9%A6%99%E6%B8%AF" class="ask" data-bn-ipg="infonav-ask" alt="香港">问答</a></li>
+    <li class="gap">&nbsp;</li>
+    <li class="text"><a target="_blank" href="http://place.qyer.com/hong-kong/travel-notes/" class="travel" rel="nofollow" data-bn-ipg="infonav-travelnotes" alt="香港">游记</a></li>
+    <li class="gap">&nbsp;</li>
+    <li class="text"><a target="_blank" href="http://place.qyer.com/hong-kong/plan/" class="route" data-bn-ipg="infonav-itinerary" alt="香港">行程</a></li>
+  </ul>
+</div>
+<div class="pl_sldline2"></div>
+<div>
+  <div class="pl_title">
+    <h2 class="pl_title_name">香港热心穷游er</h2>
+  </div>
+  <ul class="pl_hotqyer clearfix">
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_1574778" data-bn-ipg="user-1" title="貓力molly"><img src="http://static.qyer.com/data/avatar/001/57/47/78_avatar_small.jpg" width="30" height="30" alt="貓力molly"/></a>
+    </li>
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_1123728" data-bn-ipg="user-2" title="hufaye1990"><img src="http://static.qyer.com/data/avatar/001/12/37/28_avatar_small.jpg" width="30" height="30" alt="hufaye1990"/></a>
+    </li>
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_1271802" data-bn-ipg="user-3" title="dsfhjdfshfA"><img src="http://static.qyer.com/data/avatar/001/27/18/02_avatar_small.jpg" width="30" height="30" alt="dsfhjdfshfA"/></a>
+    </li>
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_1247571" data-bn-ipg="user-4" title="上上下下"><img src="http://static.qyer.com/data/avatar/001/24/75/71_avatar_small.jpg" width="30" height="30" alt="上上下下"/></a>
+    </li>
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_1395331" data-bn-ipg="user-5" title="KyleShi"><img src="http://static.qyer.com/data/avatar/001/39/53/31_avatar_small.jpg" width="30" height="30" alt="KyleShi"/></a>
+    </li>
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_240293" data-bn-ipg="user-6" title="小熊甜甜"><img src="http://static.qyer.com/data/avatar/000/24/02/93_avatar_small.jpg" width="30" height="30" alt="小熊甜甜"/></a>
+    </li>
+    <li>
+      <a target="_blank" href="http://user.qyer.com/user_uid_2214962" data-bn-ipg="user-7" title="在水中央的飛魚"><img src="http://static.qyer.com/data/avatar/002/21/49/62_avatar_small.jpg" width="30" height="30" alt="在水中央的飛魚"/></a>
+    </li>
+  </ul>
+</div>
+<!--左侧锦囊-->
+<div class="pl_sldline2"></div>
+<div>
+  <div class="pl_title">
+    <h2 class="pl_title_name">香港穷游锦囊</h2>
+    <a target="_blank" href="http://guide.qyer.com" data-bn-ipg="guide-more" class="pl_title_more" title="更多穷游锦囊">更多</a></div>
+  <ul class="pl_jnang2 clearfix">
+    <li>
+      <p class="pic">
+        <a target="_blank" href="http://guide.qyer.com/hong-kong/" data-bn-ipg="guide-1-1"><img src="http://static.qyer.com/upload/Guide_Info/1f/f1/24/100_150.jpg" width="80" height="120" alt="香港穷游锦囊" title="香港穷游锦囊"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://guide.qyer.com/hong-kong/" data-bn-ipg="guide-1-2" title="香港">香港</a></h3>
+
+      <p class="down" alt="下载" title="下载">346002</p>
+    </li>
+    <li>
+      <p class="pic">
+        <a target="_blank" href="http://guide.qyer.com/taste-of-hong-kong/" data-bn-ipg="guide-2-1"><img src="http://static.qyer.com/upload/Guide_Info/3d/ef/125/100_150.jpg" width="80" height="120" alt="香港美食穷游锦囊" title="香港美食穷游锦囊"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://guide.qyer.com/taste-of-hong-kong/" data-bn-ipg="guide-2-2" title="香港美食">香港美食</a></h3>
+
+      <p class="down" alt="下载" title="下载">185137</p>
+    </li>
+    <li>
+      <p class="pic">
+        <a target="_blank" href="http://guide.qyer.com/shopping-in-hk/" data-bn-ipg="guide-3-1"><img src="http://static.qyer.com/upload/Guide_Info/47/d1/148/100_150.jpg" width="80" height="120" alt="香港购物穷游锦囊" title="香港购物穷游锦囊"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://guide.qyer.com/shopping-in-hk/" data-bn-ipg="guide-3-2" title="香港购物">香港购物</a></h3>
+
+      <p class="down" alt="下载" title="下载">136069</p>
+    </li>
+  </ul>
+</div>
+<div class="pl_sldline2"></div>
+<div>
+  <div class="pl_title">
+    <h2 class="pl_title_name">关于香港的问题</h2>
+    <a href="http://ask.qyer.com/tag/%E9%A6%99%E6%B8%AF" data-bn-ipg="ask-more" class="pl_title_more" target="_blank" title="更多香港问题">更多</a></div>
+  <div class="ui_tab pl_aboutask">
+    <div class="ui_tab_trigger">
+      <ul>
+        <li class="ui_tab_trigger_item ui_tab_trigger_item_current"><a href="javascript:void(0);" data-bn-ipg="ask-new">最新问题</a></li>
+        <li class="gap">|</li>
+        <li class="ui_tab_trigger_item"><a href="javascript:void(0);" data-bn-ipg="ask-hot">热门问题</a></li>
+      </ul>
+    </div>
+    <div class="ui_tab_cnt">
+      <ul class="ui_tab_cnt_item ui_tab_cnt_item_current">
+        <li>
+          <a href="http://user.qyer.com/user_uid_2288460" target="_blank" class="pic" data-bn-ipg="ask-new-1-1"><img src="http://static.qyer.com/data/images/noavatar_small.gif" width="30" height="30" alt="芬达的美年达" title="芬达的美年达"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490992.html" data-bn-ipg="ask-new-1-2" title="关于香港签注">关于香港签注</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_2404574" target="_blank" class="pic" data-bn-ipg="ask-new-2-1"><img src="http://static.qyer.com/data/images/noavatar_small.gif" width="30" height="30" alt="leo0710" title="leo0710"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490970.html" data-bn-ipg="ask-new-2-2" title="各位穷游的游SER，我想请问一下两个人去香港，两夜三天，纯观光游玩为主。五千块够吗？">各位穷游的游SER，我想请问一下两个人去香港，两夜三天，纯观光游</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_2448079" target="_blank" class="pic" data-bn-ipg="ask-new-3-1"><img src="http://static.qyer.com/data/avatar/002/44/80/79_avatar_small.jpg" width="30" height="30" alt="千鹤猫猫" title="千鹤猫猫"/></a>
+
+          <p class="text">
+            <a target="_blank" href="http://ask.qyer.com/question/490878.html" data-bn-ipg="ask-new-3-2" title="深圳 --&amp;gt; 香港 --&amp;gt; 澳门 -- &amp;gt; 珠海 --&amp;gt; 广州 --&amp;gt; 深圳">深圳 --&amp;gt; 香港 --&amp;gt; 澳门
+              -- &amp;gt; 珠海 --&amp;g</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_2447410" target="_blank" class="pic" data-bn-ipg="ask-new-4-1"><img src="http://static.qyer.com/data/avatar/002/44/74/10_avatar_small.jpg" width="30" height="30" alt="温柔的林姐姐" title="温柔的林姐姐"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490847.html" data-bn-ipg="ask-new-4-2" title="请教：温州到香港、澳门过境问题">请教：温州到香港、澳门过境问题</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_1411789" target="_blank" class="pic" data-bn-ipg="ask-new-5-1"><img src="http://static.qyer.com/data/images/noavatar_small.gif" width="30" height="30" alt="chunterg" title="chunterg"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490805.html" data-bn-ipg="ask-new-5-2" title="关于香港市区预办登机">关于香港市区预办登机</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_2403305" target="_blank" class="pic" data-bn-ipg="ask-new-6-1"><img src="http://static.qyer.com/data/avatar/002/40/33/05_avatar_small.jpg" width="30" height="30" alt="汏寳_rita" title="汏寳_rita"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490777.html" data-bn-ipg="ask-new-6-2" title="香港签注问题">香港签注问题</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_2125385" target="_blank" class="pic" data-bn-ipg="ask-new-7-1"><img src="http://static.qyer.com/data/avatar/002/12/53/85_avatar_small.jpg" width="30" height="30" alt="cyn姐" title="cyn姐"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490617.html" data-bn-ipg="ask-new-7-2" title="從澳門經香港返內地 要香港簽證嗎?">從澳門經香港返內地 要香港簽證嗎?</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_1546311" target="_blank" class="pic" data-bn-ipg="ask-new-8-1"><img src="http://static.qyer.com/data/avatar/001/54/63/11_avatar_small.jpg" width="30" height="30" alt="森缇门徒" title="森缇门徒"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/490614.html" data-bn-ipg="ask-new-8-2" title="请问香港尖沙咀街边的那种摄影器材店是否靠谱？">请问香港尖沙咀街边的那种摄影器材店是否靠谱？</a></p>
+        </li>
+
+      </ul>
+      <ul class="ui_tab_cnt_item">
+        <li>
+          <a href="http://user.qyer.com/user_uid_1284819" target="_blank" class="pic" data-bn-ipg="ask-hot-1-1"><img src="http://static.qyer.com/data/avatar/001/28/48/19_avatar_small.jpg" width="30" height="30" alt="胡尕峰" title="胡尕峰"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/206750.html" data-bn-ipg="ask-hot-1-2" title="拿护照过关去香港或澳门，有哪些需要注意的么？">拿护照过关去香港或澳门，有哪些需要注意的么？</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_241546" target="_blank" class="pic" data-bn-ipg="ask-hot-2-1"><img src="http://static.qyer.com/data/images/noavatar_small.gif" width="30" height="30" alt="piaowait" title="piaowait"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/165107.html" data-bn-ipg="ask-hot-2-2" title="急！请问卡地亚手表香港和欧洲买哪里更便宜？">急！请问卡地亚手表香港和欧洲买哪里更便宜？</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_1197596" target="_blank" class="pic" data-bn-ipg="ask-hot-3-1"><img src="http://static.qyer.com/data/avatar/001/19/75/96_avatar_small.jpg" width="30" height="30" alt="aprilapple0426" title="aprilapple0426"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/197302.html" data-bn-ipg="ask-hot-3-2" title="求助，有没有人在香港买过意大利彩金？可以退货吗？">求助，有没有人在香港买过意大利彩金？可以退货吗？</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_193742" target="_blank" class="pic" data-bn-ipg="ask-hot-4-1"><img src="http://static.qyer.com/data/avatar/000/19/37/42_avatar_small.jpg" width="30" height="30" alt="华莲" title="华莲"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/177341.html" data-bn-ipg="ask-hot-4-2" title="请教达人: 香港机场免税店购物信用卡可以走银联路线吗?">请教达人: 香港机场免税店购物信用卡可以走银联路线吗?</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_172720" target="_blank" class="pic" data-bn-ipg="ask-hot-5-1"><img src="http://static.qyer.com/data/avatar/000/17/27/20_avatar_small.jpg" width="30" height="30" alt="totol412" title="totol412"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/160904.html" data-bn-ipg="ask-hot-5-2" title="【一解决】紧急！自泰国回来从香港入境的TX们不要走这条路了！下次拒签机会很大！">【一解决】紧急！自泰国回来从香港入境的TX们不要走这条路了！下次</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_51151" target="_blank" class="pic" data-bn-ipg="ask-hot-6-1"><img src="http://static.qyer.com/data/images/noavatar_small.gif" width="30" height="30" alt="septrain7" title="septrain7"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/1127.html" data-bn-ipg="ask-hot-6-2" title="请教一下，银联的借记卡在香港能刷卡消费吗？要手续费吗？谢谢~~">请教一下，银联的借记卡在香港能刷卡消费吗？要手续费吗？谢谢~~</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_461916" target="_blank" class="pic" data-bn-ipg="ask-hot-7-1"><img src="http://static.qyer.com/data/avatar/000/46/19/16_avatar_small.jpg" width="30" height="30" alt="skychan123" title="skychan123"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/103435.html" data-bn-ipg="ask-hot-7-2" title="香港机场A21巴士时间">香港机场A21巴士时间</a></p>
+        </li>
+        <li>
+          <a href="http://user.qyer.com/user_uid_135243" target="_blank" class="pic" data-bn-ipg="ask-hot-8-1"><img src="http://static.qyer.com/data/images/noavatar_small.gif" width="30" height="30" alt="catherine2007" title="catherine2007"/></a>
+
+          <p class="text"><a target="_blank" href="http://ask.qyer.com/question/12590.html" data-bn-ipg="ask-hot-8-2" title="请教内地居民在香港银行开户问题">请教内地居民在香港银行开户问题</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="mt20 tc"><a target="_blank" class="ui_buttonB" href="http://ask.qyer.com/addquestion" rel="nofollow" data-bn-ipg="ask-question">我要提问</a></div>
+  </div>
+</div>
+
+<div class="pl_sldline2"></div>
+<div>
+  <div class="pl_title">
+    <h2 class="pl_title_name">周边目的地</h2>
+  </div>
+  <ul class="pl_rimplace">
+    <li><a href="http://place.qyer.com/kinmen/" data-bn-ipg="place-1-1" class="pic"><img src="http://pic.qyer.com/album/user/422/95/RUtXSx8FYQ/index/80" width="48" height="48" alt="金门" title="金门"/></a>
+
+      <p class="title"><a href="http://place.qyer.com/kinmen/" data-bn-ipg="place-1-2" title="金门 Kinmen ">金门 Kinmen </a></p>
+
+      <p class="text"><span class="mr10">去过 <em class="fb">120</em></span><span class="mr10">景点 <em class="fb">0</em></span><span>问答 <em class="fb">10</em></span></p>
+    </li>
+    <li><a href="http://place.qyer.com/penghu/" data-bn-ipg="place-2-1" class="pic"><img src="http://static.qyer.com/images/place/no/poi_80_80.png" width="48" height="48" alt="澎湖" title="澎湖"/></a>
+
+      <p class="title"><a href="http://place.qyer.com/penghu/" data-bn-ipg="place-2-2" title="澎湖 Penghu">澎湖 Penghu</a></p>
+
+      <p class="text"><span class="mr10">去过 <em class="fb">52</em></span><span class="mr10">景点 <em class="fb">0</em></span><span>问答 <em class="fb">3</em></span></p>
+    </li>
+    <li><a href="http://place.qyer.com/macau/" data-bn-ipg="place-3-1" class="pic"><img src="http://static.qyer.com/album/1b9/89/2002978/80" width="48" height="48" alt="澳门" title="澳门"/></a>
+
+      <p class="title"><a href="http://place.qyer.com/macau/" data-bn-ipg="place-3-2" title="澳门 Macau">澳门 Macau</a></p>
+
+      <p class="text"><span class="mr10">去过 <em class="fb">22956</em></span><span class="mr10">景点 <em class="fb">175</em></span><span>问答 <em class="fb">2071</em></span></p>
+    </li>
+    <li><a href="http://place.qyer.com/tainan/" data-bn-ipg="place-4-1" class="pic"><img src="http://static.qyer.com/images/place/no/poi_80_80.png" width="48" height="48" alt="台南" title="台南"/></a>
+
+      <p class="title"><a href="http://place.qyer.com/tainan/" data-bn-ipg="place-4-2" title="台南 Tainan">台南 Tainan</a></p>
+
+      <p class="text"><span class="mr10">去过 <em class="fb">1026</em></span><span class="mr10">景点 <em class="fb">55</em></span><span>问答 <em class="fb">30</em></span></p>
+    </li>
+    <li><a href="http://place.qyer.com/kaohsiung/" data-bn-ipg="place-5-1" class="pic"><img src="http://static.qyer.com/album/12a/96/1971622/80" width="48" height="48" alt="高雄" title="高雄"/></a>
+
+      <p class="title"><a href="http://place.qyer.com/kaohsiung/" data-bn-ipg="place-5-2" title="高雄 Kaohsiung">高雄 Kaohsiung</a></p>
+
+      <p class="text"><span class="mr10">去过 <em class="fb">1883</em></span><span class="mr10">景点 <em class="fb">109</em></span><span>问答 <em class="fb">56</em></span></p>
+    </li>
+
+  </ul>
+</div>
+
+<div class="pl_sldline2"></div>
+<div>dd
+  <iframe id='ace533dd' name='ace533dd' src='http://ad.qyer.com/www/delivery/afr.php?zoneid=19&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='270' height='170'>
+    <a href='http://ad.qyer.com/www/delivery/ck.php?n=a8dd2a20&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ad.qyer.com/www/delivery/avw.php?zoneid=19&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a8dd2a20' border='0' alt=''/></a>
+  </iframe>
+</div>
+
+</div>
+<div class="pl_cont">
+
+
+<div class="pl_banner680 mb30" id="city_banner" style="display: none;">
+  <p class="close"></p>
+
+  <p class="cnt"><a href="http://app.qyer.com/cityguide/hong-kong/
+" target="_blank"><img src="http://pic.qyer.com/album/user/388/18/QkFdQxIGaQ/index" width="680" height="78" alt=""/></a></p>
+</div>
+
+<div>
+  <div class="pl_title">
+    <div class="fr">
+      <a style="display:none;" href="javascript:void(0);" url="http://user.qyer.com/album_action_upload_city_50" class="_jsuploadphoto"><img src="http://static.qyer.com/images/place/temp/feixiang.png" width="56" height="20" alt=""/></a>
+    </div>
+    <h2 class="pl_title_name pl_title_gap">图片</h2>
+
+    <h2 class="pl_title_name"><a href="http://place.qyer.com/hong-kong/map/" data-bn-ipg="map" target="_blank">地图</a></h2>
+  </div>
+  <div class="pl_focuspic">
+
+    <div class="pl_focuspic_big">
+      <p class="bigpic">
+        <a target="_blank" href="http://place.qyer.com/hong-kong/photo/" data-bn-ipg="photo-focus"><img src="http://static.qyer.com/album/user/213/10/Q0hWQxoGYg/500" alt="香港" title="香港" id="city-focus-img" width="500"/></a>
+      </p>
+
+      <p class="writer" id="focus_img_photoby"><span>PHOTO BY <a href="http://user.qyer.com/user_uid_284698" data-bn-ipg="photo-author" target="_blank">长牙的兔子</a></span></p>
+
+    </div>
+
+    <div class="pl_focuspic_right">
+      <ul class="pl_focuspic_list">
+        <li class="current" uid="284698" pid="5595">
+          <a href="javascript:void(0);" class="js_placesmallpic" data-bn-ipg="photo-list-1"><img src="http://static.qyer.com/album/user/213/10/Q0hWQxoGYg/80" data-src="http://static.qyer.com/album/user/213/10/Q0hWQxoGYg/500" username="长牙的兔子" userurl="http://user.qyer.com/user_uid_284698" alt="香港" title="香港" width="80" height="80"/></a><span class="mask"></span>
+        </li>
+        <li uid="1331543" pid="972">
+          <a href="javascript:void(0);" class="js_placesmallpic" data-bn-ipg="photo-list-2"><img src="http://static.qyer.com/album/169/e3/1857082/80" data-src="http://static.qyer.com/album/169/e3/1857082/500" username="Akkkkkkkkkki" userurl="http://user.qyer.com/user_uid_1331543" alt="香港" title="香港" width="80" height="80"/></a><span class="mask"></span>
+        </li>
+        <li uid="284698" pid="6489">
+          <a href="javascript:void(0);" class="js_placesmallpic" data-bn-ipg="photo-list-3"><img src="http://static.qyer.com/album/user/213/10/Q0hWQxoFYw/80" data-src="http://static.qyer.com/album/user/213/10/Q0hWQxoFYw/500" username="长牙的兔子" userurl="http://user.qyer.com/user_uid_284698" alt="香港" title="香港" width="80" height="80"/></a><span class="mask"></span>
+        </li>
+        <li uid="1396638" pid="6488">
+          <a href="javascript:void(0);" class="js_placesmallpic" data-bn-ipg="photo-list-4"><img src="http://static.qyer.com/album/user/357/14/QkxSQx4BaQ/80" data-src="http://static.qyer.com/album/user/357/14/QkxSQx4BaQ/500" username="shenhah" userurl="http://user.qyer.com/user_uid_1396638" alt="香港" title="香港" width="80" height="80"/></a><span class="mask"></span>
+        </li>
+      </ul>
+      <div class="pl_focuspic_add"><a href="javascript:void(0);" url="http://user.qyer.com/album_action_upload_city_50" class="btn _jsuploadphoto" data-bn-ipg="photo-add"><span>添加这里的照片</span></a></div>
+      <div class="pl_focuspic_more"><a target="_blank" href="http://place.qyer.com/hong-kong/photo/" data-bn-ipg="photo-more">更多照片 （<em class="fb">21855</em>张）</a></div>
+    </div>
+    <div class="cb"></div>
+  </div>
+</div>
+
+
+<div id="citycommenttop" class="mt30"></div>
+
+
+<div>
+<div class="pl_title pr">
+  <h2 class="pl_title_name">热门目的地</h2>
+  <a href="http://place.qyer.com/hong-kong/sight/" class="pl_title_more" data-bn-ipg="poi-more" title="更多香港景点">更多</a>
+
+  <p class="pl_title_poisort"><a href="http://place.qyer.com/hong-kong/sight/" class="spot" title="景点" data-bn-ipg="poi-spot">景点</a>
+    <a href="http://place.qyer.com/hong-kong/activity/" class="exp" title="体验" data-bn-ipg="poi-exp">体验</a>
+    <a href="http://place.qyer.com/hong-kong/transportation/" class="traffic" title="交通" data-bn-ipg="poi-traffic">交通</a>
+    <a href="http://place.qyer.com/hong-kong/hotel/" class="hotel" title="住宿" data-bn-ipg="poi-hotel">住宿</a>
+    <a href="http://place.qyer.com/hong-kong/shopping/" class="shop" title="购物" data-bn-ipg="poi-shop">购物</a>
+    <a href="http://place.qyer.com/hong-kong/food/" class="cate" title="美食" data-bn-ipg="poi-cate">美食</a>
+  </p>
+</div>
+<ul class="pl_poibox clearfix">
+<%  @hot_place.each do |p| %>
+<li class="item">
+  <div class="pic">
+    <a href="<%= place_url p.id %>" target="_blank" ><%=image_tag(p.img_path,{:width=>'200px',:height=>'113px',:alt=>p.name})%></a>
+  </div>
+  <div class="title"><a href="http://place.qyer.com/poi/59047/" target="_blank" ><%= p.name %></a></div>
+  <div class="grade"><p alt="四星" title="四星">
+    <img src="http://static.qyer.com/images/place/four/poi_star.png" alt=""/><img src="http://static.qyer.com/images/place/four/poi_star.png" alt=""/><img src="http://static.qyer.com/images/place/four/poi_star.png" alt=""/><img src="http://static.qyer.com/images/place/four/poi_star.png" alt=""/><img src="http://static.qyer.com/images/place/four/poi_star_null.png" alt=""/><span class="ml10">点评 129</span>
+  </p></div>
+  <div class="wantbeen">
+    <span title="想去" class="pl_poiwant" id="poi_doing_planto_59047" onclick="poilistdoings(59047,'planto','want')" doings="" data-bn-ipg="poi-average-1-3">388</span><span title="去过" class="pl_poibeen" id="poi_doing_beento_59047" onclick="poilistdoings(59047,'beento','been')" doings="" data-bn-ipg="poi-average-1-4">1841</span>
+  </div>
+</li>
+<% end %>
+</ul>
+</div>
+<div class="pl_sldline2"></div>
+<div>
+<div class="pl_title">
+  <h2 class="pl_title_name">热门目的地</h2>
+  </div>
+
+<ul class="pl_bbsbox clearfix js_placeplan_ul">
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-774795-1.html" data-bn-ipg="travelnotes-average-1-1"><img src="http://pic.qyer.com/album/user/418/80/RUhdShoCYw/index/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="橫穿亞洲筆記" title="橫穿亞洲筆記"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_1207079" data-bn-ipg="travelnotes-average-1-3"><img src="http://static.qyer.com/data/avatar/001/20/70/79_avatar_small.jpg" width="48" height="48" alt="张暗"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-774795-1.html" data-bn-ipg="travelnotes-average-1-2">橫穿亞洲筆記</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-03-08</span><span class="bbsview" title="查看">48253</span><span class="bbsreply" title="回复">690</span><span class="bbslike" title="喜欢">75</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_1207079" data-bn-ipg="travelnotes-average-1-4">张暗</a></span></div>
+    </div>
+    <div class="bbstext1"> 本帖最后由 张暗 于 2013-3-22 18:48 编辑 開篇
+
+
+      我會跟別人說這將是我一生的記憶。但事實上，才過去一年，很多去過的地方、很多發生的故事、很多遇見的人，細節都已經開始模糊。我努力抓住漸漸遠去的那些記憶，才把它們拼湊到一起。這樣我就能記得，七年前我曾想要做的事，如今我們終於做成了，而且加倍地做成了。
+
+      我和99分別從上海出發，在深圳匯合，從2012年3月8日到2013年2月3日，歷時332天，行程5萬5千余公里，一起一路走過香港、澳門、越南、柬埔寨、泰國、老撾、雲南、西藏、尼泊爾、印度、斯里蘭卡、伊朗、亞美尼亞、卡拉巴赫、格魯吉亞、土耳其、黎巴嫩、約旦、埃及，又重返斯里蘭卡、泰國和澳門，終於完成了我們的橫穿亞洲之旅。
+
+
+      去年的今天我們踏上旅程，今年的今天開此貼，追憶那些在路上的日子。
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <span class="label icon_essence">精华</span><a target="_blank" href="http://bbs.qyer.com/thread-743964-1.html" data-bn-ipg="travelnotes-essence-2-1"><img src="http://static.qyer.com/album/user/299/75/Q0BcRR8GaQ/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="再不吃，我们就瘦了——Biu肥的香港食记" title="再不吃，我们就瘦了——Biu肥的香港食记"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_1409699" data-bn-ipg="travelnotes-essence-2-3"><img src="http://static.qyer.com/data/avatar/001/40/96/99_avatar_small.jpg" width="48" height="48" alt="Biu肥肥"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-743964-1.html" data-bn-ipg="travelnotes-essence-2-2">再不吃，我们就瘦了——Biu肥的香港食记</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2012-11-13</span><span class="bbsview" title="查看">130147</span><span class="bbsreply" title="回复">308</span><span class="bbslike" title="喜欢">166</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_1409699" data-bn-ipg="travelnotes-essence-2-4">Biu肥肥</a></span></div>
+    </div>
+    <div class="bbstext1"> 本帖最后由 Biu肥肥 于 2013-5-3 12:05 编辑 在此先打个小广告，刚出的：香港美食穷游锦囊 新鲜热辣哟！
+
+
+      Biu肥就是一名吃货撚，港漂一枚。本来人生的道路是想往文艺青年的方向上靠，无奈天资不够，又交了一批损友，就落下了一个爱吃还吃得挑剔的毛病，在此特别感谢Y小姐和朱二。小时候傻傻地认为香港的东西都好吃，如今吃过香港的大街小巷，散尽了荷包中的粮钱，才知道原来不是家家的菠萝包都好吃得能让人飞上天，也不是家家的奶茶都拉得跟港女腿上的丝袜那样滑溜。
+
+      每当自己去别的地方旅行，要是吃的不称心那整个旅行都会不如意，那来香港玩的朋友本来都作好遇见天堂的准备了，若见到的是地狱那该多么伤心。不如开个帖讲讲这些年吃过的餐馆，顺便通过吃饭这件普通的小事记录分享自己酸甜苦辣的生活。
+
+
+      PS：味道生长于每个人的记忆和生活里，还是挺主观的，不同意见欢迎回复！
+
+      Page 1
+      便宜又好吃的烧味 再兴烧腊饭店 2楼 45楼
+      港式蛋挞名店 泰昌饼家VS檀岛咖啡饼店 3楼
+      24小时不打烊 翠华餐厅 4楼
+      冷热皆宜双皮奶 港澳义顺牛奶公司 8楼
+
+      Page 2
+      平价米其林餐厅 添好运点心专门店 18楼
+      明星云集 华星冰室 22楼
+
+      Page 3
+      潮人文艺范儿宵夜 小甜谷 31楼
+      家庭的味道 谷妈妈 35楼
+      2013年米芝莲香港指南 41楼
+
+      Page 4
+      2013年米芝莲澳门指南 48楼
+      最新鲜 Lab Made 分子雪糕专门店 52楼
+      香港No.1日式拉面 豚王 57楼
+
+      Page 5
+      奶茶始祖 兰芳园 62楼
+      朱古力迷必试 Awfully Chocolate 75楼
+      法国经典马卡龙 Ladurée 82楼
+
+      Page 8
+      可爱姑娘教学 李酥酥教你说粤语 114楼
+      怀旧香港小零食 砵仔王 130楼
+
+      Page12
+      外来的和尚会不会念经？ 澳门大利来猪扒包香港分店 180楼
+
+      Page14
+      大隐隐于市 红白格桌布上的美味 ABC Kitchen 205楼
+
+      Page16
+      卖出几十万个的牛角酥 Urban Bakery 232楼
+
+      Page17
+      小吐槽 Monster Sushi 249楼
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-590722-1.html" data-bn-ipg="travelnotes-average-3-1"><img src="http://static.qyer.com/album/12a/5f/1109129/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="(申精）三个穷鬼的6天香港非常规旅程超省钱详细攻略" title="(申精）三个穷鬼的6天香港非常规旅程超省钱详细攻略"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_1236339" data-bn-ipg="travelnotes-average-3-3"><img src="http://static.qyer.com/data/avatar/001/23/63/39_avatar_small.jpg" width="48" height="48" alt="wanglidong1900"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-590722-1.html" data-bn-ipg="travelnotes-average-3-2">(申精）三个穷鬼的6天香港非常规旅程超省钱详细攻略</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2012-03-14</span><span class="bbsview" title="查看">304577</span><span class="bbsreply" title="回复">432</span><span class="bbslike" title="喜欢">123</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_1236339" data-bn-ipg="travelnotes-average-3-4">wanglidong...</a></span></div>
+    </div>
+    <div class="bbstext1"> 本帖最后由 wanglidong1900 于 2012-8-1 01:14 编辑
+      自己不是有钱人，所以旅游的时候一直坚持又玩好又省钱的原则，近几个月才发现穷游网，看到有这么多和自己志同道合的朋友，有着和自己一样的爱好，也想要把以前穷游的经历和大家一起分享。凭着自己的记忆，把自己和朋友2010年11的香港穷游晒出来，给想去香港的朋友一些经验吧！相信大家看过不少香港的旅游攻略不外乎就是海洋公园、迪斯尼、大屿山、对我来讲太老套，无无法深入香港人的生活，无法了解香港社会！所以那些景点都没去（动辄上百的票价太贵---也没闲钱去不符合穷游的理念:lol
+      )，所以和两位好友共同计划了一次另类的香港之旅！！！ 大家往下瞧好----
+      我从内蒙古呼和浩特出发火车和先到的朋友在深圳会面，各位从不同的出发地走到深圳路费都不同，我就不记呼和浩特---深圳的火车票钱了，和朋友会合后公交车一起前往罗湖口岸
+      ，各位要拿港澳通行证在当地的公安部门出入境管理处办理就可以了，我以前有通行证，我两个朋友没有现办的花费了200多元吧，一定要记住把身份证和户口本原件带上，最好在现场拍照片，省得自己找好照片去办证不符合规定就麻烦了，太费事。出证大概一周左右，最好提前办不要搞得时间太紧张。
+      我所在的内蒙古呼和浩特市是非自由行城市，这点大家一定要注意，办好通行证出签注是L签(团队旅游），想去澳门的朋友可以香港澳门一起签，已有通行证的朋友注意-----再次签注一定要在通行证有效期半年以上！！！我才不会去跟什么旅行团，非自由行地区的朋友不要担心，只要想去没有办不成的事。
+      拿好通行证到口岸，有很多旅行社办理L签送关，可以随便找一个办理送关服务的旅行社搞价让他把你送过关，其实就是把你编到旅游团里把你送过去，自己回来就行了，一般是明码标价100元左右，我们搞价50元/人，网上说最低有20几元就可送关的，我没有遇到。
+      没去过香港的朋友看看口岸吧！
+      找送关的旅行社
+
+      传说中的深圳河
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-769766-1.html" data-bn-ipg="travelnotes-average-4-1"><img src="http://static.qyer.com/album/user/337/18/QkpSQxIBYw/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="给我15天！广州小情侣教你不用5000塊就可以環遊台灣！" title="给我15天！广州小情侣教你不用5000塊就可以環遊台灣！"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_1475917" data-bn-ipg="travelnotes-average-4-3"><img src="http://static.qyer.com/data/avatar/001/47/59/17_avatar_small.jpg" width="48" height="48" alt="JM猫的森林的猫"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-769766-1.html" data-bn-ipg="travelnotes-average-4-2">给我15天！广州小情侣教你不用5000塊就可以環遊台灣！</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-02-20</span><span class="bbsview" title="查看">35396</span><span class="bbsreply" title="回复">205</span><span class="bbslike" title="喜欢">70</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_1475917" data-bn-ipg="travelnotes-average-4-4">JM猫的森林...</a></span></div>
+    </div>
+    <div class="bbstext2"> 本帖最后由 JM猫的森林的猫 于 2013-2-24 22:53 编辑 Thenea寫在前面大家好，我叫Thenea，也可以叫我JM，我跟Nelson自助旅行第四年了，國內國外的地方也去過不少。我們兩個人都是自虐型旅行的（也可能只是我一個人不過我逼著他陪我=
+      =），因為還是大學生，沒有收入，可是寒暑二假五一十一都不放過旅遊機會，所以實習什麽的東西當然是沒有的。可是你也知道，現在年輕人年輕氣盛，總想做點什麽證明自己，所以，我們在旅行的時候也不只是吃喝玩樂的奢靡生活。我們會拍照片做圖冊，會拍視頻做微電影（不過還是菜鳥一枚，技術很一般），會回答周邊朋友的疑問，也會寫下遊記或者攻略。可是，你不認識我，能來這裡看，也想必是要趕著出門或者想出門的，所以也沒時間看我嘮叨。所以，我必須在此先聲明幾點，以防各位邊看邊罵寫的都是廢話我就邊打噴嚏就不好了哈哈~
+      1.
+      作為自虐型旅行人才（怎麼有這種人才。。。），我們住的就算不是當地最便宜的，也不會是比最便宜貴很多，除非真的有特殊情況，平常的話Nelson說“咱們住好點吧”的時候我會一口回絕。這次我們所住的地方在視頻裏面都有出現過（包括機場。。。誒大家別走啊。。。聽我說啊。。。），我真的覺得是很不錯的地方了！我的標準只有兩個：地理位置好+便宜，所以我在尼泊爾的時候住28RMB一晚的雙人標間。可是台灣就算再便宜的住宿，衛生還是有保障的（起碼我這樣認為），不過，想要住得舒服的同學，住宿這部份，還是不要參考了。（你們可以腦補一下在泰國悻悻地把大行李抬上六樓風扇房的人就是我們）我有住過日租房那又怎樣。。。。別拍我啊。。沒錢啊因為！我去香港也是住廟街，經常看到走來走去的大叔和女伴。。。。我對住要求真的不高，但儘管便宜，台灣感動我了！
+      2.
+      本人是喜歡吃素的人，雖然不代表我不吃肉，但是也比一般人少。而通常吃素的價錢會比吃肉便宜，所以我每頓飯基本上都是Nelson價格的一半。可是，我們也沒有特別省，有時會闊那麼一兩頓，而且一天吃也當然不止三頓。可是無論吃素吃肉都好，我們遵循的原則都是：我們是學生沒有收入不能這樣亂花錢啊，所以你們還是看著辦。至於想在吃方面省的同學，我介紹一個不太健康的方法（呃。。。。）：每天都是8-9點再出門，出門的時候暗示自己：“啊！好晚了快點趕路”，除非遇到真的很香或者很想吃的都不要停下來，差不多中午的時候就可以吃飽一點了。。。。（大家拍得輕一點）
+      3.
+      在異國他鄉省錢其實也是有辦法的，就是不要換那麼多。。。。。（廢話）。。不是的，我們除了第一次會換5天左右的花費之外，之後的日子都會一人兩三百那樣換。你可能會說這樣手續費很貴，但是我們算過了，如果手裡拿著很多錢，就會忍不住覺得自己還有餘地可以花，不斷說服自己要好吃好喝的，結果很快就會用完；另一種情況是，換很多，然後花不完，剩下的都不知道是換回來還是花完好了，兩種都是要花額外的錢。其實手續費也最多是十來塊（我們窮人，最多也換不了多少，白富美繞道），虧不了那麼多。
+      4.
+      還有就是5000塊人民幣（可能還會超200-300）是含機票（1500）+入台證(295)+大通證+衣食住行+一部份伴手禮的，但是！不包括誠品買書和優衣庫買減價羽絨服的。
+      5.
+      好吧大家應該知道我們有多摳門了，所以不合你胃口的可以趕緊看別的遊記了，如果還是堅持到底的，那我們開始吧。
+
+      下面是人均花費的分佈圖，台灣吃食、交通什麽的都挺便宜，唯獨住宿貴，住宿能省的，整體下來就會省很多。我們這次人均5000塊左右，除了部份伴手禮之外都包在裏面了，下面可以看看詳細分佈。其實旅行預算有時真的很沒譜，因為每個人要求都不一樣，像我這種寧願在吃、住方面省點錢，而且又不喜歡人擠人的景點的行程，應該不太適合大部份人。機票（1500RMB）、每日住宿（共1211.5RMB一個人）的介紹下面都有寫到，先看看，有不清楚的再留言吧，我都會一一回覆。
+
+
+      請多多支持！愛你們！送上此行製作的視頻
+
+      字幕在這裡
+      台灣環島旅行 Le voyage de Taiwan僅以此片紀念Nelson和Thenea自助旅行第四年
+      順時針環島旅行15個日夜，在世界最美的捷運站吵架，然後在下一個鏡頭和好。
+      我們住日式民宿、住乾淨的旅館，又或者警光會館、九人間，但我們最愛機場，因為沒有比這樣更省錢。
+      我們坐摩天輪看日落，不過嚇到哭才是真相。
+      四公里以下的路我們基本靠走，不過也不會放過有趣的交通工具。我們像其他觀光客一樣去看天燈，看見印章也從不放過。不過我們還會拍獨一無二的寶麗來。
+      我們嘗盡台灣美食，不管好吃的，還是難以接受的。
+      我們在台灣人早已不屑一顧的太平洋列車上手舞足蹈，也會在崎嶇的山路上無精打彩。
+      看不可思議的美景，感受在路上的快樂憂愁。感謝我們，讓我們看到更大更美的世界。
+      文字：Thenea
+
+
+      http://www.tudou.com/programs/view/yB8xehG-hc4/
+
+
+      視頻拍攝: Nelson(@Nelson_lUk) &amp;amp; Thenea(@JM貓的森林的貓)視頻剪輯:Thenea背景音樂: Just you and me by Zee Avi (Remix Version)
+      English Version
+
+      Travel clockwise around Taiwan in 15 days
+
+      We tiff everyday,
+      but make it up before the next minute.
+
+      We choose Japanese tatami, clean and tidy rooms,
+      as well as guest house, doom.
+      But we love sleeping in the airport the most,
+      for it is the cheapest way.
+
+      We enjoy watching sunset just like other lovers,
+      but unfortunately, not in the ferris wheel.
+
+      We mostly walk to the destination,
+      but never miss any interesting vehicle
+
+      We act like most of other visitors,
+      and we are crazy about all kinds of souvenirs.
+      But we also have our own memory.
+
+      We try all kinds of Taiwanness snacks,
+      no matter delicious,
+      or miserable.
+
+      We dance in front of the Pacific Ocean,
+      and depressed by the hard journey.
+
+      Enjoy the unimaginable landscape hand in hand,
+      share the happiness and sorrow with each other.
+
+      Thank you, for travelling with me.
+
+      by Thenea
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>台北</span><span class="to">&gt;</span><span>平溪线</span><span class="to">&gt;</span><span>台北</span><span class="to">&gt;</span><span>九份</span><span class="to">&gt;</span><span>金瓜石</span><span class="to">&gt;</span><span>花蓮</span><span class="to">&gt;</span><span>花莲</span><span class="to">&gt;</span><span>恒春</span><span class="to">&gt;</span><span>垦丁</span><span class="to">&gt;</span><span>鹅銮鼻</span><span class="to">&gt;</span><span>后壁湖</span><span class="to">&gt;</span><span>关山</span><span class="to">&gt;</span><span>高雄市</span><span class="to">&gt;</span><span>台南市</span><span class="to">&gt;</span><span>嘉义</span><span class="to">&gt;</span><span>阿里山</span><span class="to">&gt;</span><span>嘉义</span><span class="to">&gt;</span><span>新烏日</span><span class="to">&gt;</span><span>台北</span>
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <span class="label icon_essence">精华</span><a target="_blank" href="http://bbs.qyer.com/thread-569570-1.html" data-bn-ipg="travelnotes-essence-5-1"><img src="http://static.qyer.com/album/13f/d0/1051449/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="圆自己个童话般的梦——12年春港澳自助7日游详细攻略游记" title="圆自己个童话般的梦——12年春港澳自助7日游详细攻略游记"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_739180" data-bn-ipg="travelnotes-essence-5-3"><img src="http://static.qyer.com/data/avatar/000/73/91/80_avatar_small.jpg" width="48" height="48" alt="tracyrain920"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-569570-1.html" data-bn-ipg="travelnotes-essence-5-2">圆自己个童话般的梦——12年春港澳自助7日游详细攻略游记</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2012-02-06</span><span class="bbsview" title="查看">279994</span><span class="bbsreply" title="回复">922</span><span class="bbslike" title="喜欢">68</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_739180" data-bn-ipg="travelnotes-essence-5-4">tracyrain9...</a></span></div>
+    </div>
+    <div class="bbstext2"> 本帖最后由 tracyrain920 于 2013-5-27 15:58 编辑 亲爱的各位朋友，近期由于楼主的身体原因，不能经常上网，没想到朋友对我还是那么支持，谢谢大家，小女子这厢有礼了！对于不能及时回复的驴友楼主深表歉意，如果急用攻略而楼主未回复，楼主建议大家可以向已经发送过攻略的朋友索要，大家互相帮忙嘛！再次祝所有朋友旅途愉快！
+      序：
+      去年下半年手术后身体的不适让我要BB的计划足足推迟了一年，于是决定再许自己疯一年。本打算放假后去东北漠河感受那零下40度的极寒，踩踩那传说中深达一米的积雪，无奈最终还是因为担心自己身体的承受能力进而转战气候宜人的香港澳门！向来不喜欢独行，身边有个伴总让人觉得踏实，此次自然不能例外，老公年前忙去不了，于是约了知己好友，一起同行的还有她7岁的宝贝“小程”，往返七天——我们三人在香港澳门留下了快乐的足迹，也圆了自己个童话般的梦。
+      目的地定好，首要的任务自然是先办港澳通行证，之后便是订机票及酒店。通行证的办证效率是我始料未及的，办理去澳洲的签证才需要五个工作日，但搞不明白为什么港澳通行证却要14天，正是因为这“龟速”的办证效率，让我们每人的往返机票贵了300多米，不过还好，因为买机票时间早，我们还是买到了价格比较合理的机票，加税往返每人约1800（要知道如果再早些能买到往返加税1200多的机票的，合适呀！）。
+      机票是从东航官网直接预订的，因为它家有从济南直飞香港的航班，带着小孩一切从简，很多人会选择从深圳往返出入镜，其实算算除了浪费时间并不能节省多少钱。在济南的朋友如果想去还是时刻关注航班信息比较好，省钱省力，关键节约时间，我在东航官网订票时发现同一天出发的飞机，返回时间不同相应的价格也会有变化，而周六出发次周五返回的航班往往是时间合理且价格最合适的，于是通行证办下来后，没有犹豫马上将机票拿下，接下来就是订酒店。
+      看了很多前辈们的经验，攻略，在香港这种寸土寸金的地方，对于宾馆的面积我是有心理准备的，只是对价格预计不足。去年朋友去港时大概是淡季的缘故，又不是星级酒店，所以200多每晚的价格在我看来相当的合适。只是这次我们出行身边有孩子，朋友也有些小洁癖，所以决定住得要好一些。正值春节前夕，到网上一搜，头一下子大了，跟朋友商量后，住宿的预算由原来的200多一晚慢慢涨到了800元一晚。接着我查找对比了几乎所有我知道的中外订房网站，功夫不负有心人，终于在HOTELTRAVEL订房网我订到了位置好，价格又合适的4星级酒店——位于油麻地A2出口的香港城景国际酒店，只不过需要用美元来支付，用双币信用卡就没问题了，最终6晚豪华房价格合RMB4100，每晚600元多一点儿，对于这个价格我们心满意足，虽算不上节省，但心理上也能接受。（现在去大概4、500元RMB就能搞定）
+
+      订房期间幸运得很，本人也很意外，被穷游网选作“穷游大使”，这可能是对我穷游首贴码九万多字的回报吧！我免费收到了向往以久的“穷牌”及“穷T”，有些受宠若惊啊！终于可以带着“穷牌”上路了。作为“穷游大使”自然此次港澳自助游也要贯彻“穷游”的精神，接下来的工作就是订好游玩地点，能省则省，提前把所有景点的门票也提前买了，省了很多米。
+      一切准备就绪，伴着快乐，带着“穷牌”，携着好友向目的地出发……
+      日程安排：
+      14（周六）第一天：半天：星光大道、海港城和码头，香港太空馆、艺术馆
+      15（周日）第二天：东荟城——&amp;gt;旺角购物
+      16（周一）第三天：迪士尼一日游
+      17（周二）第四天：澳门一日游，晚上看咏香江。 第二部分
+      18（周三）第五天：海洋公园、太平山缆车山、顶蜡像馆、太平山顶赏夜景。
+      第五天第二部分（813楼）第五天全部更新完毕
+      19（周四）第六天：湾仔会议展览中心、紫荆广场，步行湾仔至中环——&amp;gt;昂坪缆车、大佛——&amp;gt;大澳渔村
+      20（周五）第七天：机场免税店，返回济南
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>济南--香港</span><span class="to">&gt;</span><span>香港</span><span class="to">&gt;</span><span>澳门</span><span class="to">&gt;</span><span>香港</span><span class="to">&gt;</span><span>香港--济南</span></div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-797596-1.html" data-bn-ipg="travelnotes-average-6-1"><img src="http://pic.qyer.com/album/user/384/39/QkFRQRMBZg/index/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="2013年五一带着全家六口人香港澳门六日纯玩之旅（全文完）" title="2013年五一带着全家六口人香港澳门六日纯玩之旅（全文完）"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_122935" data-bn-ipg="travelnotes-average-6-3"><img src="http://static.qyer.com/data/avatar/000/12/29/35_avatar_small.jpg" width="48" height="48" alt="shangerila"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-797596-1.html" data-bn-ipg="travelnotes-average-6-2">2013年五一带着全家六口人香港澳门六日纯玩之旅（全文完）</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-05-10</span><span class="bbsview" title="查看">8933</span><span class="bbsreply" title="回复">99</span><span class="bbslike" title="喜欢">6</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_122935" data-bn-ipg="travelnotes-average-6-4">shangerila</a></span></div>
+    </div>
+    <div class="bbstext2"> 本帖最后由 shangerila 于 2013-5-17 15:39 编辑
+      由于关注了白菜价的微博，看着他一直发布的航班优惠信息，蠢蠢欲动地想带2岁半的小宝去迪斯尼，在3月的一个周末预定了5.1-6.的上海-香港来回航班，每成人优惠300块，1267元拿下，小宝倒反而贵，要1380元，因为小宝不能单独出票，一定得跟大人一起出票，每单优惠300，所以小宝的票其实没有优惠到，不过以这种价格拿下我已经很满意了。
+
+      除了lg和小宝，我们其他几位都或多或少地玩过香港，十年前我跟团住的铜锣湾，所以这次想住一下尖沙咀。询问朋友香港酒店价格，都说我5、600的预算连江浙一带都住不到，更别说寸土寸金的尖沙咀了，于是预算一下提到了1000以上。比较了几家后通过淘宝预定了金域假日酒店，房间位置很好，地铁尖沙咀站N5出口对面就是，房间也没有其他酒店的那么小，放了两张床空间还很富裕，1300的房价值，但香港房价真心贵。
+      最后一晚入住迪斯尼，没有太多选择，预定了口碑更好的乐园酒店，1750一晚成交，看外观的确比好莱坞酒店气派。
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>上海-香港</span><span class="to">&gt;</span><span>香港</span><span class="to">&gt;</span><span>香港-澳门-香港</span><span class="to">&gt;</span><span>香港</span><span class="to">&gt;</span><span>香港-上海</span></div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <span class="label icon_essence">精华</span><a target="_blank" href="http://bbs.qyer.com/thread-751274-1.html" data-bn-ipg="travelnotes-essence-7-1"><img src="http://static.qyer.com/album/user/328/26/QktdQBwHaQ/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="跟我走吧--（全文完）九岁贝贝牵乐爸手看斑斓世界" title="跟我走吧--（全文完）九岁贝贝牵乐爸手看斑斓世界"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_1166640" data-bn-ipg="travelnotes-essence-7-3"><img src="http://static.qyer.com/data/avatar/001/16/66/40_avatar_small.jpg" width="48" height="48" alt="天乐在路上"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-751274-1.html" data-bn-ipg="travelnotes-essence-7-2">跟我走吧--（全文完）九岁贝贝牵乐爸手看斑斓世界</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2012-12-10</span><span class="bbsview" title="查看">28508</span><span class="bbsreply" title="回复">792</span><span class="bbslike" title="喜欢">14</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_1166640" data-bn-ipg="travelnotes-essence-7-4">天乐在路上</a></span></div>
+    </div>
+    <div class="bbstext1"> 本帖最后由 天乐在路上 于 2013-3-28 10:56 编辑
+      请叫我贝贝，我爸叫天乐，我是天乐的福娃贝贝
+      我出生的城市有座黄鹤楼，它因一首诗成名至今。也许爸爸受了广游的诗人影响，喜欢到处走走停停，而我得了爸爸的遗传，还在妈妈肚子里就喜欢跟着他们到处玩
+      爸爸说旅行是一种丰富人生的方式,于是今年刚十岁的我便走了很远很远的路，用我的小脚去踩到了祖国地图上东西南北角的四个指针，用我的小手去触摸恒河的水流和太平洋的沙粒。
+      因此，我的童年可是五彩斑斓的童话世界真实版哦，有时候我会分不清幼儿园里老师手里的雪花纸片跟长白山滑雪场天空中飘舞的晶莹雪花谁更美丽；偶尔会在小学课堂上凭记忆绘出在香格里拉村庄上空呈现的彩虹...我觉得这样长大很好，我用心读书也快乐出游，在认知这个世界的过程中，书本跟现实离得更近，历史在时空的转换中变得生动,在成长的路上爸爸陪我用心记录，在行走中我将度过从童年到少年的美好时光。
+
+      我叫天乐，是贝贝的老爸
+      这之前，我是个说走就走的单身旅客，有了我的福娃贝贝后，带着小小的她看世界，成了我最大的心愿。我用镜头记录行程点滴，但并不刻意；我不做计划没有攻略，只要走出去，哪里都是风景；我习惯与当地人交流，接触才能融入；我牵着贝贝的小手一路快乐前行，陪她用一双清澈的眼睛看世界，一颗童心学生活。一父一女的身影游走在各地，我们在看风景的同时，也成为别人眼中一道温情的风景。
+      仓惶间，倍感白驹易逝岁月如流，孩子一天天长大，一定要记录下些什么，不为流逝的过往，不为矫情的岁月，只为白发斑斑时翻看记忆，还能欣慰于陪着孩子一路成长的过程尚留一些色彩斑斓。 这些图文也许没有详尽的线路计划，细致的行程说明，唯一不缺的就是笑脸。爱笑的贝贝，开放的世人，都是让我端起镜头的动力；记录生活的色彩，记录旅行的快乐，这便是贝贝和乐爸眼里的世界：
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-745565-1.html" data-bn-ipg="travelnotes-average-8-1"><img src="http://static.qyer.com/album/user/320/17/QktVQx0PaQ/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="【辞职度蜜月】8万块，70天，10个亚欧国家 第九站：土耳其" title="【辞职度蜜月】8万块，70天，10个亚欧国家 第九站：土耳其"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_1354444" data-bn-ipg="travelnotes-average-8-3"><img src="http://static.qyer.com/data/avatar/001/35/44/44_avatar_small.jpg" width="48" height="48" alt="糖豆为爱旅行"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-745565-1.html" data-bn-ipg="travelnotes-average-8-2">【辞职度蜜月】8万块，70天，10个亚欧国家 第九站：土耳其</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2012-11-19</span><span class="bbsview" title="查看">38596</span><span class="bbsreply" title="回复">180</span><span class="bbslike" title="喜欢">53</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_1354444" data-bn-ipg="travelnotes-average-8-4">糖豆为爱旅...</a></span></div>
+    </div>
+    <div class="bbstext1"> 本帖最后由 糖豆为爱旅行 于 2013-5-30 20:05 编辑 【辞职度蜜月】8万块，70天，10个亚欧国家（第九站：土耳其）
+
+      2012年，我们结婚了，婚假只有十天，想了想去哪都不够用。为了能留给自己一个难忘的蜜月，我们决定辞职度蜜月。从8月2日出发，到10月10日回来，历时70天。我们走过了中国香港、越南、柬埔寨、泰国、希腊、意大利、瑞士、法国、土耳其和中国新疆，共计十个国家和地区。总计花费不到8万块人民币。
+      我们在东南亚旅行的时候，开始在东南亚板块写我们的旅行，因为时间原因没有持续更新。现在归来，将一气把我们的故事和沿途美景发上来，和大家一起分享。也算是对一路使用穷游锦囊的回报吧。
+      由于旅行的国家涉及亚洲和欧洲，也不知道该发到哪里，就先亚洲多国和欧洲多国一并发了。
+      同时，也欢迎大家关注我们的新浪微博@糖豆为爱旅行。
+
+      一点点说明：本贴中所有照片均为辛苦拍摄，欢迎大家引用，但请保留水印，谢谢。
+
+
+    </div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <span class="label icon_essence">精华</span><a target="_blank" href="http://bbs.qyer.com/thread-632281-1.html" data-bn-ipg="travelnotes-essence-9-1"><img src="http://static.qyer.com/album/user/254/67/Q0xRRB0GYg/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="❀双城记@香港❀  ▊多图引爆~饕餮美食&amp;amp;TVB式暴走▊ 完！" title="❀双城记@香港❀  ▊多图引爆~饕餮美食&amp;amp;TVB式暴走▊ 完！"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_757848" data-bn-ipg="travelnotes-essence-9-3"><img src="http://static.qyer.com/data/avatar/000/75/78/48_avatar_small.jpg" width="48" height="48" alt="莫飞"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-632281-1.html" data-bn-ipg="travelnotes-essence-9-2">❀双城记@香港❀ ▊多图引爆~饕餮美食&amp;amp;TVB式暴走▊ 完！</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2012-06-03</span><span class="bbsview" title="查看">270377</span><span class="bbsreply" title="回复">451</span><span class="bbslike" title="喜欢">75</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_757848" data-bn-ipg="travelnotes-essence-9-4">莫飞</a></span></div>
+    </div>
+    <div class="bbstext2"> 本帖最后由 莫飞 于 2012-11-7 18:54 编辑
+
+      2012.4.29日~5.3日
+
+      一次与香江的意外邂逅。
+
+      开启我的香港记忆。
+
+
+    </div>
+    <div class="bbsroute" title="行程单"><span>上海</span><span class="to">&gt;</span><span>香港</span><span class="to">&gt;</span><span>深圳</span></div>
+  </div>
+  <div class="cb"></div>
+</li>
+<li class="item">
+  <div class="pic">
+    <a target="_blank" href="http://bbs.qyer.com/thread-769316-1.html" data-bn-ipg="travelnotes-average-10-1"><img src="http://static.qyer.com/album/user/338/31/QkpdQRsBZQ/200x133" onerror="this.src='http://static.qyer.com/images/place/no/poi_200_133.png'" width="200" height="133" alt="香港离岛浪行记，发现真正美丽的香港（更新完毕）" title="香港离岛浪行记，发现真正美丽的香港（更新完毕）"/></a>
+  </div>
+  <div class="cnt">
+    <div class="top">
+      <p class="face">
+        <a target="_blank" href="http://user.qyer.com/user_uid_500527" data-bn-ipg="travelnotes-average-10-3"><img src="http://static.qyer.com/data/avatar/000/50/05/27_avatar_small.jpg" width="48" height="48" alt="allenxx1"/></a>
+      </p>
+
+      <h3 class="title"><a target="_blank" href="http://bbs.qyer.com/thread-769316-1.html" data-bn-ipg="travelnotes-average-10-2">香港离岛浪行记，发现真正美丽的香港（更新完毕）</a></h3>
+
+      <div>
+        <p class="fr"><span class="time">2013-02-19</span><span class="bbsview" title="查看">14932</span><span class="bbsreply" title="回复">124</span><span class="bbslike" title="喜欢">7</span></p>
+        <span>作者：<a target="_blank" href="http://user.qyer.com/user_uid_500527" data-bn-ipg="travelnotes-average-10-4">allenxx1</a></span></div>
+    </div>
+    <div class="bbstext2"> 本帖最后由 allenxx1 于 2013-4-2 20:28 编辑
+      之前去过香港两次，但都是在市区购物逛街，最远也就去到了海洋公园，对香港的离岛始终抱着一份期待。恰逢同学在香港工作，可以提供免费的住宿，于是毅然背起行囊，奔向梦想之地。
+      行前准备：往返机票买的国泰航空，含税1560元。
+      DAY1
+
+      12.13
+
+      上海—香港
+      CX6855
+      8:25—11:05
+      飞机准时起飞，于中午11:15准时到达香港国际机场，在机场的7-11和八达通柜台分别买了Peoples手机卡(HKD55，含HKD60话费)和八达通卡(HKD150，含HKD100费用)。这里大赞一下Peoples的手机卡！开通就送一天的上网流量，之后每24小时包天HKD8，随时随地刷围脖。打电话也不贵，5天用下来绰绰有余。而且大小卡通用，小卡只要按照印痕掰下来就行。出了机场，到大巴站坐机场快线去同学家。香港的机场快线上是有无线网络的，按照大巴上的广告操作就好。
+      到达同学家，放好行李安顿妥当便去尖沙咀采买化妆品，这样接下去的行程就不必再为购物所累。全部购置妥当后便乘坐天星小轮到达中环的7号码头，晚上去山顶欣赏夜景。之前去山顶都是坐缆车，这次来点不一样的，直接乘大巴上山，这样可以看到不一样的风景。在中环码头乘坐15路(HKD9.8，不是15C)，大约40分钟左右环山路上山，一路上中环街景、山上别墅、维港景色尽入眼底。要是时间卡得好，盘山时还是天亮，到达山顶正巧天黑。下山选择的也是同学推荐的1路小巴，说是很特别，乘上后果然人被甩得差点飞出座位，必须一路拉着扶手，很是刺激！小巴就在山顶巴士站乘，等候时间较长，而且坐满人了就要等下一辆，我们有幸坐到最后两个位子。下山比上山快很多，要留心司机报站，否则会过站，到中环下来后可以直接乘坐地铁。非常好用的香港手机卡：
+    </div>
+    <div class="bbsroute" title="行程单">
+      <span>上海--香港</span><span class="to">&gt;</span><span>南丫岛</span><span class="to">&gt;</span><span>龙脊+长洲</span><span class="to">&gt;</span><span>上水</span><span class="to">&gt;</span><span>大澳渔村</span></div>
+  </div>
+  <div class="cb"></div>
+</li>
+</ul>
+<div class="ui_page"><a target='_blank' data-bn-ipg="pages-3" href="/hong-kong/travel-notes/page1/" class='ui_page_item ui_page_item_current'>1</a>
+  <a target='_blank' data-bn-ipg="pages-3" href="/hong-kong/travel-notes/page2/" class='ui_page_item'>2</a>
+  <a target='_blank' data-bn-ipg="pages-3" href="/hong-kong/travel-notes/page3/" class='ui_page_item'>3</a>
+  <a target='_blank' data-bn-ipg="pages-3" href="/hong-kong/travel-notes/page4/" class='ui_page_item'>4</a>
+  <a target='_blank' data-bn-ipg="pages-3" href="/hong-kong/travel-notes/page5/" class='ui_page_item'>5</a>
+  <a target='_blank' data-bn-ipg="pages-4" href="/hong-kong/travel-notes/page183/" class='ui_page_item' title="...183">...183</a>
+  <a target='_blank' data-bn-ipg="pages-5" href="/hong-kong/travel-notes/page2/" class='ui_page_item ui_page_next' title="下一页">下一页</a>
+</div>
+</div>
+</div>
+<div class="cb"></div>
+</div>
+<script language="javascript">
+    function doings_callback() {
+        window.reload();
+    }
+    ;
+    function poilistdoings(id, doingstype, doingsclass) {
+        ajaxlogin(undefined, undefined, undefined, "doings_callback");
+
+        var type = "poi";
+        doing[doingstype + "poi"](parseInt(1 - $("#poi_doing_" + doingstype + "_" + id).attr("doings")), id, function (rs) {
+
+            if (rs.result == "ok") {
+                var poidoings = $("#poi_doing_" + doingstype + "_" + id).attr("doings");
+                $("#poi_doing_" + doingstype + "_" + id).attr("doings", parseInt(1 - poidoings));
+
+                var idcounts = parseInt($("#poi_doing_" + doingstype + "_" + id).html());
+                if (poidoings == 0) {
+                    $("#" + type + "_doing_" + doingstype + "_" + id).removeClass().addClass("pl_poi" + doingsclass + "_ed");
+                    $("#poi_doing_" + doingstype + "_" + id).html(parseInt(idcounts + 1))
+
+                    if (!$("#doings_" + doingstype + "_button").hasClass("place_toptool_" + doingsclass + "_selected")) {
+                        var citycounts = parseInt($("#doings_" + doingstype + "_counts").html());
+                        $("#doings_" + doingstype + "_counts").html(parseInt(1 + citycounts));
+                        $("#doings_" + doingstype + "_button").addClass("place_toptool_" + doingsclass + "_selected");
+                    }
+                } else {
+                    $("#" + type + "_doing_" + doingstype + "_" + id).removeClass().addClass("pl_poi" + doingsclass);
+
+                    $("#poi_doing_" + doingstype + "_" + id).html(parseInt(idcounts - 1));
+
+                }
+
+            } else {
+                tips.show(rs.data.msg);
+            }
+        })
+    }
+</script>
+
+
+<div class="qyer_head_crumb_pulldown crumb_continents" style="width: 160px;">
+
+
+  <ul>
+
+    <li><a href="http://place.qyer.com/asia/" data-bn-ipg="3-2-1">亚洲 Asia</a></li>
+
+
+    <li><a href="http://place.qyer.com/europe/" data-bn-ipg="3-2-2">欧洲 Europe</a></li>
+
+
+    <li><a href="http://place.qyer.com/africa/" data-bn-ipg="3-2-3">非洲 Africa</a></li>
+
+
+    <li><a href="http://place.qyer.com/north-america/" data-bn-ipg="3-2-4">北美 North America</a></li>
+
+
+    <li><a href="http://place.qyer.com/south-america/" data-bn-ipg="3-2-5">南美 South America</a></li>
+
+
+    <li><a href="http://place.qyer.com/oceania/" data-bn-ipg="3-2-6">大洋洲 Oceania</a></li>
+
+
+    <li><a href="http://place.qyer.com/antarctica/" data-bn-ipg="3-2-7">南极洲 Antarctica</a></li>
+
+  </ul>
+  <div class="cb"></div>
+</div>
+
+
+<div class="qyer_head_crumb_pulldown crumb_country">
+
+
+  <ul>
+
+    <li><a href="http://place.qyer.com/china/" data-bn-ipg="3-3-2">中国 China</a></li>
+
+
+    <li><a href="http://place.qyer.com/thailand/" data-bn-ipg="3-3-2">泰国 Thailand</a></li>
+
+
+    <li><a href="http://place.qyer.com/malaysia/" data-bn-ipg="3-3-2">马来西亚 Malaysia</a></li>
+
+
+    <li><a href="http://place.qyer.com/singapore/" data-bn-ipg="3-3-2">新加坡 Singapore</a></li>
+
+
+    <li><a href="http://place.qyer.com/japan/" data-bn-ipg="3-3-2">日本 Japan</a></li>
+
+
+    <li><a href="http://place.qyer.com/cambodia/" data-bn-ipg="3-3-2">柬埔寨 Cambodia</a></li>
+
+
+    <li><a href="http://place.qyer.com/south-korea/" data-bn-ipg="3-3-2">韩国 South Korea</a></li>
+
+
+    <li><a href="http://place.qyer.com/vietnam/" data-bn-ipg="3-3-2">越南 Vietnam</a></li>
+
+
+    <li><a href="http://place.qyer.com/indonesia/" data-bn-ipg="3-3-2">印度尼西亚 Indonesia</a></li>
+
+
+    <li><a href="http://place.qyer.com/philippines/" data-bn-ipg="3-3-2">菲律宾 Philippines</a></li>
+  </ul>
+
+  <ul>
+
+
+    <li><a href="http://place.qyer.com/nepal/" data-bn-ipg="3-3-2">尼泊尔 Nepal</a></li>
+
+
+    <li><a href="http://place.qyer.com/india/" data-bn-ipg="3-3-2">印度 India</a></li>
+
+
+    <li><a href="http://place.qyer.com/maldives/" data-bn-ipg="3-3-2">马尔代夫 Maldives</a></li>
+
+
+    <li><a href="http://place.qyer.com/united-arab-emirates/" data-bn-ipg="3-3-2">阿联酋 United Arab Emirates</a></li>
+
+
+    <li><a href="http://place.qyer.com/laos/" data-bn-ipg="3-3-2">老挝 Laos</a></li>
+
+
+    <li><a href="http://place.qyer.com/sri-lanka/" data-bn-ipg="3-3-2">斯里兰卡 Sri Lanka</a></li>
+
+
+    <li><a href="http://place.qyer.com/myanmar/" data-bn-ipg="3-3-2">缅甸 Myanmar</a></li>
+
+
+    <li><a href="http://place.qyer.com/jordan/" data-bn-ipg="3-3-2">约旦 Jordan</a></li>
+
+
+    <li><a href="http://place.qyer.com/israel-and-the-palestinian/" data-bn-ipg="3-3-2">以色列与巴勒斯坦领土 Israel & The Palestinian</a></li>
+
+
+    <li><a href="http://place.qyer.com/north-korea/" data-bn-ipg="3-3-2">朝鲜 North Korea</a></li>
+  </ul>
+
+
+  <div class="cb"></div>
+  <p class="more"><a href="http://place.qyer.com/asia/" data-bn-ipg="3-3-2">更多国家&gt;&gt;</a></p>
+
+</div>
+
+
+
+<div class="qyer_head_crumb_pulldown crumb_city">
+
+
+  <ul>
+
+    <li><a href="http://place.qyer.com/hong-kong/" data-bn-ipg="3-4-2">香港 Hong Kong</a></li>
+
+
+    <li><a href="http://place.qyer.com/macau/" data-bn-ipg="3-4-2">澳门 Macau</a></li>
+
+
+    <li><a href="http://place.qyer.com/taipei/" data-bn-ipg="3-4-2">台北 Taipei</a></li>
+
+
+    <li><a href="http://place.qyer.com/kaohsiung/" data-bn-ipg="3-4-2">高雄 Kaohsiung</a></li>
+
+
+    <li><a href="http://place.qyer.com/kenting-national-park/" data-bn-ipg="3-4-2">垦丁国家公园 Kenting national park</a></li>
+
+
+    <li><a href="http://place.qyer.com/hualien/" data-bn-ipg="3-4-2">花莲 Hualien</a></li>
+
+
+    <li><a href="http://place.qyer.com/tainan/" data-bn-ipg="3-4-2">台南 Tainan</a></li>
+
+
+    <li><a href="http://place.qyer.com/taichung/" data-bn-ipg="3-4-2">台中 Taichung</a></li>
+
+
+    <li><a href="http://place.qyer.com/new-taipei/" data-bn-ipg="3-4-2">新北 New Taipei</a></li>
+
+
+    <li><a href="http://place.qyer.com/keelung/" data-bn-ipg="3-4-2">基隆 Keelung</a></li>
+  </ul>
+
+  <ul>
+
+
+    <li><a href="http://place.qyer.com/taitung/" data-bn-ipg="3-4-2">台东 Taitung</a></li>
+
+
+    <li><a href="http://place.qyer.com/yilan/" data-bn-ipg="3-4-2">宜兰 Yilan</a></li>
+
+
+    <li><a href="http://place.qyer.com/taoyuan/" data-bn-ipg="3-4-2">桃园 Taoyuan</a></li>
+
+
+    <li><a href="http://place.qyer.com/chiayi/" data-bn-ipg="3-4-2">嘉义 Chiayi</a></li>
+
+
+    <li><a href="http://place.qyer.com/nantou/" data-bn-ipg="3-4-2">南投 Nantou</a></li>
+
+
+    <li><a href="http://place.qyer.com/pingtung/" data-bn-ipg="3-4-2">屏东 Pingtung</a></li>
+
+
+    <li><a href="http://place.qyer.com/suao/" data-bn-ipg="3-4-2">苏澳 Su'ao</a></li>
+
+
+    <li><a href="http://place.qyer.com/hsinchu/" data-bn-ipg="3-4-2">新竹 Hsinchu</a></li>
+
+
+    <li><a href="http://place.qyer.com/changhua/" data-bn-ipg="3-4-2">彰化 Changhua</a></li>
+
+
+    <li><a href="http://place.qyer.com/kinmen/" data-bn-ipg="3-4-2">金门 Kinmen </a></li>
+  </ul>
+
+
+  <div class="cb"></div>
+  <p class="more"><a href="http://place.qyer.com/china/" data-bn-ipg="3-4-2">更多城市&gt;&gt;</a></p>
+
+</div>
+
+
+
+<div class="qyer_head_crumb_pulldown crumb_cate" style="width: 160px;">
+
+
+  <ul>
+
+    <li><a href="http://place.qyer.com/hong-kong/sight/">景点</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/activity/">体验</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/transportation/">交通</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/hotel/">住宿</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/shopping/">购物</a></li>
+
+
+    <li><a href="http://place.qyer.com/hong-kong/food/">美食</a></li>
+
+
+  </ul>
+  <div class="cb"></div>
+
+</div>
+

@@ -374,7 +374,7 @@ var utils = UE.utils = {
     /**
      * 将字符串list(以','分隔)或者数组list转成哈希对象
      * @name listToMap
-     * @grammar UE.utils.listToMap(list)  => Object  //Object形如{test:1,br:1,textarea:1}
+     * @grammar UE.utils.listToMap(show)  => Object  //Object形如{test:1,br:1,textarea:1}
      */
     listToMap:function (list) {
         if (!list)return {};
@@ -1117,7 +1117,7 @@ var attrFix = ie && browser.version < 9 ? {
     },
     styleBlock = utils.listToMap([
         '-webkit-box', '-moz-box', 'block' ,
-        'list-item' , 'table' , 'table-row-group' ,
+        'show-item' , 'table' , 'table-row-group' ,
         'table-header-group', 'table-footer-group' ,
         'table-row' , 'table-column-group' , 'table-column' ,
         'table-cell' , 'table-caption'
@@ -10026,48 +10026,48 @@ UE.plugins['list'] = function () {
         var customCss = [];
         for(var p in customStyle){
             if(p == 'dash' || p == 'dot'){
-                customCss.push('li.list-' + customStyle[p] + '{background-image:url(' + liiconpath +customStyle[p]+'.gif)}');
-                customCss.push('ul.custom_'+p+'{list-style:none;}ul.custom_'+p+' li{background-position:0 3px;background-repeat:no-repeat}');
+                customCss.push('li.show-' + customStyle[p] + '{background-image:url(' + liiconpath +customStyle[p]+'.gif)}');
+                customCss.push('ul.custom_'+p+'{show-style:none;}ul.custom_'+p+' li{background-position:0 3px;background-repeat:no-repeat}');
             }else{
                 for(var i= 0;i<99;i++){
-                    customCss.push('li.list-' + customStyle[p] + i + '{background-image:url(' + liiconpath + 'list-'+customStyle[p] + i + '.gif)}')
+                    customCss.push('li.show-' + customStyle[p] + i + '{background-image:url(' + liiconpath + 'show-'+customStyle[p] + i + '.gif)}')
                 }
-                customCss.push('ol.custom_'+p+'{list-style:none;}ol.custom_'+p+' li{background-position:0 3px;background-repeat:no-repeat}');
+                customCss.push('ol.custom_'+p+'{show-style:none;}ol.custom_'+p+' li{background-position:0 3px;background-repeat:no-repeat}');
             }
             switch(p){
                 case 'cn':
-                    customCss.push('li.list-'+p+'-paddingleft-1{padding-left:25px}');
-                    customCss.push('li.list-'+p+'-paddingleft-2{padding-left:40px}');
-                    customCss.push('li.list-'+p+'-paddingleft-3{padding-left:55px}');
+                    customCss.push('li.show-'+p+'-paddingleft-1{padding-left:25px}');
+                    customCss.push('li.show-'+p+'-paddingleft-2{padding-left:40px}');
+                    customCss.push('li.show-'+p+'-paddingleft-3{padding-left:55px}');
                     break;
                 case 'cn1':
-                    customCss.push('li.list-'+p+'-paddingleft-1{padding-left:30px}');
-                    customCss.push('li.list-'+p+'-paddingleft-2{padding-left:40px}');
-                    customCss.push('li.list-'+p+'-paddingleft-3{padding-left:55px}');
+                    customCss.push('li.show-'+p+'-paddingleft-1{padding-left:30px}');
+                    customCss.push('li.show-'+p+'-paddingleft-2{padding-left:40px}');
+                    customCss.push('li.show-'+p+'-paddingleft-3{padding-left:55px}');
                     break;
                 case 'cn2':
-                    customCss.push('li.list-'+p+'-paddingleft-1{padding-left:40px}');
-                    customCss.push('li.list-'+p+'-paddingleft-2{padding-left:55px}');
-                    customCss.push('li.list-'+p+'-paddingleft-3{padding-left:68px}');
+                    customCss.push('li.show-'+p+'-paddingleft-1{padding-left:40px}');
+                    customCss.push('li.show-'+p+'-paddingleft-2{padding-left:55px}');
+                    customCss.push('li.show-'+p+'-paddingleft-3{padding-left:68px}');
                     break;
                 case 'num':
                 case 'num1':
-                    customCss.push('li.list-'+p+'-paddingleft-1{padding-left:25px}');
+                    customCss.push('li.show-'+p+'-paddingleft-1{padding-left:25px}');
                     break;
                 case 'num2':
-                    customCss.push('li.list-'+p+'-paddingleft-1{padding-left:35px}');
-                    customCss.push('li.list-'+p+'-paddingleft-2{padding-left:40px}');
+                    customCss.push('li.show-'+p+'-paddingleft-1{padding-left:35px}');
+                    customCss.push('li.show-'+p+'-paddingleft-2{padding-left:40px}');
                     break;
                 case 'dash':
-                    customCss.push('li.list-'+p+'-paddingleft{padding-left:35px}');
+                    customCss.push('li.show-'+p+'-paddingleft{padding-left:35px}');
                     break;
                 case 'dot':
-                    customCss.push('li.list-'+p+'-paddingleft{padding-left:20px}');
+                    customCss.push('li.show-'+p+'-paddingleft{padding-left:20px}');
             }
         }
-        customCss.push('.list-paddingleft-1{padding-left:0}');
-        customCss.push('.list-paddingleft-2{padding-left:'+me.options.listDefaultPaddingLeft+'px}');
-        customCss.push('.list-paddingleft-3{padding-left:'+me.options.listDefaultPaddingLeft*2+'px}');
+        customCss.push('.show-paddingleft-1{padding-left:0}');
+        customCss.push('.show-paddingleft-2{padding-left:'+me.options.listDefaultPaddingLeft+'px}');
+        customCss.push('.show-paddingleft-3{padding-left:'+me.options.listDefaultPaddingLeft*2+'px}');
         //如果不给宽度会在自定应样式里出现滚动条
         utils.cssRule('list', 'ol,ul{margin:0;pading:0;'+(browser.ie ? '' : 'width:95%')+'}li{clear:both;}'+customCss.join('\n'), me.document);
     });
@@ -10106,7 +10106,7 @@ UE.plugins['list'] = function () {
         if(domUtils.hasClass(node,/custom_/)){
             return cls.match(/custom_(\w+)/)[1]
         }
-        return domUtils.getStyle(node, 'list-style-type')
+        return domUtils.getStyle(node, 'show-style-type')
 
     }
 
@@ -10126,7 +10126,7 @@ UE.plugins['list'] = function () {
                     if(className && /custom_/.test(className)){
                         type = className.match(/custom_(\w+)/)[1]
                     }else{
-                        type = n.parentNode.getStyle('list-style-type');
+                        type = n.parentNode.getStyle('show-style-type');
                     }
                     if(!type){
                         type = list.tagName == 'OL' ? 'decimal' : 'disc';
@@ -10140,7 +10140,7 @@ UE.plugins['list'] = function () {
                     n.setAttr('class', 'custom_' + currentStyle)
 
                 }else{
-                    n.setStyle('list-style-type',currentStyle)
+                    n.setStyle('show-style-type',currentStyle)
                 }
             })
 
@@ -10222,7 +10222,7 @@ UE.plugins['list'] = function () {
                 if(customStyle[type]){
                     list.setAttr('class','custom_'+type)
                 }else{
-                    list.setStyle('list-style-type',type)
+                    list.setStyle('show-style-type',type)
                 }
                 while(node && node.parentNode.tagName != 'li' && checkListType(node.innerText(),node)){
                     tmp = node.nextSibling();
@@ -10272,9 +10272,9 @@ UE.plugins['list'] = function () {
                 }
             }
 
-            var style = domUtils.getStyle(node, 'list-style-type');
-            style && (node.style.cssText = 'list-style-type:' + style);
-            node.className = utils.trim(node.className.replace(/list-paddingleft-\w+/,'')) + ' list-paddingleft-' + type;
+            var style = domUtils.getStyle(node, 'show-style-type');
+            style && (node.style.cssText = 'show-style-type:' + style);
+            node.className = utils.trim(node.className.replace(/list-paddingleft-\w+/,'')) + ' show-paddingleft-' + type;
             utils.each(domUtils.getElementsByTagName(node,'li'),function(li){
                 li.style.cssText && (li.style.cssText = '');
                 if(!li.firstChild){
@@ -10305,9 +10305,9 @@ UE.plugins['list'] = function () {
                                     }
                             }
                         }
-                        li.className = 'list-'+customStyle[currentStyle]+ index + ' ' + 'list-'+currentStyle+'-paddingleft-' + paddingLeft;
+                        li.className = 'show-'+customStyle[currentStyle]+ index + ' ' + 'show-'+currentStyle+'-paddingleft-' + paddingLeft;
                     }else{
-                        li.className = 'list-'+customStyle[currentStyle]  + ' ' + 'list-'+currentStyle+'-paddingleft';
+                        li.className = 'show-'+customStyle[currentStyle]  + ' ' + 'show-'+currentStyle+'-paddingleft';
                     }
                 }else{
                     li.className = li.className.replace(/list-[\w\-]+/gi,'');
@@ -10317,12 +10317,12 @@ UE.plugins['list'] = function () {
                     domUtils.removeAttributes(li,'class')
                 }
             });
-            !ignore && adjustList(node,node.tagName.toLowerCase(),getStyle(node)||domUtils.getStyle(node, 'list-style-type'),true);
+            !ignore && adjustList(node,node.tagName.toLowerCase(),getStyle(node)||domUtils.getStyle(node, 'show-style-type'),true);
         })
     }
     function adjustList(list, tag, style,ignoreEmpty) {
         var nextList = list.nextSibling;
-        if (nextList && nextList.nodeType == 1 && nextList.tagName.toLowerCase() == tag && (getStyle(nextList) || domUtils.getStyle(nextList, 'list-style-type') || (tag == 'ol' ? 'decimal' : 'disc')) == style) {
+        if (nextList && nextList.nodeType == 1 && nextList.tagName.toLowerCase() == tag && (getStyle(nextList) || domUtils.getStyle(nextList, 'show-style-type') || (tag == 'ol' ? 'decimal' : 'disc')) == style) {
             domUtils.moveChild(nextList, list);
             if (nextList.childNodes.length == 0) {
                 domUtils.remove(nextList);
@@ -10332,7 +10332,7 @@ UE.plugins['list'] = function () {
             domUtils.remove(nextList);
         }
         var preList = list.previousSibling;
-        if (preList && preList.nodeType == 1 && preList.tagName.toLowerCase() == tag && (getStyle(preList) || domUtils.getStyle(preList, 'list-style-type') || (tag == 'ol' ? 'decimal' : 'disc')) == style) {
+        if (preList && preList.nodeType == 1 && preList.tagName.toLowerCase() == tag && (getStyle(preList) || domUtils.getStyle(preList, 'show-style-type') || (tag == 'ol' ? 'decimal' : 'disc')) == style) {
             domUtils.moveChild(list, preList);
         }
         if(preList && domUtils.isFillChar(preList)){
@@ -10349,7 +10349,7 @@ UE.plugins['list'] = function () {
             list.className = 'custom_' + style;
         }
         try{
-            domUtils.setStyle(list, 'list-style-type', style);
+            domUtils.setStyle(list, 'show-style-type', style);
         }catch(e){}
     }
     function clearEmptySibling(node) {
@@ -10663,7 +10663,7 @@ UE.plugins['list'] = function () {
         if (keyCode == 8) {
             var rng = me.selection.getRange(),list;
             if(list = domUtils.findParentByTagName(rng.startContainer,['ol', 'ul'],true)){
-                adjustList(list,list.tagName.toLowerCase(),getStyle(list)||domUtils.getComputedStyle(list,'list-style-type'),true)
+                adjustList(list,list.tagName.toLowerCase(),getStyle(list)||domUtils.getComputedStyle(list,'show-style-type'),true)
             }
         }
     });
@@ -10696,7 +10696,7 @@ UE.plugins['list'] = function () {
                     return true;
                 var parentLi = li.parentNode,
                     list = me.document.createElement(parentLi.tagName),
-                    index = utils.indexOf(listStyle[list.tagName], getStyle(parentLi)||domUtils.getComputedStyle(parentLi, 'list-style-type'));
+                    index = utils.indexOf(listStyle[list.tagName], getStyle(parentLi)||domUtils.getComputedStyle(parentLi, 'show-style-type'));
                 index = index + 1 == listStyle[list.tagName].length ? 0 : index + 1;
                 var currentStyle = listStyle[list.tagName][index];
                 setListStyle(list,currentStyle);
@@ -10728,7 +10728,7 @@ UE.plugins['list'] = function () {
                         }
                         var parentLi = current.parentNode,
                             list = me.document.createElement(parentLi.tagName),
-                            index = utils.indexOf(listStyle[list.tagName], getStyle(parentLi)||domUtils.getComputedStyle(parentLi, 'list-style-type'));
+                            index = utils.indexOf(listStyle[list.tagName], getStyle(parentLi)||domUtils.getComputedStyle(parentLi, 'show-style-type'));
                         var currentIndex = index + 1 == listStyle[list.tagName].length ? 0 : index + 1;
                         var currentStyle = listStyle[list.tagName][currentIndex];
                         setListStyle(list,currentStyle);
@@ -10834,7 +10834,7 @@ UE.plugins['list'] = function () {
                         if (domUtils.isEmptyNode(tmp.nextSibling)) {
                             domUtils.remove(tmp.nextSibling)
                         }
-                        var nodeStyle = getStyle(startParent) || domUtils.getComputedStyle(startParent, 'list-style-type') || (command.toLowerCase() == 'insertorderedlist' ? 'decimal' : 'disc');
+                        var nodeStyle = getStyle(startParent) || domUtils.getComputedStyle(startParent, 'show-style-type') || (command.toLowerCase() == 'insertorderedlist' ? 'decimal' : 'disc');
                         if (startParent.tagName.toLowerCase() == tag && nodeStyle == style) {
                             for (var i = 0, ci, tmpFrag = me.document.createDocumentFragment(); ci = frag.childNodes[i++];) {
                                 if(domUtils.isTagNode(ci,'ol ul')){
@@ -11058,7 +11058,7 @@ UE.plugins['list'] = function () {
                         break;
                     };
                 }
-                return node ? getStyle(node) || domUtils.getComputedStyle(node, 'list-style-type') : null;
+                return node ? getStyle(node) || domUtils.getComputedStyle(node, 'show-style-type') : null;
             }
         };
 };
@@ -19514,7 +19514,7 @@ baidu.editor.ui = {};
     editorui.insertcode = function (editor, list, title) {
         list = editor.options['insertcode'] || [];
         title = editor.options.labelMap['insertcode'] || editor.getLang("labelMap.insertcode") || '';
-       // if (!list.length) return;
+       // if (!show.length) return;
         var items = [];
         utils.each(list,function(key,val){
             items.push({

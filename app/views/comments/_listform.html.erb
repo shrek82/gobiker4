@@ -1,0 +1,42 @@
+<div id="write_review">
+  <span class="pl_title_name" style="float:left">点评：</span>
+  <a href="javascript:;" onclick="scroll_to_cmtform()" class="btn2 btn2-mint" style="float:right"><span class="icon-plus"></span>
+    我要点评</a>
+
+  <div class="clear"></div>
+</div>
+<div id="cms_list">
+  <ul class="cmt" id="cmt_loading">
+    <li style="color: #999"><img src="/images/loading.gif" alt="载入中..." style="vertical-align:middle;"/> 载入中...</li>
+  </ul>
+  <ul class="cmt" id="ajax_list">
+  </ul>
+  <ul class="cmt" id="cmt_form">
+    <li class="cmt_form">
+      <div class="avatar">
+        <a target="_blank" href="http://weibo.com/chichiyao" title="zhaojiangang_"><img src="/avatar/up.jpeg" alt="zhaojiangang_"></a>
+      </div>
+      <div class="cmt-body">
+        <form method="post" id="comment_form" action="<%= comments_path %>">
+          <% @hidden_field.each do |key, value| %>
+              <input type="hidden" name="comment[<%= key %>]" value="<%= value %>"/>
+          <% end %>
+          <div class="ds-textarea-wrapper ds-rounded-top">
+            <% if @query_param[:review] %>
+                <div id="starbox" style="color:#999;">评分:</div>
+            <% end %>
+            <textarea name="comment[content]" id="cmt_textarea"></textarea>
+          </div>
+          <div class="post-toolbar">
+            <button class="btn btn-mint" type="submit" id="cmt_submit_button">发布评论</button>
+          </div>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<% content_for:seajs_global do %>
+    global.loadComments('<%= @query_param.to_param %>');
+    global.bindCmtForm('<%= @query_param.to_param %>');
+<% end %>

@@ -7,7 +7,10 @@ class Photo < ActiveRecord::Base
                     :default_url => "/images/:style/missing.png",
                     :url => "/uploads/photos/:year/:month:day/:id_:style.:extension",
                     :path => ":rails_root/public/uploads/photos/:year/:month:day/:id_:style.:extension"
-  validates_attachment_content_type :img, :content_type => ['image/gif', 'image/png', 'image/x-png', 'image/jpeg', 'image/pjpeg', 'image/jpg','application/octet-stream']
+  #validates_attachment_content_type :img, :content_type => ['image/gif', 'image/png', 'image/x-png', 'image/jpeg', 'image/pjpeg', 'image/jpg','application/octet-stream']
+  validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/
+  #validates_attachment :img, :presence => true,:content_type => { :content_type => "image/jpg" },:size => { :in => 0..20000.kilobytes }
+
   belongs_to :album
   belongs_to :user
 
