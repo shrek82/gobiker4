@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "install/setting"
   get "install/user"
   get "install/setcity"
+  get "v2"=>'main#two'
 
   resources :forums
   resources :topics
@@ -13,11 +14,22 @@ Rails.application.routes.draw do
   resources :routes
   resources :asks, :path => 'wenda'
 
+  #用户相关
   match 'login' => 'users#login', :as => 'login', :via => [:get, :post]
   match 'register' => 'users#register', :as => 'register', :via => [:get, :post]
   post 'users/create' => 'users#create'
   post 'users/ajax' => 'users#ajax'
   get 'user/logout' => 'users#logout'
+
+  #会员个人主页
+  resources :u, :only => [:show] do |u|
+    member do
+      #get 'albums'
+      match '/albums'=>'u#albums',:as=>'albums',:via=>[:get]
+      match '/albums_upload'=>'u#albums_upload',:as=>'albums_upload',:via=>[:get,:post]
+      match '/album/:aid' => 'u#album', :constraints => {:aid => /\d/}, :as => 'album_show',:via=>[:get]
+    end
+  end
 
   #目的地
   resources :places do
@@ -44,9 +56,13 @@ Rails.application.routes.draw do
   #问答
   resources :asks, :path => 'wenda'
 
+  #攻略
+  resources :guides
+
   #评论
   resources :comments do
     collection do
+      get 'list', :to => "comments#list",:as => 'list'
       get :show
       get :getone
     end

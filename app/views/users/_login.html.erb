@@ -12,8 +12,6 @@
         <div class="clearfix mt15">
           <strong class="fl f16 fontYaHei fb cGray">使用骑趣网帐号</strong><span class="fr cGray">还没有有帐号？<a href="/register/">注册</a></span>
         </div>
-
-
         <div class="list clearfix" style="margin-top: 10px">
           <span class="fl">账号：</span>
 
@@ -41,6 +39,7 @@
         </div>
 
         <div class="list mt10 clearfix">
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
           <button type="submit" id="submit_button" class="btn btn-mint big_btn" style="padding:8px 0;font-size:16px" >立即登陆</button>
         </div>
 

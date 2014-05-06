@@ -9,6 +9,10 @@
 
 class UsersController < ApplicationController
 
+  #cookies如果没有选择跳过verify验证，就不能保存成功，必须选择跳过或在表单中添加verify
+  #skip_before_filter :verify_authenticity_token, :only => [:login]
+
+
   include UsersHelper
 
   layout "login_register", :only => [:register, :login]
@@ -24,9 +28,9 @@ class UsersController < ApplicationController
       else
         flash[:success]='恭喜您，您的邮箱已经验证通过'
       end
-    #正式注册
+      #正式注册
     elsif request.method=='POST' && params[:user]
-      @user =User.new(params[:user])
+      @user =User.new(user_params)
       if @user.save
         cookies[:uid]=@user[:uid]
         cookies[:email]=@user[:email]
@@ -57,18 +61,21 @@ class UsersController < ApplicationController
   def login
 
     if request.method=='POST'
-      u=User.login params[:login]
+      u=User.login(login_params)
       if u[:error]
         cookies[:uid]=nil
         cookies[:email]=nil
         cookies[:username]=nil
+        logger.info 'dont found user!'
         respond :error => u[:error]
       elsif u[:uid]
-        cookies[:uid]=u[:uid]
-        cookies[:email]=u[:user][:email]
-        cookies[:username]=u[:user][:username]
-        respond :uid => u[:uid],:username=>u[:user][:username],:success => '登录成功!'
+        cookies[:uid]={:value => u[:uid], :expires => 1.month.from_now}
+        cookies[:email]={:value => u[:user][:email], :expires => 1.month.from_now}
+        cookies[:username]={:value => u[:user][:username], :expires => 1.month.from_now}
+        logger.info 'save cookis ed!'
+        respond :uid => u[:uid], :username => u[:user][:username],:redirect_to=>main_path,:success => '登录成功!'
       end
+
     end
   end
 
@@ -87,7 +94,7 @@ class UsersController < ApplicationController
 
     #验证帐号是否被注册
     if @email && @act=='checkemail'
-      user=User.exists?(:email=>@email)
+      user=User.exists?(:email => @email)
       if user
         respond :error => '该帐号已经被注册了!', :_format => 'json'
       else
@@ -101,7 +108,7 @@ class UsersController < ApplicationController
       }
       UserMailer.activation_mail(mail_data).deliver
       @mail_domain=@email.split("@")[1]
-      @mail_domain=@mail_domain=='gmail.com'?'www.gmail.com':"mail."+@mail_domain
+      @mail_domain=@mail_domain=='gmail.com' ? 'www.gmail.com' : "mail."+@mail_domain
       respond :action => 'reg_active_mail', :layout => false
       #检查用户名是否被注册
     elsif @act=='checkusername' && @username
@@ -153,5 +160,14 @@ class UsersController < ApplicationController
   def authenticate
   end
 
+  private
+  # Never trust parameters from the scary internet, only allow the white show through.
+  def user_params
+    params.require(:user).permit(:username, :password, :password_confirmation, :email, :code)
+  end
+
+  def login_params
+    params.require(:login).permit(:account, :password)
+  end
 
 end

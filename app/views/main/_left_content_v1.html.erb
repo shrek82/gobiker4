@@ -108,7 +108,7 @@
 
             <div class="ind_travels_list_info">
               <span class="float_right">查看 <%= g.hits_num %></span><a href="u_path g.user_id"></a> 来自
-              <a href="<%= list_forums_path g.forum_id %>" ><%= g.forum.name %></a></div>
+              <a href="<%= forum_path g.forum_id %>" ><%= g.forum.name %></a></div>
           </li>
               <% end %></ul>
       <% end %>
@@ -119,9 +119,9 @@
     <ul class="ind_hotbbs_list">
       <% @hot_forums.each do |f| %>
           <li>
-            <a href="<%= list_forums_path f.id %>"><img src="<%= f.ico_path %>" width="48" height="48"></a>
+            <a href="<%= forum_path f.id %>"><img src="<%= f.ico_path %>" width="48" height="48"></a>
 
-            <h3 class="ind_hotbbs_list_title"><a href="<%= list_forums_path f.id %>"><%= f.name %></a></h3>
+            <h3 class="ind_hotbbs_list_title"><a href="<%= forum_path f.id %>"><%= f.name %></a></h3>
 
             <div class="ind_hotbbs_list_info"><%= truncate(f.intro, :length => 10) %></div>
             <div class="gray"><%= f.topics_num %>个主题</div>

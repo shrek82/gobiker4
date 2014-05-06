@@ -27,3 +27,24 @@ module Gobiker4
 
   end
 end
+
+#脚手架不生成测试文件
+#--no-test-framework， --no-helper，和--no-assets.
+Gobiker4::Application.config.generators do |g|
+  g.stylesheets false
+  #g.test_framework false
+  g.helper false
+  g.assets false
+  #g.fixture_replacement false
+end
+
+#邮件配置
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+    :address => "smtp.163.com",
+    :port => 25,
+    :domain => "163.com",
+    :authentication => :login,
+    :user_name => "hmilyo2008@163.com",
+    :password => "orange320"
+}

@@ -14,9 +14,9 @@ class CommentsController < ApplicationController
     #conditions << "%#{params[:q]}%"
 
     if params[:review]=='true'
-      template="comments/review/show"
+      template="comments/review/list"
     elsif params[:topic]=='true'
-      template="comments/topics/show"
+      template="comments/topics/list"
     else
       template="comments/show"
     end
