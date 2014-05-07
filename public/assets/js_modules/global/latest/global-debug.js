@@ -1,4 +1,4 @@
-/*! global(1.1.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-11-06 20:24:37*/
+/*! global(1.1.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-05-07 9:17:13*/
 define("global/latest/global-debug", [ "lib/latest/lib-debug", "./ueditor_config-debug" ], function(require, exports, module) {
     var lib = require("lib/latest/lib-debug");
     var global = {};
@@ -204,7 +204,7 @@ define("global/latest/global-debug", [ "lib/latest/lib-debug", "./ueditor_config
     //载入某条评论
     global.loadComments = function(query_param) {
         $.ajax({
-            url: "/comments/show",
+            url: "/comments/list",
             dataType: "html",
             type: "get",
             data: query_param + "&_format=html",

@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
-  #获取评论列表
+  #获取一条或多条评论列表
   def list
     #conditions=Array.new
     #conditions << "name LIKE ?"
@@ -40,23 +40,17 @@ class CommentsController < ApplicationController
 
   end
 
-  #获取评论模板
+  #获取一条评论内容
   def getone
     if params[:review]=='true'
-      template="comments/review/show"
+      template="comments/review/list"
     elsif params[:topic]=='true'
-      template="comments/topics/show"
+      template="comments/topics/list"
     else
       template="comments/show"
     end
     @comment=Comment.find_by_id(params[:id])
     respond :template=>template,:comments => @comment, :layout => false
-  end
-
-  # GET /comments/1
-  # GET /comments/1.json
-  def show
-    @params=params
   end
 
   # GET /comments/new
@@ -76,8 +70,8 @@ class CommentsController < ApplicationController
 
   #发布评论
   def create
-    @comment = Comment.new(params[:comment])
-    @comment[:user_id]=cookies[:uid] if cookies[:uid]
+    @comment = Comment.new(comment_params)
+    @comment[:user_id]=cookies[:uid]
     if @comment.save
       respond :success => '发表成功',:comment => @comment
     else
@@ -87,7 +81,7 @@ class CommentsController < ApplicationController
 
   #修改评论
   def update
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find(comment_params)
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
@@ -98,6 +92,12 @@ class CommentsController < ApplicationController
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:place_id,:topic_id,:route_id,:activity_id,:article_id,:album_id,:content,:userful_num)
   end
 
 end

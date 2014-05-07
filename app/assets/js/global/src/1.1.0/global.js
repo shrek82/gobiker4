@@ -225,7 +225,7 @@ define(function (require, exports, module) {
   //载入某条评论
   global.loadComments = function (query_param) {
     $.ajax({
-      url: '/comments/show',
+      url: '/comments/list',
       dataType: 'html',
       type: 'get',
       data: query_param + '&_format=html',

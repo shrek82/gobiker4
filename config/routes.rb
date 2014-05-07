@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'main/index'
 
   get "install/setting"
   get "install/user"
   get "install/setcity"
-  get "v2"=>'main#two'
+
+  get "v2"=>'main#index'
 
   resources :forums
   resources :topics
@@ -87,7 +87,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'main#index', :as => 'main'
+  root 'main#two', :as => 'main'
 
   #管理员路径
   get "admin" => 'admin#frame', :as => 'admin'

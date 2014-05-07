@@ -1,4 +1,4 @@
-/*! global(1.1.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2013-11-06 20:24:36*/
+/*! global(1.1.0) - JianGang Zhao <zhaojiangang@gmail.com> - 2014-05-07 9:17:13*/
 define("global/1.1.0/ueditor_config-debug", [], function(require, exports, module) {
     //ueditor默认配置
     var config = {};

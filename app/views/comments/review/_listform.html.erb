@@ -21,6 +21,7 @@
           <% end %>
           <div class="ds-textarea-wrapper ds-rounded-top">
             <div id="starbox" style="color:#999;">评分:</div>
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
             <textarea name="comment[content]"  id="cmt_textarea"></textarea>
           </div>
           <div class="post-toolbar">
