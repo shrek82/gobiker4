@@ -55,7 +55,7 @@ class PlacesController < ApplicationController
   def photos
     @place=Place.find(params[:id])
     @album=Album.find_or_create_by(:place_id => @place.id, :name => @place.name+'相册')
-    @photos=Photo.where(:album_id=>@album.id).paginate(:page => params[:page], :per_page =>20, :order => "photos.id DESC",:include => :user)
+    @photos=Photo.where(:album_id=>@album.id).order(:id=>:desc).includes(:usre).paginate(:page => params[:page], :per_page =>20)
   end
 
   #添加记录
